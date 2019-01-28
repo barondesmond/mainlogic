@@ -81,13 +81,11 @@ header
 <p>Rules</p>
 <p>Non-Billable Report</p>
 <p>Process Employee Reports</P>
-</div>
-
+<div class="row">
 <div class="column">
 <p>Master Information Screen</p>
 		</div>
 </div>
-
 		<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 	
 </body>
