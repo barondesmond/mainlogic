@@ -71,7 +71,6 @@ body {
 </head>
 <body>
 <div id="header">
-header
 </div>
 	<div class="row">
 	<div class="column">
@@ -80,6 +79,7 @@ header
 <p>Job Assignment</p>
 <p>Rules</p>
 <p>Non-Billable Report</p>
+<p><img src="<?include("/var/www/html/timeclock/assets/timeclick.png" width="20%"></p>
 <p>Process Employee Reports</P>
 </div>
 

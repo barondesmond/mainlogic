@@ -71,7 +71,7 @@ body {
 </head>
 <body>
 <div id="header">
-header
+<img src="./assets/serviq.png">
 </div>
 	<div class="row">
 	<div class="column">
@@ -81,11 +81,13 @@ header
 <p>Rules</p>
 <p>Non-Billable Report</p>
 <p>Process Employee Reports</P>
-<div class="row">
+</div>
+
 <div class="column">
 <p>Master Information Screen</p>
 		</div>
 </div>
+
 		<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 	
 </body>
