@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
  
 	public function view()
 	{
-		this->index();
+		return index();
 	}
 
 	

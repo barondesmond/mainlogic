@@ -27,6 +27,11 @@ class Welcome extends CI_Controller {
 
 
  
+	public function view()
+	{
+		this->index();
+	}
+
 	
 	public function index()
 	{
