@@ -27,7 +27,7 @@ class Login extends CI_Controller {
 
 	public function auth()
 	{
-		$auth = file_get_contents(APP . '/empauth_json.php?EmpName=' . $_REQUEST['EmpName'] . '&Email='  .$_REQUEST['Email']);
+		$auth = file_get_contents(APPURL . 'empauth_json.php?EmpName=' . $_REQUEST['EmpName'] . '&Email='  .$_REQUEST['Email']);
 		$auth = json_decode($auth);
 		if ($auth->authorized == '1')
 		{
