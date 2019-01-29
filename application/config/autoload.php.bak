@@ -103,7 +103,7 @@ $autoload['helper'] = array('authentication');
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array('app');
+$autoload['config'] = array();
 
 /*
 | -------------------------------------------------------------------
