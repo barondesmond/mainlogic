@@ -22,7 +22,6 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
          varify_session(); 
-		 var_dump(time());
 	}
 
 

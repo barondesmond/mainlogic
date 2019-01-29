@@ -3,13 +3,12 @@
     function varify_session(){
        $CI = &get_instance();
 
-       $user_session_id = $CI->session->userdata('logged_in');
-	   
-       if($user_session_id  ==  '') {
+       $authorized = $CI->session->userdata('authorized');
+       if($authorized  !=  '1') {
 
-          //Header("Location: " . base_url() . "login/");
-		  //exit;
+          redirect('login');
        }
+
    }
 
    ?>  

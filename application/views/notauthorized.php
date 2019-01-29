@@ -1,0 +1,1 @@
+<?php echo $auth['error'] . $auth['EmpName'] . $auth['Email'] ; ?>

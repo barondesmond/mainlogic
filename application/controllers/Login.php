@@ -37,17 +37,25 @@ class Login extends CI_Controller {
 
 
 		$url = APPURL . 'empauth_json.php?EmpName=' . urlencode($_REQUEST['EmpName']) . '&Email='  . urlencode($_REQUEST['Email']) . '&installationId=' . INSTID;
-		echo $url;
+		//echo $url;
 		$auth = file_get_contents($url,false, stream_context_create($arrContextOptions));
 		$auth = json_decode($auth);
 		if ($auth->authorized == '1')
 		{
-			echo "Authorized";
-			exit;
+
+				$newdata = array(
+				  'EmpName'  => $auth->EpmName,
+				   'Email'     => $auth->Email,
+					'EmpNo' => $auth->EmpNo,
+				   'authorized' => $auth->authorized
+				);
+				$this->session->set_userdata($newdata);
+				redirect('/');
+		
 		}
 		else
 		{
-			var_dump($auth);
+			$this->load->view('notauthorized', array('data'=>$auth));
 		}
 	}
 	public function index()
