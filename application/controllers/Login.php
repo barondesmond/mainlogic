@@ -27,10 +27,18 @@ class Login extends CI_Controller {
 
 	public function auth()
 	{
-		
-		$url = APPURL . 'empauth_json.php?EmpName=' . $_REQUEST['EmpName'] . '&Email='  .$_REQUEST['Email'] . '&installationId=' . INSTID;
+	
+		$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);  
+
+
+		$url = APPURL . 'empauth_json.php?EmpName=' . urlencode($_REQUEST['EmpName']) . '&Email='  . urlencode($_REQUEST['Email']) . '&installationId=' . INSTID;
 		echo $url;
-		$auth = file_get_contents($url);
+		$auth = file_get_contents($url,false, stream_context_create($arrContextOptions));
 		$auth = json_decode($auth);
 		if ($auth->authorized == '1')
 		{
