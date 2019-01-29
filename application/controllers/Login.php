@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Login extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,26 +18,31 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	function __construct()
+	function _construct()
 	{
-		parent::__construct();
-         varify_session(); 
-		 var_dump(time());
-	}
 
 
  
-	public function view()
-	{
-		this->index();
 	}
 
-	
+	public function auth()
+	{
+		$auth = file_get_contents(APPURL . 'empauth_json.php?EmpName=' . $_REQUEST['EmpName'] . '&Email='  .$_REQUEST['Email']);
+		$auth = json_decode($auth);
+		if ($auth->authorized == '1')
+		{
+			echo "Authorized";
+			exit;
+		}
+		else
+		{
+			var_dump($auth);
+		}
+	}
 	public function index()
 	{
-		
 		$this->load->view('header');
-		$this->load->view('welcome_message');
+		$this->load->view('login_form');
 		$this->load->view('footer');
 	}
 }
