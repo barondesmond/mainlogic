@@ -6,7 +6,7 @@
        $user_session_id = $CI->session->userdata('logged_in');
 	   
        if($user_session_id  ==  '') {
-          Header("Location: /login/");
+          Header("Location: " . base_url() . "/login/");
 		  exit;
        }
    }
