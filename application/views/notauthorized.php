@@ -1,1 +1,3 @@
-<?php echo $auth['error'] . $auth['EmpName'] . $auth['Email'] ; ?>
+<?php 
+
+echo "Awaiting Email Authorization " . $EmpName  . ' ' . $Email ; ?>

@@ -27,24 +27,13 @@ class Login extends CI_Controller {
 
 	public function auth()
 	{
-	
-		$arrContextOptions=array(
-    "ssl"=>array(
-        "verify_peer"=>false,
-        "verify_peer_name"=>false,
-    ),
-);  
+		$auth = empauth($_REQUEST);
 
-
-		$url = APPURL . 'empauth_json.php?EmpName=' . urlencode($_REQUEST['EmpName']) . '&Email='  . urlencode($_REQUEST['Email']) . '&installationId=' . INSTID;
-		//echo $url;
-		$auth = file_get_contents($url,false, stream_context_create($arrContextOptions));
-		$auth = json_decode($auth);
 		if ($auth->authorized == '1')
 		{
 
 				$newdata = array(
-				  'EmpName'  => $auth->EpmName,
+				  'EmpName'  => $auth->EmpName,
 				   'Email'     => $auth->Email,
 					'EmpNo' => $auth->EmpNo,
 				   'authorized' => $auth->authorized
@@ -55,7 +44,11 @@ class Login extends CI_Controller {
 		}
 		else
 		{
-			$this->load->view('notauthorized', array('data'=>$auth));
+			$this->load->view('header');
+	
+			$this->load->view('notauthorized', $auth);
+			$this->load->view('footer');
+
 		}
 	}
 	public function index()
@@ -63,5 +56,6 @@ class Login extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('login_form');
 		$this->load->view('footer');
+
 	}
 }

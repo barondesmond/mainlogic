@@ -69,7 +69,7 @@ body {
 </head>
 <body>
 <div id="header">
-<? echo $this->session->userdata('Email'); ?>
+<p> <?php  echo $this->session->userdata('EmpNo') . ' ' . $this->session->userdataa('EmpName') . ' ' . $this->session->userdata('Email'); ?> </p>
 </div>
 	<div class="row">
 	<div class="column">
