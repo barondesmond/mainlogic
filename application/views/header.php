@@ -73,13 +73,13 @@ body {
 </div>
 	<div class="row">
 	<div class="column">
-<p>Employee Time to review</p>
-<p>PTO by employee</p>
-<p>Job Assignment</p>
-<p>Rules</p>
-<p>Non-Billable Report</p>
+<p><A HREF="<?php echo base_url(); ?>review">Employee Time to review</A></p>
+<p><A href="<?php echo base_url(); ?>pto">PTO by employee</A></p>
+<p><A HREF="<?php echo base_url(); ?>job">Job Assignment</A></p>
+<p><A HREF="<?php echo base_url(); ?>rules">Rules</A></p>
+<p><A HREF="<?php echo base_url(); ?>nonbillable">Non-Billable Report</A></p>
 <p><img src="/assets/images/serviq.png" width="20%"></p>
-<p>Process Employee Reports</P>
+<p><A HREF="<?php echo base_url(); ?>reports">Process Employee Reports</A></P>
 </div>
 
 <div class="column">
