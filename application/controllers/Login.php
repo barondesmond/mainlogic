@@ -24,7 +24,11 @@ class Login extends CI_Controller {
 
  
 	}
-
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('login', 'refresh');
+	}
 	public function auth()
 	{
 		$auth = empauth($_REQUEST);
@@ -39,7 +43,7 @@ class Login extends CI_Controller {
 				   'authorized' => $auth->authorized
 				);
 				$this->session->set_userdata($newdata);
-				redirect('/');
+				redirect('/', 'refresh');
 		
 		}
 		else

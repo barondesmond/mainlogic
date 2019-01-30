@@ -12,7 +12,7 @@
 
 
 		$url = APPURL . 'empauth_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&installationId=' . INSTID;
-		echo $url;
+		//echo $url;
 		$auth = file_get_contents($url,false, stream_context_create($arrContextOptions));
 		$auth = json_decode($auth);
 	return $auth;

@@ -36,7 +36,7 @@ class Job extends CI_Controller {
 	{
 		
 		$this->load->view('header');
-		$this->load->view('pto');
+		$this->load->view('job');
 		$this->load->view('footer');
 	}
 }

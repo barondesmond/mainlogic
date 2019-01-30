@@ -1,4 +1,4 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<p>Welcome <?php $Email</p>
+<p>Master Screen</p>

@@ -1,8 +1,8 @@
  <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-
-	function empauth($db)
+	function app_api($uri)
 	{
+
 		$arrContextOptions=array(
     "ssl"=>array(
         "verify_peer"=>false,
@@ -11,12 +11,26 @@
 );  
 
 
-		$url = APPURL . 'empauth_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&installationId=' . INSTID;
-		//echo $url;
-		$auth = file_get_contents($url,false, stream_context_create($arrContextOptions));
-		$auth = json_decode($auth);
+		$url = APPURL . $uri;
+		$api = file_get_contents($url,false, stream_context_create($arrContextOptions));
+		$json = json_decode($api);
+	return $json;
+	}
+
+	function empauth($db)
+	{
+		$uri = 'empauth_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&installationId=' . INSTID;
+		$auth = app_api($uri);
 	return $auth;
 	}
+
+	function jobs()
+	{
+		$uri = 'jobs_json.php?latitude=34.253725&longitude=-88.6843';
+		return app_api($uri);
+
+	}
+
 
     function verify_session(){
        $CI = &get_instance();
