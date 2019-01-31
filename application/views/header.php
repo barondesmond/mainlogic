@@ -57,7 +57,11 @@ body {
   display: table;
   clear: both;
 }
-
+.review: {
+  background-color: #808080;
+  layer-background-color: gray;
+  color: black;
+}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {
   .column {
