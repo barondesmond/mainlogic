@@ -18,7 +18,7 @@ foreach ($TimeClock as $event)
 echo $select[$this->session->userdata('EmpNo')]['Dispatch'];
 echo '</SELECT>';
 var_dump($select);
-var_dump($TimeClock);
+
 ?>
 
 

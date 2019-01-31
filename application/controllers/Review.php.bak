@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Review extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,8 +23,6 @@ class Welcome extends CI_Controller {
 		parent::__construct();
         verify_session(); 
 	}
-
-
  
 	public function view()
 	{
@@ -35,8 +33,10 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		
+		$data['jobreview'] = 'jobreview';
+		$data['jobselect'] = 'jobselect';		
 		$this->load->view('header');
-		$this->load->view('welcome_message');
+		$this->load->view('review', $data);
 		$this->load->view('footer');
 	}
 }

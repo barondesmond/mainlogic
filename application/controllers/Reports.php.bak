@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Nonbillable extends CI_Controller {
+class Reports extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -34,9 +34,11 @@ class Nonbillable extends CI_Controller {
 	
 	public function index()
 	{
+		$timeclock = timeclock();
+
 		
 		$this->load->view('header');
-		$this->load->view('nonbillable');
+		$this->load->view('reports', $timeclock);
 		$this->load->view('footer');
 	}
 }

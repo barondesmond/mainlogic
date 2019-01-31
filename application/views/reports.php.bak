@@ -1,1 +1,7 @@
-Whats billable?
+Report what?
+
+<?php
+foreach ($TimeClock as $event)
+{
+	var_dump($event);
+}

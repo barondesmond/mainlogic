@@ -23,8 +23,6 @@ class Review extends CI_Controller {
 		parent::__construct();
         verify_session(); 
 	}
-
-
  
 	public function view()
 	{
@@ -35,8 +33,9 @@ class Review extends CI_Controller {
 	public function index()
 	{
 		
+		$timeclock = timeclock();	
 		$this->load->view('header');
-		$this->load->view('review');
+		$this->load->view('review', $timeclock);
 		$this->load->view('footer');
 	}
 }

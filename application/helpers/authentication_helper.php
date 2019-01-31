@@ -30,7 +30,11 @@
 		return app_api($uri);
 
 	}
-
+	function timeclock()
+	{
+		$uri = 'timeclock_json.php';
+		return app_api($uri);
+	}
 
     function verify_session(){
        $CI = &get_instance();
