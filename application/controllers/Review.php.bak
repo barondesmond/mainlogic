@@ -26,17 +26,22 @@ class Review extends CI_Controller {
  
 	public function view()
 	{
-		return index();
+		return this->index();
 	}
-
 	
+	public function update()
+	{
+		$auth = timeclock_update();
+		$this->load->view('header');
+		$this->load->view('update', $auth);
+		$this->load->view('footer');
+	}
 	public function index()
 	{
 		
-		$data['jobreview'] = 'jobreview';
-		$data['jobselect'] = 'jobselect';		
+		$timeclock = timeclock();	
 		$this->load->view('header');
-		$this->load->view('review', $data);
+		$this->load->view('review', $timeclock);
 		$this->load->view('footer');
 	}
 }

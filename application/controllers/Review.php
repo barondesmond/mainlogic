@@ -26,10 +26,16 @@ class Review extends CI_Controller {
  
 	public function view()
 	{
-		return index();
+		return $this->index();
 	}
-
 	
+	public function update()
+	{
+		$auth = timeclock_update();
+		$this->load->view('header');
+		$this->load->view('update', $auth);
+		$this->load->view('footer');
+	}
 	public function index()
 	{
 		

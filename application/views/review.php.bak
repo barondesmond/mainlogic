@@ -1,5 +1,5 @@
 Review what?
-<form method=post action="<?php echo base_url(); ?>review/index/">
+<form method=post action="<?php echo base_url(); ?>review/update/">
 
 <div class="review">
 <?php
@@ -28,11 +28,11 @@ foreach ($TimeClock as $event)
 			$selected = '';
 		}
 
-		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . '</option>';
+		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
 
 		$Job[$event->EmpNo][$event->Name] = $event->Name .  ' ' . $event->LocName;
-		$Time[$event->EmpNo][$event->Name] .= 'Start: <input type=text name="' . $event->TimeClockID . '[]" value="' . $event->StartDate . '">' ;
-		$Time[$event->EmpNo][$event->Name] .= 'Stop: <input type=text name="' . $event->TimeClockID . '[]" value="' . $event->StopDate . '">'  ;
+		$Time[$event->EmpNo][$event->Name] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
+		$Time[$event->EmpNo][$event->Name] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
 		$Time[$event->EmpNo][$event->Name] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 	
 	}
@@ -48,7 +48,8 @@ echo "<BR>\r\n";
 
 if (isset($_REQUEST['EmpNo']))
 {
-    if (isset($Job[$_REQUEST['EmpNo']]))
+	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
+	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
 		foreach ($Job[$_REQUEST['EmpNo']] as $Name => $LocName)
 		{
@@ -59,7 +60,11 @@ if (isset($_REQUEST['EmpNo']))
 		}
 	}
 }
-
+if (isset($_REQUEST['TimeClockID'] && is_array($_REQUEST['TimeClockID']))
+{
+	var_dump($_REQUEST['TimeClockID']);
+}
+//var_dump($_REQUEST);
 ?>
 <input type=submit value=Next>
 </form>
