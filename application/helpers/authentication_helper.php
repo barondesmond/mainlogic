@@ -68,7 +68,7 @@
 		if (!isset($Time[$event->EmpNo][$event->Name]) )
 		{
 			$Time[$event->EmpNo][$event->Name] = '';
-			$Save[$event->EmpNo][$event->Name][$event->event] = 0;
+			$Save[$event->EmpNo][$event->Name] = '';
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
 		{
