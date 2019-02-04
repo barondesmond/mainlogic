@@ -68,6 +68,7 @@
 		if (!isset($Time[$event->EmpNo][$event->Name]) )
 		{
 			$Time[$event->EmpNo][$event->Name] = '';
+			$Save[$event->EmpNo][$event->Name][$event->event] = 0;
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
 		{
@@ -84,12 +85,14 @@
 		$Time[$event->EmpNo][$event->Name] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
 		$Time[$event->EmpNo][$event->Name] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
 		$Time[$event->EmpNo][$event->Name] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-	
+		$Save[$event->EmpNo][$event->Name][$event->event] += $event->StopTime - $event->StartTime;
 		}
 		}
 	$db['Time'] = $Time;
 	$db['Job']  = $Job;
 	$db['Employee'] = $Employee;
+	$db['Save'] = $Save;
+
 return $db;
 
 }

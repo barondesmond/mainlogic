@@ -82,10 +82,14 @@
 		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
 
 		$Job[$event->EmpNo][$event->Name] = $event->Name .  ' ' . $event->LocName;
+		$Save[$event->EmpNo][$event->Name] .= 'Start: ' . $event->StartDate;
+		$Save[$event->EmpNo][$event->Name] .= 'Stop: ' . $event->StopDate;
+		$Save[$event->EmpNo][$event->Name] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+
 		$Time[$event->EmpNo][$event->Name] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
 		$Time[$event->EmpNo][$event->Name] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
 		$Time[$event->EmpNo][$event->Name] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-		$Save[$event->EmpNo][$event->Name][$event->event] += $event->StopTime - $event->StartTime;
+
 		}
 		}
 	$db['Time'] = $Time;
