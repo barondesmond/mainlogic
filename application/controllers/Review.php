@@ -24,6 +24,14 @@ class Review extends CI_Controller {
         verify_session(); 
 	}
  
+
+	public function save()
+	{
+		$timeclock = timeclock();
+		
+		$this->load->view('save', $timeclock);
+	}
+
 	public function view()
 	{
 		return $this->index();
@@ -32,9 +40,7 @@ class Review extends CI_Controller {
 	public function update()
 	{
 		$auth = timeclock_update();
-		$this->load->view('header');
-		$this->load->view('update', $auth);
-		$this->load->view('footer');
+		redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'], 'refresh');
 	}
 	public function index()
 	{

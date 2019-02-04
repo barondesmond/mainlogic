@@ -19,7 +19,7 @@
   		$url = APPURL . $uri . $auth;
 		$api = file_get_contents($url,false, stream_context_create($arrContextOptions));
 		$json = json_decode($api);
-		if ($empauth == '' && $auth == '' && isset($json->EmpNo) && isset($json->authorized) && $json->authorized == 1)
+		if ($empauth == 'auth' && $auth == '' && isset($json->EmpNo) && isset($json->authorized) && $json->authorized == 1)
 		{
 			$auth = '&EmpNo=' .  $json->EmpNo . '&installationId=' . INSTID;
 		}
@@ -51,10 +51,51 @@
 		$uri = 'timeclock_json.php?timeclock_update=1';
 		if ($_REQUEST['TimeClockID'])
 		{
-			$uri .= '&' . http_build_query($_REQUEST['TimeClockID']);
+			$uri .= '&' . http_build_query($_REQUEST);
 		}
 		return app_api($uri);
 	}
+
+	function timeclock_employee($TimeClock)
+	{
+		foreach ($TimeClock as $event)
+		{
+	
+
+		if ($event->Screen == 'Job')
+		{
+		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
+		if (!isset($Time[$event->EmpNo][$event->Name]) )
+		{
+			$Time[$event->EmpNo][$event->Name] = '';
+			$Save[$event->EmpNo][$event->Name][$event->event] = 0;
+		}
+		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
+		{
+			$selected = 'selected';
+		}
+		else
+		{
+			$selected = '';
+		}
+
+		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
+
+		$Job[$event->EmpNo][$event->Name] = $event->Name .  ' ' . $event->LocName;
+		$Time[$event->EmpNo][$event->Name] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
+		$Time[$event->EmpNo][$event->Name] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
+		$Time[$event->EmpNo][$event->Name] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+		$Save[$event->EmpNo][$event->Name][$event->event] += $event->StopTime - $event->StartTime;
+		}
+		}
+	$db['Time'] = $Time;
+	$db['Job']  = $Job;
+	$db['Employee'] = $Employee;
+	$db['Save'] = $Save;
+
+return $db;
+
+}
 
     function verify_session(){
        $CI = &get_instance();
