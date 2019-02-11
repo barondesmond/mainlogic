@@ -67,7 +67,7 @@
 			{
 				$eva = $screen[$event->Screen];
 			}
-		if ($eva)
+		if (isset(${$eva}))
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 

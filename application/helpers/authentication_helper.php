@@ -71,7 +71,7 @@
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 
-		echo $eva;
+		echo ${$eva};
 		if (!isset($Time[$event->EmpNo][${$eva}]) )
 		{
 			$Time[$event->EmpNo][${$eva}] = '';
