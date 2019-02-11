@@ -55,7 +55,7 @@
 			$uri .= '&' . http_build_query($_REQUEST);
 		}
 		return app_api($uri);
-
+	}
 
 	function timeclock_update()
 	{
