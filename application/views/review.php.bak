@@ -2,7 +2,7 @@ Review what?
 
 <div class="review">
 <?php
-
+date_default_timezone_set('America/Chicago');
 $db = timeclock_employee($TimeClock);
 
 $Time = $db['Time'];
