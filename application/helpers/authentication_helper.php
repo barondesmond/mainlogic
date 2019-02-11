@@ -50,7 +50,7 @@
 	{
 
 		$uri = 'timeclock_json.php?timeclock_add=1';
-		if ($_REQUEST['TimeClockID'])
+		if ($_REQUEST['StartDate'] && $_REQUEST['StopDate'] && $_REQUEST['EmpNo'])
 		{
 			$uri .= '&' . http_build_query($_REQUEST);
 		}
