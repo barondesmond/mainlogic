@@ -46,6 +46,17 @@
 		return app_api($uri);
 	}
 
+	function timeclock_add()
+	{
+
+		$uri = 'timeclock_json.php?timeclock_add=1';
+		if ($_REQUEST['TimeClockID'])
+		{
+			$uri .= '&' . http_build_query($_REQUEST);
+		}
+		return app_api($uri);
+
+
 	function timeclock_update()
 	{
 		$uri = 'timeclock_json.php?timeclock_update=1';
