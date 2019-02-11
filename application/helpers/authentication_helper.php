@@ -75,7 +75,7 @@
 		{
 			$Time[$event->EmpNo][$event->Screen] = '';
 			$Save[$event->EmpNo][$event->Screen] = '';
-			$Job[$event->EmpNo][$event->Screen];
+			$Job[$event->EmpNo][$event->Screen] = '';
 
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
