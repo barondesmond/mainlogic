@@ -1,5 +1,4 @@
 Review what?
-<form method=post action="<?php echo base_url(); ?>review/update/">
 
 <div class="review">
 <?php
@@ -25,9 +24,20 @@ echo "<BR>\r\n";
 
 if (isset($_REQUEST['EmpNo']))
 {
+	echo '<form method=post action="' . echo base_url(); . 'review/add/">';
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
+	echo 'Add Type<input type=select name="Screen"><OPTION>Job</OPTION><OPTION>Dispatch</OPTION><OPTION>Employee</OPTION>';
+	echo 'Job/Dispatch#<input type=text name="JD">';
+	echo '<inpt type=submit value="Add"></form>';
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
+		if (!isset($form))
+		{
+			$form =  '<form method=post action="' . echo base_url();  . 'review/update/">';
+			echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
+			echo $form;
+		}
+
 		foreach ($Job[$_REQUEST['EmpNo']] as $Name => $LocName)
 		{
 			echo '<p>' . $LocName . "<BR>\r\n";
@@ -35,6 +45,8 @@ if (isset($_REQUEST['EmpNo']))
 			echo $Time[$_REQUEST['EmpNo']][$Name];
 			echo '</p>';
 		}
+		echo '<input type=submit value="Update"> </form>';
+
 	}
 }
 if (isset($_REQUEST['TimeClockID']) && is_array($_REQUEST['TimeClockID']))
@@ -43,7 +55,5 @@ if (isset($_REQUEST['TimeClockID']) && is_array($_REQUEST['TimeClockID']))
 }
 //var_dump($_REQUEST);
 ?>
-<input type=submit value=Next>
-</form>
 
 </div>
