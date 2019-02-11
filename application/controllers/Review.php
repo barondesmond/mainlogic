@@ -24,6 +24,13 @@ class Review extends CI_Controller {
         verify_session(); 
 	}
  
+	public function add()
+	{
+
+		$timeclock = timeclock_add();
+		redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'], 'refresh');
+
+	}
 
 	public function save()
 	{
