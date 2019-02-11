@@ -28,7 +28,7 @@ if (isset($_REQUEST['EmpNo']))
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 	echo 'Add Type<select name="Screen"><OPTION>Job</OPTION><OPTION>Dispatch</OPTION><OPTION>Employee</OPTION></SELECT>';
 	echo 'Job/Dispatch#<input type=text name="JD">';
-	echo '<inpt type=submit value="Add"></form>';
+	echo '<input type=submit value="Add"></form>';
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
 		if (!isset($form))
