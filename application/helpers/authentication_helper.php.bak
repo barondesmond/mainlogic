@@ -58,7 +58,7 @@
 
 	function timeclock_employee($TimeClock)
 	{
-		$screen = array('Job' => '$event->Name', 'Dispatch' => '$event->Dispatch', 'Employee' => '')l
+		$screen = array('Job' => '$event->Name', 'Dispatch' => '$event->Dispatch', 'Employee' => '');
 
 		foreach ($TimeClock as $event)
 		{
