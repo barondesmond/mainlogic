@@ -28,7 +28,7 @@ if (isset($_REQUEST['EmpNo']))
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 	echo 'Add Type<select name="Screen"><OPTION>Job</OPTION><OPTION>Dispatch</OPTION><OPTION>Employee</OPTION></SELECT>';
 	echo 'Job/Dispatch#<input type=text name="JD">';
-	echo "<BR>\r\n" . 'Start Date <input type=text name="StartDate"> Stop Date <input type=text name="StopDate">';
+	echo "<BR>\r\n" . 'Start Date <input type=text name="StartDate" value="' . date("Y:m:d H:i:s", time()) . '"> Stop Date <input type=text name="StopDate" value="' . date("Y:m:d H:i:s", time()) . '">';
 	echo ' <input type=submit value="Add"></form>';
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
