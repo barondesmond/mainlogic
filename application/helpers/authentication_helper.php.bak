@@ -64,12 +64,11 @@
 		{
 	
 			$eva = $screen[$event->Screen];
-		if (1)
+		if ($eva)
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 
 		echo $eva;
-		exit;
 		if (!isset($Time[$event->EmpNo][${$eva}]) )
 		{
 			$Time[$event->EmpNo][${$eva}] = '';
