@@ -67,7 +67,7 @@
 		{
 	
 
-		if (isset($event->StartTime) && isset($event-StopTime))
+		if (isset($event->StartTime) && isset($event->StopTime))
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 
