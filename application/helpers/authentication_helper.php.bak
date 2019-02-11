@@ -63,7 +63,10 @@
 		foreach ($TimeClock as $event)
 		{
 	
-			$eva = $screen[$event->Screen];
+			if (isset($event->Screen) && isset($screen[$event->Screen]))
+			{
+				$eva = $screen[$event->Screen];
+			}
 		if ($eva)
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
