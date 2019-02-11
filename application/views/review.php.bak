@@ -24,7 +24,7 @@ echo "<BR>\r\n";
 
 if (isset($_REQUEST['EmpNo']))
 {
-	echo '<form method=post action="' . echo base_url(); . 'review/add/">';
+	echo '<form method=post action="' . base_url() .  'review/add/">';
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 	echo 'Add Type<input type=select name="Screen"><OPTION>Job</OPTION><OPTION>Dispatch</OPTION><OPTION>Employee</OPTION>';
 	echo 'Job/Dispatch#<input type=text name="JD">';
@@ -33,7 +33,7 @@ if (isset($_REQUEST['EmpNo']))
 	{
 		if (!isset($form))
 		{
-			$form =  '<form method=post action="' . echo base_url();  . 'review/update/">';
+			$form =  '<form method=post action="' .  base_url()  . 'review/update/">';
 			echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 			echo $form;
 		}
