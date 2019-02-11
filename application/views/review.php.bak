@@ -20,7 +20,7 @@ foreach ($Employee as $Emp)
 	echo $Emp;
 }
 echo '</select>';
-echo "<BR>\r\n";
+echo "<BR><p>\r\n";
 
 if (isset($_REQUEST['EmpNo']))
 {
