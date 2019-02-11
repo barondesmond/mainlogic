@@ -58,17 +58,19 @@
 
 	function timeclock_employee($TimeClock)
 	{
+		$screen = array('Job' => '$event->Name', 'Dispatch' => '$event->Dispatch', 'Employee' => '')l
+
 		foreach ($TimeClock as $event)
 		{
 	
-
-		if ($event->Screen == 'Job')
+			$eva = $screen($event->Screen);
+		if (1)
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
-		if (!isset($Time[$event->EmpNo][$event->Name]) )
+		if (!isset($Time[$event->EmpNo][${$eva}]) )
 		{
-			$Time[$event->EmpNo][$event->Name] = '';
-			$Save[$event->EmpNo][$event->Name] = '';
+			$Time[$event->EmpNo][${$eva}] = '';
+			$Save[$event->EmpNo][${$eva}] = '';
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
 		{
@@ -81,14 +83,14 @@
 
 		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
 
-		$Job[$event->EmpNo][$event->Name] = $event->Name .  ' ' . $event->LocName;
-		$Save[$event->EmpNo][$event->Name] .= 'Start: ' . $event->StartDate . ' ';
-		$Save[$event->EmpNo][$event->Name] .= 'Stop: ' . $event->StopDate . ' ';
-		$Save[$event->EmpNo][$event->Name] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+		$Job[$event->EmpNo][${$eva}] = ${$eva} .  ' ' . $event->LocName;
+		$Save[$event->EmpNo][${$eva}] .= 'Start: ' . $event->StartDate . ' ';
+		$Save[$event->EmpNo][${$eva}] .= 'Stop: ' . $event->StopDate . ' ';
+		$Save[$event->EmpNo][${$eva}] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 
-		$Time[$event->EmpNo][$event->Name] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
-		$Time[$event->EmpNo][$event->Name] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
-		$Time[$event->EmpNo][$event->Name] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+		$Time[$event->EmpNo][${$eva}] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
+		$Time[$event->EmpNo][${$eva}] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
+		$Time[$event->EmpNo][${$eva}] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 
 		}
 		}
