@@ -28,7 +28,7 @@ class Review extends CI_Controller {
 	{
 
 		$timeclock = timeclock_add();
-		redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'], 'refresh');
+		redirect('review/index/?EmpNo=' . $_REQUEST['EmpNo'], 'refresh');
 
 	}
 
