@@ -99,22 +99,22 @@
 		}
 
 		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
-
-		//$Job[$event->EmpNo][$event->Screen] .= $event->Name . $event->Dispatch .  ' ' . $event->LocName;
-		$Save[$event->EmpNo][$event->Screen] .= 'Start: ' . $event->StartDate . ' ';
-		$Save[$event->EmpNo][$event->Screen] .= 'Stop: ' . $event->StopDate . ' ';
-		$Save[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+		$key = $event->Name . $event->Dispatch;
+		$Job[$event->EmpNo][$event->Screen][$key] = $event->Name . $event->Dispatch .  ' ' . $event->LocName;
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			if ($event->Screen != 'Dispatch')
 			{
-				$Time[$event->EmpNo][$event->Screen] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
-				$Time[$event->EmpNo][$event->Screen] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
-				$Time[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			}
 			else
 			{
-				$Time[$event->EmpNo][$event->Screen] .= 'Start: ' . $event->StartDate . ' ';
-				$Time[$event->EmpNo][$event->Screen] .= 'Stop: ' . $event->StopDate . ' ';
-				$Time[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			}
 		}
 		}
