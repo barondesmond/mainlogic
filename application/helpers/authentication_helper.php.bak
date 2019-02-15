@@ -83,7 +83,7 @@
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 		$key = $event->Name . $event->Dispatch;
 
-		if (!isset($Time[$event->EmpNo][$event->Screen]) )
+		if (!isset($Time[$event->EmpNo][$event->Screen][$key]) )
 		{
 			$Time[$event->EmpNo][$event->Screen][$key] = '';
 			$Save[$event->EmpNo][$event->Screen][$key] = '';

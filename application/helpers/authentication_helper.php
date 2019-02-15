@@ -82,7 +82,10 @@
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 		$key = $event->Name . $event->Dispatch;
-
+		if ($key == '')
+		{
+			$key = $event->EmpNo;
+		}
 		if (!isset($Time[$event->EmpNo][$event->Screen][$key]) )
 		{
 			$Time[$event->EmpNo][$event->Screen][$key] = '';
@@ -100,7 +103,6 @@
 		}
 
 		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
-		$key = $event->Name . $event->Dispatch;
 		$Job[$event->EmpNo][$event->Screen][$key] = $event->Name . $event->Dispatch .  ' ' . $event->LocName;
 		$Save[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
 		$Save[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
