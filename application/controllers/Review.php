@@ -49,7 +49,7 @@ class Review extends CI_Controller {
 	public function update()
 	{
 		$auth = timeclock_update();
-		//redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'], 'refresh');
+		redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'], 'refresh');
 	}
 	public function index()
 	{
