@@ -32,13 +32,10 @@ if (isset($_REQUEST['EmpNo']))
 	echo ' <input type=submit value="Add"></form>';
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
-		if (!isset($form))
-		{
-			$form =  '<form method=post action="' .  base_url()  . 'review/update/">';
-			echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
-			echo $form;
-		}
 
+		echo  '<form method=post action="' .  base_url()  . 'review/update/">';
+		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
+		
 		foreach ($Job[$_REQUEST['EmpNo']] as $Name => $LocName)
 		{
 			echo '<p>' . $LocName . "<BR>\r\n";
