@@ -115,7 +115,7 @@
 				$Time[$event->EmpNo][$event->Screen] .= 'Start: ' . $event->StartDate . ' ';
 				$Time[$event->EmpNo][$event->Screen] .= 'Stop: ' . $event->StopDate . ' ';
 				$Tave[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-
+			}
 		}
 		}
 	$db['Time'] = $Time;
