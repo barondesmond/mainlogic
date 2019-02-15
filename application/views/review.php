@@ -40,7 +40,7 @@ if (isset($_REQUEST['EmpNo']))
 		{
 			foreach ($jd as $key=>$JobDisp)
 			{
-				echo '<p>'  $screen . ' ' . $JobDisp .  "<BR>\r\n";
+				echo '<p>' . $screen . ' ' . $JobDisp .  "<BR>\r\n";
 				echo "Employee Input<BR>\r\n";
 				echo $Time[$_REQUEST['EmpNo']][$screen][$JobDisp];
 				echo '</p>';
