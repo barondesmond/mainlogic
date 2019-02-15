@@ -18,15 +18,15 @@ echo "<BR><p>\r\n";
 if (isset($_REQUEST['EmpNo']))
 {
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
-	if (isset($Job[$_REQUEST['EmpNo']]))
-	{
-		foreach ($Job[$_REQUEST['EmpNo']] as $Name => $LocName)
+		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
 		{
-			echo '<p>' . $LocName . "<BR>\r\n";
-			echo "Adjusted<BR>\r\n";
-			echo $Save[$_REQUEST['EmpNo']][$Name];
-			echo '</p>';
+			foreach ($jd as $key=>$JobDisp)
+			{
+				echo '<p>' . $screen . ' ' . $JobDisp .  "<BR>\r\n";
+				echo "Employee Input<BR>\r\n";
+				echo $Save[$_REQUEST['EmpNo']][$screen][$key];
+				echo '</p>';
+			}
 		}
-	}
 }
 ?>
