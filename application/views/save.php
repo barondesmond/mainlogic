@@ -23,7 +23,6 @@ if (isset($_REQUEST['EmpNo']))
 			foreach ($jd as $key=>$JobDisp)
 			{
 				echo '<p>' . $screen . ' ' . $JobDisp .  "<BR>\r\n";
-				echo "Employee Input<BR>\r\n";
 				echo $Save[$_REQUEST['EmpNo']][$screen][$key];
 				echo '</p>';
 			}
