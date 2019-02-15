@@ -81,12 +81,13 @@
 		if (isset($event->StartTime) && isset($event->StopTime))
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
+		$key = $event->Name . $event->Dispatch;
 
 		if (!isset($Time[$event->EmpNo][$event->Screen]) )
 		{
-			$Time[$event->EmpNo][$event->Screen] = '';
-			$Save[$event->EmpNo][$event->Screen] = '';
-			$Job[$event->EmpNo][$event->Screen] = '';
+			$Time[$event->EmpNo][$event->Screen][$key] = '';
+			$Save[$event->EmpNo][$event->Screen][$key] = '';
+			$Job[$event->EmpNo][$event->Screen][$key] = '';
 
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
