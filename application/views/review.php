@@ -36,12 +36,15 @@ if (isset($_REQUEST['EmpNo']))
 		echo  '<form method=post action="' .  base_url()  . 'review/update/">';
 		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 		
-		foreach ($Job[$_REQUEST['EmpNo']] as $Name => $LocName)
+		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
 		{
-			echo '<p>' . $Name . ' ' . $LocName . "<BR>\r\n";
-			echo "Employee Input<BR>\r\n";
-			echo $Time[$_REQUEST['EmpNo']][$Name];
-			echo '</p>';
+			foreach ($jd as $key=>$JobDisp)
+			{
+				echo '<p>'  $screen . ' ' . $JobDisp .  "<BR>\r\n";
+				echo "Employee Input<BR>\r\n";
+				echo $Time[$_REQUEST['EmpNo']][$screen][$JobDisp];
+				echo '</p>';
+			}
 		}
 		echo '<input type=submit value="Update"> </form>';
 

@@ -100,7 +100,7 @@
 
 		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
 
-		$Job[$event->EmpNo][$event->Screen] .= $event->Name . $event->Dispatch .  ' ' . $event->LocName;
+		//$Job[$event->EmpNo][$event->Screen] .= $event->Name . $event->Dispatch .  ' ' . $event->LocName;
 		$Save[$event->EmpNo][$event->Screen] .= 'Start: ' . $event->StartDate . ' ';
 		$Save[$event->EmpNo][$event->Screen] .= 'Stop: ' . $event->StopDate . ' ';
 		$Save[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
@@ -114,7 +114,7 @@
 			{
 				$Time[$event->EmpNo][$event->Screen] .= 'Start: ' . $event->StartDate . ' ';
 				$Time[$event->EmpNo][$event->Screen] .= 'Stop: ' . $event->StopDate . ' ';
-				$Tive[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+				$Time[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			}
 		}
 		}

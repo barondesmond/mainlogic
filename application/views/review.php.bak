@@ -38,7 +38,7 @@ if (isset($_REQUEST['EmpNo']))
 		
 		foreach ($Job[$_REQUEST['EmpNo']] as $Name => $LocName)
 		{
-			echo '<p>' . $Name . ' ' $LocName . "<BR>\r\n";
+			echo '<p>' . $Name . ' ' . $LocName . "<BR>\r\n";
 			echo "Employee Input<BR>\r\n";
 			echo $Time[$_REQUEST['EmpNo']][$Name];
 			echo '</p>';
