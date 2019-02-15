@@ -114,7 +114,7 @@
 			{
 				$Time[$event->EmpNo][$event->Screen] .= 'Start: ' . $event->StartDate . ' ';
 				$Time[$event->EmpNo][$event->Screen] .= 'Stop: ' . $event->StopDate . ' ';
-				$Tive[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+				$Time[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			}
 		}
 		}
