@@ -104,10 +104,17 @@
 		$Save[$event->EmpNo][$event->Screen] .= 'Start: ' . $event->StartDate . ' ';
 		$Save[$event->EmpNo][$event->Screen] .= 'Stop: ' . $event->StopDate . ' ';
 		$Save[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-
-		$Time[$event->EmpNo][$event->Screen] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
-		$Time[$event->EmpNo][$event->Screen] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
-		$Time[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+			if ($event->Screen != 'Dispatch')
+			{
+				$Time[$event->EmpNo][$event->Screen] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
+				$Time[$event->EmpNo][$event->Screen] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
+				$Time[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+			}
+			else
+			{
+				$Time[$event->EmpNo][$event->Screen] .= 'Start: ' . $event->StartDate . ' ';
+				$Time[$event->EmpNo][$event->Screen] .= 'Stop: ' . $event->StopDate . ' ';
+				$Tave[$event->EmpNo][$event->Screen] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 
 		}
 		}
