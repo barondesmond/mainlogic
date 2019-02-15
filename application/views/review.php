@@ -42,7 +42,7 @@ if (isset($_REQUEST['EmpNo']))
 			{
 				echo '<p>' . $screen . ' ' . $JobDisp .  "<BR>\r\n";
 				echo "Employee Input<BR>\r\n";
-				echo $Time[$_REQUEST['EmpNo']][$screen][$JobDisp];
+				echo $Time[$_REQUEST['EmpNo']][$screen][$key];
 				echo '</p>';
 			}
 		}
