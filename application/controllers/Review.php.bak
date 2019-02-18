@@ -51,6 +51,16 @@ class Review extends CI_Controller {
 		$auth = timeclock_update();
 		redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'], 'refresh');
 	}
+
+	public function timesheet()
+	{
+		$timeclock = timeclock();
+		$timesheet = timesheet();
+		$this->load->view('header');
+		$this->load->view('timesheet', array_merge($timeclock, $timesheet));
+		$this->load->view('footer');
+	}
+
 	public function index()
 	{
 		
