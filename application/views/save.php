@@ -17,6 +17,8 @@ echo '</select>';
 echo "<BR><p>\r\n";
 if (isset($_REQUEST['EmpNo']))
 {
+	echo '<form method=get action=/review/timesheet/>';
+
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
 		{
@@ -27,5 +29,7 @@ if (isset($_REQUEST['EmpNo']))
 				echo '</p>';
 			}
 		}
+    echo '<input type=submit value="Next"></form>';
 }
+
 ?>
