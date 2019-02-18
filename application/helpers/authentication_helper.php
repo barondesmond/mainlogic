@@ -40,6 +40,12 @@
 		return app_api($uri);
 
 	}
+
+	function timesheet()
+	{
+		$uri = 'timesheet_json.php?timesheet=1';
+		return app_api($uri);
+	}
 	function timeclock()
 	{
 		$uri = 'timeclock_json.php?timeclock=1';
