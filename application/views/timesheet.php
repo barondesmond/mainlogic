@@ -1,5 +1,5 @@
 TimeSheet and TimeClock Together Again
-
+<p>
 <?php
 	$db = timeclock_employee($TimeClock);
 	$Job = $db['Job'];
