@@ -56,9 +56,11 @@ class Review extends CI_Controller {
 	{
 		$timeclock = timeclock();
 		$timesheet = timesheet();
-		var_dump($timeclock);
+		$tt = array_merge($timeclock, $timesheet);
+		var_dump($tt);
+
 		$this->load->view('header');
-		$this->load->view('timesheet', array_merge($timeclock, $timesheet));
+		$this->load->view('timesheet', $tt);
 		$this->load->view('footer');
 	}
 
