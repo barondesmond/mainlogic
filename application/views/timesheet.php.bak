@@ -53,10 +53,16 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
 	hour_head();
-	foreach ($Time[$_REQUEST['EmpNo']] as $date=>$row)
+	foreach ($Time[$_REQUEST['EmpNo']] as $key)
 	{
-		var_dump($row);
-		hour_row($row);
+		foreach ($key as $date)
+		{
+			foreach ($date as $row)
+			{
+				var_dump($row);
+				hour_row($row);
+			}
+		}
 	}
 	echo '</table>';
 

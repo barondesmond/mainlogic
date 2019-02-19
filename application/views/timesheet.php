@@ -59,7 +59,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		{
 			foreach ($date as $row)
 			{
-				var_dump($row);
+				print_r($row);
 				hour_row($row);
 			}
 		}
