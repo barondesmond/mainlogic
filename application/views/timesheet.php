@@ -43,12 +43,12 @@ echo '</select>';
 echo "<BR><p>\r\n";
 
 //Wage Item, Job, JobClass, Date1-Date7, Total, Department, Dispatch, Memo, WorkmansCompCode, Processed
-if (isset($_REQUEST['EmpNo']))
+if (isset($_REQUEST['EmpNo']) && isset($TimeSheet[$_REQUEST['EmpNo'])
 {
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
 	hour_head();
-	foreach ($Timesheet[$_REQUEST['EmpNo']] as $row)
+	foreach ($TimeSheet[$_REQUEST['EmpNo']] as $row)
 	{
 		hour_row($row);
 	}
