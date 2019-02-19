@@ -3,7 +3,7 @@ TimeSheet and TimeClock Together Again
 <?php
 date_default_timezone_set('America/Chicago');
 	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'JobClass', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'WorkmansCompCode'=>'PRWorkComp');
-	$select = array('WageItem'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'SlDept', 'WorkmansCompCode'=>'PRWorkComp');
+	$select = array('WageItem'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'DeptID', 'WorkmansCompCode'=>'PRWorkComp');
 	$timekey['PRPayItem']['ItemID'] = 'Name';
 	$timekey['JobClass']['JobClassID'] = 'Name';
 	$timekey['SlDept']['DeptID'] = 'Desc';
@@ -50,7 +50,7 @@ function hour_row($db, $head, $select)
 		elseif (isset($db->$select[$key]))
 		{
 				timesheet_select_key($db->ID, $key, $db->$select[$key]);
-				if (isset($db->$display) && $display != $key)
+				if (isset($db->$display) && $display != $select[$key])
 				{
 					echo $db->$display;
 				}		
