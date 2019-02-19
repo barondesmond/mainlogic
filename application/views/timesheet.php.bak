@@ -40,6 +40,7 @@ function hour_row($db, $head)
 		{
 	
 				echo '<input type=hidden name=timesheet[' . $db->ID . '][' . $db->$key . ']>';
+				echo $db->$display;
 
 			
 		}
