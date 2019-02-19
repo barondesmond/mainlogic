@@ -31,7 +31,10 @@ function hour_row($db)
 $db = timesheet_employee($TimeSheet);
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
-
+if ($db['TimeSheet'])
+{
+	$TimeSheet = $db['TimeSheet'];
+}
 //Employee Select
 echo 'Employee <select name="EmpNo" onchange="javascript:location.href = this.value;">';
 
