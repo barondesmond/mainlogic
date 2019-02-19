@@ -22,13 +22,22 @@ function hour_head($head)
 	echo '</tr>';
 }
 
-function timesheet_select_key($id, $key, $keydb)
+function timesheet_select_key($id, $key, $keydb, $selected='')
 {
 
 	echo "<select name=timesheet[$id][$key]>";
 	foreach ($keydb as $k=>$v)
 	{
-		echo "<option value=$k>$v</option>";
+		if ($k == $selected)
+		{
+			$sel = " selected ";
+		}
+		else
+		{
+			$sel = '';
+		}
+		echo "<option value='$k' $sel>$v</option>";
+
 	}
 	echo "</select>";
 }
@@ -49,7 +58,7 @@ function hour_row($db, $head, $select)
 		}
 		elseif (isset($db->$select[$key]))
 		{
-				timesheet_select_key($db->ID, $key, $db->$select[$key]);
+				timesheet_select_key($db->ID, $key, $db->$select[$key], $db->$display);
 				if (isset($db->$display) && $display != $select[$key])
 				{
 					echo $db->$display;
