@@ -55,6 +55,7 @@ if (isset($_REQUEST['EmpNo']) && isset($TimeSheet[$_REQUEST['EmpNo']]))
 	hour_head();
 	foreach ($TimeSheet[$_REQUEST['EmpNo']] as $date=>$row)
 	{
+		var_dump($row);
 		hour_row($row);
 	}
 	echo '</table>';
