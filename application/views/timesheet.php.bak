@@ -28,7 +28,16 @@ function timesheet_select_key($id, $key, $keydb, $selected='')
 	echo "<select name=timesheet[$id][$key]>";
 	foreach ($keydb as $k=>$v)
 	{
-		echo "<option value=$k>$v</option>";
+		if ($k == $selected)
+		{
+			$sel = " selected ";
+		}
+		else
+		{
+			$sel = '';
+		}
+		echo "<option value='$k' $sel>$v</option>";
+
 	}
 	echo "</select>";
 }
