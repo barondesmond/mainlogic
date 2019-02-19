@@ -3,7 +3,7 @@ TimeSheet and TimeClock Together Again
 <?php
 date_default_timezone_set('America/Chicago');
 	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'JobClass', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'WorkmansCompCode'=>'PRWorkComp');
-	$select = array('WageItem'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'SlDeprt', 'WorkmansCompCode'=>'PRWorkComp');
+	$select = array('WageItem'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'SlDept', 'WorkmansCompCode'=>'PRWorkComp');
 	$timekey['PRPayItem']['ItemID'] = 'Name';
 	$timekey['JobClass']['JobClassID'] = 'Name';
 	$timekey['SlDept']['DeptID'] = 'Desc';
