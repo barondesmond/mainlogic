@@ -46,6 +46,70 @@
 		$uri = 'timesheet_json.php?timesheet=1';
 		return app_api($uri);
 	}
+
+
+	function timesheet_employee($TimeClock)
+	{
+		$screen = array('Job' => '$event->Job', 'Dispatch' => '$event->Dispatch', 'Employee' => '');
+		$Time = array();
+		$Save = array();
+		$Job = array();
+		$Employee = array();
+		foreach ($TimeClock as $event)
+		{
+	
+
+		if (isset($event->StartTime) && isset($event->StopTime))
+		{
+		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
+		$key = $event->Job . $event->Dispatch;
+		if ($key == '')
+		{
+			$key = $event->EmpNo;
+		}
+		if (!isset($Time[$event->EmpNo][$event->Screen][$key]) )
+		{
+			$Time[$event->EmpNo][$event->Screen][$key] = '';
+			$Save[$event->EmpNo][$event->Screen][$key] = '';
+			$Job[$event->EmpNo][$event->Screen][$key] = '';
+
+		}
+		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
+		{
+			$selected = 'selected';
+		}
+		else
+		{
+			$selected = '';
+		}
+
+		$Employee[$event->EmpNo] = '<option value="/review/index/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+			if ($event->Screen != 'Dispatch')
+			{
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+			}
+			else
+			{
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+			}
+		}
+		}
+	$db['Time'] = $Time;
+	$db['Employee'] = $Employee;
+	$db['Save'] = $Save;
+
+return $db;
+
+}
+	
+	
 	function timeclock()
 	{
 		$uri = 'timeclock_json.php?timeclock=1';
