@@ -64,12 +64,21 @@
 		{
 			$key = $event->EmpNo;
 		}
-		if (!isset($Time[$event->EmpNo][$event->Screen][$key]) )
+		$date = date("M d", $event-StartTime);
+		$event->Hours = round(($event->StopTime - $event->StartTime) / (60*60), 2);
+		$event->Date = date("M d Y", $event->StartTime) . ' 12:00:00:00 AM';
+		if (!isset($Time[$event->EmpNo][$key][$date]) )
 		{
-			$Time[$event->EmpNo][$event->Screen][$key] = '';
-			$Save[$event->EmpNo][$event->Screen][$key] = '';
+			$Time[$event->EmpNo][$key][$date] = $event;
 
 		}
+		else
+		{
+			$rec = $Time[$event->EmpNo][$key][$date];
+			$event->Hours = $event->Hours + $rec->Hours;
+			$Time[$event->EmpNo][$key][$date] = $event;
+		}
+
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
 		{
 			$selected = 'selected';
@@ -85,6 +94,7 @@
 		}
 		}
 	$db['Employee'] = $Employee;
+	$db['TimeSheet'] = $Time;
 
 return $db;
 
