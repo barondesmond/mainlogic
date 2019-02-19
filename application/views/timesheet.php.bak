@@ -48,9 +48,9 @@ if (isset($_REQUEST['EmpNo']))
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
 	hour_head();
-	foreach ($Timesheet[$_REQUEST['EmpNo']] as $db)
+	foreach ($Timesheet[$_REQUEST['EmpNo']] as $row)
 	{
-		hour_row($db);
+		hour_row($row);
 	}
 	echo '</table>';
 
