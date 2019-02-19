@@ -9,7 +9,7 @@ function hour_head()
 	echo '<td>Employee</td>';
 	echo ' <td>Wage Item</td><td>Job</td><td>JobClass</td>';
 	echo '<td>Date</td>';
-	echo '<td>Hours</td><td>Department</td><td>Dispatch</td><td>Memo</td><td>WorkmansCompCode</td><td>Processed</td>';
+	echo '<td>Hours</td><td>Department</td><td>Dispatch</td><td>Memo</td><td>WorkmansCompCode</td>';
 	echo '</tr>';
 }
 

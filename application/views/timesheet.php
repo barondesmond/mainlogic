@@ -30,6 +30,12 @@ function hour_row($db)
 	echo '</tr>';
 }
 
+foreach ($PRPayItem as $pr)
+{
+	print_r($pr);
+}
+
+
 $db = timesheet_employee($TimeSheet);
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
@@ -38,6 +44,7 @@ if ($db['Time'])
 	$Time = $db['Time'];
 }
 //Employee Select
+
 echo 'Employee <select name="EmpNo" onchange="javascript:location.href = this.value;">';
 
 foreach ($Employee as $Emp)
