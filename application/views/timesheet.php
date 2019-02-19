@@ -57,12 +57,12 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
 	hour_head();
-	foreach ($Time[$_REQUEST['EmpNo']] as $key)
+	foreach ($Time[$_REQUEST['EmpNo']] as $key
 	{
 		foreach ($key as $date => $row)
 		{
-				$ID = md5($_REQUEST['EmpNo']) . $key . $date;
-				$row['ID'] = $ID;
+				$ID = md5($row->EmpNo . $row->JobID . $row->Date);
+				$row->ID = $ID;
 				if (isset($row->Hours) && isset($row->Date))
 				{
 					hour_row($row);

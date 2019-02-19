@@ -61,7 +61,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	{
 		foreach ($key as $date => $row)
 		{
-				$ID = md5($_REQUES['EmpNo']) . $key . $date;
+				$ID = md5($_REQUEST['EmpNo']) . $key . $date;
 				$row['ID'] = $ID;
 				if (isset($row->Hours) && isset($row->Date))
 				{
