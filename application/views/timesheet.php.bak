@@ -33,9 +33,9 @@ function hour_row($db)
 $db = timesheet_employee($TimeSheet);
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
-if ($db['TimeSheet'])
+if ($db['Time'])
 {
-	$TimeSheet = $db['TimeSheet'];
+	$Time = $db['Time'];
 }
 //Employee Select
 echo 'Employee <select name="EmpNo" onchange="javascript:location.href = this.value;">';
@@ -48,12 +48,12 @@ echo '</select>';
 echo "<BR><p>\r\n";
 
 //Wage Item, Job, JobClass, Date1-Date7, Total, Department, Dispatch, Memo, WorkmansCompCode, Processed
-if (isset($_REQUEST['EmpNo']) && isset($TimeSheet[$_REQUEST['EmpNo']]))
+if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 {
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
 	hour_head();
-	foreach ($TimeSheet[$_REQUEST['EmpNo']] as $date=>$row)
+	foreach ($Time[$_REQUEST['EmpNo']] as $date=>$row)
 	{
 		var_dump($row);
 		hour_row($row);
