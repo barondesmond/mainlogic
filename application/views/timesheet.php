@@ -19,6 +19,6 @@ echo '</select>';
 echo "<BR><p>\r\n";
 if (isset($_REQUEST['EmpNo']))
 {
-
+print_r($TimeClock);
 
 }
