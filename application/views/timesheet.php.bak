@@ -1,7 +1,7 @@
 TimeSheet and TimeClock Together Again
 <p>
 <?php
-$db = timeclock_employee($TimeSheet);
+$db = timesheet_employee($TimeSheet);
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
 
