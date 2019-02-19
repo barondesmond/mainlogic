@@ -94,7 +94,7 @@
 		}
 		}
 	$db['Employee'] = $Employee;
-	$db['TimeSheet'] = $Time;
+	$db['Time'] = $Time;
 
 return $db;
 
