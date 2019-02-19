@@ -2,24 +2,23 @@ TimeSheet and TimeClock Together Again
 <p>
 <?php
 date_default_timezone_set('America/Chicago');
+	$head = array('ID', 'EmpNo'=>'Employee', 'WageItem' => 'PRPayItem', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'Dispatch', 'Memo'=>'Desc', 'WorkcompID'=>'PRWorkComp');
 
-function hour_head()
+function hour_head($head)
 {
 		echo '	<tr>';
-	echo '<td>ID</TD>';
-	echo '<td>Employee</td>';
-	echo ' <td>Wage Item</td><td>Job</td><td>JobClass</td>';
-	echo '<td>Date</td>';
-	echo '<td>Hours</td><td>Department</td><td>Dispatch</td><td>Memo</td><td>WorkmansCompCode</td>';
+		foreach ($head as $key=>$value)
+		{
+			echo '<td>' . $key . '</td>';
+		}
 	echo '</tr>';
 }
 
-function hour_row($db)
+function hour_row($db, $head)
 {
-	$array = array('ID', 'EmpNo'=>'Employee', 'WageItem' => 'PRPayItem', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'Dispatch', 'Memo'=>'Desc', 'WorkcompID'=>'PRWorkComp');
 	echo '<tr>';
 
-	foreach ($array as $key=>$display)
+	foreach ($head as $key=>$display)
 	{
 		echo '<td>';
 		if (isset($db->$key))
@@ -64,7 +63,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 {
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
-	hour_head();
+	hour_head($head);
 	foreach ($Time[$_REQUEST['EmpNo']] as $key)
 	{
 		foreach ($key as $date => $row)
@@ -73,7 +72,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 				$row->ID = $ID;
 				if (isset($row->Hours) && isset($row->Date))
 				{
-					hour_row($row);
+					hour_row($row, $head);
 				}			
 			
 		}
