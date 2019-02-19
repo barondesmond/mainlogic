@@ -40,7 +40,7 @@ function hour_row($db, $head, $select)
 	foreach ($head as $key=>$display)
 	{
 		echo '<td>';
-		if (isset($db->$key) && isset($db->$display) && !isset($db->$select[$key]))
+		if (isset($db->$key) && isset($db->$display) && !$select[$key]))
 		{
 	
 				echo '<input type=hidden name=timesheet[' . $db->ID . '][' . $db->$key . ']>';
