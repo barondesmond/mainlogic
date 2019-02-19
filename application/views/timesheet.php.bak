@@ -2,7 +2,11 @@ TimeSheet and TimeClock Together Again
 <p>
 <?php
 date_default_timezone_set('America/Chicago');
-	$head = array('ID'=>'ID', 'Employee'=>'EmpNo', 'WageItem' => 'PRPayItem', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'WorkcompID'=>'PRWorkComp');
+	$head = array('ID'=>'ID', 'Employee'=>'EmpNo', 'WageItem' => 'PRPayItem', 'JobID'=>'Name', 'JobClassID' => 'JobClass', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'SlDept', 'WorkcompID'=>'PRWorkComp');
+
+/*
+<input type=hidden name=timesheet[$id][$key]>$display
+*/
 
 function hour_head($head)
 {
@@ -14,6 +18,17 @@ function hour_head($head)
 	echo '</tr>';
 }
 
+function timesheet_select_key($id, $key, $keydb)
+{
+
+	echo "<select name=timesheet[$id][$key]>";
+	foreach ($keydb as $k=>$v)
+	{
+		echo "<option value=$k>$v</option>";
+	}
+	echo "</select>";
+}
+
 function hour_row($db, $head)
 {
 	echo '<tr>';
@@ -23,13 +38,11 @@ function hour_row($db, $head)
 		echo '<td>';
 		if (isset($db->$key))
 		{
+			timesheet_select_key($id, $key, $db->$key);
 			if (isset($db->$display))
 			{
+				echo '<input type=hidden name=timesheet[' . $db->$id . '][' . $db->$key . ']>';
 				echo $db->$display;
-			}
-			else
-			{
-				echo $db->$key;
 			}
 		}
 		echo '</td>';
@@ -70,6 +83,14 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		{
 				$ID = md5($row->EmpNo . $row->JobID . $row->Date);
 				$row->ID = $ID;
+				foreach ($head as $k=>$v)
+				{
+					if (isset(${$v})
+					{
+						$row->${$v} = $v;
+					}
+				}
+
 				if (isset($row->Hours) && isset($row->Date))
 				{
 					hour_row($row, $head);
