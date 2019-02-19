@@ -85,7 +85,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 				$row->ID = $ID;
 				foreach ($head as $k=>$v)
 				{
-					if (isset(${$v})
+					if (isset(${$v}))
 					{
 						$row->${$v} = $v;
 					}

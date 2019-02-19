@@ -87,7 +87,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 				{
 					if (isset(${$v}))
 					{
-						$row->${$v} = $v;
+						$row->$v = ${$v};
 					}
 				}
 
