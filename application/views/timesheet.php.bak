@@ -17,6 +17,7 @@ foreach ($Employee as $Emp)
 }
 echo '</select>';
 echo "<BR><p>\r\n";
+//Wage Item, Job, JobClass, Date1-Date7, Total, Department, Dispatch, Memo, WorkmansCompCode, Processed
 if (isset($_REQUEST['EmpNo']))
 {
 print_r($TimeClock[$_REQUEST['EmpNo']);
