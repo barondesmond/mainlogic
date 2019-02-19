@@ -21,6 +21,10 @@ function hour_row($db)
 	foreach ($array as $key)
 	{
 		echo '<td>';
+		if (isset($db->$key))
+		{
+			echo $db->$key;
+		}
 		if (isset($db[$key]))
 		{
 			echo $db[$key];
