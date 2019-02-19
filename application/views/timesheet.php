@@ -2,7 +2,7 @@ TimeSheet and TimeClock Together Again
 <p>
 <?php
 date_default_timezone_set('America/Chicago');
-	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'PRPayItem', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'WorkmansCompCode'=>'PRWorkComp');
+	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'PRPayItem', 'JobID'=>'Name', 'JobClassID' => 'JobClass', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'WorkmansCompCode'=>'PRWorkComp');
 	$select = array('WageItem'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'DeptID', 'WorkmansCompCode'=>'PRWorkComp');
 	$timekey['PRPayItem']['ItemID'] = 'Name';
 	$timekey['JobClass']['JobClassID'] = 'Name';
@@ -93,7 +93,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		{
 				$ID = md5($row->EmpNo . $row->JobID . $row->Date);
 				$row->ID = $ID;
-				foreach ($head as $k=>$v)
+				foreach ($select as $k=>$v)
 				{
 					if (isset(${$v}) && !isset($row->$v))
 					{
