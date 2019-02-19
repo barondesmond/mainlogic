@@ -53,7 +53,6 @@
 		$screen = array('Job' => '$event->Job', 'Dispatch' => '$event->Dispatch', 'Employee' => '');
 		$Time = array();
 		$Save = array();
-		$Job = array();
 		$Employee = array();
 		foreach ($TimeClock as $event)
 		{
@@ -71,7 +70,6 @@
 		{
 			$Time[$event->EmpNo][$event->Screen][$key] = '';
 			$Save[$event->EmpNo][$event->Screen][$key] = '';
-			$Job[$event->EmpNo][$event->Screen][$key] = '';
 
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)

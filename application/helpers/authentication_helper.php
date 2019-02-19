@@ -50,7 +50,7 @@
 
 	function timesheet_employee($TimeClock)
 	{
-		$screen = array('Job' => '$event->Job', 'Dispatch' => '$event->Dispatch', 'Employee' => '');
+		$screen = array('Job' => '$event->Name', 'Dispatch' => '$event->Dispatch', 'Employee' => '');
 		$Time = array();
 		$Save = array();
 		$Employee = array();
@@ -61,7 +61,7 @@
 		if (isset($event->StartTime) && isset($event->StopTime))
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
-		$key = $event->Job . $event->Dispatch;
+		$key = $event->Name . $event->Dispatch;
 		if ($key == '')
 		{
 			$key = $event->EmpNo;
