@@ -50,7 +50,7 @@ function hour_row($db, $head, $select)
 		elseif (isset($db->$select[$key]))
 		{
 				timesheet_select_key($db->ID, $key, $db->$select[$key]);
-				if (isset($db->$display))
+				if (isset($db->$display) && $display != $select[$key])
 				{
 					echo $db->$display;
 				}		
