@@ -2,7 +2,7 @@ TimeSheet and TimeClock Together Again
 <p>
 <?php
 date_default_timezone_set('America/Chicago');
-	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'WorkmansCompCode'=>'PRWorkComp');
+	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'JobClass', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'WorkmansCompCode'=>'PRWorkComp');
 	$select = array('WageItem'=>'PrPayItem', 'JobClassID'=>'JobClass', 'Department'=>'SlDeprt', 'WorkmansCompCode'=>'PRWorkComp');
 	$timekey['PRPayItem']['ItemID'] = 'Name';
 	$timekey['JobClass']['JobClassID'] = 'Name';
@@ -40,7 +40,7 @@ function hour_row($db, $head, $select)
 	foreach ($head as $key=>$display)
 	{
 		echo '<td>';
-		if (isset($db->$key) && isset($db->$display) && !isset($select[$key]))
+		if (isset($db->$key) && isset($db->$display) && !isset($db->$select[$key]))
 		{
 	
 				echo '<input type=hidden name=timesheet[' . $db->ID . '][' . $db->$key . ']>';
@@ -49,7 +49,7 @@ function hour_row($db, $head, $select)
 		}
 		else
 		{
-				timesheet_select_key($db->ID, $key, $db->$display);
+				timesheet_select_key($db->ID, $key, $db->$select[$key]);
 		}
 		echo '</td>';
 	}
