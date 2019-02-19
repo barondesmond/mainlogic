@@ -15,7 +15,7 @@ function hour_head()
 
 function hour_row($db)
 {
-	$array = array('EmpNo', 'PRPayItem', 'JobID', 'JobClassId', 'Date', 'Hours', 'DeptID', 'Dispatch', 'Desc', 'WorkcompID');
+	$array = array('ID', 'EmpNo', 'PRPayItem', 'JobID', 'JobClassId', 'Date', 'Hours', 'DeptID', 'Dispatch', 'Desc', 'WorkcompID');
 	echo '<tr>';
 
 	foreach ($array as $key)
@@ -30,10 +30,7 @@ function hour_row($db)
 	echo '</tr>';
 }
 
-foreach ($PRPayItem as $pr)
-{
-	print_r($pr);
-}
+
 
 
 $db = timesheet_employee($TimeSheet);
@@ -64,7 +61,8 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	{
 		foreach ($key as $date => $row)
 		{
-	
+				$ID = md5($_REQUES['EmpNo']) . $key . $date;
+				$row['ID'] = $ID;
 				if (isset($row->Hours) && isset($row->Date))
 				{
 					hour_row($row);
