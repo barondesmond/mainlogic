@@ -1,6 +1,8 @@
 TimeSheet and TimeClock Together Again
 <p>
 <?php
+date_default_timezone_set('America/Chicago');
+
 function hour_head()
 {
 		echo '	<tr>';
