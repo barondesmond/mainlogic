@@ -6,6 +6,7 @@ date_default_timezone_set('America/Chicago');
 function hour_head()
 {
 		echo '	<tr>';
+	echo '<td>ID</TD>';
 	echo '<td>Employee</td>';
 	echo ' <td>Wage Item</td><td>Job</td><td>JobClass</td>';
 	echo '<td>Date</td>';
