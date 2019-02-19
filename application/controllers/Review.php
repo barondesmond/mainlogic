@@ -39,11 +39,7 @@ class Review extends CI_Controller {
 
 	public function timesheet()
 	{
-		$timeclock = timeclock();
 		$timesheet = timesheet();
-		$timesheet->TimeClock  = $timeclock->TimeClock;
-	
-
 		$this->load->view('header');
 		$this->load->view('timesheet', $timesheet);
 		$this->load->view('footer');
