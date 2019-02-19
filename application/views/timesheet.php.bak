@@ -15,7 +15,7 @@ function hour_head()
 
 function hour_row($db)
 {
-	$array = array('EmpNo', 'PRPayItem', 'JobID', 'JobClassId', 'Date', 'Hours', 'DeptID', 'Dispatch', 'Desc', 'WorkcompID', 'Processed');
+	$array = array('EmpNo', 'PRPayItem', 'JobID', 'JobClassId', 'Date', 'Hours', 'DeptID', 'Dispatch', 'Desc', 'WorkcompID');
 	echo '<tr>';
 
 	foreach ($array as $key)
