@@ -50,6 +50,7 @@ function hour_row($db, $head, $select)
 		else
 		{
 				timesheet_select_key($db->ID, $key, $db->$select[$key]);
+				echo $db->$display;
 		}
 		echo '</td>';
 	}
