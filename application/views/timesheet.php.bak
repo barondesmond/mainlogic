@@ -38,11 +38,14 @@ function hour_row($db, $head)
 		echo '<td>';
 		if (isset($db->$key))
 		{
-			timesheet_select_key($db->ID, $key, $db->$key);
 			if (isset($db->$display))
 			{
-				echo '<input type=hidden name=timesheet[' . $db->$id . '][' . $db->$key . ']>';
+				echo '<input type=hidden name=timesheet[' . $db->ID . '][' . $db->$key . ']>';
 				echo $db->$display;
+			}
+			else
+			{
+				timesheet_select_key($db->ID, $key, $db->$key);
 			}
 		}
 		echo '</td>';
