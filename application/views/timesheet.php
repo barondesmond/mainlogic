@@ -59,10 +59,9 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	hour_head();
 	foreach ($Time[$_REQUEST['EmpNo']] as $key)
 	{
-		foreach ($key as $date)
+		foreach ($key as $date => $row)
 		{
-			foreach ($date as $row)
-			{
+	
 					//print_r($row);
 				echo "Hours : " . $row->Hours;
 				echo "Date : " . $row->Date;
@@ -70,7 +69,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 				{
 					hour_row($row);
 				}			
-			}
+			
 		}
 	}
 	echo '</table>';
