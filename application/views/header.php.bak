@@ -59,6 +59,7 @@ body {
 }
 .review: {
   background-color: #808080;
+  layer-background-color: gray;
   color: black;
 }
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
@@ -77,6 +78,8 @@ body {
 	<div class="row">
 	<div class="column">
 <p><A HREF="<?php echo base_url(); ?>review">Employee Time to review</A></p>
+<p><A HREF="<?php echo base_url(); ?>review">Job TimeSheet</A></p>
+
 <p><A href="<?php echo base_url(); ?>pto">PTO by employee</A></p>
 <p><A HREF="<?php echo base_url(); ?>job">Job Assignment</A></p>
 <p><A HREF="<?php echo base_url(); ?>rules">Rules</A></p>
