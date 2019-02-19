@@ -25,10 +25,6 @@ function hour_row($db)
 		{
 			echo $db->$key;
 		}
-		if (isset($db[$key]))
-		{
-			echo $db[$key];
-		}
 		echo '</td>';
 	}
 	echo '</tr>';
