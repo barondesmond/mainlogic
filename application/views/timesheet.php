@@ -16,15 +16,22 @@ function hour_head()
 
 function hour_row($db)
 {
-	$array = array('ID', 'EmpNo', 'PRPayItem', 'JobID', 'JobClassId', 'Date', 'Hours', 'DeptID', 'Dispatch', 'Desc', 'WorkcompID');
+	$array = array('ID', 'EmpNo'=>'Employee', 'PRPayItem', 'JobID'=>'Name', 'JobClassId', 'Date', 'Hours', 'DeptID', 'Dispatch', 'Desc', 'WorkcompID');
 	echo '<tr>';
 
-	foreach ($array as $key)
+	foreach ($array as $key=>$display)
 	{
 		echo '<td>';
 		if (isset($db->$key))
 		{
-			echo $db->$key;
+			if (isset($db->$display))
+			{
+				echo $db->$display;
+			}
+			else
+			{
+				echo $db->$key;
+			}
 		}
 		echo '</td>';
 	}
