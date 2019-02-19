@@ -46,7 +46,7 @@ function hour_row($db, $head)
 		}
 		else
 		{
-				timesheet_select_key($db->ID, $key, $db->$key);
+				timesheet_select_key($db->ID, $key, $db->$display);
 		}
 		echo '</td>';
 	}
