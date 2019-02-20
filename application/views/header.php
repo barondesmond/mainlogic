@@ -44,16 +44,15 @@ body {
   color: black;
 }
 
-/* Create three equal columns that floats next to each other */
 .column1 {
   float: left;
-  width: 20.00%;
+  width: 10.00%;
   padding: 15px;
 }
 
 .column2 {
   float: left;
-  width: 80.00%;
+  width: 90.00%;
   padding: 15px;
 }
 
