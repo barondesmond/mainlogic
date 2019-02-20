@@ -141,7 +141,10 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 						$row->$v = ${$v};
 					}
 				}
-			$table[$key]['row'] = timesheet_row($row, $head, $select);
+			if (isset($table[$key]['row']))
+			{
+				$table[$key]['row'] = timesheet_row($row, $head, $select);
+			}
 			}
 			if (isset($row->Date))
 			{
