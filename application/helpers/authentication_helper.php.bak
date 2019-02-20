@@ -62,7 +62,7 @@
 
 	function timesheet()
 	{
-		if (!$_REQUEST['StartTime'] || !$_REQUEST['StopTime'])
+		if (!isset($_REQUEST['StartTime']) || !isset($_REQUEST['StopTime']))
 		{
 			$gpb = get_period_bounds();
 			$StartTime = $gpb[0];
