@@ -158,13 +158,11 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			}
 			
 		}
-		if (!isset($hdr))
-		{
 			echo '<tr>';
 			echo $table[$key]['head'];
 			echo '</tr>';
 			$hdr = $table[$key]['head'];
-		}
+		
 		echo '<tr>';
 		echo $table[$key]['row'];
 		echo '</tr>';
