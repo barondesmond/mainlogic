@@ -2,7 +2,8 @@ TimeSheet and TimeClock Together Again
 <p>
 <?php
 echo "Period $PayrollPeriod<p>";
-	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClass', 'Date'=>'Date', 'Hours'=>'Hours', 'Department'=>'DeptID', 'WorkmansCompCode'=>'WorkComp');
+	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClass', 'Department'=>'DeptID', 'WorkmansCompCode'=>'WorkComp');
+	$hour = array('Date'=>'Date', 'Hours'=>'Hours');
 	$select = array('WageItem'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'SlDept', 'WorkmansCompCode'=>'PRWorkComp');
 	$timekey['PRPayItem']['ItemID'] = 'Name';
 	$timekey['JobClass']['JobClassID'] = 'Name';
@@ -12,20 +13,36 @@ echo "Period $PayrollPeriod<p>";
 <input type=hidden name=timesheet[$id][$key]>$display
 */
 
-function hour_head($head)
+function hour_head($day='')
 {
-		echo '	<tr>';
+		
+		$row = "<td>$day</td>";
+
+return $row;
+}
+
+function hour_row($hours = '')
+{
+	$row = "<td>$hours</td>";
+
+return $row;
+}
+
+function timesheet_head($head)
+{
+	$row = '';
 		foreach ($head as $key=>$value)
 		{
-			echo '<td>' . $key . '</td>';
+			$row .= '<td>' . $key . '</td>';
 		}
-	echo '</tr>';
+return $row;
+
 }
 
 function timesheet_select_key($id, $key, $keydb, $selected='')
 {
 
-	echo "<select name=timesheet[$id][$key]>";
+	$select =  "<select name=timesheet[$id][$key]>";
 	foreach ($keydb as $k=>$v)
 	{
 		if ($k == $selected)
@@ -36,38 +53,42 @@ function timesheet_select_key($id, $key, $keydb, $selected='')
 		{
 			$sel = '';
 		}
-		echo "<option value='$k' $sel>$v</option>";
+		$select .= "<option value='$k' $sel>$v</option>";
 
 	}
-	echo "</select>";
+	$select .= "</select>";
+return $select;
+
 }
 
-function hour_row($db, $head, $select)
+function timesheet_row($db, $head, $select)
 {
-	echo '<tr>';
 
 	foreach ($head as $key=>$display)
 	{
-		echo '<td>';
+		$row = '<td>';
 		if (isset($db->$key) && isset($db->$display) && !isset($select[$key]))
 		{
 	
-				echo '<input type=hidden name=timesheet[' . $db->ID . '][' . $db->$key . ']>';
-				echo $db->$display;
+				$row .=  '<input type=hidden name=timesheet[' . $db->ID . '][' . $db->$key . ']>';
+				$row .= $db->$display;
 			
 		}
 		elseif (isset($db->$select[$key]))
 		{
-				timesheet_select_key($db->ID, $key, $db->$select[$key], $db->$display);
+				$row .= timesheet_select_key($db->ID, $key, $db->$select[$key], $db->$display);
 				if (isset($db->$display) && $display != $select[$key])
 				{
 					//echo $db->$display;
 				}		
 		}
-		echo '</td>';
+		$row .=  '</td>';
 	}
-	echo '</tr>';
+
+return $row;
 }
+
+
 
 
 
@@ -95,28 +116,58 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 {
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
-	hour_head($head);
 	foreach ($Time[$_REQUEST['EmpNo']] as $key)
 	{
-		foreach ($key as $date => $row)
+		$table[$key]['head'] = timesheet_head($head);
+		$gpb = get_period_bounds();
+		$Start = $gpb[0];
+		$Stop = $gpb[1];
+		$days = ($Stop-$Start)/86400;
+		$day = date("Y-m-d", $Start);
+		$row = $key[$day];
+		foreach ($select as $k=>$v)
 		{
-				$ID = md5($row->EmpNo . $row->JobID . $row->Date);
-				$row->ID = $ID;
-				foreach ($select as $k=>$v)
-				{
-					if (isset(${$v}) && !isset($row->$v))
-					{
-						$row->$v = ${$v};
-					}
-				}
+			if (isset(${$v}) && !isset($row->$v))
+			{
+				$row->$v = ${$v};
+			}
+		}
+		$table[$key]['row'] = timesheet_row($row, $head, $select);
 
-				if (isset($row->Hours) && isset($row->Date))
-				{
-					hour_row($row, $head, $select);
-				}			
+		for ($i=0; $i < $days; $i++)
+		{
+			$day = date("Y-m-d", $Start + 86400*$i);
+			$row = $key[$day];
+			if (isset($row->Date))
+			{
+				$table[$key]['head'] .= hour_head($row->Date);
+			}
+			else
+			{
+				$table[$key]['head'] = hour_head(date("M d", $Start + 86400*$i));
+			}
+			if (isset($row->Hours))
+			{
+					$table[$key]['row'] .= hour_row($row->Hours);
+			}			
+			else
+			{
+				$table[$key]['row'] = hour_row();
+			}
 			
 		}
+		if (!$head)
+		{
+			echo '<tr>';
+			echo $table[$key]['head'];
+			echo '</tr>';
+			$head = $table[$key]['head'];
+		}
+		echo '<tr>';
+		echo $table[$key]['row'];
+		echo '</tr>';
 	}
+
 	echo '</table>';
 
 }
