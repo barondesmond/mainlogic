@@ -17,6 +17,10 @@ TimeSheet and TimeClock Together Again
 
 function period_select($action='/review/timesheet')
 {
+
+	echo "Pay Period ";
+
+
 	echo '<select name=Offset onchange="javascript:location.href = this.value;">';
 		for ($i=0; $i>-24; $i--)
 		{
@@ -68,7 +72,6 @@ return $row;
 
 function timesheet_select_key($id, $key, $keydb, $selected='')
 {
-	echo "Pay Period ";
 	$select =  "<select name=timesheet[$id][$key]>";
 	foreach ($keydb as $k=>$v)
 	{
