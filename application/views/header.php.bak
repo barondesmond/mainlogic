@@ -44,7 +44,6 @@ body {
   color: black;
 }
 
-/* Create three equal columns that floats next to each other */
 .column1 {
   float: left;
   width: 10.00%;

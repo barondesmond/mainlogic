@@ -89,7 +89,7 @@ body {
 <p><A HREF="<?php echo base_url(); ?>job">Job Assignment</A></p>
 <p><A HREF="<?php echo base_url(); ?>rules">Rules</A></p>
 <p><A HREF="<?php echo base_url(); ?>nonbillable">Non-Billable Report</A></p>
-<p><img src="/assets/images/serviq.png" width="20%"></p>
+<p><img src="/assets/images/serviq.png" width="50%"></p>
 <p><A HREF="<?php echo base_url(); ?>reports">Process Employee Reports</A></P>
 <?php 
 if ($this->session->userdata('EmpNo'))
