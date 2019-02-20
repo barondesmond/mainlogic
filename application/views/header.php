@@ -47,13 +47,13 @@ body {
 /* Create three equal columns that floats next to each other */
 .column1 {
   float: left;
-  width: 33.33%;
+  width: 20.00%;
   padding: 15px;
 }
 
 .column2 {
   float: left;
-  width: 66.66%;
+  width: 80.00%;
   padding: 15px;
 }
 
