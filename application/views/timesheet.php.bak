@@ -75,13 +75,17 @@ function timesheet_row($db, $head, $select)
 				$row .= $db->$display;
 			
 		}
-		elseif (isset($db->$select[$key]))
+		elseif (isset($select[$key]) && isset($db->$select[$key]))
 		{
 				$row .= timesheet_select_key($db->ID, $key, $db->$select[$key], $db->$display);
 				if (isset($db->$display) && $display != $select[$key])
 				{
 					//echo $db->$display;
 				}		
+		}
+		else
+		{
+			$row .= timesheet_head();
 		}
 		$row .=  '</td>';
 	}

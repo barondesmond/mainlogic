@@ -85,7 +85,7 @@ function timesheet_row($db, $head, $select)
 		}
 		else
 		{
-			$row .= timesheet_head();
+			$row .= ''
 		}
 		$row .=  '</td>';
 	}
