@@ -128,6 +128,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$Stop = $gpb[1];
 		$days = ($Stop-$Start)/86400;
 		$day = date("Y-m-d", $Start);
+		$total = 0;
 		for ($i=0; $i < $days; $i++)
 		{
 			$day = date("Y-m-d", $Start + 86400*$i);
@@ -152,6 +153,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			if (isset($row->Hours))
 			{
 					$table[$key]['row'] .= hour_row($row, $day);
+					$total = $total + $row->Hours;
 			}			
 			else
 			{
@@ -163,13 +165,17 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			echo '<tr>';
 			echo $table[$key]['timehead'];
 			echo $table[$key]['head'];
+			echo "<td>Total</td>";
+
 			echo '</tr>';
 			$hdr = 1;
 		
 		echo '<tr>';
 		echo $table[$key]['timerow'];
 		echo $table[$key]['row'];
+		echo "<td>$total</td>";
 		echo '</tr>';
+
 	}
 
 	echo '</table>';

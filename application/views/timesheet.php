@@ -129,7 +129,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$days = ($Stop-$Start)/86400;
 		$day = date("Y-m-d", $Start);
 		$total = 0;
-		for ($i=0; $i < $days; $i++)
+		for ($i=0; $i <= $days; $i++)
 		{
 			$day = date("Y-m-d", $Start + 86400*$i);
 			if (isset($date[$day]))
