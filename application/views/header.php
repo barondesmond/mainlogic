@@ -83,7 +83,7 @@ body {
 	<div class="row">
 	<div class="column1">
 <p><A HREF="<?php echo base_url(); ?>review">Employee Time to review</A></p>
-<p><A HREF="<?php echo base_url(); ?>review/timesheet">Job TimeSheet</A></p>
+<p><A HREF="<?php echo base_url(); ?>review/timesheet">TimeSheet</A></p>
 
 <p><A href="<?php echo base_url(); ?>pto">PTO by employee</A></p>
 <p><A HREF="<?php echo base_url(); ?>job">Job Assignment</A></p>
