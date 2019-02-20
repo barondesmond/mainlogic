@@ -96,7 +96,6 @@ return $row;
 
 
 
-
 if (!isset($TimeSheet))
 {
 	return false;
