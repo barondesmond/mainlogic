@@ -45,7 +45,7 @@ class Review extends CI_Controller {
 		$period = date("Y-m-d", $StartTime) . ' ' . date("Y-m-d", $StopTime);;
 
 		$timesheet = timesheet();
-		$timesheet->period
+		$timesheet->Period = $period;
 		$this->load->view('header');
 		$this->load->view('timesheet', $timesheet);
 		$this->load->view('footer');
