@@ -176,7 +176,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		echo $table[$key]['row'];
 		echo "<td>$total</td>";
 		echo '</tr>';
-		$max = $max + $total
+		$max = $max + $total;
 
 	}
 	echo '<tr><td>Total Hours ' . $max . '</td></tr>';

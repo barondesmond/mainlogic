@@ -116,6 +116,7 @@ echo "<BR><p>\r\n";
 //Wage Item, Job, JobClass, Date1-Date7, Total, Department, Dispatch, Memo, WorkmansCompCode, Processed
 if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 {
+	$max = 0;
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
 	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
@@ -175,9 +176,10 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		echo $table[$key]['row'];
 		echo "<td>$total</td>";
 		echo '</tr>';
+		$max = $max + $total
 
 	}
-
+	echo '<tr><td>Total Hours ' . $max . '</td></tr>';
 	echo '</table>';
 
 }
