@@ -101,7 +101,7 @@
 			if (!isset($Time[$event->EmpNo][$key][$date]))
 			{
 				$Time[$event->EmpNo][$key][$date] = $event;
-
+				$TimeClock[$event->EmpNo][$key][$date][] = $event->TimeClockID;
 			}
 			else
 			{
@@ -127,6 +127,7 @@
 		}
 	$db['Employee'] = $Employee;
 	$db['Time'] = $Time;
+	$db['TimeClock'] = $TimeClock;
 
 return $db;
 

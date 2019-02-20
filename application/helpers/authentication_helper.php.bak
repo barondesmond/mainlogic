@@ -93,7 +93,7 @@
 		{
 			$key = $event->EmpNo;
 		}
-		$date = date("M d", $event->StartTime);
+		$date = date("Y-m-d", $event->StartTime);
 		$event->Hours = round(($event->StopTime - $event->StartTime) / (60*60), 2);
 		$event->Date = date("M d Y", $event->StartTime) . ' 12:00:00:00 AM';
 		if ($event->Screen == 'Job')
