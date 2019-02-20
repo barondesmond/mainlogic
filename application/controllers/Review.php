@@ -42,7 +42,7 @@ class Review extends CI_Controller {
 		if (!isset($_REQUEST['Offset']))
 		{
 			$_REQUEST['Offset'] = -1;
-		)
+		}
 		$gpb = get_period_bounds($_REQUEST['Offset']);
 		$StartTime = $gpb[0];
 		$StopTime = $gpb[1];
