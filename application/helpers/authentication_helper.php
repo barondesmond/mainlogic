@@ -42,7 +42,7 @@
 	}
 
 
-	function get_period_bounds($offset = 0) 
+	function get_period_bounds($offset = -1) 
 	{
 
 	  $secondhalf  = ($offset % 2) == 0 xor (int) date('j') >= 15;

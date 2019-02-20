@@ -72,7 +72,7 @@
 			$StartTime = $_REQUEST['StartTime'];
 			$StopTime = $_REQUEST['StopTime'];
 		}
-		$uri = 'timesheet_json.php?timesheet=1&StartTime=$StartTime&StopTime=$StopTime';
+		$uri = "timesheet_json.php?timesheet=1&StartTime=$StartTime&StopTime=$StopTime";
 		return app_api($uri);
 	}
 
