@@ -75,7 +75,7 @@ function timesheet_row($db, $head, $select)
 				$row .= $db->$display;
 			
 		}
-		elseif (isset($select[$key]) && isset($db->$select[$key]))
+		elseif (isset($select[$key]) && isset($db->$select[$key]) && isset($db->$display)
 		{
 				$row .= timesheet_select_key($db->ID, $key, $db->$select[$key], $db->$display);
 				if (isset($db->$display) && $display != $select[$key])
