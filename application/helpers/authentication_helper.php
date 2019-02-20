@@ -41,9 +41,37 @@
 
 	}
 
+
+	function get_period_bounds($offset = 0) 
+	{
+	  $secondhalf  = ($offset % 2) == 0 xor (int) date('j') >= 15;
+	 $monthnumber = ceil((int) date('n') + $offset / 2);;
+
+	    $period_begin = mktime(0, 0, 0, // 00:00:00
+                           $monthnumber,
+                           $secondhalf ? 16 : 1);
+	  $period_end   = mktime(0, 0, 0, // 00:00:00
+                           $secondhalf ? $monthnumber + 1 : $monthnumber,
+                           $secondhalf ? 0 : 15);
+
+		return array($period_begin, $period_end);
+	}
+		
+
 	function timesheet()
 	{
-		$uri = 'timesheet_json.php?timesheet=1';
+		if (!$_REQUEST['StartTime'] || !$_REQUEST['StopTime'])
+		{
+			$gpb = get_period_bounds();
+			$StartTime = $gpb[0];
+			$StopTime = $gpb[1];
+		}
+		else
+		{
+			$StartTime = $_REQUEST['StartTime'];
+			$StopTime = $_REQUEST['StopTime'];
+		}
+		$uri = 'timesheet_json.php?timesheet=1&StartTime=$StartTime&StopTime=$StopTime';
 		return app_api($uri);
 	}
 
