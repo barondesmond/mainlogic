@@ -39,10 +39,9 @@ class Review extends CI_Controller {
 
 	public function timesheet()
 	{
-		if (!$_REQUEST['Offset'])
+		if (!isset($_REQUEST['Offset']))
 		{
-			Header("/review/timesheet/?Offset=-1");
-			exit;
+			$_REQUEST['Offset'] = -1;
 		)
 		$gpb = get_period_bounds($_REQUEST['Offset']);
 		$StartTime = $gpb[0];
