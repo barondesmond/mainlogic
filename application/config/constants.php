@@ -87,3 +87,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('APPURL', 'https://app.plisolutions.com:7443/primelogic/');
 define('INSTID', md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']));
 date_default_timezone_set('America/Chicago');
+define('__DEV__', 'true');
