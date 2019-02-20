@@ -34,7 +34,7 @@ class Review extends CI_Controller {
 	public function update()
 	{
 		$auth = timeclock_update();
-		redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'], 'refresh');
+		redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
 	}
 
 	public function timesheet()
@@ -42,14 +42,10 @@ class Review extends CI_Controller {
 		if (!isset($_REQUEST['Offset']))
 		{
 			$_REQUEST['Offset'] = -1;
-		)
-		$gpb = get_period_bounds($_REQUEST['Offset']);
-		$StartTime = $gpb[0];
-		$StopTime = $gpb[1];
-		$period = date("Y-m-d", $StartTime) . ' ' . date("Y-m-d", $StopTime);;
+		}
+	
 
 		$timesheet = timesheet();
-		$timesheet->PayrollPeriod = $period;
 		$this->load->view('header');
 		$this->load->view('timesheet', $timesheet);
 		$this->load->view('footer');
@@ -57,7 +53,10 @@ class Review extends CI_Controller {
 
 	public function index()
 	{
-		
+		if (!isset($_REQUEST['Offset']))
+		{
+			$_REQUEST['Offset'] = -1;
+		}		
 		$timeclock = timeclock();	
 		$this->load->view('header');
 		$this->load->view('review', $timeclock);
