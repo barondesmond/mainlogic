@@ -2,7 +2,7 @@ TimeSheet and TimeClock Together Again
 <p>
 <?php
 echo "Period $PayrollPeriod<p>";
-	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClass', 'Department'=>'DeptID', 'WorkmansCompCode'=>'WorkComp');
+	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Department'=>'DeptID', 'WorkmansCompCode'=>'WorkComp');
 	$hour = array('Date'=>'Date', 'Hours'=>'Hours');
 	$select = array('WageItem'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'SlDept', 'WorkmansCompCode'=>'PRWorkComp');
 	$timekey['PRPayItem']['ItemID'] = 'Name';
