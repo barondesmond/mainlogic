@@ -64,6 +64,7 @@ return $select;
 function timesheet_row($db, $head, $select)
 {
 
+
 	foreach ($head as $key=>$display)
 	{
 		$row = '<td>';
@@ -119,7 +120,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	echo '<table border=1>';
 	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
 	{
-		$table[$key]['head'] = timesheet_head($head);
+		$table[$key]['timehead'] = timesheet_head($head);
 		$table[$key]['row'] = '';
 		$gpb = get_period_bounds();
 		$Start = $gpb[0];
@@ -141,9 +142,9 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 						$row->$v = ${$v};
 					}
 				}
-			if (!isset($table[$key]['row']))
+			if (!isset($table[$key]['timerow']))
 			{
-				$table[$key]['row'] = timesheet_row($row, $head, $select);
+				$table[$key]['timerow'] = timesheet_row($row, $head, $select);
 			}
 			}
 			$table[$key]['head'] .= hour_head(date("M d", $Start + 86400*$i));
@@ -159,11 +160,13 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			
 		}
 			echo '<tr>';
+			echo $table[$key]['timehead'];
 			echo $table[$key]['head'];
 			echo '</tr>';
-			$hdr = $table[$key]['head'];
+			$hdr = 1;
 		
 		echo '<tr>';
+		echo $table[$key]['timerow'];
 		echo $table[$key]['row'];
 		echo '</tr>';
 	}

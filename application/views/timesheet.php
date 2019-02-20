@@ -127,7 +127,8 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$Stop = $gpb[1];
 		$days = ($Stop-$Start)/86400;
 		$day = date("Y-m-d", $Start);
-
+		$table[$keh]['head'] = '';
+		$table[$key]['row'] = '';
 		for ($i=0; $i < $days; $i++)
 		{
 			$day = date("Y-m-d", $Start + 86400*$i);
