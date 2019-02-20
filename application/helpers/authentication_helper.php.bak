@@ -63,7 +63,7 @@
 	{
 		if (!isset($_REQUEST['StartTime']) || !isset($_REQUEST['StopTime']))
 		{
-			$gpb = get_period_bounds();
+			$gpb = get_period_bounds($_REQUEST['Offset']);
 			$StartTime = $gpb[0];
 			$StopTime = $gpb[1];
 		}

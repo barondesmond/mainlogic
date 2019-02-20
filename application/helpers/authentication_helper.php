@@ -120,7 +120,7 @@
 			$selected = '';
 		}
 
-		$Employee[$event->EmpNo] = '<option value="/review/timesheet/?EmpNo=' . $event->EmpNo . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
+		$Employee[$event->EmpNo] = '<option value="/review/timesheet/?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" '   . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
 
 		
 		}
