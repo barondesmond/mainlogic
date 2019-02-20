@@ -116,7 +116,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 {
 	echo '<form method=post action=/review/timepost/>';
 	echo '<table border=1>';
-	foreach ($Time[$_REQUEST['EmpNo']] as $key)
+	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
 	{
 		$table[$key]['head'] = timesheet_head($head);
 		$gpb = get_period_bounds();
@@ -124,7 +124,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$Stop = $gpb[1];
 		$days = ($Stop-$Start)/86400;
 		$day = date("Y-m-d", $Start);
-		$row = $key[$day];
+		$row = $date[$day];
 		foreach ($select as $k=>$v)
 		{
 			if (isset(${$v}) && !isset($row->$v))
@@ -137,7 +137,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		for ($i=0; $i < $days; $i++)
 		{
 			$day = date("Y-m-d", $Start + 86400*$i);
-			$row = $key[$day];
+			$row = $date[$day];
 			if (isset($row->Date))
 			{
 				$table[$key]['head'] .= hour_head($row->Date);
