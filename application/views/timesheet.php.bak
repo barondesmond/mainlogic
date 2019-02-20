@@ -124,6 +124,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$Stop = $gpb[1];
 		$days = ($Stop-$Start)/86400;
 		$day = date("Y-m-d", $Start);
+		print_r($date);
 		$row = $date[$day];
 		foreach ($select as $k=>$v)
 		{

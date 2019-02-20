@@ -124,21 +124,23 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$Stop = $gpb[1];
 		$days = ($Stop-$Start)/86400;
 		$day = date("Y-m-d", $Start);
-		print_r($date);
-		$row = $date[$day];
-		foreach ($select as $k=>$v)
-		{
-			if (isset(${$v}) && !isset($row->$v))
-			{
-				$row->$v = ${$v};
-			}
-		}
-		$table[$key]['row'] = timesheet_row($row, $head, $select);
 
 		for ($i=0; $i < $days; $i++)
 		{
 			$day = date("Y-m-d", $Start + 86400*$i);
-			$row = $date[$day];
+			if (isset($date[$day]))
+			{
+				$row = $date[$day];
+		
+				foreach ($select as $k=>$v)
+				{
+					if (isset(${$v}) && !isset($row->$v))
+					{
+						$row->$v = ${$v};
+					}
+				}
+			$table[$key]['row'] = timesheet_row($row, $head, $select);
+			}
 			if (isset($row->Date))
 			{
 				$table[$key]['head'] .= hour_head($row->Date);
