@@ -63,11 +63,11 @@ return $select;
 
 function timesheet_row($db, $head, $select)
 {
-
+	$row = '';
 
 	foreach ($head as $key=>$display)
 	{
-		$row = '<td>';
+		$row .= '<td>';
 		if (isset($db->$key) && isset($db->$display) && !isset($select[$key]))
 		{
 	
