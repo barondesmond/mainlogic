@@ -128,7 +128,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$table[$key]['timehead'] = timesheet_head($head);
 		$table[$key]['head'] = '';
 		$table[$key]['row'] = '';
-		$gpb = get_period_bounds();
+		$gpb = get_period_bounds($_REQUEST['Offset']);
 		$Start = $gpb[0];
 		$Stop = $gpb[1];
 		$days = ($Stop-$Start)/86400;

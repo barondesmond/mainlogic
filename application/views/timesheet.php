@@ -97,7 +97,10 @@ return $row;
 
 
 
-
+if (!isset($TimeSheet))
+{
+	return false;
+}
 
 $db = timesheet_employee($TimeSheet);
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
