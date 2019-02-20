@@ -133,7 +133,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			if (isset($date[$day]))
 			{
 				$row = $date[$day];
-
+				$row->ID = $row->EmpNo . '-' . $key;
 				foreach ($select as $k=>$v)
 				{
 					if (isset(${$v}) && !isset($row->$v))
@@ -153,7 +153,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			}
 			if (isset($row->Hours))
 			{
-					$table[$key]['row'] .= hour_row($row);
+					$table[$key]['row'] .= hour_row($row, $day);
 			}			
 			else
 			{
