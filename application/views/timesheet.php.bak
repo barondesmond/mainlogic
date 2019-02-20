@@ -70,7 +70,7 @@ function timesheet_row($db, $head, $select)
 		if (isset($db->$key) && isset($db->$display) && !isset($select[$key]))
 		{
 	
-				$row .=  '<input type=hidden name=timesheet[' . $db->ID . '][' . $db->$key . ']>';
+				$row .=  '<input type=hidden name=TimeSheet[' . $db->ID . '][' . $db->$key . ']>';
 				$row .= $db->$display;
 			
 		}
@@ -87,6 +87,7 @@ function timesheet_row($db, $head, $select)
 
 return $row;
 }
+
 
 
 
@@ -131,7 +132,6 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			if (isset($date[$day]))
 			{
 				$row = $date[$day];
-				$row->ID = md5($row->EmpNo . $key . $row->Date . $row->Hours);
 
 				foreach ($select as $k=>$v)
 				{
@@ -152,7 +152,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			}
 			if (isset($row->Hours))
 			{
-					$table[$key]['row'] .= hour_row($row->Hours);
+					$table[$key]['row'] .= hour_row($row);
 			}			
 			else
 			{

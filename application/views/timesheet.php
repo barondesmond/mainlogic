@@ -120,6 +120,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
 	{
 		$table[$key]['head'] = timesheet_head($head);
+		$table[$key]['row'] = '';
 		$gpb = get_period_bounds();
 		$Start = $gpb[0];
 		$Stop = $gpb[1];
@@ -148,7 +149,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			}
 			else
 			{
-				$table[$key]['head'] = hour_head(date("M d", $Start + 86400*$i));
+				$table[$key]['head'] .= hour_head(date("M d", $Start + 86400*$i));
 			}
 			if (isset($row->Hours))
 			{
@@ -156,7 +157,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			}			
 			else
 			{
-				$table[$key]['row'] = hour_row();
+				$table[$key]['row'] .= hour_head();
 			}
 			
 		}
