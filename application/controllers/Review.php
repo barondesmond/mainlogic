@@ -39,7 +39,13 @@ class Review extends CI_Controller {
 
 	public function timesheet()
 	{
+		$gpb = get_period_bounds();
+		$StartTime = $gpb[0];
+		$StopTime = $gpb[1];
+		$period = date("Y-m-d", $StartTime) . ' ' . date("Y-m-d", $StopTime);;
+
 		$timesheet = timesheet();
+		$timesheet->period['period'] = $period;
 		$this->load->view('header');
 		$this->load->view('timesheet', $timesheet);
 		$this->load->view('footer');
