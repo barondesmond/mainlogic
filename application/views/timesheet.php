@@ -21,9 +21,9 @@ function hour_head($day='')
 return $row;
 }
 
-function hour_row($hours = '')
+function hour_row($db, $key)
 {
-	$row = "<td>$hours</td>";
+	$row = "<td><input type=hidden name=timesheet[$db->ID][$key] value=$db->Hours>$db->Hours</td>";
 
 return $row;
 }
@@ -131,7 +131,8 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			if (isset($date[$day]))
 			{
 				$row = $date[$day];
-		
+				$row->ID = md5($row->EmpNo . $key . $row->Date . $row->Hours);
+
 				foreach ($select as $k=>$v)
 				{
 					if (isset(${$v}) && !isset($row->$v))
