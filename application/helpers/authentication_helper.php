@@ -44,6 +44,8 @@
 
 	function get_period_bounds($offset = 0) 
 	{
+		date_default_timezone_set("America/Central");
+
 	  $secondhalf  = ($offset % 2) == 0 xor (int) date('j') >= 15;
 	 $monthnumber = ceil((int) date('n') + $offset / 2);;
 
@@ -60,7 +62,7 @@
 
 	function timesheet()
 	{
-		if (!$_REQUEST['StartTime'] || !$_REQUEST['StopTime'])
+		if (!isset($_REQUEST['StartTime']) || !isset($_REQUEST['StopTime']))
 		{
 			$gpb = get_period_bounds();
 			$StartTime = $gpb[0];
