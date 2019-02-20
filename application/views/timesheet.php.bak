@@ -157,6 +157,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			{
 				$table[$key]['row'] .= hour_head();
 			}
+			unsete($row);
 			
 		}
 			echo '<tr>';
