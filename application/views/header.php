@@ -45,9 +45,15 @@ body {
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
+.column1 {
   float: left;
   width: 33.33%;
+  padding: 15px;
+}
+
+.column2 {
+  float: left;
+  width: 66.66%;
   padding: 15px;
 }
 
@@ -76,7 +82,7 @@ body {
 <p> <?php  echo $this->session->userdata('EmpNo') . ' ' . $this->session->userdata('EmpName') . ' ' . $this->session->userdata('Email'); ?> </p>
 </div>
 	<div class="row">
-	<div class="column">
+	<div class="column1">
 <p><A HREF="<?php echo base_url(); ?>review">Employee Time to review</A></p>
 <p><A HREF="<?php echo base_url(); ?>review/timesheet">Job TimeSheet</A></p>
 
@@ -94,4 +100,4 @@ if ($this->session->userdata('EmpNo'))
 ?>
 </div>
 
-<div class="column">
+<div class="column2">
