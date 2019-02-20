@@ -146,14 +146,8 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 				$table[$key]['row'] = timesheet_row($row, $head, $select);
 			}
 			}
-			if (isset($row->Date))
-			{
-				$table[$key]['head'] .= hour_head($row->Date);
-			}
-			else
-			{
-				$table[$key]['head'] .= hour_head(date("M d", $Start + 86400*$i));
-			}
+			$table[$key]['head'] .= hour_head(date("M d", $Start + 86400*$i));
+			
 			if (isset($row->Hours))
 			{
 					$table[$key]['row'] .= hour_row($row, $day);
