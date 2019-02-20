@@ -68,7 +68,7 @@ return $row;
 
 function timesheet_select_key($id, $key, $keydb, $selected='')
 {
-
+	echo "Pay Period ";
 	$select =  "<select name=timesheet[$id][$key]>";
 	foreach ($keydb as $k=>$v)
 	{

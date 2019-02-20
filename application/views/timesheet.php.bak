@@ -34,7 +34,7 @@ function period_select($action='/review/timesheet')
 				$offsel = '';
 			}
 
-			echo "<option value=$i $offset>$period</option>";
+			echo "<option value=$action?Offset=$i&EmpNo=" . $_REQUEST['EmpNo'] . " $offsel>$period</option>";
 		}
 	echo "</select>";
 
