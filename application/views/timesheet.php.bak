@@ -1,7 +1,9 @@
 TimeSheet and TimeClock Together Again
 <p>
 <?php
-echo "Period $PayrollPeriod<p>";
+
+	
+	
 	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Department'=>'DeptID', 'WorkmansCompCode'=>'WorkComp');
 	$hour = array('Date'=>'Date', 'Hours'=>'Hours');
 	$select = array('WageItem'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'SlDept', 'WorkmansCompCode'=>'PRWorkComp');
@@ -12,6 +14,31 @@ echo "Period $PayrollPeriod<p>";
 /*
 <input type=hidden name=timesheet[$id][$key]>$display
 */
+
+function period_select($action='/review/timesheet')
+{
+	echo '<select name=Offset onchange="javascript:location.href = this.value;">';
+		for ($i=0; $i>-24; $i--)
+		{
+			$gpb = get_period_bounds($i);
+			$StartTime = $gpb[0];
+			$StopTime = $gpb[1];
+			
+			$period = date("Y-m-d", $StartTime) . ' ' . date("Y-m-d", $StopTime);
+			if ($_REQUEST['Offset'] == $i)
+			{
+				$offsel = ' selected ';
+			}
+			else
+			{
+				$offsel = '';
+			}
+
+			echo "<option value=$i $offset>$period</option>";
+		}
+	echo "</select>";
+
+}
 
 function hour_head($day='')
 {
@@ -93,6 +120,7 @@ function timesheet_row($db, $head, $select)
 return $row;
 }
 
+period_select();
 
 
 
