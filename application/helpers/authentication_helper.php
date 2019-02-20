@@ -164,7 +164,18 @@ return $db;
 	
 	function timeclock()
 	{
-		$uri = 'timeclock_json.php?timeclock=1';
+		if (!isset($_REQUEST['StartTime']) || !isset($_REQUEST['StopTime']))
+		{
+			$gpb = get_period_bounds($_REQUEST['Offset']);
+			$StartTime = $gpb[0];
+			$StopTime = $gpb[1];
+		}
+		else
+		{
+			$StartTime = $_REQUEST['StartTime'];
+			$StopTime = $_REQUEST['StopTime'];
+		}
+		$uri = 'timeclock_json.php?timeclock=1&StartTime=$StartTime&StopTime=$StopTime';
 		return app_api($uri);
 	}
 

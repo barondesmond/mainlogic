@@ -8,6 +8,7 @@ $db = timeclock_employee($TimeClock);
 $Time = $db['Time'];
 $Job = $db['Job'];
 
+period_select('/review/index/');
 
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
