@@ -219,7 +219,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	{
 		echo timesheet_prhours($PRHours, $max);
 	}
-	echo '<tr><td>Total Hours</td> ' . $max . '</td></tr>';
+	echo '<tr><td>Total Hours</td><td> ' . $max . '</td></tr>';
 	echo '</table>';
 
 }
