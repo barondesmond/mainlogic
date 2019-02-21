@@ -60,7 +60,9 @@ class Review extends CI_Controller {
 			//redirect('/review/timesheet/?' . http_build_query($res) , 'refresh');
 
 		}
-		redirect('/review/timesheet/');
+		echo 'error';
+
+		//redirect('/review/timesheet/');
 
 	}
 	public function timesheet()
