@@ -39,7 +39,8 @@ class Review extends CI_Controller {
 
 	public function timepost()
 	{
-		redirect('/review/timesheet/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		print_r($_REQUEST);
+		//redirect('/review/timesheet/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
 
 	}
 	public function timesheet()
