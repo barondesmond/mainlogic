@@ -123,7 +123,7 @@ $rows = '';
 		}
 		$row .= '<tr>';
 		$row .= '<td>' . $db->Name . '</td>';
-		$row .= '<td><input type=text name=prhours[' . $db->ItemID . '] value=' . $db->Hours . '></td>';
+		$row .= '<td><input type=text name=PRHours[' . $db->ItemID . '] value=' . $db->Hours . '></td>';
 		$row .= '</tr>';
 		$rows .= $row;
 	}
