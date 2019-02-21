@@ -75,6 +75,12 @@
 		$uri = "timesheet_json.php?timesheet=1&StartTime=$StartTime&StopTime=$StopTime";
 		return app_api($uri);
 	}
+	
+	function timesheet_post($db)
+	{
+		$uri = "timesheet_post_json.php?timesheet_post=1&". http_build_query($db);
+		return app_uri($uri);
+	}
 
 function period_select($action='/review/timesheet')
 {

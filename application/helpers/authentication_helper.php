@@ -78,7 +78,7 @@
 	
 	function timesheet_post($db)
 	{
-		$uri = "timesheet_post_json.php?timesheet_post=1&". http_build_query($db);
+		$uri = "timesheet_post_json.php?timesheet_post=1&". http_build_query($db) . '&Dev='__DEV__;
 		return app_uri($uri);
 	}
 
