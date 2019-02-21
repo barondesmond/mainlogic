@@ -39,8 +39,21 @@ class Review extends CI_Controller {
 
 	public function timepost()
 	{
-		print_r($_REQUEST);
-		//redirect('/review/timesheet/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		//print_r($_REQUEST);
+		if (isset($_REQUEST['review_timesheet']))
+		{
+			redirect('/review/index/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		}
+		elseif (isset($_REQUEST['update_hours']))
+		{
+			//update hours
+			redirect('/review/timesheet/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		}
+		elseif (isset($_REQUEST['post_timehsset']))
+		{
+			//post timesheet
+			echo 'posting timesheet';
+		}
 
 	}
 	public function timesheet()
