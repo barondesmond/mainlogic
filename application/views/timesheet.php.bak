@@ -78,7 +78,7 @@ function timesheet_row($db, $head, $select)
 		if (isset($db->$key) && isset($db->$display) && !isset($select[$key]))
 		{
 	
-				$row .=  '<input type=hidden name=TimeSheet[' . $db->ID . '][' . $db->$key . ']>';
+				$row .=  '<input type=hidden name=' . $db->ID . '[' . $db->$key . ']>';
 				$row .= $db->$display;
 			
 		}
