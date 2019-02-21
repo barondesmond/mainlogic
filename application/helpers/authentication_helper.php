@@ -78,6 +78,13 @@
 	
 	function timesheet_post($db)
 	{
+	if (!isset($db['StartTime']) || !isset($db['StopTime']))
+		{
+			$gpb = get_period_bounds($_REQUEST['Offset']);
+			$db['StartTime'] = $gpb[0];
+			$db['StopTime'] = $gpb[1];
+		}
+		
 		$uri = "timesheet_post_json.php?timesheet_post=1&". http_build_query($db) . '&Dev=' . __DEV__;
 		return app_api($uri);
 	}
