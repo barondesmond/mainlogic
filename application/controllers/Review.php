@@ -47,8 +47,8 @@ class Review extends CI_Controller {
 		elseif (isset($_REQUEST['update_hours']))
 		{
 			//update hours
-			print_r($_REQUEST);
-			exit;
+			//print_r($_REQUEST);
+			//exit;
 			$atu = http_build_query($_REQUEST);
 			redirect('/review/timesheet/?' . $atu , 'refresh');
 		}
