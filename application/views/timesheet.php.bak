@@ -27,7 +27,7 @@ return $row;
 
 function hour_row($db, $key)
 {
-	$row = "<td><input type=hidden name=timesheet[$db->ID][$key] value=$db->Hours>$db->Hours</td>";
+	$row = "<td><input type=hidden name=[" . $db->ID . '][' . $key . '] value=' . $db->Hours . '>' . $db->Hours . '</td>';
 
 return $row;
 }
