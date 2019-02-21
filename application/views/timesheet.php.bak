@@ -45,7 +45,7 @@ return $row;
 
 function timesheet_select_key($id, $key, $keydb, $selected='')
 {
-	if (isset($_REQUEST['TimeSheet'][$id][$key])
+	if (isset($_REQUEST['TimeSheet'][$id][$key]))
 	{
 		print_r($_REQUEST['TimeSheet'][$id][$key]);
 	}
