@@ -96,6 +96,27 @@ function timesheet_row($db, $head, $select)
 return $row;
 }
 
+function timesheet_prhours($PRHours)
+{
+$rows = '';
+	foreach ($PRHours as $id=> $db)
+	{
+		$row = '';
+		if (!isset($db['Hours']))
+		{
+			$db['Hours'] = '';
+		}
+		$row .= '<tr color=gray>';
+		$row .= '<td>' . $db['Name'] . '</td>';
+		$row .= '<td><input type=text name=prhours[' . $db[ItemID] . '] value=' . $db['Hours'] . '></td>';
+		$row .= '</tr>';
+		$rows .= $row;
+	}
+
+return $rows;
+}
+
+
 period_select();
 
 
@@ -188,6 +209,10 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		echo '</tr>';
 		$max = $max + $total;
 
+	}
+	if (isset($PRHours))
+	{
+		echo timesheet_prhours($PRHours);
 	}
 	echo '<tr><td>Total Hours ' . $max . '</td></tr>';
 	echo '</table>';

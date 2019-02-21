@@ -15,34 +15,7 @@ TimeSheet and TimeClock Together Again
 <input type=hidden name=timesheet[$id][$key]>$display
 */
 
-function period_select($action='/review/timesheet')
-{
 
-	echo "Pay Period ";
-
-
-	echo '<select name=Offset onchange="javascript:location.href = this.value;">';
-		for ($i=0; $i>-24; $i--)
-		{
-			$gpb = get_period_bounds($i);
-			$StartTime = $gpb[0];
-			$StopTime = $gpb[1];
-			
-			$period = date("Y-m-d", $StartTime) . ' ' . date("Y-m-d", $StopTime);
-			if ($_REQUEST['Offset'] == $i)
-			{
-				$offsel = ' selected ';
-			}
-			else
-			{
-				$offsel = '';
-			}
-
-			echo "<option value=$action?Offset=$i&EmpNo=" . $_REQUEST['EmpNo'] . " $offsel>$period</option>";
-		}
-	echo "</select>";
-
-}
 
 function hour_head($day='')
 {
