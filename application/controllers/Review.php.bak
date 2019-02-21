@@ -61,7 +61,7 @@ class Review extends CI_Controller {
 
 		}
 		echo 'error';
-
+		print_r($_REQUEST);
 		//redirect('/review/timesheet/');
 
 	}
