@@ -116,6 +116,7 @@ $rows = '';
 		elseif (isset($_REQUEST['PRHours'][$db->ItemID]))
 		{
 			$db->Hours = $_REQUEST['PRHours'][$db->ItemID];
+			$max = $max + $db-->Hours;
 		}
 		else
 		{
