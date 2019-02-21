@@ -197,7 +197,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			
 			if (isset($row->Hours))
 			{
-					$table[$key]['row'] .= hour_row($row, $day);
+					$table[$key]['row'] .= hour_row($row, $row->Date);
 					$total = $total + $row->Hours;
 			}			
 			else

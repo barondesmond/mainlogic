@@ -180,7 +180,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			if (isset($date[$day]))
 			{
 				$row = $date[$day];
-				$row->ID = $row->EmpNo . '-' . $key;
+				$row->ID = trim($row->EmpNo . '-' . $key);
 				foreach ($select as $k=>$v)
 				{
 					if (isset(${$v}) && !isset($row->$v))
