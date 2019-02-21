@@ -2,6 +2,13 @@ TimeSheet and TimeClock Together Again
 <p>
 <?php
 
+if (isset($_REQUEST['error']))
+{
+	foreach ($_REQUEST['error'] as $id=>$err)
+	{
+		echo $err;
+	}
+}
 	
 	
 	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'WageItem' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Department'=>'DeptID', 'WorkmansCompCode'=>'WorkComp');
