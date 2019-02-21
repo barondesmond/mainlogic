@@ -101,14 +101,15 @@ function timesheet_prhours($PRHours)
 $rows = '';
 	foreach ($PRHours as $id=> $db)
 	{
+		
 		$row = '';
-		if (!isset($db['Hours']))
+		if (!isset($db->Hours))
 		{
-			$db['Hours'] = '';
+			$db->Hours = '';
 		}
 		$row .= '<tr>';
-		$row .= '<td>' . $db['Name'] . '</td>';
-		$row .= '<td><input type=text name=prhours[' . $db[ItemID] . '] value=' . $db['Hours'] . '></td>';
+		$row .= '<td>' . $db->Name . '</td>';
+		$row .= '<td><input type=text name=prhours[' . $db->ItemID . '] value=' . $db->Hours . '></td>';
 		$row .= '</tr>';
 		$rows .= $row;
 	}
