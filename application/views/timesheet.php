@@ -48,7 +48,7 @@ function timesheet_select_key($id, $key, $keydb, $selected='')
 	$select =  "<select name=timesheet[$id][$key]>";
 	foreach ($keydb as $k=>$v)
 	{
-		if ($k == $selected || isset($_REQUEST['TimeSheet'][$key] == $k))
+		if ($k == $selected || isset($_REQUEST['TimeSheet'][$id][$key] == $k))
 		{
 			$sel = " selected ";
 		}
