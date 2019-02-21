@@ -49,7 +49,7 @@ function timesheet_select_key($id, $key, $keydb, $selected='')
 	{
 		//print_r($_REQUEST['TimeSheet'][$id]);
 	}
-	$select =  "<select name=$id[$key]>";
+	$select =  "<select name=" . $id . "[$key]>";
 	foreach ($keydb as $k=>$v)
 	{
 		if ($k == $selected || (isset($_REQUEST[$id][$key]) && $_REQUEST[$id][$key] == $k))

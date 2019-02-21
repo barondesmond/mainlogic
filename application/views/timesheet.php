@@ -107,13 +107,19 @@ $rows = '';
 	{
 		
 		$row = '';
-		if (!isset($db->Hours))
+		if (isset($db->Hours))
 		{
+			$max = $max + $db->Hours;
+			
 			$db->Hours = '';
+		}
+		elseif (isset($_REQUEST['PRHours'][$db->ItemID]))
+		{
+			$db->Hours = $_REQUEST['PRHours'][$db->ItemID];
 		}
 		else
 		{
-			$max = $max + $db->Hours;
+			$db->Hours = '';
 		}
 		$row .= '<tr>';
 		$row .= '<td>' . $db->Name . '</td>';
