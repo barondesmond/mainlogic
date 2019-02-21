@@ -106,7 +106,7 @@ $rows = '';
 		{
 			$db['Hours'] = '';
 		}
-		$row .= '<tr color=gray>';
+		$row .= '<tr>';
 		$row .= '<td>' . $db['Name'] . '</td>';
 		$row .= '<td><input type=text name=prhours[' . $db[ItemID] . '] value=' . $db['Hours'] . '></td>';
 		$row .= '</tr>';
