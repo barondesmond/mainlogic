@@ -52,7 +52,7 @@ class Review extends CI_Controller {
 			$atu = http_build_query($_REQUEST);
 			redirect('/review/timesheet/?' . $atu , 'refresh');
 		}
-		elseif (isset($_REQUEST['post_timehsset']))
+		elseif (isset($_REQUEST['post_timesheet']))
 		{
 			//post timesheet
 			$res = timesheet_post();
