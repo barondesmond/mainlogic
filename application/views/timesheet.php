@@ -220,7 +220,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		echo timesheet_prhours($PRHours, $max);
 	}
 	echo '<tr><td>Total Hours</td><td> ' . $max . '</td></tr>';
-	echo '<tr><td><img src="/assets/images/serviq.png" width="50%"></td><td><input type=submit value="Update Hours"></td><td><input type=submit value="Review"></td><td><input type=submit value="Post"></td></tr>';
+	echo '<tr align="center"><td><img src="/assets/images/serviq.png" width="50%"></td><td><input type=submit value="Update Hours"></td><td><input type=submit value="Review"></td><td><input type=submit value="Post"></td></tr>';
 	echo '</table>';
 
 }
