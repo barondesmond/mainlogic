@@ -96,7 +96,7 @@ function timesheet_row($db, $head, $select)
 return $row;
 }
 
-function timesheet_prhours($PRHours)
+function timesheet_prhours($PRHours, &$max)
 {
 $rows = '';
 	foreach ($PRHours as $id=> $db)
@@ -106,6 +106,10 @@ $rows = '';
 		if (!isset($db->Hours))
 		{
 			$db->Hours = '';
+		}
+		else
+		{
+			$max = $max + $db->Hours;
 		}
 		$row .= '<tr>';
 		$row .= '<td>' . $db->Name . '</td>';
@@ -213,7 +217,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	}
 	if (isset($PRHours))
 	{
-		echo timesheet_prhours($PRHours);
+		echo timesheet_prhours($PRHours, $max);
 	}
 	echo '<tr><td>Total Hours</td> ' . $max . '</td></tr>';
 	echo '</table>';
