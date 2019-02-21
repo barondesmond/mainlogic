@@ -154,6 +154,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 {
 	$max = 0;
 	echo '<form method=post action=/review/timepost/>';
+	echo '<input type=hidden name=EmpNo value=' . $_REQUEST['EmpNo'] . '><input type=hidden name=Offset value=' . $_REQUEST['Offset'] . '>';
 	echo '<table border=1>';
 	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
 	{
