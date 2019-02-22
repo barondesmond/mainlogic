@@ -197,7 +197,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 				$row = $date[$day];
 				$row->ID = trim($row->EmpNo . '-' . $key);
 				echo "<input type=hidden name=ids[] value='" . $row->ID . "'>";
-				echo "<input type=hidden name=Dates[] = value'" . $row->Date . "'";
+				echo "<input type=hidden name=Dates[] value='" . $row->Date . "'>";
 
 				foreach ($select as $k=>$v)
 				{
