@@ -36,7 +36,7 @@ function hour_row($db, $key)
 {
 	if (isset($db->Hours) && $db->Hours > 0)
 	{
-		$row = "<td><input type=hidden name=" . $db->ID . '[' . $db->Date . '] value=' . $db->Hours . '>' . $db->Hours . '</td>';
+		$row = "<td><input type=hidden name=" . $db->ID . "['" . $db->Date . "'] value=" . $db->Hours . '>' . $db->Hours . '</td>';
 	}
 	else
 	{
