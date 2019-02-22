@@ -2,7 +2,7 @@ TimeSheet and TimeClock Together Again
 <p>
 <?php
 
-if (isset($_REQUEST['error']))
+if (isset($_REQUEST['error']) && is_array($_REQUEST['error']))
 {
 	foreach ($_REQUEST['error'] as $id=>$err)
 	{
