@@ -6,7 +6,7 @@ if (isset($_REQUEST['error']))
 {
 	foreach ($_REQUEST['error'] as $id=>$err)
 	{
-		echo $err;
+		echo "<p>$err<BR>\r\n";;
 	}
 }
 	

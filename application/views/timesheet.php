@@ -106,6 +106,7 @@ return $row;
 function timesheet_prhours($PRHours, &$max)
 {
 $rows = '';
+print_r($PRHours);
 	foreach ($PRHours as $id=> $db)
 	{
 		
