@@ -111,6 +111,7 @@ print_r($PRHours);
 	{
 		
 		$row = '';
+		print_r($db);
 		if (isset($db->Hours))
 		{
 			$max = $max + $db->Hours;
