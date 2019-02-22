@@ -199,6 +199,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			if (!isset($table[$key]['timerow']))
 			{
 				$table[$key]['timerow'] = timesheet_row($row, $head, $select);
+				
 			}
 			}
 			$table[$key]['head'] .= hour_head(date("M d", $Start + 86400*$i));
@@ -225,6 +226,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		
 		echo '<tr>';
 		echo $table[$key]['timerow'];
+		echo "<input type=hidden name=ids[] value='$key'>";
 		echo $table[$key]['row'];
 		echo "<td>$total</td>";
 		echo '</tr>';
