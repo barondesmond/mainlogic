@@ -188,6 +188,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$days = ($Stop-$Start)/86400;
 		$day = date("Y-m-d", $Start);
 		$total = 0;
+
 		for ($i=0; $i <= $days; $i++)
 		{
 			$day = date("Y-m-d", $Start + 86400*$i);
@@ -195,6 +196,8 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			{
 				$row = $date[$day];
 				$row->ID = trim($row->EmpNo . '-' . $key);
+				echo "<input type=hidden name=ids[] value='" . $row->ID . "'>";
+
 				foreach ($select as $k=>$v)
 				{
 					if (isset(${$v}) && !isset($row->$v))
@@ -232,7 +235,6 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		
 		echo '<tr>';
 		echo $table[$key]['timerow'];
-		echo "<input type=hidden name=ids[] value='$key'>";
 		echo $table[$key]['row'];
 		echo "<td>$total</td>";
 		echo '</tr>';

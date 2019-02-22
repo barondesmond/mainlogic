@@ -34,9 +34,13 @@ return $row;
 
 function hour_row($db, $key)
 {
-	if ($db->Hours > 0)
+	if (isset($db->Hours) && $db->Hours > 0)
 	{
 		$row = "<td><input type=hidden name=" . $db->ID . '[' . $key . '] value=' . $db->Hours . '>' . $db->Hours . '</td>';
+	}
+	else
+	{
+		$row = '<td></td>';
 	}
 return $row;
 }
@@ -184,6 +188,8 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		$days = ($Stop-$Start)/86400;
 		$day = date("Y-m-d", $Start);
 		$total = 0;
+		echo "<input type=hidden name=ids[] value='$key'>";
+
 		for ($i=0; $i <= $days; $i++)
 		{
 			$day = date("Y-m-d", $Start + 86400*$i);
@@ -228,7 +234,6 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		
 		echo '<tr>';
 		echo $table[$key]['timerow'];
-		echo "<input type=hidden name=ids[] value='$key'>";
 		echo $table[$key]['row'];
 		echo "<td>$total</td>";
 		echo '</tr>';
