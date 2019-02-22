@@ -56,15 +56,13 @@ class Review extends CI_Controller {
 		{
 			//post timesheet
 			$res = timesheet_post($_REQUEST);
-			print_r($res);
-			//redirect('/review/timesheet/?' . http_build_query($res) , 'refresh');
+			
+			redirect('/review/timesheet/?' . http_build_query($res) , 'refresh');
 
 		}
 		else
 		{
-			echo 'error';
-			print_r($_REQUEST);
-			//redirect('/review/timesheet/');	
+			redirect('/review/timesheet/?Error=error');	
 		}
 
 	}
