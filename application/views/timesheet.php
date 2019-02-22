@@ -106,12 +106,11 @@ return $row;
 function timesheet_prhours($PRHours, &$max)
 {
 $rows = '';
-print_r($PRHours);
 	foreach ($PRHours as $id=> $db)
 	{
 		
 		$row = '';
-		print_r($db);
+		
 		if (isset($db->Hours))
 		{
 			$max = $max + $db->Hours;
