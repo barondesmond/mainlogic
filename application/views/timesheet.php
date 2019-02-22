@@ -34,8 +34,14 @@ return $row;
 
 function hour_row($db, $key)
 {
-	$row = "<td><input type=hidden name=" . $db->ID . '[' . $key . '] value=' . $db->Hours . '>' . $db->Hours . '</td>';
-
+	if (isset($db->Hours) && $db->Hours > 0)
+	{
+		$row = "<td><input type=hidden name=" . $db->ID . '[' . $key . '] value=' . $db->Hours . '>' . $db->Hours . '</td>';
+	}
+	else
+	{
+		$row = '<td></td>';
+	}
 return $row;
 }
 
