@@ -11,9 +11,9 @@ if (isset($_REQUEST['error']) && is_array($_REQUEST['error']))
 }
 	
 	
-	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'PayItemID' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'Department'=>'DeptID', 'WorkmansCompCode'=>'WorkComp');
+	$head = array('ID'=>'ID', 'EmpNo'=>'EmpName', 'PayItemID' => 'ItemID', 'JobID'=>'Name', 'JobClassID' => 'JobClassID', 'DeptID'=>'DeptID', 'WorkmansCompCode'=>'WorkComp');
 	$hour = array('Date'=>'Date', 'Hours'=>'Hours');
-	$select = array('PayItemID'=>'PRPayItem', 'JobClassID'=>'JobClass', 'Department'=>'SlDept', 'WorkmansCompCode'=>'PRWorkComp');
+	$select = array('PayItemID'=>'PRPayItem', 'JobClassID'=>'JobClass', 'DeptID'=>'SlDept', 'WorkmansCompCode'=>'PRWorkComp');
 	$timekey['PRPayItem']['ItemID'] = 'Name';
 	$timekey['JobClass']['JobClassID'] = 'Name';
 	$timekey['SlDept']['DeptID'] = 'Desc';
