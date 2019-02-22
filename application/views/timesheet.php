@@ -196,12 +196,12 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			{
 				$row = $date[$day];
 				$row->ID = trim($row->EmpNo . '-' . $key);
-				if (!isset($ids[$row->ID])
+				if (!isset($ids[$row->ID]))
 				{
 					echo "<input type=hidden name=ids[] value='" . $row->ID . "'>";
 					$ids[$row->ID] = $row->ID;
 				}
-				if (!isset($dates[$row->Date])
+				if (!isset($dates[$row->Date]))
 				{
 					echo "<input type=hidden name=Dates[] value='" . $row->Date . "'>";
 					$dates[$row->Date] = $row->Date;
