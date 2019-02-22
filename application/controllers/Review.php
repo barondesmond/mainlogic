@@ -55,9 +55,9 @@ class Review extends CI_Controller {
 		elseif (isset($_REQUEST['post_timesheet']))
 		{
 			//post timesheet
-			print_r($_REQUEST);
+			//print_r($_REQUEST);
 			$res = timesheet_post($_REQUEST);
-			exit;
+			//exit;
 			
 			redirect('/review/timesheet/?' . http_build_query($res) , 'refresh');
 
