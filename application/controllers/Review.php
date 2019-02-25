@@ -34,10 +34,9 @@ class Review extends CI_Controller {
 	public function update()
 	{
 		$auth = timeclock_update();
-		print_r($auth);
-		print_r($_REQUEST);
+	
 
-		//redirect('review/save/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		redirect('/review/save/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
 	}
 
 	public function timepost()
