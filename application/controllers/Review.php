@@ -90,7 +90,8 @@ class Review extends CI_Controller {
 		{
 			$_REQUEST['Offset'] = -1;
 		}		
-		$timeclock = timeclock();	
+		$timeclock = timeclock();
+		print_r($timeclock);
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($timeclock->Posted->$_REQUEST['EmpNo']))
 		{
 				$this->load->view('header');

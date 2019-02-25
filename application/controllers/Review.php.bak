@@ -93,10 +93,15 @@ class Review extends CI_Controller {
 		$timeclock = timeclock();	
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($timeclock->Posted->$_REQUEST['EmpNo']))
 		{
-			redirect('/review/save/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+				$this->load->view('header');
+				$this->load->view('save', $timeclock);
+				$this->load->view('footer');
 		}
-		$this->load->view('header');
-		$this->load->view('review', $timeclock);
-		$this->load->view('footer');
+		else
+		{
+				$this->load->view('header');
+				$this->load->view('review', $timeclock);
+				$this->load->view('footer');
+		}
 	}
 }
