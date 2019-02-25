@@ -1,5 +1,14 @@
 <?php 
+
+period_select('/review/index/');
+if (!isset($TimeClock))
+{
+	return false;
+}
+
 	$db = timeclock_employee($TimeClock);
+
+	
 	$Job = $db['Job'];
 	$Save = $db['Save'];
 
@@ -18,6 +27,7 @@ echo "<BR><p>\r\n";
 if (isset($_REQUEST['EmpNo']))
 {
 	echo '<form method=get action=/review/timesheet/>';
+	echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';		
 
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
