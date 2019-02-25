@@ -13,7 +13,9 @@ class Review extends CI_Controller {
 	{
 
 		$timeclock = timeclock_add();
-		redirect('review/index/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		print_r($timeclock);
+		print_r($_REQUEST);
+		//redirect('review/index/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
 
 	}
 
