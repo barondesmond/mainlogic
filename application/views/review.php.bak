@@ -3,12 +3,20 @@ Review what?
 <div class="review">
 <?php
 date_default_timezone_set('America/Chicago');
+
+period_select('/review/index/');
+if (!isset($TimeClock))
+{
+	return false;
+}
+
+
+
 $db = timeclock_employee($TimeClock);
 
 $Time = $db['Time'];
 $Job = $db['Job'];
 
-period_select('/review/index/');
 
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
