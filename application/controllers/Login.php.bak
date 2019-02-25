@@ -48,9 +48,8 @@ class Login extends CI_Controller {
 		}
 		else
 		{
-			$this->load->view('header');
-	
-			$this->load->view('notauthorized', $auth);
+			$this->load->view('header');	
+			$this->load->view('notauthorized');
 			$this->load->view('footer');
 
 		}

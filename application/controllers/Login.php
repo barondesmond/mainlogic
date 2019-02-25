@@ -46,12 +46,17 @@ class Login extends CI_Controller {
 				redirect('/', 'refresh');
 		
 		}
+		elseif ($auth->authorized == '0' && isset($auth->Email))
+		{
+			$this->load->view('header');	
+			$this->load->view('notauthorized', $auth);
+			$this->load->view('footer');
+		}
 		else
 		{
 			$this->load->view('header');	
 			$this->load->view('notauthorized');
 			$this->load->view('footer');
-
 		}
 	}
 	public function index()
