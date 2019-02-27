@@ -64,7 +64,7 @@ $table = '<table border=1>';
 foreach($locationapi as $lid=>$lc)
 {
 
-	$table .= '<tr>' . table_head() . '</tr>';
+	$table .= '<tr>' . table_head() . '<td>Accept/Deny</td></tr>';
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '';
 	foreach ($locrow->$lid as $id=>$row)
