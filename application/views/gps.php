@@ -22,7 +22,7 @@ return $table;
 function location_row($row)
 {
 	$table = '';
-	$array = array('CustNo', 'LocNo', 'LocName', 'Add1','City', 'State', 'Zip');
+	$array = array('CustNo', 'LocNo', 'LocName', 'Add1','City', 'State', 'Zip', 'latitude', 'longitude');
 	foreach ($array as $id => $v)
 	{
 		$table .= '<td>' . $row->$v . '</td>';
