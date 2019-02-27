@@ -11,7 +11,6 @@ function table_row($row)
 	{
 		if ($key == 'file')
 		{
-			$value = '<img src="' . APPURL . 'upload/' . str_replace(' ', '%20', $value) . '" width=50>';
 		}
 
 		$table .= '<td>' . $value . '</td>';
@@ -22,10 +21,24 @@ return $table;
 function location_row($row)
 {
 	$table = '';
-	$array = array('LocName', 'Add1','City', 'State', 'Zip', 'latitude', 'longitude');
+	$array = array('LocName', 'Add1','City', 'State', 'Zip', 'latitude', 'longitude', 'file');
+
 	foreach ($array as $id => $v)
 	{
-		$table .= '<td>' . $row->$v . '</td>';
+		$value = '';
+		if (isset($row->$v))
+		{
+			if ($v == 'file')
+			{
+				$value = '<img src="' . APPURL . 'upload/' . str_replace(' ', '%20', $value) . '" width=50>';
+			}
+			else
+			{
+				$value = $row->$v;
+			}
+		}	
+		$table .= '<td>' . $value . '</td>';
+
 	}
 
 return $table;
@@ -34,7 +47,9 @@ return $table;
 function table_head($row)
 {
 	$table = '';
-	foreach ($row as $key=> $value)
+	$array = array('LocName', 'Add1','City', 'State', 'Zip', 'latitude', 'longitude', 'file');
+
+	foreach ($row as $id => $key)
 	{
 		$table .= '<td>' . $key . '</td>';
 	}

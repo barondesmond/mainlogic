@@ -44,12 +44,12 @@ function location_row($row)
 return $table;
 }
 
-function table_head($row)
+function table_head()
 {
 	$table = '';
 	$array = array('LocName', 'Add1','City', 'State', 'Zip', 'latitude', 'longitude', 'file');
 
-	foreach ($row as $id => $key)
+	foreach ($array as $id => $key)
 	{
 		$table .= '<td>' . $key . '</td>';
 	}
@@ -64,18 +64,11 @@ $table = '<table border=1>';
 foreach($locationapi as $lid=>$lc)
 {
 
-	$table .= '<tr>' . table_head($lc) . '</tr>';
+	$table .= '<tr>' . table_head() . '</tr>';
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '</table>';
 	foreach ($locrow->$lid as $id=>$row)
 	{
-		if (!isset($tablehead))
-		{
-			$tablehead = table_head($lc);
-			$table .= '<table border=1><tr>' . $tablehead . '<td>Accept/Deny Override</td></tr>';
-		
-		}
-
 		$tablerow = table_row($row) . table_form($row);
 		$table .= '<tr>' . $tablerow . '</tr>';
 	}
