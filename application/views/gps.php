@@ -11,7 +11,7 @@ function table_row($row)
 	{
 		if ($key == 'file')
 		{
-			$value = '<img src="' . APPURL . 'upload/' . str_replace(' ', '%20', $value) . '" width=10%>';
+			$value = '<img src="' . APPURL . 'upload/' . str_replace(' ', '%20', $value) . '" width=50>';
 		}
 		$table .= '<td>' . $value . '</td>';
 	}
