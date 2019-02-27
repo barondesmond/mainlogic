@@ -66,7 +66,7 @@ foreach($locationapi as $lid=>$lc)
 
 	$table .= '<tr>' . table_head() . '</tr>';
 	$table .= '<tr>' . location_row($lc) . '</tr>';
-	$table .= '</table>';
+	$table .= '';
 	foreach ($locrow->$lid as $id=>$row)
 	{
 		$tablerow = table_row($row) . table_form($row);
