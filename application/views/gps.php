@@ -49,7 +49,7 @@ $table = '<table border=1>';
 foreach($locationapi as $lid=>$lc)
 {
 
-	//$table = '<tr>' . table_head($lc) . '</tr>';
+	$table .= '<tr>' . table_head($lc) . '</tr>';
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '</table>';
 	foreach ($locrow->$lid as $id=>$row)
