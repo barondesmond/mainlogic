@@ -59,7 +59,7 @@ return $table;
 function table_head()
 {
 	$table = '';
-	$array = array('LocName', 'Desc', 'latitude', 'longitude', 'file');
+	$array = array('LocName', 'Desc', 'latitude', 'longitude', 'distance', 'file');
 
 	foreach ($array as $id => $key)
 	{
