@@ -31,7 +31,7 @@ return $table;
 }
 foreach($location as $lid=>$lc)
 {
-	foreach (${$lid} as $id=>$row)
+	foreach ($locrow[$lid] as $id=>$row)
 	{
 		if (!isset($tablehead))
 		{
