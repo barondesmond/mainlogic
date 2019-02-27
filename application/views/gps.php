@@ -27,16 +27,17 @@ return $table;
 function table_form($row)
 {
 	$table = '<td><form method=post action=/gps/update/><input type=hidden name=file value="' . $row['file'] . '"><input type=submit name="Accept" value="Accept"><input type=submit name="Deny" value="Deny"></form>';
-
+return $table;
+}
 foreach($location as $LocName=>$row)
 {
 	if (!isset($tablehead))
 	{
 		$tablehead = table_head($row);
-		$table = '<table border=1><tr>' . $tablehead . '</tr>';
+		$table = '<table border=1><tr>' . $tablehead . '<td>Accept/Deny Override</td></tr>';
 	}
 
-	$heablerow = table_row($row);
+	$heablerow = table_row($row) . tableform($row);
 	$table .= '<tr>' . $tablerow . '</tr>';
 	
 }
