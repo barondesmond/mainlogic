@@ -30,7 +30,7 @@ function location_row($row)
 		{
 			if ($v == 'file')
 			{
-				$value = '<img src="' . APPURL . 'upload/' . str_replace(' ', '%20', $value) . '" width=50>';
+				$value = '<img src="' . APPURL . 'upload/' . str_replace(' ', '%20', $row->$v) . '" width=50>';
 			}
 			else
 			{
