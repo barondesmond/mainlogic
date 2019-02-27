@@ -13,6 +13,7 @@ function table_row($row)
 		{
 			$value = '<img src="' . APPURL . 'upload/' . str_replace(' ', '%20', $value) . '" width=50>';
 		}
+
 		$table .= '<td>' . $value . '</td>';
 	}
 return $table;
@@ -35,13 +36,18 @@ return $table;
 }
 foreach($location as $lid=>$lc)
 {
+
+	if (!isset($tablehead))
+	{
+		$tablehead = table_head($lc);
+		$table = '<table border=1><tr>' . $tablehead . '<td>Accept/Deny Override</td></tr>';
+		
+	}
+	$table .= '<tr>' . table_row($row) . '</tr>';
+
 	foreach ($locrow->$lid as $id=>$row)
 	{
-		if (!isset($tablehead))
-		{
-			$tablehead = table_head($row);
-			$table = '<table border=1><tr>' . $tablehead . '<td>Accept/Deny Override</td></tr>';
-		}
+
 		$tablerow = table_row($row) . table_form($row);
 		$table .= '<tr>' . $tablerow . '</tr>';
 	}
