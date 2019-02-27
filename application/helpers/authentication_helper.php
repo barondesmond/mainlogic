@@ -40,6 +40,12 @@
 		return app_api($uri);
 
 	}
+	function gps()
+	{
+		$uri = 'location_json.php?location=1';
+		return app_api($uri);
+
+	}
 
 
 	function get_period_bounds($offset = -1) 
