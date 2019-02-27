@@ -19,6 +19,14 @@ function table_row($row)
 return $table;
 }
 
+function location_row($row)
+{
+	$array = array('CustNo', 'LocNo', 'LocName', 'Add1','City', 'State', 'Zip');
+	foreach ($array as $id => $v)
+	{
+		$table .= '<td>' . $row->$v . '</td>';
+	}
+}
 
 function table_head($row)
 {
@@ -39,7 +47,7 @@ foreach($location as $lid=>$lc)
 {
 
 	//$table = '<tr>' . table_head($lc) . '</tr>';
-	$table .= '<tr>' . table_row($lc) . '</tr>';
+	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '</table>';
 	foreach ($locrow->$lid as $id=>$row)
 	{
