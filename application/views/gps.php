@@ -38,7 +38,7 @@ foreach($location as $lid=>$lc)
 			$tablehead = table_head($row);
 			$table = '<table border=1><tr>' . $tablehead . '<td>Accept/Deny Override</td></tr>';
 		}
-		$heablerow = table_row($row) . table_form($row);
+		$tablerow = table_row($row) . table_form($row);
 		$table .= '<tr>' . $tablerow . '</tr>';
 	}
 
