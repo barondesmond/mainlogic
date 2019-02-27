@@ -9,6 +9,10 @@ function table_row($row)
 	$table = '';
 	foreach ($row as $key=> $value)
 	{
+		if ($key == 'file')
+		{
+			$value = '<img src="' . base_url() . 'upload/' . urlencode($value) . '" width=100%>';
+		}
 		$table .= '<td>' . $value . '</td>';
 	}
 return $table;

@@ -20,7 +20,7 @@ function table_head($row)
 	$table = '';
 	foreach ($row as $key=> $value)
 	{
-		$table .= '<td>' . $value . '</td>';
+		$table .= '<td>' . $key . '</td>';
 	}
 return $table;
 }
