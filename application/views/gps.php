@@ -22,7 +22,7 @@ return $table;
 function location_row($row)
 {
 	$table = '';
-	$array = array('CustNo', 'LocNo', 'LocName', 'Add1','City', 'State', 'Zip');
+	$array = array('CustNo', 'LocNo', 'LocName', 'Add1','City', 'State', 'Zip', 'latitude', 'longitude');
 	foreach ($array as $id => $v)
 	{
 		$table .= '<td>' . $row->$v . '</td>';
@@ -46,7 +46,7 @@ function table_form($row)
 return $table;
 }
 $table = '<table border=1>';
-foreach($location as $lid=>$lc)
+foreach($locationapi as $lid=>$lc)
 {
 
 	//$table = '<tr>' . table_head($lc) . '</tr>';
