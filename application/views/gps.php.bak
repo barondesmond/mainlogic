@@ -22,7 +22,7 @@ function location_row($row)
 {
 	$table = '';
 	$array = array('LocName', 'Desc', 'latitude', 'longitude', 'file');
-
+	$desc = array('Add1', 'City', 'State', 'Zip');
 	foreach ($array as $id => $v)
 	{
 		$value = '';
@@ -39,7 +39,15 @@ function location_row($row)
 		}
 		if (!isset($row->$v) && $v == 'Desc')
 		{
-			$value = $row->Addr1 . $row->City . $row->State. $row->Zip;
+			
+			foreach ($desc as $num=>$add)
+			{
+				if (isset($row->$add))
+				{
+					$value .= $row->$add . ' ';
+				}
+			}
+			$value = trim($value);
 		}
 		$table .= '<td>' . $value . '</td>';
 
