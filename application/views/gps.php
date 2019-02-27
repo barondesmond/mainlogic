@@ -21,11 +21,14 @@ return $table;
 
 function location_row($row)
 {
+	$table = '';
 	$array = array('CustNo', 'LocNo', 'LocName', 'Add1','City', 'State', 'Zip');
 	foreach ($array as $id => $v)
 	{
 		$table .= '<td>' . $row->$v . '</td>';
 	}
+
+return $table;
 }
 
 function table_head($row)
