@@ -43,7 +43,7 @@ foreach($location as $lid=>$lc)
 		$table = '<table border=1><tr>' . $tablehead . '<td>Accept/Deny Override</td></tr>';
 		
 	}
-	$table .= '<tr>' . table_row($row) . '</tr>';
+	$table .= '<tr>' . table_row($lc) . '</tr>';
 
 	foreach ($locrow->$lid as $id=>$row)
 	{
