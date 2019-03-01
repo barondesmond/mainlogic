@@ -42,7 +42,7 @@
 	}
 	function gps()
 	{
-		$uri = 'location_json.php?location=1';
+		$uri = 'location_json.php?location=1&dev='__DEV__;
 		return app_api($uri);
 
 	}
