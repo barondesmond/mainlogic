@@ -21,7 +21,7 @@ return $table;
 function location_row($row)
 {
 	$table = '';
-	$array = array('LocName', 'Desc', 'latitude', 'longitude', 'distance', 'file');
+	$array = array('LocName', 'location', 'Desc', 'latitude', 'longitude', 'distance', 'file');
 	$desc = array('Add1', 'City', 'State', 'Zip');
 	foreach ($array as $id => $v)
 	{
