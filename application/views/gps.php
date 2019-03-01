@@ -21,7 +21,7 @@ return $table;
 function location_row($row)
 {
 	$table = '';
-	$array = array('LocName', 'EmpNo', 'location', 'Desc', 'latitude', 'longitude', 'distance', 'file');
+	$array = array('CustNo', 'LocNo', 'LocName', 'EmpNo', 'location', 'Desc', 'latitude', 'longitude', 'distance', 'file');
 	$desc = array('Add1', 'City', 'State', 'Zip');
 	foreach ($array as $id => $v)
 	{
@@ -59,7 +59,7 @@ return $table;
 function table_head()
 {
 	$table = '';
-	$array = array('LocName', 'EmpNo', 'location', 'Desc', 'latitude', 'longitude', 'distance', 'file');
+	$array = array('CustNo', 'LocNo', 'LocName', 'EmpNo', 'location', 'Desc', 'latitude', 'longitude', 'distance', 'file');
 
 	foreach ($array as $id => $key)
 	{
