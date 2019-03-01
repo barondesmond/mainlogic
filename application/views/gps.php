@@ -72,6 +72,10 @@ function table_form($row)
 	$table = '<td><form method=post action=/gps/update/><input type=hidden name=file value="' . $row->file . '"><input type=submit name="Accept" value="Accept"><input type=submit name="Deny" value="Deny"></form>';
 return $table;
 }
+if (isset($error))
+{
+	echo $error;
+}
 $table = '<table border=1>';
 foreach($locationapi as $lid=>$lc)
 {
