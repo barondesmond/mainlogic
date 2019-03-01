@@ -31,12 +31,15 @@ class Gps extends CI_Controller {
 		return index();
 	}
 
-	
+	public function update()
+	{
+		redirect('/gps/index/', 'refresh');
+	}
 	public function index()
 	{
 		$gps = gps();
 		$this->load->view('header');
-		$this->load->view('gps');
+		$this->load->view('gps', $gps);
 		$this->load->view('footer');
 	}
 }

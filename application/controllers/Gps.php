@@ -31,7 +31,12 @@ class Gps extends CI_Controller {
 		return index();
 	}
 
-	
+	public function update()
+	{
+		$gps = gps_update();
+
+		redirect('/gps/index/?update=1&' . http_build_query($gps), 'refresh');
+	}
 	public function index()
 	{
 		$gps = gps();
