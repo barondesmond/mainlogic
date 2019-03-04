@@ -9,7 +9,7 @@ foreach ($employees as $employee)
 ?>
 </select>
 
-Group <select multiple name=JobGroup[]>
+JobGroup <select multiple name=JobGroup[]>
 <?php
 foreach ($jobgroups as $jobgroup)
 {
