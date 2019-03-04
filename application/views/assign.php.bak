@@ -1,3 +1,7 @@
+<form method=post action/assign/addjobgroup/>
+Job Group<input type=text name=jobgroup><input type=submit name="Add Job Group"></form>
+<p>
+
 <form method=post action=/assign/add/>
 
 Employee <select multiple name=Employee[] size=20>
