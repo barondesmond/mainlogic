@@ -2,6 +2,7 @@
 
 Employee <select multiple name=Employee[]>
 <?
+print_r($employees);
 foreach ($employees as $employee)
 {
 	echo "<option value=$employee->EmpNo>$employee->EmpName $employee->Email</option>\r\n";
