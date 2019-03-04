@@ -1,4 +1,4 @@
-<form method=post action=/assignment/add/>
+<form method=post action=/assign/add/>
 
 Employee <select multiple name=Employee>
 <option value=0195>Baron Desmond</option>
