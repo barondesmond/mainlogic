@@ -24,7 +24,10 @@ class Assign extends CI_Controller {
         verify_session(); 
 	}
 
-
+	public function add()
+	{
+		print_r($_REQUEST);
+	}
  
 	public function view()
 	{
