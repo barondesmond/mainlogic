@@ -14,7 +14,7 @@ Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group"
 
 <form method=post action=/assign/add/>
 
-Employee <select multiple name=Employee[] size=20>
+Employee <select multiple name=Employee[] size=<?php echo count($employees) ?>>
 <?php
 foreach ($employees as $employee)
 {
@@ -31,7 +31,7 @@ foreach ($jobgroups as $jobgroup)
 }
 ?>
 </select>
-Job <select multiple name=Job[] size=20>
+Job <select multiple name=Job[] size=<?php echo count($jobs) ?>>
 <?php
 
 foreach ($jobs as $job)
