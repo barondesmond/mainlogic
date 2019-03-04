@@ -23,7 +23,7 @@ foreach ($employees as $employee)
 ?>
 </select>
 
-JobGroup <select multiple name=JobGroup[]>
+JobGroup <select multiple name=JobGroup[] size=<?php echo count($jobgroups) ?>>
 <?php
 foreach ($jobgroups as $jobgroup)
 {
