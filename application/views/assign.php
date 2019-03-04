@@ -9,11 +9,14 @@ foreach ($employees as $employee)
 ?>
 </select>
 
-Group <select multiple name=Group[] size=20>
-<option>Group1</option>
-<option>Group2</option>
+Group <select multiple name=JobGroup[]>
+<?php
+foreach ($jobgroups as $jobgroups)
+{
+	echo "<option value=$jobgroups->JobGroupID>$jobgroups->JobGroup</option>\r\n";
+}
+?>
 </select>
-
 Job <select multiple name=Job[] size=20>
 <?php
 

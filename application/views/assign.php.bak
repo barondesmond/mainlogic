@@ -1,6 +1,6 @@
 <form method=post action=/assign/add/>
 
-Employee <select multiple name=Employee[]>
+Employee <select multiple name=Employee[] size=20>
 <?php
 foreach ($employees as $employee)
 {
@@ -9,12 +9,12 @@ foreach ($employees as $employee)
 ?>
 </select>
 
-Group <select multiple name=Group[] size=10>
+Group <select multiple name=Group[] size=20>
 <option>Group1</option>
 <option>Group2</option>
 </select>
 
-Job <select multiple name=Job[] size=10>
+Job <select multiple name=Job[] size=20>
 <?php
 
 foreach ($jobs as $job)
