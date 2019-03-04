@@ -9,10 +9,24 @@ if (isset($error))
 ?>
 
 <form method=post action=/assign/addjobgroup/>
+
+
 Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group"></form>
 <p>
 
+
+
 <form method=post action=/assign/add/>
+
+Job <select multiple name=Job[] size=<?php echo count($jobs) ?>>
+<?php
+
+foreach ($jobs as $job)
+{
+	echo "<option value=$job->Name>$job->Name $job->LocName</option>\r\n";
+}
+?>
+</select>
 
 Employee <select multiple name=Employee[] size=<?php echo count($employees) ?>>
 <?php
@@ -31,15 +45,7 @@ foreach ($jobgroups as $jobgroup)
 }
 ?>
 </select>
-Job <select multiple name=Job[] size=<?php echo count($jobs) ?>>
-<?php
 
-foreach ($jobs as $job)
-{
-	echo "<option value=$job->Name>$job->Name $job->LocName</option>\r\n";
-}
-?>
-</select>
 
 <input type=submit value="Assign"></form>
 
