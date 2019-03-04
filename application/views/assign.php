@@ -9,12 +9,12 @@ foreach ($employees as $employee)
 ?>
 </select>
 
-Group <select multiple name=Group[] height=20>
+Group <select multiple name=Group[] size=10>
 <option>Group1</option>
 <option>Group2</option>
 </select>
 
-Job <select multiple name=Job[] height=20>
+Job <select multiple name=Job[] size=10>
 <?php
 
 foreach ($jobs as $job)
