@@ -34,6 +34,13 @@
 	return $auth;
 	}
 
+	function assign()
+	{
+		$uri = 'assign_json.php?latitude=34.253725&longitude=-88.6843';
+		return app_api($uri);
+
+	}
+
 	function jobs()
 	{
 		$uri = 'jobs_json.php?latitude=34.253725&longitude=-88.6843';

@@ -1,8 +1,12 @@
 <form method=post action=/assign/add/>
 
 Employee <select multiple name=Employee[]>
-<option value=0195>Baron Desmond</option>
-<option value=0002>Shannon Dillon</option>
+<?
+foreach ($employees as $employee)
+{
+	echo "<option value=$employee->EmpNo>$employee->EmpName $employee->Email</option>\r\n";
+}
+?>
 </select>
 
 Group <select multiple name=Group[]>
