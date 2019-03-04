@@ -28,7 +28,7 @@ class Assign extends CI_Controller {
 	{
 		//print_r($_REQUEST);
 		$resp = add_job_group();
-		redirect('/assign/index/?' . hthtp_build_query($resp), 'refresh');
+		redirect('/assign/index/?' . http_build_query($resp), 'refresh');
 	}
 
 	public function add()

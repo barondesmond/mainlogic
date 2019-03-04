@@ -34,7 +34,7 @@
 	return $auth;
 	}
 
-	function addjobgroup()
+	function add_job_group()
 	{
 		$uri = 'assign_json.php?add_job_group=1&' . http_build_query($_REQUEST);
 		return app_api($uri);
