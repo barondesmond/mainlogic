@@ -10,7 +10,7 @@ Group <select name=Group>
 <option>Group2</option>
 </select>
 
-Job <selecct name=Job>
+Job <select name=Job>
 <option value=J-012345>Job 1</option>
 <option value=J-023423>Job 2</option>
 </option>
