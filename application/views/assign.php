@@ -9,7 +9,7 @@ if (isset($error))
 ?>
 
 <form method=post action=/assign/addjobgroup/>
-Job Group<input type=text name=jobgroup><input type=submit value="Add Job Group"></form>
+Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group"></form>
 <p>
 
 <form method=post action=/assign/add/>

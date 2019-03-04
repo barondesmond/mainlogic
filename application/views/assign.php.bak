@@ -1,11 +1,12 @@
 <?php
-if ($error)
+if (isset($error))
 {
 	foreach ($error as $err)
 	{
 		echo "<p>$err\r\n";
 	}
 }
+?>
 
 <form method=post action=/assign/addjobgroup/>
 Job Group<input type=text name=jobgroup><input type=submit value="Add Job Group"></form>
