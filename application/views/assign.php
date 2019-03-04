@@ -11,9 +11,14 @@ Group <select multiple name=Group[]>
 </select>
 
 Job <select multiple name=Job[]>
-<option value=J-012345>Job 1</option>
-<option value=J-023423>Job 2</option>
-</option>
+<?php
+
+foreach ($jobs as $job)
+{
+	echo "<option value=$job->Name>$job->Name $job->LocName</option>\r\n";
+}
+?>
+</select>
 
 <input type=submit value="Assign"></form>
 
