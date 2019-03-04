@@ -34,6 +34,11 @@
 	return $auth;
 	}
 
+	function addjobgroup()
+	{
+		$uri = 'assign_json.php?add_job_group=1&' . http_build_query($_REQUEST);
+		return app_api($uri);
+	}
 	function assign()
 	{
 		$uri = 'assign_json.php?latitude=34.253725&longitude=-88.6843';
