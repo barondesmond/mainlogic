@@ -1,8 +1,7 @@
 <form method=post action=/assign/add/>
 
 Employee <select multiple name=Employee[]>
-<?
-print_r($employees);
+<?php
 foreach ($employees as $employee)
 {
 	echo "<option value=$employee->EmpNo>$employee->EmpName $employee->Email</option>\r\n";

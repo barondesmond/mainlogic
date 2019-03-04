@@ -40,6 +40,7 @@ class Assign extends CI_Controller {
 		
 		$this->load->view('header');
 		$assign = assign();
+		print_r($assign);
 		$this->load->view('assign', $assign);
 		$this->load->view('footer');
 	}
