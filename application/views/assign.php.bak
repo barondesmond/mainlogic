@@ -21,6 +21,7 @@ function is_selected($id, $jobgroupemployees='')
 	}
 }
 
+print_r($jobgroupemployees);
 ?>
 
 <form method=post action=/assign/addjobgroup/>

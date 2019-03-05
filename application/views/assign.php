@@ -7,13 +7,13 @@ if (isset($error))
 	}
 }
 
-function is_selected($id, $jobgroupemployees='')
+function is_selected($key, $id, $jobgroupemployees='')
 {
 	foreach ($jobgroupemployeese as $jobgroupemployee)
 	{
 	if (isset($jobgroupemployee) && is_array($jobgroupemployee))
 	{
-		if (in_array($id, $jobgroupemployee))
+		if ($jobgroupemployee[$key]==$id))
 		{
 			return 'selected';
 		}
@@ -39,7 +39,7 @@ Job <select multiple name=Job[] size=<?php echo count($jobs) ?>>
 
 foreach ($jobs as $job)
 {
-	echo "<option value=$job->Name " . is_selected($job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
+	echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
 }
 ?>
 </select>
@@ -48,7 +48,7 @@ Employee <select multiple name=Employee[] size=<?php echo count($employees) ?>>
 <?php
 foreach ($employees as $employee)
 {
-	echo "<option value=$employee->EmpNo " . is_selected($employee->EmpNo, $jobgroupemployees) . ">$employee->EmpName $employee->Email</option>\r\n";
+	echo "<option value=$employee->EmpNo " . is_selected('EmpNo', $employee->EmpNo, $jobgroupemployees) . ">$employee->EmpName $employee->Email</option>\r\n";
 }
 ?>
 </select>
@@ -57,7 +57,7 @@ JobGroup <select multiple name=JobGroup[] size=<?php echo count($jobgroups) ?>>
 <?php
 foreach ($jobgroups as $jobgroup)
 {
-	echo "<option value=$jobgroup->JobGroupID " . is_selected($jobgroup->JobGroupID, $jobgroupemployees) . ">$jobgroup->JobGroup</option>\r\n";
+	echo "<option value=$jobgroup->JobGroupID " . is_selected('JobGroupID', $jobgroup->JobGroupID, $jobgroupemployees) . ">$jobgroup->JobGroup</option>\r\n";
 }
 ?>
 </select>
