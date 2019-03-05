@@ -9,12 +9,15 @@ if (isset($error))
 
 function is_selected($id, $jobgroupemployees='')
 {
-	if (isset($jobgroupemployees) && is_array($jobgroupemployees))
+	foreach ($jobgroupemployeese as $jobgroupemployee)
 	{
-		if (in_array($id, $jobgroupemployees))
+	if (isset($jobgroupemployee) && is_array($jobgroupemployee))
+	{
+		if (in_array($id, $jobgroupemployee))
 		{
 			return 'selected';
 		}
+	}
 	}
 }
 
