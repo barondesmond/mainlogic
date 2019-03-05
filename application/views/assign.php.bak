@@ -12,7 +12,7 @@ function is_selected($key, $id, $jobgroupemployees='')
 	foreach ($jobgroupemployees as $jobgroupemployee)
 	{
 
-		if ($jobgroupemployee[$key]==$id)
+		if ($jobgroupemployee->$key==$id)
 		{
 			return 'selected';
 		}
@@ -41,6 +41,17 @@ foreach ($jobs as $job)
 }
 ?>
 </select>
+JobGroup <select multiple name=JobGroup[] size=<?php echo count($jobgroups) ?>>
+<?php
+foreach ($jobgroups as $jobgroup)
+{
+	echo "<option value=$jobgroup->JobGroupID " . is_selected('JobGroupID', $jobgroup->JobGroupID, $jobgroupemployees) . ">$jobgroup->JobGroup</option>\r\n";
+}
+?>
+</select>
+
+
+<input type=submit value="Assign"></form>
 
 Employee <select multiple name=Employee[] size=<?php echo count($employees) ?>>
 <?php

@@ -30,7 +30,7 @@ Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group"
 
 
 
-<form method=post action=/assign/add/>
+<P><form method=post action=/assign/add/>
 
 Job <select multiple name=Job[] size=<?php echo count($jobs) ?>>
 <?php
@@ -41,6 +41,19 @@ foreach ($jobs as $job)
 }
 ?>
 </select>
+JobGroup <select multiple name=JobGroup[] size=<?php echo count($jobgroups) ?>>
+<?php
+foreach ($jobgroups as $jobgroup)
+{
+	echo "<option value=$jobgroup->JobGroupID " . is_selected('JobGroupID', $jobgroup->JobGroupID, $jobgroupemployees) . ">$jobgroup->JobGroup</option>\r\n";
+}
+?>
+</select>
+
+
+<input type=submit value="Assign"></form>
+
+<P><form method=post action=/assign/add/>
 
 Employee <select multiple name=Employee[] size=<?php echo count($employees) ?>>
 <?php
