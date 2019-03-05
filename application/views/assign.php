@@ -35,7 +35,7 @@ Job <select multiple name=Job[] size=<?php echo count($jobs) ?>>
 
 foreach ($jobs as $job)
 {
-	echo "<option value=$job->Name " . is_selectecd($job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
+	echo "<option value=$job->Name " . is_selected($job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
 }
 ?>
 </select>

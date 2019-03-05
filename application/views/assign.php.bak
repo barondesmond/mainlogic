@@ -7,9 +7,9 @@ if (isset($error))
 	}
 }
 
-function is_selected($id, $jobgroupemployees)
+function is_selected($id, $jobgroupemployees='')
 {
-	if (isset($jobgroupemployees))
+	if (isset($jobgroupemployees) && is_array($jobgroupemployees))
 	{
 		if (in_array($id, $jobgroupemployees))
 		{
