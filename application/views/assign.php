@@ -12,7 +12,7 @@ function is_selected($key, $id, $jobgroupemployees='')
 	foreach ($jobgroupemployees as $jobgroupemployee)
 	{
 
-		if ($jobgroupemployee[$key]==$id)
+		if ($jobgroupemployee->$key==$id)
 		{
 			return 'selected';
 		}
