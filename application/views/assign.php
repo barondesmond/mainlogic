@@ -9,7 +9,7 @@ if (isset($error))
 
 function is_selected($key, $id, $jobgroupemployees='')
 {
-	foreach ($jobgroupemployeese as $jobgroupemployee)
+	foreach ($jobgroupemployees as $jobgroupemployee)
 	{
 	if (isset($jobgroupemployee) && is_array($jobgroupemployee))
 	{
