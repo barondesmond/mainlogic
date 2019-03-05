@@ -13,7 +13,7 @@ function is_selected($key, $id, $jobgroupemployees='')
 	{
 	if (isset($jobgroupemployee) && is_array($jobgroupemployee))
 	{
-		if ($jobgroupemployee[$key]==$id))
+		if ($jobgroupemployee[$key]==$id)
 		{
 			return 'selected';
 		}
