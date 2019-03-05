@@ -65,14 +65,7 @@ foreach ($employees as $employee)
 ?>
 </select>
 
-JobGroup <select multiple name=JobGroup[] size=<?php echo count($jobgroups) ?>>
-<?php
-foreach ($jobgroups as $jobgroup)
-{
-	echo "<option value=$jobgroup->JobGroupID " . is_selected('JobGroupID', $jobgroup->JobGroupID, $jobgroupemployees) . ">$jobgroup->JobGroup</option>\r\n";
-}
-?>
-</select>
+
 
 
 <input type=submit value="Assign Job/Employee"></form>
