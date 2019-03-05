@@ -11,8 +11,12 @@ function is_selected($key, $id, $jobgroupemployees='')
 {
 	foreach ($jobgroupemployees as $jobgroupemployee)
 	{
+
+
 	if (isset($jobgroupemployee) && is_array($jobgroupemployee))
 	{
+		echo "$key $id";
+		print_r($jobgroupemployee);
 		if ($jobgroupemployee[$key]==$id)
 		{
 			return 'selected';
@@ -21,7 +25,6 @@ function is_selected($key, $id, $jobgroupemployees='')
 	}
 }
 
-print_r($jobgroupemployees);
 ?>
 
 <form method=post action=/assign/addjobgroup/>
