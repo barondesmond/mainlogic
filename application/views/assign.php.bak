@@ -34,7 +34,7 @@ Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group"
 
 Job <select multiple name=Job[] size=<?php echo count($jobs) ?>>
 <?php
-
+<option></option>
 foreach ($jobs as $job)
 {
 	echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
@@ -54,6 +54,8 @@ foreach ($jobgroups as $jobgroup)
 
 
 Employee <select multiple name=Employee[] size=<?php echo count($employees) ?>>
+<option></option>
+
 <?php
 foreach ($employees as $employee)
 {
