@@ -51,8 +51,7 @@ foreach ($jobgroups as $jobgroup)
 </select>
 
 
-<input type=submit value="Assign Job"></form>
-<form method=post action=/assign/add/>
+
 
 Employee <select multiple name=Employee[] size=<?php echo count($employees) ?>>
 <?php
@@ -73,6 +72,6 @@ foreach ($jobgroups as $jobgroup)
 </select>
 
 
-<input type=submit value="Assign Employee"></form>
+<input type=submit value="Assign Job/Employee"></form>
 
 
