@@ -34,10 +34,19 @@ class Assign extends CI_Controller {
 	public function add()
 	{
 		$resp = add_job_group_employee();
-		redirect('/assign/index/?' . http_build_query($resp), 'refresh');
+		redirect('/assign/assigned/?' . http_build_query($resp), 'refresh');
 
 	}
  
+	public function assigned()
+	{
+
+		$this->load->view('header');
+		$assign = assign();
+		$this->load->view('assigned', $assign);
+		$this->load->view('footer');
+
+	}
 	public function view()
 	{
 		return index();
