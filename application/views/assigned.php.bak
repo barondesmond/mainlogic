@@ -20,6 +20,8 @@ foreach ($jobgroupemployees as $jobgroupemployee)
 	$head = '';
 	$row = '';
 	$djg[$jobgroupemployee->JobGroupID] = delete_jobgroup('JobGroup', $jobgroupemployee->JobGroupID, $jobgroupemployee->JobGroup);
+	$dje[$jobgroupemployee->EmpNo] = delete_jobgroup('Employee', $jobgroupemployee->EmpNo, $jobgroupemployee->EmpName);
+	$djj[$jobgroupemployee->Job] = delete_jobgroup('Job', $jobgroupemployee->Job, $jobgroupemployee->LocName);
 	foreach ($jobgroupemployee as $key => $value)
 	{
 	  $head .= '<td>' . $key . '</td>';
@@ -47,4 +49,12 @@ foreach ($djg as $deletejobgroup)
 	echo $deletejobgroup;
 }
 
+foreach ($dje as $deletejobgroup)
+{
+	echo $deletejobgroup;
+}
+foreach ($djj as $deletejobgroup)
+{
+	echo $deletejobgroup;
+}
 ?>
