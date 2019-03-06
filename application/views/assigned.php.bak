@@ -12,6 +12,18 @@ function delete_jobgroup($JobGroupID, $JobGroup)
 	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=JobGroup[] value=' . $JobGroupID . '><input type=submit value="Delete ' . $JobGroup . '"></form>';
 return $form;
 }
+function delete_employee($EmpNo, $EmpName)
+{
+	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=Employee[] value=' . $EmpNo . '><input type=submit value="Delete ' . $EmpName . '"></form>';
+return $form;
+}
+
+function delete_job($Job, $LocName)
+{
+	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=Job[] value=' . $Job . '><input type=submit value="Delete ' . $LocName . '"></form>';
+return $form;
+}
+
 
 foreach ($jobgroupemployees as $jobgroupemployee)
 {
@@ -44,3 +56,5 @@ foreach ($djg as $deletejobgroup)
 {
 	echo $deletejobgroup;
 }
+
+?>
