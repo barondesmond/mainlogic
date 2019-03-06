@@ -16,7 +16,7 @@ foreach ($jobgroupemployees as $jobgroupemployee)
 	  $head .= '<td>' . $key . '</td>';
 	  if ($key == 'id')
 	  {
-		  $row .= '<td>' . delete_jobgroup_employee('Employee', $jobgroupemployee['EmpNo'], $jobgroupemployee['JobGroupID']) . delete_jobgroup_employee('Job', $jobgroupemployee['Job'], $jobgroupemployee['JobGroupID']) . '</td>';
+		  $row .= '<td>' . delete_jobgroup_employee('Employee', $jobgroupemployee->EmpNo, $jobgroupemployee->JobGroupID) . delete_jobgroup_employee('Job', $jobgroupemployee->Job, $jobgroupemployee->JobGroupID) . '</td>';
 	  }
 	  else
 	  {
