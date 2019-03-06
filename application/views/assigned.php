@@ -7,10 +7,29 @@ function delete_jobgroup_employee($key, $id, $JobGroup)
 return $form;
 }
 
+function delete_jobgroup($JobGroupID, $JobGroup)
+{
+	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=JobGroup[] value=' . $JobGroupID . '><input type=submit value="Delete ' . $JobGroup . '"></form>';
+return $form;
+}
+function delete_employee($EmpNo, $EmpName)
+{
+	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=Employee[] value=' . $EmpNo . '><input type=submit value="Delete ' . $EmpName . '"></form>';
+return $form;
+}
+
+function delete_job($Job, $LocName)
+{
+	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=Job[] value=' . $Job . '><input type=submit value="Delete ' . $LocName . '"></form>';
+return $form;
+}
+
+
 foreach ($jobgroupemployees as $jobgroupemployee)
 {
 	$head = '';
 	$row = '';
+	$djg[$jobgroupemployee['JobGroupID']] = delete_jobgroup($jobgroupemployee['JobGroupID'], $jobgroupemployee['JobGroup']);
 	foreach ($jobgroupemployee as $key => $value)
 	{
 	  $head .= '<td>' . $key . '</td>';
@@ -33,3 +52,9 @@ foreach ($jobgroupemployees as $jobgroupemployee)
 
 }
 echo '</table>';
+foreach ($djg as $deletejobgroup)
+{
+	echo $deletejobgroup;
+}
+
+?>
