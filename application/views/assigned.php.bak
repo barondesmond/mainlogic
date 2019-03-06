@@ -9,18 +9,18 @@ return $form;
 
 function delete_jobgroup($JobGroupID, $JobGroup)
 {
-	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=JobGroup[] value=' . $JobGroupID . '><input type=submit value="Delete ' . $JobGroup . '"></form>';
+	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=JobGroup[] value=' . $JobGroupID . '><input type=submit value="Delete ' $JobGroupID . ' '. $JobGroup . '"></form>';
 return $form;
 }
 function delete_employee($EmpNo, $EmpName)
 {
-	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=Employee[] value=' . $EmpNo . '><input type=submit value="Delete ' . $EmpName . '"></form>';
+	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=Employee[] value=' . $EmpNo . '><input type=submit value="Delete ' . $EmpNo . ' ' . $EmpName . '"></form>';
 return $form;
 }
 
 function delete_job($Job, $LocName)
 {
-	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=Job[] value=' . $Job . '><input type=submit value="Delete ' . $LocName . '"></form>';
+	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=Job[] value=' . $Job . '><input type=submit value="Delete ' . $Job . ' ' . $LocName . '"></form>';
 return $form;
 }
 
@@ -29,7 +29,7 @@ foreach ($jobgroupemployees as $jobgroupemployee)
 {
 	$head = '';
 	$row = '';
-	$djg[$jobgroupemployee->JobGroupID] = delete_jobgroup($jobgroupemployee->'JobGroupID', $jobgroupemployee->'JobGroup');
+	$djg[$jobgroupemployee->JobGroupID] = delete_jobgroup($jobgroupemployee->JobGroupID, $jobgroupemployee->JobGroup);
 	foreach ($jobgroupemployee as $key => $value)
 	{
 	  $head .= '<td>' . $key . '</td>';
