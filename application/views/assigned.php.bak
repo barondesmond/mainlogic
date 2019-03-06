@@ -9,7 +9,7 @@ return $form;
 
 function delete_jobgroup($type, $key, $id)
 {
-	$form = '<form method=post action/assign/deletejobgroup/><input type=hidden name=' . $type . '[] value=' . $key . '><input type=submit value="Delete ' . $key . ' '. $id . '"></form>';
+	$form = '<form method=post action=/assign/deletejobgroup/><input type=hidden name=' . $type . '[] value=' . $key . '><input type=submit value="Delete ' . $key . ' '. $id . '"></form>';
 return $form;
 }
 
