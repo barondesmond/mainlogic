@@ -69,8 +69,3 @@ foreach ($employees as $employee)
 
 
 <input type=submit value="Assign Job/Employee"></form>
-
-
-
-
-?>
