@@ -2,7 +2,7 @@
 
 function delete_jobgroup_employee($key, $id, $JobGroup)
 {
-	$form = '<form method=post action=/assign/delete/jobgroup/><input type=hidden name=' . $key . '[] value=' . $id . '><input type=hidden name=JobGroup[] value=$JobGroup><input type=submit value="Delete ' . $key . ' ' . $id . '"></form>';
+	$form = '<form method=post action=/assign/deletejobgroup/><input type=hidden name=' . $key . '[] value=' . $id . '><input type=hidden name=JobGroup[] value=$JobGroup><input type=submit value="Delete ' . $key . ' ' . $id . '"></form>';
 	
 return $form;
 }
