@@ -29,7 +29,7 @@ foreach ($jobgroupemployees as $jobgroupemployee)
 {
 	$head = '';
 	$row = '';
-	$djg[$jobgroupemployee->JobGroupID] = delete_jobgroup($jobgroupemployee->'JobGroupID', $jobgroupemployee->'JobGroup');
+	$djg[$jobgroupemployee->JobGroupID] = delete_jobgroup($jobgroupemployee->JobGroupID, $jobgroupemployee->JobGroup);
 	foreach ($jobgroupemployee as $key => $value)
 	{
 	  $head .= '<td>' . $key . '</td>';
