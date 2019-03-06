@@ -4,7 +4,7 @@
 if (!isset($jobgroupemployees))
 {
 	echo "No Job Group Employees";
-	exit;
+	return false;
 }
 
 function delete_jobgroup_employee($key, $id, $JobGroup)

@@ -1,5 +1,12 @@
 <?php
 
+
+if (!isset($jobgroupemployees))
+{
+	echo "No Job Group Employees";
+	exit;
+}
+
 function delete_jobgroup_employee($key, $id, $JobGroup)
 {
 	$form = '<form method=post action=/assign/deletejobgroup/><input type=hidden name=' . $key . '[] value=' . $id . '><input type=hidden name=JobGroup[] value=' . $JobGroup . '><input type=submit value="Delete ' . $key . ' ' . $id . ' from JobGroup ' . $JobGroup . '"></form>';
