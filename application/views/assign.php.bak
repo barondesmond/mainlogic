@@ -76,7 +76,7 @@ foreach ($jobgroupemployees as $jobgroupemployee)
 {
 	$head = '';
 	$row = '';
-	foreach ($jobgroopemployee as $key => $value)
+	foreach ($jobgroupemployee as $key => $value)
 	{
 	  $head .= '<td>' . $key . '</td>';
 	  $row .= '<td>' . $value . '</td>';

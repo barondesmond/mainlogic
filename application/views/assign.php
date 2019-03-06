@@ -81,7 +81,7 @@ foreach ($jobgroupemployees as $jobgroupemployee)
 	  $head .= '<td>' . $key . '</td>';
 	  $row .= '<td>' . $value . '</td>';
 	}
-	if (!$hd)
+	if (!isset($hd))
 	{
 		$hd = '<table border=1><tr>' . $head . '</tr>';
 		echo $hd;
