@@ -14,7 +14,7 @@ function is_selected($key, $id, $jobgroupemployees='')
 
 		if ($jobgroupemployee->$key==$id)
 		{
-			return 'selected';
+			//return 'selected';
 		}
 	
 	}
