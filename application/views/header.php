@@ -125,11 +125,11 @@ foreach ($head as $desc => $link)
 }
 ?>
 <p><img src="/assets/images/serviq.png" width="50%"></p>
-<p><A HREF="<?php echo base_url(); ?>reports">Process Employee Reports</A></P>
-<?php 
+<?php echo form_button('reports', 'Process Employee reports');
+
 if ($this->session->userdata('EmpNo'))
 {
-	echo '<P><A HREF="' . base_url() .  'login/logout">Logout</A></p>';
+	echo form_button('login/logout', 'Logout');
 }
 ?>
 </div>
