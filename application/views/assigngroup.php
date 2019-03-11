@@ -37,3 +37,22 @@ foreach ($jobgroups as $jobgroup)
 }
 ?>
 </select>
+<?php
+
+if (!isset($_REQUEST['JobGroupID'])
+{
+	return false;
+}
+
+?>
+
+Job <select multiple name=Job[] size=<?php echo count($jobs)+2 ?>>
+<option></option>
+
+<?php
+foreach ($jobs as $job)
+{
+	echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
+}
+?>
+</select>

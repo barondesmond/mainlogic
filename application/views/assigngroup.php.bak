@@ -37,11 +37,3 @@ foreach ($jobgroups as $jobgroup)
 }
 ?>
 </select>
-
-
-
-
-
-
-
-<input type=submit value="Assign Job/Employee"></form>
