@@ -117,7 +117,7 @@ inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
 	<div class="row">
 	<div class="column1">
 <?php
-$head = array("Employee Time" => "review", "TimeSheet" => "review/timesheet", "GPS Review" => "pto", "Job Assignment" => "assign", "Rules"=> "rules", "Non-Billable Report" => "nonbillable", "Process Employee Reports" => "reports");
+$head = array("Employee Time" => "review", "TimeSheet" => "review/timesheet", "GPS Review" => "gps", "Job Assignment" => "assign", "Rules"=> "rules", "Non-Billable Report" => "nonbillable", "Process Employee Reports" => "reports");
 
 foreach ($head as $desc => $link)
 {

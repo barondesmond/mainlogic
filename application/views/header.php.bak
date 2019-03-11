@@ -110,7 +110,7 @@ inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
 </style>
 
 </head>
-<body>
+<body class="header">
 <div id="header" class="header">
 <p> <?php  echo $this->session->userdata('EmpNo') . ' ' . $this->session->userdata('EmpName') . ' ' . $this->session->userdata('Email'); ?> </p>
 </div>
