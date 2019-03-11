@@ -1,3 +1,10 @@
+<?php
+function form_button($get, $value)
+{
+	return '<p><form method=get action="'. base_url() . $get . '"><input type=submit value="' . $value . '" class="my-button"></form>';
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,7 +121,7 @@ $head = array("Employee Time" => "review", "TimeSheet" => "review/timesheet", "G
 
 foreach ($head as $desc => $link)
 {
-	echo '<p><form method=get action="'. base_url() . $link . '"><input type=submit value="' . $desc . '" class="my-button"></form>';
+	echo form_button($link, $desc);
 }
 ?>
 <p><img src="/assets/images/serviq.png" width="50%"></p>

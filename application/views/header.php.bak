@@ -48,7 +48,7 @@ body {
   float: left;
   width: 10.00%;
   padding: 15px;
-  background-color: blue;
+  background-color: #4fade0;
 
 }
 
