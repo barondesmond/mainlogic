@@ -39,7 +39,7 @@ foreach ($jobgroups as $jobgroup)
 </select>
 <?php
 
-if (!isset($_REQUEST['JobGroupID'])
+if (!isset($_REQUEST['JobGroupID']))
 {
 	return false;
 }
