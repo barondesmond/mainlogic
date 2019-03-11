@@ -24,7 +24,7 @@ body {
 
 /* Style the header */
 .header {
-  background-color: #f1f1f1;
+  background-color: white;
   padding: 20px;
   text-align: center;
 }
@@ -55,8 +55,8 @@ body {
   float: left;
   width: 10.00%;
   padding: 15px;
-  background-color: #4fade0;
-
+  background-color: #f1f1f1;
+  border: 1px;
 }
 
 .column2 {
@@ -114,7 +114,7 @@ inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
 <div id="header" >
 </div>
 	<div class="row">
-	<div class="column1" id="header">
+	<div class="column1" id="column1">
 <?php
 $head = array("Employee Time" => "review", "TimeSheet" => "review/timesheet", "GPS Review" => "gps", "Job Assignment" => "assign", "Rules"=> "rules", "Non-Billable Report" => "nonbillable", "Process Employee Reports" => "reports");
 
