@@ -110,8 +110,8 @@ inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
 </style>
 
 </head>
-<body class="header">
-<div id="header" class="header">
+<body >
+<div id="header" >
 </div>
 	<div class="row">
 	<div class="column1">
