@@ -33,7 +33,7 @@ JobGroup <select name=JobGroup onchange="javascript:location.href = this.value;"
 <?php
 foreach ($jobgroups as $jobgroup)
 {
-	echo "<option value='/assign/?JobGroup[]=" . $jobgroup->JobGroupID . "'" . is_selected('JobGroupID', $jobgroup->JobGroupID, $jobgroupemployees) . " >$jobgroup->JobGroup</option>\r\n";
+	echo "<option value='/assign/?JobGroup[]=" . $jobgroup->JobGroupID . "'" . is_selected('JobGroupID', $jobgroup->JobGroupID, $JobGroup) . " >$jobgroup->JobGroup</option>\r\n";
 }
 ?>
 </select>
