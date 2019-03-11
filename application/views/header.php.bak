@@ -77,7 +77,7 @@ body {
 
 </head>
 <body>
-<div id="header">
+<div id="header" class="header">
 <p> <?php  echo $this->session->userdata('EmpNo') . ' ' . $this->session->userdata('EmpName') . ' ' . $this->session->userdata('Email'); ?> </p>
 </div>
 	<div class="row">
