@@ -37,6 +37,9 @@ body {
   background-color: #f1f1f1;
 
 }
+.table {
+  border: 1px;
+}
 
 .my-button{
 min-width: 100px; /*not necessary if the button has text on it*/
@@ -66,7 +69,7 @@ inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
 
 </head>
 <body class="body">
-<table><tr><td class="column1">
+<table class="table"><tr><td class="column1">
 <?php
 $head = array("Employee Time" => "review", "TimeSheet" => "review/timesheet", "GPS Review" => "gps", "Job Assignment" => "assign", "Rules"=> "rules", "Non-Billable Report" => "nonbillable", "Process Employee Reports" => "reports");
 
