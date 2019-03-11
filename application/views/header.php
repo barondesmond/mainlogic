@@ -75,13 +75,7 @@ body {
 min-width: 100px; /*not necessary if the button has text on it*/
 height: 30px;
 border: 0;
-/* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
-/* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
-/* IE10+ */
-background: linear-gradient(to bottom, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
-/* W3C */
+background: white;
 /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73bbe9', endColorstr='#17567f',GradientType=0 ); IE6-9 */
 filter: none; /*IE6-9 */
 -moz-box-shadow:

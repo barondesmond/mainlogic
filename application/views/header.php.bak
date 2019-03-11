@@ -72,9 +72,33 @@ body {
   color: black;
 }
 .my-button{
-background: white;
-inset 0px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
-inset 0px 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+min-width: 100px; /*not necessary if the button has text on it*/
+height: 30px;
+border: 0;
+/* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
+/* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
+/* IE10+ */
+background: linear-gradient(to bottom, rgba(115,187,223,1) 0%,rgba(23,86,127,1) 100%);
+/* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73bbe9', endColorstr='#17567f',GradientType=0 ); IE6-9 */
+filter: none; /*IE6-9 */
+-moz-box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+-webkit-box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+box-shadow:
+0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
 }
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {
