@@ -86,7 +86,7 @@ body {
 <p><A HREF="<?php echo base_url(); ?>review/timesheet">TimeSheet</A></p>
 <p><A HREF="<?php echo base_url(); ?>gps">GPS Review</A></p>
 <p><A href="<?php echo base_url(); ?>pto">PTO by employee</A></p>
-<p><A HREF="<?php echo base_url(); ?>job">Job Assignment</A></p>
+<p><A HREF="<?php echo base_url(); ?>assign">Job Assignment</A></p>
 <p><A HREF="<?php echo base_url(); ?>rules">Rules</A></p>
 <p><A HREF="<?php echo base_url(); ?>nonbillable">Non-Billable Report</A></p>
 <p><img src="/assets/images/serviq.png" width="50%"></p>
