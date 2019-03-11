@@ -28,7 +28,6 @@ body {
   width: 10.00%;
   padding: 15px;
   background-color: #4fade0;
-  border: 1px;
 }
 
 .column2 {
@@ -38,7 +37,7 @@ body {
 
 }
 .table {
-  border: 1px;
+  border: 1;
 }
 
 .my-button{
