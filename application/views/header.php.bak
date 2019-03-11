@@ -24,6 +24,7 @@ body {
 
 .footer {
    text-align: right;
+   font-size: small:
 }
 
 
