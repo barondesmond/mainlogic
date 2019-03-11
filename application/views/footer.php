@@ -1,7 +1,7 @@
 
-<div class="footer"> <?php  echo $this->session->userdata('EmpNo') . ' ' . $this->session->userdata('EmpName') . ' ' . $this->session->userdata('Email'); ?> 
+<div class="footer"><p> <?php  echo $this->session->userdata('EmpNo') . ' ' . $this->session->userdata('EmpName') . ' ' . $this->session->userdata('Email'); ?> </p
 
-		Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo __DEV__; ?>
+		<p>Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo __DEV__; ?> </p>
 		</div>
 </td></tr></table>
 
