@@ -23,7 +23,7 @@ body {
 }
 
 .footer {
- align: right;
+   text-align: right;
 }
 
 
