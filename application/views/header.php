@@ -112,7 +112,6 @@ inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
 </head>
 <body class="header">
 <div id="header" class="header">
-<p> <?php  echo $this->session->userdata('EmpNo') . ' ' . $this->session->userdata('EmpName') . ' ' . $this->session->userdata('Email'); ?> </p>
 </div>
 	<div class="row">
 	<div class="column1">
@@ -134,4 +133,3 @@ if ($this->session->userdata('EmpNo'))
 ?>
 </div>
 
-<div class="column2">
