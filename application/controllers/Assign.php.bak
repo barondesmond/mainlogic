@@ -31,6 +31,13 @@ class Assign extends CI_Controller {
 		redirect('/assign/index/?' . http_build_query($resp), 'refresh');
 	}
 
+	public function deletejobgroup()
+	{
+		//print_r($_REQUEST);
+		$resp = delete_job_group();
+		redirect('/assign/assigned/?' . http_build_query($resp), 'refresh');
+	}
+
 	public function add()
 	{
 		$resp = add_job_group_employee();

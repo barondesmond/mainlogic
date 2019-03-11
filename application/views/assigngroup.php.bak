@@ -1,0 +1,47 @@
+<?php
+if (isset($error))
+{
+	foreach ($error as $err)
+	{
+		echo "<p>$err\r\n";
+	}
+}
+
+function is_selected($key, $id, $jobgroupemployees='')
+{
+	foreach ($jobgroupemployees as $jobgroupemployee)
+	{
+
+		if ($jobgroupemployee->$key==$id)
+		{
+			//return 'selected';
+		}
+	
+	}
+}
+
+?>
+
+<form method=post action=/assign/addjobgroup/>
+
+
+Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group"></form>
+<p>
+
+
+JobGroup <select name=JobGroup[] size=<?php echo count($jobgroups) ?>>
+<?php
+foreach ($jobgroups as $jobgroup)
+{
+	echo "<option value=$jobgroup->JobGroupID " . is_selected('JobGroupID', $jobgroup->JobGroupID, $jobgroupemployees) . ">$jobgroup->JobGroup</option>\r\n";
+}
+?>
+</select>
+
+
+
+
+
+
+
+<input type=submit value="Assign Job/Employee"></form>
