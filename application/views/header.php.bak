@@ -56,6 +56,8 @@ body {
   float: left;
   width: 90.00%;
   padding: 15px;
+  background-color: #f1f1f1;
+
 }
 
 /* Clear floats after the columns */
