@@ -55,7 +55,7 @@ body {
   float: left;
   width: 10.00%;
   padding: 15px;
-  background-color: #f1f1f1;
+  background-color: #4fade0;
   border: 1px;
 }
 
@@ -132,4 +132,4 @@ if ($this->session->userdata('EmpNo'))
 }
 ?>
 </div>
-
+<div class="column2" id="column2">
