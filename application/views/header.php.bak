@@ -71,6 +71,11 @@ body {
   layer-background-color: gray;
   color: black;
 }
+.my-button{
+background: #d1d1d1;
+inset 0px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+inset 0px 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+}
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:600px) {
   .column {
@@ -86,13 +91,14 @@ body {
 </div>
 	<div class="row">
 	<div class="column1">
-<p><A HREF="<?php echo base_url(); ?>review">Employee Time</A></p>
-<p><A HREF="<?php echo base_url(); ?>review/timesheet">TimeSheet</A></p>
-<p><A HREF="<?php echo base_url(); ?>gps">GPS Review</A></p>
-<p><A href="<?php echo base_url(); ?>pto">PTO by employee</A></p>
-<p><A HREF="<?php echo base_url(); ?>assign">Job Assignment</A></p>
-<p><A HREF="<?php echo base_url(); ?>rules">Rules</A></p>
-<p><A HREF="<?php echo base_url(); ?>nonbillable">Non-Billable Report</A></p>
+<?php
+$head = array("Employee Time" => "review", "TimeSheet" => "review/timesheet", "GPS Review" => "pto", "Job Assignment" => "assign", "Rules"=> "rules", "Non-Billable Report" => "nonbillable", "Process Employee Reports" => "reports");
+
+foreach ($head as $desc => $link)
+{
+	echo '<p><form method=get action="'. base_url() . $link . '"><input type=submit value="' . $desc . '" class="my-button"></form>';
+}
+?>
 <p><img src="/assets/images/serviq.png" width="50%"></p>
 <p><A HREF="<?php echo base_url(); ?>reports">Process Employee Reports</A></P>
 <?php 

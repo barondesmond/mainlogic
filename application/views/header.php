@@ -72,7 +72,7 @@ body {
   color: black;
 }
 .my-button{
-background: #d1d1d1;
+background: white;
 inset 0px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
 inset 0px 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
 }
