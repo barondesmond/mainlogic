@@ -29,11 +29,11 @@ Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group"
 <p>
 
 
-JobGroup <select name=JobGroup size=<?php echo count($jobgroups) ?> onchange="javascript:location.href = this.value;>
+JobGroup <select name=JobGroup onchange="javascript:location.href = this.value;">
 <?php
 foreach ($jobgroups as $jobgroup)
 {
-	echo "<option value=/assign/groupselected/?JobGroupID=$jobgroup->JobGroupID " . is_selected('JobGroupID', $jobgroup->JobGroupID, $jobgroupemployees) . ">$jobgroup->JobGroup</option>\r\n";
+	echo "<option value='/assign/groupselected/?JobGroupID=" . $jobgroup->JobGroupID . "'" . is_selected('JobGroupID', $jobgroup->JobGroupID, $jobgroupemployees) . " >$jobgroup->JobGroup</option>\r\n";
 }
 ?>
 </select>
