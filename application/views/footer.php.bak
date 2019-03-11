@@ -1,3 +1,4 @@
+</div>
 		</div>
 <p> <?php  echo $this->session->userdata('EmpNo') . ' ' . $this->session->userdata('EmpName') . ' ' . $this->session->userdata('Email'); ?> </p>
 
