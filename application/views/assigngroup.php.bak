@@ -61,7 +61,7 @@ if (!isset($_REQUEST['JobGroup']))
 
 ?>
 <P>
-Job <select multiple name=Job[] size=<?php echo count($jobs)+2 ?>>
+Job<P> <select multiple name=Job[] size=<?php echo count($jobs)+2 ?>>
 <option></option>
 
 <?php
