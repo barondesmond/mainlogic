@@ -60,11 +60,13 @@ if (!isset($_REQUEST['JobGroup']))
 
 ?>
 <P>
-
+<form method=get action=/assign/jobgroup/>
+<input type=hidden name=JobGroup[] value="<?php echo $_REQUEST['JobGroup'][0]; ?>">
 
 <?php
 $joboptions = '';
 $i=0;
+
 foreach ($jobs as $job)
 {
 
