@@ -64,6 +64,27 @@ if (!isset($_REQUEST['JobGroup']))
 <input type=hidden name=JobGroup[] value="<?php echo $_REQUEST['JobGroup'][0]; ?>">
 
 <?php
+//employees
+$employeeptions = '';
+$e=0;
+
+foreach ($employees as $employee)
+{
+
+	if (is_selected('Employee', $employee->EmpNo, $jobgroupemployees, $_REQUEST['JobGroup']))
+	{
+		$employeeoptions .= "<option value=$employee->EmpName >$employee->EmpNo $employee->EmpName</option>\r\n";
+		$e++;
+	}
+}
+if ($i > 0)
+{
+	echo "Employees<P> <select multiple name=Employees[] size=$i >";
+
+	echo $employeeoptions;
+	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'>";
+}
+//jobs
 $joboptions = '';
 $i=0;
 
@@ -83,3 +104,8 @@ if ($i > 0)
 	echo $joboptions;
 	echo "</select><p><input type=submit name='submit' value='Remove Jobs' class='my-button'>";
 }
+
+
+
+
+
