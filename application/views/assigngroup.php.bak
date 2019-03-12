@@ -67,7 +67,8 @@ if (!isset($_REQUEST['JobGroup']))
 //employees
 $employeeptions = '';
 $e=0;
-
+if (isset($employees))
+{
 foreach ($employees as $employee)
 {
 
@@ -84,7 +85,10 @@ if ($i > 0)
 	echo $employeeoptions;
 	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'>";
 }
+}
 //jobs
+if (isset($jobs))
+{
 $joboptions = '';
 $i=0;
 
@@ -104,7 +108,7 @@ if ($i > 0)
 	echo $joboptions;
 	echo "</select><p><input type=submit name='submit' value='Remove Jobs' class='my-button'>";
 }
-
+}
 
 
 
