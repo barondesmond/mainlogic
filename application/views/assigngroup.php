@@ -91,7 +91,7 @@ if ($e > 0)
 }
 else
 	{
-		echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees) . ">
+		echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees) + 2 . ">
 <option></option>";
 
 	foreach ($employees as $employee)
