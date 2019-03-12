@@ -144,7 +144,7 @@ else
 	{
 		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
 	}
-	echo "</select><input type=submit name='submit' value='Add Jobs' class='my-button'>";
+	echo "</select><p><input type=submit name='submit' value='Add Jobs' class='my-button'>";
 
 }
 
