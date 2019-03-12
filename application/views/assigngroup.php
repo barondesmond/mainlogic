@@ -76,7 +76,6 @@ foreach ($jobs as $job)
 	}
 }
 ?>
-Job<P> <select multiple name=Job[] size=<?php echo $i; ?>>z
-<option></option>
-<?php echo $joboptions
+Job<P> <select multiple name=Job[] size=<?php echo $i; ?> >
+<?php echo $joboptions;?>
 </select>
