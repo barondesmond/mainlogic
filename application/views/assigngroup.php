@@ -104,7 +104,7 @@ foreach ($jobs as $job)
 		$j++;
 	}
 }
-if ($i > 0)
+if ($j > 0)
 {
 	echo "Job<P> <select multiple name=Job[] size=$i >";
 
