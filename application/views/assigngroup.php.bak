@@ -68,7 +68,7 @@ if (!isset($_REQUEST['JobGroup']))
 
 <?php
 //employees
-$employeeptions = '';
+$employeeoptions = '';
 $e=0;
 if (isset($employees))
 {
@@ -81,7 +81,7 @@ foreach ($employees as $employee)
 		$e++;
 	}
 }
-if ($i > 0)
+if ($e > 0)
 {
 	echo "Employees<P> <select multiple name=Employees[] size=$i >";
 

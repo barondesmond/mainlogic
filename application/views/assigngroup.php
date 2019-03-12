@@ -81,7 +81,7 @@ foreach ($employees as $employee)
 		$e++;
 	}
 }
-if ($i > 0)
+if ($e > 0)
 {
 	echo "Employees<P> <select multiple name=Employees[] size=$i >";
 
@@ -93,7 +93,7 @@ if ($i > 0)
 if (isset($jobs))
 {
 $joboptions = '';
-$i=0;
+$j=0;
 
 foreach ($jobs as $job)
 {
@@ -101,7 +101,7 @@ foreach ($jobs as $job)
 	if (is_selected('Job', $job->Name, $jobgroupemployees, $_REQUEST['JobGroup']))
 	{
 		$joboptions .= "<option value=$job->Name >$job->Name $job->LocName</option>\r\n";
-		$i++;
+		$j++;
 	}
 }
 if ($i > 0)
