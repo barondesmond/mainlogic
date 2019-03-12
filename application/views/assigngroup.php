@@ -68,7 +68,7 @@ if (!isset($_REQUEST['JobGroup']))
 
 <?php
 //employees
-$employeeptions = '';
+$employeeoptions = '';
 $e=0;
 if (isset($employees))
 {
