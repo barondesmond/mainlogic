@@ -20,6 +20,19 @@ function is_selected($key, $id, $jobgroupemployees='')
 	}
 }
 
+function select_group($key, $id, $JobGroup)
+{
+	if (!isset($JobGroup))
+	{
+		
+	}
+	elseif ($key == $JobGroupID['0'])
+	{
+		return 'selected'l
+	}
+
+}
+
 ?>
 
 <form method=post action=/assign/addjobgroup/>
@@ -33,7 +46,7 @@ JobGroup <select name=JobGroup onchange="javascript:location.href = this.value;"
 <?php
 foreach ($jobgroups as $jobgroup)
 {
-	echo "<option value='/assign/?JobGroup[]=" . $jobgroup->JobGroupID . "'" . is_selected('JobGroupID', $jobgroup->JobGroupID, $JobGroup) . " >$jobgroup->JobGroup</option>\r\n";
+	echo "<option value='/assign/?JobGroup[]=" . $jobgroup->JobGroupID . "'" . select_group('JobGroupID', $jobgroup->JobGroupID, $JobGroup) . " >$jobgroup->JobGroup</option>\r\n";
 }
 ?>
 </select>
