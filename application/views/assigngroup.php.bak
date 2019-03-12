@@ -88,6 +88,17 @@ if ($e > 0)
 	echo $employeeoptions;
 	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'>";
 }
+else
+	{
+		echo "Employee <select multiple name=Employee[] size=" . count($employees) . ">
+<option></option>";
+
+	foreach ($employees as $employee)
+	{
+		echo "<option value=$employee->EmpNo " . is_selected('EmpNo', $employee->EmpNo, $jobgroupemployees) . ">$employee->EmpName $employee->Email</option>\r\n";
+	}
+	echo "</select>";
+	}
 }
 else
 {
