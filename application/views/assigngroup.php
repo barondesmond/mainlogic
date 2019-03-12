@@ -74,7 +74,7 @@ if (!isset($_REQUEST['Assign']))
 }
 else
 {
-	echo "<input type=submit name='Remove' value='Switch to Remove' class='my-button'>":
+	echo "<input type=submit name='Remove' value='Switch to Remove' class='my-button'>";
 }
 
 //employees

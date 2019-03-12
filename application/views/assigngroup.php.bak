@@ -70,7 +70,11 @@ if (!isset($_REQUEST['JobGroup']))
 <?php
 if (!isset($_REQUEST['Assign']))
 {
-	echo "<input type=submit name='Assign' value='Switch To Assign'>";
+	echo "<input type=submit name='Assign' value='Switch To Assign' class='my-button'>";
+}
+else
+{
+	echo "<input type=submit name='Remove' value='Switch to Remove' class='my-button'>":
 }
 
 //employees
