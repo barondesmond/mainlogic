@@ -11,7 +11,10 @@ function is_selected($key, $id, $jobgroupemployees='', $JobGroup)
 {
 	foreach ($jobgroupemployees as $jobgroupemployee)
 	{
-
+		if (!isset($jobgroupemployee->$key))
+		{
+			return;
+		}
 		if ($jobgroupemployee->$key==$id && select_group($key, $jobgroupemployee->JobGroupID, $JobGroup) == 'selected')
 		{
 			return 'selected';
