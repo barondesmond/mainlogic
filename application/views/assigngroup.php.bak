@@ -137,14 +137,15 @@ if ($j > 0)
 else
 {
 	echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)+2  . ">
-<option></option>";
+	<option></option>";
 
-foreach ($jobs as $job)
-{
-	echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
+	foreach ($jobs as $job)
+	{
+		echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
+	}
+	echo "</select><input type=submit name='submit' value='Add Jobs' class='my-button'>";
+
 }
-echo "</select><input type=submit name='submit' value='Add Jobs' class='my-button'>";
-
 
 }
 
