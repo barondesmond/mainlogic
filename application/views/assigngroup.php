@@ -22,8 +22,7 @@ function is_selected($key, $id, $jobgroupemployees='', $JobGroup)
 
 function select_group($key, $id, $JobGroup)
 {
-	echo "key = $key id = $id";
-	print_r($JobGroup);
+
 	if (!isset($JobGroup))
 	{
 		
