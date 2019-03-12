@@ -91,7 +91,7 @@ if ($e > 0)
 }
 else
 	{
-		echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees) + 2 . ">
+		echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees)  . ">
 <option></option>";
 
 	foreach ($employees as $employee)
@@ -103,7 +103,7 @@ else
 }
 else
 {
-	echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees) + 2 . ">
+	echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees)  . ">
 <option></option>";
 
 	foreach ($employees as $employee)
@@ -137,7 +137,7 @@ if ($j > 0)
 }
 else
 {
-	echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)+2  . ">
+	echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)  . ">
 	<option></option>";
 
 	foreach ($jobs as $job)
