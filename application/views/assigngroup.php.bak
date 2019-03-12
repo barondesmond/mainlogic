@@ -79,5 +79,5 @@ if ($i > 0)
 	echo "Job<P> <select multiple name=Job[] size=$i >";
 
 	echo $joboptions;
-	echo "</select><input type=submit value='Remove Jobs' class='my_button'>";
+	echo "</select><input type=submit value='Remove Jobs' class='my-button'>";
 }
