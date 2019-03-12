@@ -7,12 +7,12 @@ if (isset($error))
 	}
 }
 
-function is_selected($key, $id, $jobgroupemployees='')
+function is_selected($key, $id, $jobgroupemployees='', $JobGroup)
 {
 	foreach ($jobgroupemployees as $jobgroupemployee)
 	{
 
-		if ($jobgroupemployee->$key==$id)
+		if ($jobgroupemployee->$key==$id && select_group($key, $jobgroupemployee->JobGroupID, $JobGroup) == 'selected')
 		{
 			return 'selected';
 		}
@@ -67,7 +67,7 @@ Job <select multiple name=Job[] size=<?php echo count($jobs)+2 ?>>
 <?php
 foreach ($jobs as $job)
 {
-	echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
+	echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees, $_REQUEST['JobGroup']) . " >$job->Name $job->LocName</option>\r\n";
 }
 ?>
 </select>
