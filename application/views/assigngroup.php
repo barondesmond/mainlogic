@@ -134,6 +134,18 @@ if ($j > 0)
 	echo $joboptions;
 	echo "</select><p><input type=submit name='submit' value='Remove Jobs' class='my-button'>";
 }
+else
+{
+	echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)+2  . ">
+<option></option>";
+
+foreach ($jobs as $job)
+{
+	echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees) . " >$job->Name $job->LocName</option>\r\n";
+}
+echo "</select><input type=submit name='submit' value='Add Jobs' class='my-button'>";
+
+
 }
 
 
