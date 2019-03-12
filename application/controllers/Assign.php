@@ -44,6 +44,12 @@ class Assign extends CI_Controller {
 		redirect('/assign/assigned/?' . http_build_query($resp), 'refresh');
 
 	}
+
+	public function jobgroup()
+	{
+		$resp = $_REQUEST;
+		redirect('/assign/assign/?' http_build_query($resp), 'refresh');
+	}
  
 	public function assigned()
 	{
