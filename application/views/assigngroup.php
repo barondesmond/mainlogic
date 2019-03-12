@@ -67,7 +67,11 @@ Job <select multiple name=Job[] size=<?php echo count($jobs)+2 ?>>
 <?php
 foreach ($jobs as $job)
 {
-	echo "<option value=$job->Name " . is_selected('Job', $job->Name, $jobgroupemployees, $_REQUEST['JobGroup']) . " >$job->Name $job->LocName</option>\r\n";
+
+	if (is_selected('Job', $job->Name, $jobgroupemployees, $_REQUEST['JobGroup']))
+	{
+		echo "<option value=$job->Name >$job->Name $job->LocName</option>\r\n";
+	}
 }
 ?>
 </select>
