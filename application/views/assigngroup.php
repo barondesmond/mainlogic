@@ -61,17 +61,22 @@ if (!isset($_REQUEST['JobGroup']))
 
 ?>
 <P>
-Job<P> <select multiple name=Job[] size=<?php echo count($jobgroupemployees)+2 ?>>z
-<option></option>
+
 
 <?php
+$joboptions = '';
+$i=0;
 foreach ($jobs as $job)
 {
 
 	if (is_selected('Job', $job->Name, $jobgroupemployees, $_REQUEST['JobGroup']))
 	{
-		echo "<option value=$job->Name >$job->Name $job->LocName</option>\r\n";
+		$joboptions .= "<option value=$job->Name >$job->Name $job->LocName</option>\r\n";
+		$i++;
 	}
 }
 ?>
+Job<P> <select multiple name=Job[] size=<?php echo $i; ?>>z
+<option></option>
+<?php echo $joboptions
 </select>
