@@ -83,7 +83,7 @@ foreach ($employees as $employee)
 }
 if ($e > 0)
 {
-	echo "Employees<P> <select multiple name=Employees[] size=$j >";
+	echo "Employees<P> <select multiple name=Employees[] size=$e >";
 
 	echo $employeeoptions;
 	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'>";
