@@ -26,9 +26,9 @@ function select_group($key, $id, $JobGroup)
 	{
 		
 	}
-	elseif ($key == $JobGroupID['0'])
+	elseif ($key == $JobGroup['0'])
 	{
-		return 'selected'l
+		return 'selected';
 	}
 
 }
