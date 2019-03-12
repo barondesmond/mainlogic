@@ -90,7 +90,7 @@ if ($e > 0)
 }
 else
 	{
-		echo "Employee <select multiple name=Employee[] size=" . count($employees) . ">
+		echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees) . ">
 <option></option>";
 
 	foreach ($employees as $employee)
@@ -102,14 +102,14 @@ else
 }
 else
 {
-	echo "Employee <select multiple name=Employee[] size=" . count($employees) . ">
+	echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees) + 2 . ">
 <option></option>";
 
 	foreach ($employees as $employee)
 	{
 		echo "<option value=$employee->EmpNo " . is_selected('EmpNo', $employee->EmpNo, $jobgroupemployees) . ">$employee->EmpName $employee->Email</option>\r\n";
 	}
-	echo "</select>";
+	echo "</select><input type=submit name='submit' value='Add Employees' class='my-button'>";
 }
 
 //jobs
