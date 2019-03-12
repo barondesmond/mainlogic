@@ -87,7 +87,7 @@ if ($e > 0 && !isset($_REQUEST['Assign']))
 	echo "<P>Employees<P> <select multiple name=Employees[] size=$e >";
 
 	echo $employeeoptions;
-	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'><input type=submit name='Assign' value='Switch To Assign Employees'";
+	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'><form method=get action=/assign/?JobGroupID[]=" . $_REQUEST['JobGroupID']['0'] . "><input type=submit name='Assign' value='Switch To Assign Employees'";
 }
 else
 	{
