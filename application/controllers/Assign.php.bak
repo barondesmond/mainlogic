@@ -54,7 +54,10 @@ class Assign extends CI_Controller {
 				$resp = add_job_group_employee();
 			}
 		}
-		$resp = $_REQUEST;
+		else
+		{
+						$resp = $_REQUEST;
+		}
 		redirect('/assign/?' . http_build_query($resp), 'refresh');
 	}
  

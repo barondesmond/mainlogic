@@ -47,7 +47,7 @@ class Assign extends CI_Controller {
 
 	public function jobgroup()
 	{
-		if (isset($_REQUEST['submit'])
+		if (isset($_REQUEST['submit']))
 		{
 			if ($_REQUEST['submit'] == 'Assign Jobs' || $_REQUEST['submit'] == 'Assign Employees')
 			{
