@@ -100,7 +100,7 @@ if ($e > 0 && !isset($_REQUEST['Assign']))
 }
 else
 	{
-		echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees)  . ">
+		echo "<p>Employee <p><select multiple name=Employees[] size=" . count($employees)  . ">
 <option></option>";
 
 	foreach ($employees as $employee)
@@ -112,7 +112,7 @@ else
 }
 else
 {
-	echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees)  . ">
+	echo "<p>Employee <p><select multiple name=Employees[] size=" . count($employees)  . ">
 <option></option>";
 
 	foreach ($employees as $employee)
