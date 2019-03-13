@@ -76,7 +76,7 @@ else
 {
 	echo "<input type=submit name='Remove' value='Switch to Remove' class='my-button'>";
 }
-echo '<table><tr><td>';
+echo '<table class="table"><tr><td>';
 //employees
 $employeeoptions = '';
 $e=0;
