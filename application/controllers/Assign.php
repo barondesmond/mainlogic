@@ -53,6 +53,14 @@ class Assign extends CI_Controller {
 			{
 				$resp = add_job_group_employee();
 			}
+			elseif ($_REQUEST['submit'] == 'Remove Jobs' || $_REQUEST['submit'] == 'Remove Employees')
+			{
+				$resp = delete_job_group();
+			}
+			else
+			{
+				$resp = $_REQUEST;
+			}
 		}
 		else
 		{
