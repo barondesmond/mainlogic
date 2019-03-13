@@ -87,7 +87,7 @@ foreach ($employees as $employee)
 
 	if (is_selected('EmpNo', $employee->EmpNo, $jobgroupemployees, $_REQUEST['JobGroup']))
 	{
-		$employeeoptions .= "<option value=$employee->EmpName >$employee->EmpNo $employee->EmpName</option>\r\n";
+		$employeeoptions .= "<option value=$employee->EmpNo >$employee->EmpNo $employee->EmpName</option>\r\n";
 		$e++;
 	}
 }
