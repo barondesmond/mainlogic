@@ -93,14 +93,14 @@ foreach ($employees as $employee)
 }
 if ($e > 0 && !isset($_REQUEST['Assign']))
 {
-	echo "<P>Employees<P> <select multiple name=Employees[] size=$e >";
+	echo "<P>Employees<P> <select multiple name=Employee[] size=$e >";
 
 	echo $employeeoptions;
 	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'><form method=get action=/assign/?JobGroupID[]=" . $_REQUEST['JobGroupID']['0'] . ">";
 }
 else
 	{
-		echo "<p>Employee <p><select multiple name=Employees[] size=" . count($employees)  . ">
+		echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees)  . ">
 <option></option>";
 
 	foreach ($employees as $employee)
@@ -112,7 +112,7 @@ else
 }
 else
 {
-	echo "<p>Employee <p><select multiple name=Employees[] size=" . count($employees)  . ">
+	echo "<p>Employee <p><select multiple name=Employee[] size=" . count($employees)  . ">
 <option></option>";
 
 	foreach ($employees as $employee)

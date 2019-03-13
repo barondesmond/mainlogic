@@ -76,7 +76,7 @@ else
 {
 	echo "<input type=submit name='Remove' value='Switch to Remove' class='my-button'>";
 }
-
+echo '<table><tr><td>';
 //employees
 $employeeoptions = '';
 $e=0;
@@ -121,7 +121,7 @@ else
 	}
 	echo "</select><p><input type=submit name='submit' value='Assign Employees' class='my-button'>";
 }
-
+echo '</td><td>';
 //jobs
 if (isset($jobs))
 {
@@ -169,7 +169,7 @@ else
 	}
 	echo "</select><p><input type=submit name='submit' value='Assign Jobs' class='my-button'>";
 }
-
+echo '</td></tr></table>';
 
 
 
