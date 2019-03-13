@@ -153,10 +153,21 @@ else
 	{
 		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Add Jobs' class='my-button'>";
+	echo "</select><p><input type=submit name='submit' value='Assign Jobs' class='my-button'>";
 
 }
 
+}
+else
+{
+		echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)  . ">
+	<option></option>";
+
+	foreach ($jobs as $job)
+	{
+		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
+	}
+	echo "</select><p><input type=submit name='submit' value='Assign Jobs' class='my-button'>";
 }
 
 
