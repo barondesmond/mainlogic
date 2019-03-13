@@ -47,7 +47,17 @@ class Assign extends CI_Controller {
 
 	public function jobgroup()
 	{
-		$resp = $_REQUEST;
+		if (isset($_REQUEST['submit'])
+		{
+			if ($_REQUEST['submit'] == 'Assign Jobs' || $_REQUEST['submit'] == 'Assign Employees')
+			{
+				$resp = add_job_group_employee();
+			}
+		}
+		else
+		{
+						$resp = $_REQUEST;
+		}
 		redirect('/assign/?' . http_build_query($resp), 'refresh');
 	}
  
