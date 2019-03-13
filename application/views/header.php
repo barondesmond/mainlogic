@@ -26,7 +26,9 @@ body {
    text-align: right;
    font-size: smaller:
 }
-
+.column {
+  vertical-align: text-top;
+}
 
 .column1 {
   width: 10.00%;
