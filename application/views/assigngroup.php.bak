@@ -76,7 +76,7 @@ else
 {
 	echo "<input type=submit name='Remove' value='Switch to Remove' class='my-button'>";
 }
-echo '<table><tr><td>';
+echo '<table class="table"><tr><td>';
 //employees
 $employeeoptions = '';
 $e=0;
@@ -96,7 +96,7 @@ if ($e > 0 && !isset($_REQUEST['Assign']))
 	echo "<P>Employees<P> <select multiple name=Employee[] size=$e >";
 
 	echo $employeeoptions;
-	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'><form method=get action=/assign/?JobGroupID[]=" . $_REQUEST['JobGroupID']['0'] . ">";
+	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'><form method=get action=/assign/?JobGroupID[]=" . $_REQUEST['JobGroup']['0'] . ">";
 }
 else
 	{
