@@ -233,7 +233,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			unset($row);
 			
 		}
-			echo '<tr>';
+			echo '<tr class="cell">';
 			echo $table[$key]['timehead'];
 			echo $table[$key]['head'];
 			echo "<td>Total</td>";

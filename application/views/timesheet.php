@@ -133,8 +133,8 @@ $rows = '';
 			$db->Hours = '';
 		}
 		$row .= '<tr>';
-		$row .= '<td>' . $db->Name . '</td>';
-		$row .= '<td><input type=text name=PRHours[' . $db->ItemID . '] value=' . $db->Hours . '></td>';
+		$row .= '<td class="cell">' . $db->Name . '</td>';
+		$row .= '<td class="cell"><input type=text name=PRHours[' . $db->ItemID . '] value=' . $db->Hours . '></td>';
 		$row .= '</tr>';
 		$rows .= $row;
 	}
@@ -233,7 +233,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 			unset($row);
 			
 		}
-			echo '<tr class="cell">';
+			echo '<tr >';
 			echo $table[$key]['timehead'];
 			echo $table[$key]['head'];
 			echo "<td>Total</td>";
