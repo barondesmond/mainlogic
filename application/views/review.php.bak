@@ -41,6 +41,7 @@ if (isset($_REQUEST['EmpNo']))
 	echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></select> Job#<input type=text name="JD">';
 	echo "<BR>\r\n" . 'Start Date <input type=text name="StartDate" value="' . date("Y:m:d H:i:s", time()) . '"> Stop Date <input type=text name="StopDate" value="' . date("Y:m:d H:i:s", time()) . '">';
 	echo ' <input type=submit value="Add"></form>';
+	echo '<table class="table"><tr>';
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
 
@@ -51,15 +52,17 @@ if (isset($_REQUEST['EmpNo']))
 		{
 			foreach ($jd as $key=>$JobDisp)
 			{
-				echo '<p>' . $screen . ' ' . $JobDisp .  "<BR>\r\n";
-				echo "Employee Input<BR>\r\n";
+				echo '<td>' . $screen . ' ' . $JobDisp .  '</td></tr>';
+				echo '<tr><td class="cell">Employee Input</td></tr>';
+				echo '<tr><td class="cell">';
 				echo $Time[$_REQUEST['EmpNo']][$screen][$key];
-				echo '</p>';
+				echo '</td></tr>';
 			}
 		}
 		echo '<input type=submit value="Update"> </form>';
 
 	}
+	echo '</table>';
 }
 if (isset($_REQUEST['TimeClockID']) && is_array($_REQUEST['TimeClockID']))
 {
