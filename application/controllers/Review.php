@@ -39,10 +39,15 @@ class Review extends CI_Controller {
 			if (!isset($td['StartDate']) && isset($td['StartDay']) && isset($td['StartHour']))
 			{
 				$_REQUEST['TimeClockID'][$TimeClockID]['StartDate'] = $td['StartDay'] . ' ' . $td['StartHour'];
+				unset($_REQUEST['TimeClockID'][$TimeClockID]['StartDay']);
+				unset($_REQUEST['TimeClockID'][$TimeClockID]['StartHour']);
+
 			}
 			if (!isset($td['StopDate']) && isset($td['StopDay']) && isset($td['StopHour']))
 			{
 				$_REQUEST['TimeClockID'][$TimeClockID]['StopDate'] = $td['StopDay'] . ' ' . $td['StopHour'];
+				unset($_REQUEST['TimeClockID'][$TimeClockID]['StopDay']);
+				unset($_REQUEST['TimeClockID'][$TimeClockID]['StopHour']);
 			}
 		}
 		print_r($_REQUEST);
