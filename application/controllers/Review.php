@@ -33,7 +33,7 @@ class Review extends CI_Controller {
 	
 	public function update()
 	{
-		print_r($_REQUEST);
+	
 		foreach ($_REQUEST['TimeClockID'] as $TimeClockID => $td)
 		{
 			if (!isset($td['StartDate']) && isset($td['StartDay']) && isset($td['StartHour']))
