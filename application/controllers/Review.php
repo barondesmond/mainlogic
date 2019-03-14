@@ -50,8 +50,7 @@ class Review extends CI_Controller {
 				unset($_REQUEST['TimeClockID'][$TimeClockID]['StopHour']);
 			}
 		}
-		print_r($_REQUEST);
-		exit;
+
 		$auth = timeclock_update();
 	
 
