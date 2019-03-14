@@ -59,7 +59,7 @@ if (isset($_REQUEST['EmpNo']))
 				echo '</td></tr>';
 			}
 		}
-		echo '<input type=submit value="Update"> </form>';
+		echo '<tr><td class="cel"><input type=submit value="Update"> </form></td></tr>';
 
 	}
 	echo '</table>';
