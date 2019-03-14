@@ -314,7 +314,7 @@ return $db;
 				$Time[$event->EmpNo][$event->Screen][$key] .= ' Start: <input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '">';
 				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
 				$Time[$event->EmpNo][$event->Screen][$key] .= ' Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '">' ;
-				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+				$Time[$event->EmpNo][$event->Screen][$key] .= ' Event: ' . $event->event . "<BR>\r\n"  ;
 				}
 			}
 			else
