@@ -36,11 +36,11 @@ if (isset($_REQUEST['EmpNo']))
 	echo '<form method=post action="' . base_url() .  'review/add/">';
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 	echo 'Add Type<select name="Screen"><OPTION>Job</OPTION><OPTION>Employee</OPTION></SELECT>';
-	echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '" class="my-button">';		
+	echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '" >';		
 
 	echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></select> Job#<input type=text name="JD">';
 	echo "<BR>\r\n" . 'Start Date <input type=text name="StartDate" value="' . date("Y:m:d H:i:s", time()) . '"> Stop Date <input type=text name="StopDate" value="' . date("Y:m:d H:i:s", time()) . '">';
-	echo ' <input type=submit value="Add"></form>';
+	echo ' <input type=submit value="Add" class="my-button"></form>';
 	echo '<table class="table"><tr>';
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
