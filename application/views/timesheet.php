@@ -244,7 +244,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 		echo '<tr>';
 		echo $table[$key]['timerow'];
 		echo $table[$key]['row'];
-		echo "<td>$total</td>";
+		echo '<td class="cell">' . $total . '</td>';
 		echo '</tr>';
 		$max = $max + $total;
 
