@@ -302,8 +302,17 @@ return $db;
 		$Save[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			if ($event->Screen != 'Dispatch')
 			{
-				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDate]" value="' . $event->StartDate . '">' ;
-				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDate]" value="' . $event->StopDate . '">' ;
+				$exp = explode($event->StartDate);
+				$event->StartDay = $exp[0];
+				$event->StartHour = $exp[1];
+				$exp2 = explode($event->StopDate);
+				$event->StopDay = $exp2[0];
+				$event->StopHour = $exp2[1];
+
+				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '">' . $event->StartDay;
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: <input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '">';
+				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '">' ;
 				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			}
 			else
