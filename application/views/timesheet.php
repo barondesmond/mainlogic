@@ -176,7 +176,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	$max = 0;
 	echo '<form method=post action=/review/timepost/>';
 	echo '<input type=hidden name=EmpNo value=' . $_REQUEST['EmpNo'] . '><input type=hidden name=Offset value=' . $_REQUEST['Offset'] . '>';
-	echo '<table border=1>';
+	echo '<table class="table">';
 	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
 	{
 		$table[$key]['timehead'] = timesheet_head($head);
@@ -257,7 +257,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	echo '<tr><td>Total Hours</td><td><input type=hidden name=PRHours[TCHours] value=' . $tchours . '> ' . $max . '</td></tr>';
 	if (!isset($Post))
 	{
-		echo '<tr align="center"><td><img src="/assets/images/serviq.png" width="100%"></td><td><input type=submit name="update_hours" value="Update Hours"></td><td><input type=submit name="review_timesheet", value="Review"></td><td><input type=submit name="post_timesheet" value="Post"></td></tr>';
+		echo '<tr align="center"><td><img src="/assets/images/serviq.png" width="100%"></td><td><input type=submit name="update_hours" value="Update Hours" class="my-button"></td><td><input type=submit name="review_timesheet", value="Review" class="my-button"></td><td><input type=submit name="post_timesheet" value="Post" class="my-button"></td></tr>';
 	}
 	echo '</table>';
 
