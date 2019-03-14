@@ -47,7 +47,9 @@ body {
 .table {
   border: 1px solid black;
 }
-
+.cell {
+  border: 1px solid black;
+}
 .my-button{
 min-width: 100px; /*not necessary if the button has text on it*/
 height: 30px;

@@ -45,7 +45,7 @@ body {
   vertical-align: text-top;
 }
 .table {
-  border: 1;
+  border: 1px solid black;
 }
 
 .my-button{
