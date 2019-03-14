@@ -302,10 +302,10 @@ return $db;
 		$Save[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			if ($event->Screen != 'Dispatch')
 			{
-				$exp = explode($event->StartDate);
+				$exp = explode(' ' , $event->StartDate);
 				$event->StartDay = $exp[0];
 				$event->StartHour = $exp[1];
-				$exp2 = explode($event->StopDate);
+				$exp2 = explode(' ',$event->StopDate);
 				$event->StopDay = $exp2[0];
 				$event->StopHour = $exp2[1];
 
