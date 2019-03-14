@@ -27,7 +27,7 @@ if (isset($_REQUEST['error']) && is_array($_REQUEST['error']))
 function hour_head($day='')
 {
 		
-		$row = "<td>$day</td>";
+		$row = "<td class="cell">$day</td>";
 
 return $row;
 }
@@ -36,11 +36,11 @@ function hour_row($db, $key)
 {
 	if (isset($db->Hours) && $db->Hours > 0)
 	{
-		$row = "<td><input type=hidden name=" . $db->ID . "[" . urlencode($db->Date) . "] value=" . $db->Hours . '>' . $db->Hours . '</td>';
+		$row = "<td class="cell"><input type=hidden name=" . $db->ID . "[" . urlencode($db->Date) . "] value=" . $db->Hours . '>' . $db->Hours . '</td>';
 	}
 	else
 	{
-		$row = '<td></td>';
+		$row = '<td class="cell"></td>';
 	}
 return $row;
 }
@@ -50,7 +50,7 @@ function timesheet_head($head)
 	$row = '';
 		foreach ($head as $key=>$value)
 		{
-			$row .= '<td>' . $key . '</td>';
+			$row .= '<td class="cell">' . $key . '</td>';
 		}
 return $row;
 
@@ -83,7 +83,7 @@ function timesheet_row($db, $head, $select)
 
 	foreach ($head as $key=>$display)
 	{
-		$row .= '<td>';
+		$row .= '<td class="cell">';
 		if (isset($db->$key) && isset($db->$display) && !isset($select[$key]))
 		{
 	

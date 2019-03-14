@@ -27,7 +27,7 @@ if (isset($_REQUEST['error']) && is_array($_REQUEST['error']))
 function hour_head($day='')
 {
 		
-		$row = "<td class="cell">$day</td>";
+		$row = '<td class="cell">' . $day . '</td>';
 
 return $row;
 }
@@ -36,7 +36,7 @@ function hour_row($db, $key)
 {
 	if (isset($db->Hours) && $db->Hours > 0)
 	{
-		$row = "<td class="cell"><input type=hidden name=" . $db->ID . "[" . urlencode($db->Date) . "] value=" . $db->Hours . '>' . $db->Hours . '</td>';
+		$row = '<td class="cell"><input type=hidden name=' . $db->ID . '[' . urlencode($db->Date) . '] value=' . $db->Hours . '>' . $db->Hours . '</td>';
 	}
 	else
 	{
