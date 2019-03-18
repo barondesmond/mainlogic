@@ -6,14 +6,14 @@
      <div class="fluid_height_spacer"></div>
     </div>
    </div>
-   <a class="nonblock nontext Button ButtonSelected clearfix grpelem" id="buttonu2917" href="employee_time.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><img class="grpelem" id="u2918-4" alt="Time Entry" src="/images/u2918-4-a.png?crc=4042819532" data-image-width="186"/><!-- rasterized frame --></a>
+   <a class="nonblock nontext Button ButtonSelected clearfix grpelem" id="buttonu2917" href="/review/" data-visibility="changed" style="visibility:hidden"><!-- container box --><img class="grpelem" id="u2918-4" alt="Time Entry" src="/images/u2918-4-a.png?crc=4042819532" data-image-width="186"/><!-- rasterized frame --></a>
    <div class="Button clearfix grpelem" id="buttonu2903" data-visibility="changed" style="visibility:hidden"><!-- container box -->
     <div class="grpelem" id="u2904"><!-- state-based BG images -->
      <img alt="Accounting" src="/images/blank.gif?crc=4208392903"/>
      <div class="fluid_height_spacer"></div>
     </div>
    </div>
-   <a class="nonblock nontext Button clearfix grpelem" id="buttonu2907" href="index.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2908"><!-- state-based BG images --><img alt="Logout" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
+   <a class="nonblock nontext Button clearfix grpelem" id="buttonu2907" href="/" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2908"><!-- state-based BG images --><img alt="Logout" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
    <div class="clearfix grpelem" id="u2914"><!-- group -->
     <div class="Button rounded-corners button clearfix grpelem" id="buttonu2910" data-visibility="changed" style="visibility:hidden"><!-- container box -->
      <div class="rounded-corners colelem" id="u2911"><!-- simple frame --></div>
@@ -33,7 +33,7 @@
    <div class="clip_frame grpelem" id="u2899"><!-- image -->
     <img class="block" id="u2899_img" src="/images/400dpilogocropped304x67.png?crc=294061041" alt="" data-heightwidthratio="0.22112211221122113" data-image-width="303" data-image-height="67"/>
    </div>
-   <a class="nonblock nontext Button clearfix grpelem" id="buttonu2905" href="admin.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2906"><!-- state-based BG images --><img alt="Administration" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
+   <a class="nonblock nontext Button clearfix grpelem" id="buttonu2905" href="/admin/" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2906"><!-- state-based BG images --><img alt="Administration" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
    <div class="verticalspacer" data-offset-top="1001" data-content-above-spacer="1001" data-content-below-spacer="0" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
   </div>
   <div class="preload_images">
