@@ -214,7 +214,10 @@ function period_select($action='/review/timesheet')
 		}
 		}
 	$db['Employee'] = $Employee;
-	$db['Time'] = $Time;
+	if (isset($Time))
+	{
+		$db['Time'] = $Time;
+	}
 	$db['TimeClock'] = $TimeClock;
 
 return $db;
