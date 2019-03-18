@@ -248,7 +248,7 @@ return $db;
 		$uri = 'timeclock_json.php?timeclock_add=1';
 		if ($_REQUEST['StartDate'] && $_REQUEST['StopDate'] && $_REQUEST['EmpNo'])
 		{
-			$uri .= '&' . http_build_query($_REQUEST);
+			$uri .= '&' . http_build_query($_REQUEST) . '&Dev=' . __Dev__;
 		}
 		return app_api($uri);
 	}
@@ -258,7 +258,7 @@ return $db;
 		$uri = 'timeclock_json.php?timeclock_update=1';
 		if ($_REQUEST['TimeClockID'])
 		{
-			$uri .= '&' . http_build_query($_REQUEST);
+			$uri .= '&' . http_build_query($_REQUEST) . '&Dev=' . __Dev__;
 		}
 		return app_api($uri);
 	}
