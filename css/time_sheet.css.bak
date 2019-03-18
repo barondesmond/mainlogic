@@ -21,7 +21,7 @@ border-color:transparent;background-color:#9A5252;max-width:100000px;position:re
 #u3116-3{z-index:3;min-height:1001px;border-width:0px;border-color:transparent;background-color:
 #1D5980;position:relative;margin-right:-10000px;width:20%;}
 #u3101{z-index:6;background-color:#9E9999;padding-bottom:623px;position:relative;margin-right:-10000px;width:80%;left:19.95%;}
-#u3517-4{z-index:42;min-height:82px;background-color:transparent;font-size:72px;line-height:86px;position:relative;margin-right:-10000px;margin-top:292px;width:61.2%;left:9.71%;}
+#u3517-4{z-index:42;min-height:82px;background-color:transparent;font-size:16px;line-height:86px;position:relative;margin-right:-10000px;margin-top:292px;width:61.2%;left:9.71%;}
 #buttonu3102{z-index:7;border-color:#787878;background-color:#5C5858;padding-bottom:88px;position:relative;margin-right:-10000px;margin-top:92px;width:9.95%;left:10%;}
 #buttonu3102:hover{background-color:#141414;min-height:0px;width:9.95%;margin:92px -10000px 0px 0%;}
 #buttonu3102
