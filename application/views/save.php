@@ -1,7 +1,7 @@
 <?php 
 
 period_select('/review/index/');
-if (isset($error) && isset(__DEV__) && __DEV__== 'Dev')
+if (isset($error) && __DEV__== 'Dev')
 {
 	foreach ($error as $id=> $e)
 	{
