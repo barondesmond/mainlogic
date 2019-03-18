@@ -16,12 +16,11 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   
   <title>Employee_Time</title>
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=133766301"/>
-  <link rel="stylesheet" type="text/css" href="css/employee_time.css?crc=3960203500" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="/css/site_global.css?crc=133766301"/>
+  <link rel="stylesheet" type="text/css" href="/css/employee_time.css?crc=3960203500" id="pagesheet"/>
     <!--HTML Widget code-->
   
 
-<link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
 
 <style>
 
