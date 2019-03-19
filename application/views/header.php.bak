@@ -2,7 +2,7 @@
 <html class="nojs html css_verticalspacer" lang="en-US">
  <head>
 
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="generator" content="2018.1.0.386"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
@@ -11,13 +11,13 @@
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "require.js", "time_sheet.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "require.js", "webpro.js", "time_sheet.css"], "outOfDate":[]};
 </script>
   
   <title>time_sheet</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/css/site_global.css?crc=133766301"/>
-  <link rel="stylesheet" type="text/css" href="/css/time_sheet.css?crc=466319910" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="/css/time_sheet.css?crc=4155656313" id="pagesheet"/>
     <!--HTML Widget code-->
   
 
@@ -770,17 +770,53 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
       </div>
       <div class="clearfix grpelem" id="u6079"><!-- group -->
        <div class="clearfix grpelem" id="u6091-4"><!-- content -->
-        <p><?php if (isset($TimeClock)){echo period_check($TimeClock);} ?></p>
+        <p>Baron001</p>
        </div>
       </div>
-      <div class="clearfix grpelem" id="u6085"><!-- group -->
-       <div class="clearfix grpelem" id="u6088-4"><!-- content -->
+      <div class="clearfix grpelem" id="pu6082"><!-- group -->
+       <div class="clearfix grpelem" id="u6082"><!-- group -->
+        <div class="clearfix grpelem" id="u6094-4"><!-- content -->
+         <p>Baron002</p>
+        </div>
+       </div>
+       <form class="form-grp clearfix grpelem" id="widgetu6459" method="post" enctype="multipart/form-data" action="scripts/form-u6459.php" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- none box -->
+        <button class="submit-btn NoWrap rounded-corners clearfix grpelem" id="u6464-4" type="submit" value="UPDATE" tabindex="4"><!-- content -->
+         <div style="margin-top:-26px;height:26px;">
+          <p>UPDATE</p>
+         </div>
+        </button>
+        <div class="clearfix grpelem" id="ppwidgetu6743"><!-- column -->
+         <div class="clearfix colelem" id="pwidgetu6743"><!-- group -->
+          <div class="fld-grp clearfix grpelem" id="widgetu6743" data-required="true" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- none box -->
+           <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u6745-4"><!-- content --><div id="u6745-3"><input class="wrapped-input" type="text" spellcheck="false" id="widgetu6743_input" name="custom_U6743" tabindex="1"/><label class="wrapped-input fld-prompt" id="widgetu6743_prompt" for="widgetu6743_input"><span class="actAsPara">Enter Name</span></label></div></span>
+          </div>
+          <div class="fld-grp clearfix grpelem" id="widgetu6460" data-required="true" data-type="email" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- none box -->
+           <span class="fld-input NoWrap actAsDiv clearfix grpelem" id="u6461-4"><!-- content --><div id="u6461-3"><input class="wrapped-input" type="email" spellcheck="false" id="widgetu6460_input" name="Email" tabindex="2"/><label class="wrapped-input fld-prompt" id="widgetu6460_prompt" for="widgetu6460_input"><span class="actAsPara">Enter Email</span></label></div></span>
+          </div>
+          <div class="fld-grp clearfix grpelem" id="widgetu6471" data-required="false" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- none box -->
+           <span class="fld-textarea actAsDiv clearfix grpelem" id="u6474-4"><!-- content --><div id="u6474-3"><textarea class="wrapped-input" id="widgetu6471_input" name="custom_U6471" tabindex="3"></textarea><label class="wrapped-input fld-prompt" id="widgetu6471_prompt" for="widgetu6471_input"><span class="actAsPara">Enter Your Message</span></label></div></span>
+          </div>
+         </div>
+         <div class="clearfix colelem" id="pu6469-4"><!-- group -->
+          <div class="clearfix grpelem" id="u6469-4"><!-- content -->
+           <p>Submitting Form...</p>
+          </div>
+          <div class="clearfix grpelem" id="u6475-4"><!-- content -->
+           <p>The server encountered an error.</p>
+          </div>
+          <div class="clearfix grpelem" id="u6470-4"><!-- content -->
+           <p>Form received.</p>
+          </div>
+         </div>
+        </div>
+       </form>
+       <div class="clearfix grpelem" id="u6512-4"><!-- content -->
         <p>UPDATE</p>
        </div>
-      </div>
-      <div class="clearfix grpelem" id="u6082"><!-- group -->
-       <div class="clearfix grpelem" id="u6094-4"><!-- content -->
-        <p>Baron002</p>
+       <div class="clearfix grpelem" id="u6759"><!-- group -->
+        <div class="clearfix grpelem" id="u6762-4"><!-- content -->
+         <p>ADD</p>
+        </div>
        </div>
       </div>
      </div>
@@ -807,8 +843,9 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
       <div class="clip_frame colelem" id="u5409"><!-- image -->
        <img class="block" id="u5409_img" src="/images/400dpilogocropped455x100.png?crc=3930767816" alt="" data-heightwidthratio="0.22112211221122113" data-image-width="303" data-image-height="67"/>
       </div>
-      <a class="nonblock nontext Button clearfix colelem" id="buttonu5411" href="index.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u5412"><!-- state-based BG images --><img alt="Logout" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
+      <a class="nonblock nontext Button clearfix colelem" id="buttonu5411" href="/" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u5412"><!-- state-based BG images --><img alt="Logout" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
      </div>
      <div class="clearfix grpelem" id="u5432-4"><!-- content -->
+  
     
     
