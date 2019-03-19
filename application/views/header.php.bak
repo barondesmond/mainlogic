@@ -770,7 +770,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
       </div>
       <div class="clearfix grpelem" id="u6079"><!-- group -->
        <div class="clearfix grpelem" id="u6091-4"><!-- content -->
-        <p><?php echo period_check($TimeClock) ?></p>
+        <p><?php if (isset($TimeClock)){echo period_check($TimeClock);} ?></p>
        </div>
       </div>
       <div class="clearfix grpelem" id="u6085"><!-- group -->
