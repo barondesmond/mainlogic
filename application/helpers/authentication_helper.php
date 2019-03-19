@@ -139,7 +139,7 @@ function period_check($TimeClock='')
 {
 date_default_timezone_set('America/Chicago');
 
-period_select($_REQUEST_URI);
+period_select($_SERVER['REQUEST_URI']);
 if (!isset($TimeClock) || $TimeClock=='')
 {
 	return false;

@@ -138,8 +138,8 @@
 function period_check($TimeClock='')
 {
 date_default_timezone_set('America/Chicago');
-print_r($_SERVER);
-period_select('/review/index/');
+
+period_select($_REQUEST_URI);
 if (!isset($TimeClock) || $TimeClock=='')
 {
 	return false;
