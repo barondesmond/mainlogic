@@ -155,7 +155,7 @@ if (!isset($TimeSheet))
 $db = timesheet_employee($TimeSheet);
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
-if ($db['Time'])
+if (isset($db['Time']))
 {
 	$Time = $db['Time'];
 }
