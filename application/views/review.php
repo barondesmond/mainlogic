@@ -41,7 +41,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></select> Job#<input type=text name="JD">';
 	echo "<BR>\r\n" . 'Start Date <input type=text name="StartDate" value="' . date("Y:m:d H:i:s", time()) . '"> Stop Date <input type=text name="StopDate" value="' . date("Y:m:d H:i:s", time()) . '">';
 	echo ' <input type=submit value="Add" class="my-button"></form>';
-	echo '<table class="table"><tr>';
+	echo '<table class="table">';
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
 
