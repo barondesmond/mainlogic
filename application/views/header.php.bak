@@ -11,13 +11,13 @@
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "require.js", "employee_time.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "require.js", "time_sheet.css"], "outOfDate":[]};
 </script>
   
-  <title>employee_time</title>
+  <title>time_sheet</title>
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/site_global.css?crc=133766301"/>
-  <link rel="stylesheet" type="text/css" href="/css/employee_time.css?crc=92693933" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=133766301"/>
+  <link rel="stylesheet" type="text/css" href="css/time_sheet.css?crc=466319910" id="pagesheet"/>
     <!--HTML Widget code-->
   
 
@@ -757,42 +757,57 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
  <body>
 
   <div class="clearfix borderbox" id="page"><!-- group -->
-   <div class="clearfix grpelem" id="pu2914"><!-- column -->
-    <div class="clearfix colelem" id="u2914"><!-- group -->
-     <div class="Button rounded-corners button clearfix grpelem" id="buttonu2910" data-visibility="changed" style="visibility:hidden"><!-- container box -->
-      <div class="rounded-corners colelem" id="u2911"><!-- simple frame --></div>
-      <div class="rounded-corners colelem" id="u2913"><!-- simple frame --></div>
-      <div class="rounded-corners colelem" id="u2912"><!-- simple frame --></div>
-     </div>
-     <div class="clearfix grpelem" id="u2909-4"><!-- content -->
-      <p>CP</p>
-     </div>
-    </div>
-    <div class="clearfix colelem" id="u4168"><!-- column -->
-     <div class="clearfix colelem" id="pu4057"><!-- group -->
-      <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u4057" href="/review/"><!-- group --><img class="grpelem" id="u4150-4" alt="Time Sheet" src="images/u4150-4.png?crc=4175918297" data-image-width="141"/><!-- rasterized frame --></a>
-      <div class="clearfix grpelem" id="u4060"><!-- group -->
-       <img class="grpelem" id="u4162-4" alt="Dispatch" src="images/u4162-4.png?crc=43866679" data-image-width="109"/><!-- rasterized frame -->
+   <div class="clearfix grpelem" id="pu5429"><!-- column -->
+    <div class="browser_width colelem" id="u5429-bw">
+     <div class="clearfix" id="u5429"><!-- group -->
+      <div class="Button rounded-corners button clearfix grpelem" id="buttonu5413" data-visibility="changed" style="visibility:hidden"><!-- container box -->
+       <div class="rounded-corners colelem" id="u5415"><!-- simple frame --></div>
+       <div class="rounded-corners colelem" id="u5414"><!-- simple frame --></div>
+       <div class="rounded-corners colelem" id="u5416"><!-- simple frame --></div>
+      </div>
+      <div class="clearfix grpelem" id="u5430-4"><!-- content -->
+       <p>CP</p>
+      </div>
+      <div class="clearfix grpelem" id="u6079"><!-- group -->
+       <div class="clearfix grpelem" id="u6091-4"><!-- content -->
+        <p>Baron001</p>
+       </div>
+      </div>
+      <div class="clearfix grpelem" id="u6085"><!-- group -->
+       <div class="clearfix grpelem" id="u6088-4"><!-- content -->
+        <p>UPDATE</p>
+       </div>
+      </div>
+      <div class="clearfix grpelem" id="u6082"><!-- group -->
+       <div class="clearfix grpelem" id="u6094-4"><!-- content -->
+        <p>Baron002</p>
+       </div>
       </div>
      </div>
-     <div class="clearfix colelem" id="pu4063"><!-- group -->
-      <div class="clearfix grpelem" id="u4063"><!-- group -->
-       <img class="grpelem" id="u4159-4" alt="Accounting" src="images/u4159-4.png?crc=163544750" data-image-width="141"/><!-- rasterized frame -->
+    </div>
+    <div class="clearfix colelem" id="ppu5420"><!-- group -->
+     <div class="clearfix grpelem" id="pu5420"><!-- column -->
+      <div class="clearfix colelem" id="u5420"><!-- column -->
+       <div class="clearfix colelem" id="pu5422"><!-- group -->
+        <a class="nonblock nontext clearfix grpelem" id="u5422" href="employee_time.html"><!-- group --><img class="grpelem" id="u5428-4" alt="Time Sheet" src="images/u5428-4.png?crc=4175918297" data-image-width="141"/><!-- rasterized frame --></a>
+        <div class="clearfix grpelem" id="u5421"><!-- group -->
+         <img class="grpelem" id="u5426-4" alt="Dispatch" src="images/u5426-4.png?crc=43866679" data-image-width="109"/><!-- rasterized frame -->
+        </div>
+       </div>
+       <div class="clearfix colelem" id="pu5423"><!-- group -->
+        <div class="clearfix grpelem" id="u5423"><!-- group -->
+         <img class="grpelem" id="u5424-4" alt="Accounting" src="images/u5424-4.png?crc=163544750" data-image-width="141"/><!-- rasterized frame -->
+        </div>
+        <div class="clearfix grpelem" id="u5427"><!-- group -->
+         <img class="grpelem" id="u5425-4" alt="Estimating" src="images/u5425-4.png?crc=4282423050" data-image-width="126"/><!-- rasterized frame -->
+        </div>
+       </div>
       </div>
-      <div class="clearfix grpelem" id="u4066"><!-- group -->
-       <img class="grpelem" id="u4163-4" alt="Estimating" src="images/u4163-4.png?crc=4282423050" data-image-width="126"/><!-- rasterized frame -->
+      <a class="nonblock nontext Button clearfix colelem" id="buttonu5417" href="admin.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u5418"><!-- state-based BG images --><img alt="Administration" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
+      <div class="clip_frame colelem" id="u5409"><!-- image -->
+       <img class="block" id="u5409_img" src="images/400dpilogocropped455x100.png?crc=3930767816" alt="" data-heightwidthratio="0.22112211221122113" data-image-width="303" data-image-height="67"/>
       </div>
+      <a class="nonblock nontext Button clearfix colelem" id="buttonu5411" href="index.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u5412"><!-- state-based BG images --><img alt="Logout" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
      </div>
-    </div>
-    <a class="nonblock nontext Button clearfix colelem" id="buttonu2905" href="/admin/" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2906"><!-- state-based BG images --><img alt="Administration" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
-    <div class="clip_frame colelem" id="u2899"><!-- image -->
-     <img class="block" id="u2899_img" src="images/400dpilogocropped455x100.png?crc=3930767816" alt="" data-heightwidthratio="0.22112211221122113" data-image-width="303" data-image-height="67"/>
-    </div>
-    <a class="nonblock nontext Button clearfix colelem" id="buttonu2907" href="/" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2908"><!-- state-based BG images --><img alt="Logout" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
-   </div>
-   <div class="clearfix" id="u2901-3"><!-- content -->
-    <p>&nbsp;</p>
-   </div>
-   <div class="clearfix grpelem" id="pu5128-4"><!-- group -->
-    <div class="clearfix grpelem" id="u5128-4"><!-- content -->
+     <div class="clearfix grpelem" id="u5432-4"><!-- content -->
   
