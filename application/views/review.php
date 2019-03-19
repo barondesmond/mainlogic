@@ -59,7 +59,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 				echo '</td></tr>';
 			}
 		}
-		echo '<tr><td><input type=submit value="Update" class="my-button"> </form></td></tr>';
+		echo '<tr><td><input type=submit value="Update"> </form></td></tr>';
 
 	}
 	echo '</table>';
