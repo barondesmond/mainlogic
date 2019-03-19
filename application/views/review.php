@@ -30,7 +30,7 @@ foreach ($Employee as $Emp)
 }
 echo '</select>';
 echo "<BR><p>\r\n";
-
+/*
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 	echo '<form method=post action="' . base_url() .  'review/add/">';
@@ -65,7 +65,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	}
 
 }
-
+*/
 //var_dump($_REQUEST);
 ?>
 
