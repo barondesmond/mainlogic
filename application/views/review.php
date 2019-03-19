@@ -64,10 +64,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	}
 	echo '</table>';
 }
-if (isset($_REQUEST['TimeClockID']) && is_array($_REQUEST['TimeClockID']))
-{
-	var_dump($_REQUEST['TimeClockID']);
-}
+
 //var_dump($_REQUEST);
 ?>
 
