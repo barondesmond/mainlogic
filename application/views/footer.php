@@ -1,23 +1,22 @@
-
-   </div>
-<div class="size_fluid_width grpelem" id="u2902" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- custom html -->
-<?php echo 'whatever'; ?>
-    
+ </div>
+    <div class="size_fluid_width grpelem" id="u2902" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- custom html -->
+     
 
     	
+    </div>
    </div>
-   <div class="verticalspacer" data-offset-top="960" data-content-above-spacer="960" data-content-below-spacer="39" data-sizePolicy="fixed" data-pintopage="page_fixedLeft">verticals?</div>
+   <div class="verticalspacer" data-offset-top="1001" data-content-above-spacer="1001" data-content-below-spacer="0" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
   </div>
   <div class="preload_images">
-   <img class="preload" src="/images/u2906-r.png?crc=193805634" alt=""/>
-   <img class="preload" src="/images/u2908-r.png?crc=4194255742" alt=""/>
+   <img class="preload" src="images/u2906-r.png?crc=193805634" alt=""/>
+   <img class="preload" src="images/u2908-r.png?crc=4194255742" alt=""/>
   </div>
   <!-- JS includes -->
   <script type="text/javascript">
    if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
 </script>
   <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="/scripts/jquery-1.8.3.min.js?crc=209076791" type="text/javascript">\x3C/script>');
+   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js?crc=209076791" type="text/javascript">\x3C/script>');
 </script>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -30,7 +29,7 @@ var suppressMissingFileError = false
 k[1]:null,k=k&&k[2]?k[2]:null;switch(k.toLowerCase()){case "css":i=i.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");g.className+=" "+i;i=a(d(g,"color"));k=a(d(g,"backgroundColor"));i!=0||k!=0?(Muse.assets.required.splice(j,1),"undefined"!=typeof b[l]&&(i!=b[l]>>>24||k!=(b[l]&16777215))&&Muse.assets.outOfDate.push(l)):j++;g.className="version";break;case "js":j++;break;default:throw Error("Unsupported file type: "+k);}}c?c().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
 g.parentNode.removeChild(g);if(Muse.assets.outOfDate.length||Muse.assets.required.length)g="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",f&&Muse.assets.outOfDate.length&&(g+="\nOut of date: "+Muse.assets.outOfDate.join(",")),f&&Muse.assets.required.length&&(g+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(g+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(g)):alert(g)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
 setTimeout(function(){f(!0)},5E3):f()}};
-var muse_init=function(){require.config({baseUrl:"/"});require(["jquery","museutils","whatinput","jquery.watch"],function(c){var $ = c;$(document).ready(function(){try{
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.watch"],function(c){var $ = c;$(document).ready(function(){try{
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
@@ -42,7 +41,7 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 
 </script>
   <!-- RequireJS script -->
-  <script src="/scripts/require.js?crc=7928878" type="text/javascript" async data-main="/scripts/museconfig.js?crc=310584261" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
+  <script src="scripts/require.js?crc=7928878" type="text/javascript" async data-main="scripts/museconfig.js?crc=310584261" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
   
   <!--HTML Widget code-->
   
@@ -115,15 +114,15 @@ var outPush = [1,2,4,5,9,10,11,12,13];
   function push_element(){
     navMenu = [];
     var originalCount = navMenu.length;
-    navMenu.push({label: "EMPLOYEE TIME", url: "/review/", target: "_self"});
-    navMenu.push({label: "TIME SHEET", url: "review/timesheet/", target: "_self"});
-    navMenu.push({label: "GPS REVIEW", url: "/gps/", target: "_self"});
-    navMenu.push({label: "PTO BY EMPLOYEE", url: "/pto/", target: "_self"});
-    navMenu.push({label: "EMPLOYEE REPORT", url: "/reports/", target: "_self"});
-    navMenu.push({label: "NON-BILLABLE REPORT", url: "/nonbillable/", target: "_self"});
-    navMenu.push({label: "RULES", url: "/rules/", target: "_self"});
-    navMenu.push({label: "JOB ASSIGNMENT", url: "/jobs/", target: "_self"});
-    navMenu.push({label: "LOGOUT", url: "/login/logout/", target: "_self"});
+    navMenu.push({label: "EMPLOYEE TIME", url: "employee_time.html", target: "_self"});
+    navMenu.push({label: "TIME SHEET", url: "time_sheet.html", target: "_self"});
+    navMenu.push({label: "GPS REVIEW", url: "gps_report.html", target: "_self"});
+    navMenu.push({label: "PTO BY EMPLOYEE", url: "pto_by_employee.html", target: "_self"});
+    navMenu.push({label: "EMPLOYEE REPORT", url: "employee_report.html", target: "_self"});
+    navMenu.push({label: "NON-BILLABLE REPORT", url: "non_billable_report.html", target: "_self"});
+    navMenu.push({label: "RULES", url: "rules.html", target: "_self"});
+    navMenu.push({label: "JOB ASSIGNMENT", url: "job_assignment.html", target: "_self"});
+    navMenu.push({label: "LOGOUT", url: "index.html", target: "_self"});
     navMenu.push({label: "", url: "http://", target: "_self"});
     navMenu.push({label: "", url: "http://", target: "_self"});
     navMenu.push({label: "", url: "http://", target: "_self"});

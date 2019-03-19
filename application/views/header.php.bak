@@ -795,6 +795,6 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
     </div>
     <a class="nonblock nontext Button clearfix colelem" id="buttonu2907" href="/" data-visibility="changed" style="visibility:hidden"><!-- container box -->is this it?<div class="grpelem" id="u2908">whbat is this?<!-- state-based BG images --><img alt="Logout" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
    </div>
-   <div class="clearfix" id="u2901-3"><!-- content -->
+   <div class="clearfix" id="u2901-3"><!-- content -->what is content?
 
    
