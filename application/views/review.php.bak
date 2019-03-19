@@ -41,9 +41,10 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></select> Job#<input type=text name="JD">';
 	echo "<BR>\r\n" . 'Start Date <input type=text name="StartDate" value="' . date("Y:m:d H:i:s", time()) . '"> Stop Date <input type=text name="StopDate" value="' . date("Y:m:d H:i:s", time()) . '">';
 	echo ' <input type=submit value="Add" class="my-button"></form>';
-	echo '<table class="table">';
+
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
+		echo '<table>';
 
 		echo  '<form method=post action="' .  base_url()  . 'review/update/">';
 		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
@@ -60,9 +61,9 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 			}
 		}
 		echo '<tr><td><input type=submit value="Update"> </form></td></tr>';
-
-	}
 	echo '</table>';
+	}
+
 }
 
 //var_dump($_REQUEST);
