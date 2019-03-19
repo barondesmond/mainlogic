@@ -16,14 +16,14 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   
   <title>Employee_Time</title>
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/site_global.css?crc=133766301"/>
-  <link rel="stylesheet" type="text/css" href="/css/employee_time.css?crc=3960203500" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=133766301"/>
+  <link rel="stylesheet" type="text/css" href="css/employee_time.css?crc=3862736330" id="pagesheet"/>
     <!--HTML Widget code-->
   
 
+<link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
 
 <style>
-
 
 .button{
   cursor: pointer;
@@ -757,13 +757,42 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
  <body>
 
   <div class="clearfix borderbox" id="page"><!-- group -->
-   <div class="size_fluid_width grpelem" id="u2902" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- custom html -->
-    
-
-    	
+   <div class="clearfix grpelem" id="pu2914"><!-- column -->
+    <div class="clearfix colelem" id="u2914"><!-- group -->
+     <div class="Button rounded-corners button clearfix grpelem" id="buttonu2910" data-visibility="changed" style="visibility:hidden"><!-- container box -->
+      <div class="rounded-corners colelem" id="u2911"><!-- simple frame --></div>
+      <div class="rounded-corners colelem" id="u2913"><!-- simple frame --></div>
+      <div class="rounded-corners colelem" id="u2912"><!-- simple frame --></div>
+     </div>
+     <div class="clearfix grpelem" id="u2909-4"><!-- content -->
+      <p>CP</p>
+     </div>
+    </div>
+    <div class="clearfix colelem" id="u4168"><!-- column -->
+     <div class="clearfix colelem" id="pu4057"><!-- group -->
+      <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u4057" href="employee_time.html"><!-- group --><img class="grpelem" id="u4150-4" alt="Time Sheet" src="images/u4150-4.png?crc=4175918297" data-image-width="141"/><!-- rasterized frame --></a>
+      <div class="clearfix grpelem" id="u4060"><!-- group -->
+       <img class="grpelem" id="u4162-4" alt="Dispatch" src="images/u4162-4.png?crc=43866679" data-image-width="109"/><!-- rasterized frame -->
+      </div>
+     </div>
+     <div class="clearfix colelem" id="pu4063"><!-- group -->
+      <div class="clearfix grpelem" id="u4063"><!-- group -->
+       <img class="grpelem" id="u4159-4" alt="Accounting" src="images/u4159-4.png?crc=163544750" data-image-width="141"/><!-- rasterized frame -->
+      </div>
+      <div class="clearfix grpelem" id="u4066"><!-- group -->
+       <img class="grpelem" id="u4163-4" alt="Estimating" src="images/u4163-4.png?crc=4282423050" data-image-width="126"/><!-- rasterized frame -->
+      </div>
+     </div>
+    </div>
+    <div class="Button clearfix colelem" id="buttonu2905" data-visibility="changed" style="visibility:hidden"><!-- container box -->
+     <div class="grpelem" id="u2906"><!-- state-based BG images -->
+      <img alt="Administration" src="images/blank.gif?crc=4208392903"/>
+      <div class="fluid_height_spacer"></div>
+     </div>
+    </div>
+    <div class="clip_frame colelem" id="u2899"><!-- image -->
+     <img class="block" id="u2899_img" src="images/400dpilogocropped455x100.png?crc=3930767816" alt="" data-heightwidthratio="0.22112211221122113" data-image-width="303" data-image-height="67"/>
+    </div>
+    <a class="nonblock nontext Button clearfix colelem" id="buttonu2907" href="index.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2908"><!-- state-based BG images --><img alt="Logout" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
    </div>
-   <div class="clearfix grpelem" id="u2901-3"><!-- content -->
-    <p>&nbsp;</p>
-   </div>
-   <div class="clearfix grpelem" id="u2919"><!-- group -->
-    <div class="clearfix grpelem" id="u3506-4"><style font-size="10px;">
+   <div class="clearfix" id="u2901-3"><!-- content -->
