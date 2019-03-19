@@ -147,7 +147,7 @@ if ($j > 0 && !isset($_REQUEST['Assign']))
 else
 {
 	echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)  . ">
-	<option></option>";
+	";
 
 	foreach ($jobs as $job)
 	{
@@ -161,7 +161,7 @@ else
 else
 {
 		echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)  . ">
-	<option></option>";
+	";
 
 	foreach ($jobs as $job)
 	{
