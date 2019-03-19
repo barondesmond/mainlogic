@@ -6,7 +6,7 @@
 
     	
    </div>
-   <div class="verticalspacer" data-offset-top="960" data-content-above-spacer="960" data-content-below-spacer="39" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+   <div class="verticalspacer" data-offset-top="960" data-content-above-spacer="960" data-content-below-spacer="39" data-sizePolicy="fixed" data-pintopage="page_fixedLeft">verticals?</div>
   </div>
   <div class="preload_images">
    <img class="preload" src="/images/u2906-r.png?crc=193805634" alt=""/>
