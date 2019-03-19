@@ -1,3 +1,5 @@
+
+   </div>
 <div class="size_fluid_width grpelem" id="u2902" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- custom html -->
 <?php echo 'whatever'; ?>
     
