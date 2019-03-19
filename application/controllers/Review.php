@@ -20,7 +20,7 @@ class Review extends CI_Controller {
 	public function save()
 	{
 		$timeclock = timeclock();
-		$this->load->view('header');	
+		$this->load->view('header', $timeclock);
 		$this->load->view('save', $timeclock);
 		$this->load->view('footer');
 
@@ -103,7 +103,7 @@ class Review extends CI_Controller {
 	
 
 		$timesheet = timesheet();
-		$this->load->view('header');
+				$this->load->view('header', $timeclock);
 		$this->load->view('timesheet', $timesheet);
 		$this->load->view('footer');
 	}
@@ -118,7 +118,7 @@ class Review extends CI_Controller {
 		//print_r($timeclock);
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($timeclock->Post->$_REQUEST['EmpNo']))
 		{
-				$this->load->view('header');
+				$this->load->view('header', $timeclock);
 				$this->load->view('save', $timeclock);
 				$this->load->view('footer');
 		}
