@@ -796,3 +796,5 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
     <a class="nonblock nontext Button clearfix colelem" id="buttonu2907" href="/" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2908"><!-- state-based BG images --><img alt="Logout" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
    </div>
    <div class="clearfix" id="u2901-3"><!-- content -->
+   </div>
+   <div class="size_fluid_width grpelem" id="u2902" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- custom html -->
