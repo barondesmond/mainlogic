@@ -169,6 +169,8 @@ echo '</select>';
 echo "<BR><p>\r\n";
 }
 
+}
+
 function period_select($action='/review/timesheet')
 {
 
