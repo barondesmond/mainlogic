@@ -135,6 +135,39 @@
 		$uri = "timesheet_post_json.php?timesheet_post=1&". http_build_query($db) . '&Dev=' . __DEV__;
 		return app_api($uri);
 	}
+function period_check($TimeClock='')
+{
+date_default_timezone_set('America/Chicago');
+
+period_select('/review/index/');
+if (!isset($TimeClock) || $TimeClock=='')
+{
+	return false;
+}
+
+
+
+$db = timeclock_employee($TimeClock);
+
+$Time = $db['Time'];
+$Job = $db['Job'];
+
+
+$Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
+$Employee = array_merge($Employee, $db['Employee']);
+
+if (isset($Employee))
+{
+//Employee Select
+echo 'Employee <select name="EmpNo" onchange="javascript:location.href = this.value;">';
+
+foreach ($Employee as $Emp)
+{
+	echo $Emp;
+}
+echo '</select>';
+echo "<BR><p>\r\n";
+}
 
 function period_select($action='/review/timesheet')
 {

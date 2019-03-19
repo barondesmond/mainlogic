@@ -21,6 +21,8 @@ $Job = $db['Job'];
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
 
+if (isset($Employee))
+{
 //Employee Select
 echo 'Employee <select name="EmpNo" onchange="javascript:location.href = this.value;">';
 
@@ -30,7 +32,7 @@ foreach ($Employee as $Emp)
 }
 echo '</select>';
 echo "<BR><p>\r\n";
-/*
+}
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 	echo '<form method=post action="' . base_url() .  'review/add/">';
@@ -65,7 +67,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	}
 
 }
-*/
+
 //var_dump($_REQUEST);
 ?>
 

@@ -2,37 +2,7 @@ Review what?
 
 <div class="review">
 <?php
-date_default_timezone_set('America/Chicago');
 
-period_select('/review/index/');
-if (!isset($TimeClock))
-{
-	return false;
-}
-
-
-
-$db = timeclock_employee($TimeClock);
-
-$Time = $db['Time'];
-$Job = $db['Job'];
-
-
-$Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
-$Employee = array_merge($Employee, $db['Employee']);
-
-if (isset($Employee))
-{
-//Employee Select
-echo 'Employee <select name="EmpNo" onchange="javascript:location.href = this.value;">';
-
-foreach ($Employee as $Emp)
-{
-	echo $Emp;
-}
-echo '</select>';
-echo "<BR><p>\r\n";
-}
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 	echo '<form method=post action="' . base_url() .  'review/add/">';
