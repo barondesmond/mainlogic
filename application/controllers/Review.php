@@ -124,7 +124,7 @@ class Review extends CI_Controller {
 		}
 		else
 		{
-				$this->load->view('header');
+				$this->load->view('header', $timeclock);
 				$this->load->view('review', $timeclock);
 				$this->load->view('footer');
 		}

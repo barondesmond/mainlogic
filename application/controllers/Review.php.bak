@@ -33,7 +33,9 @@ class Review extends CI_Controller {
 	
 	public function update()
 	{
-	
+		if (isset($_REQUEST['TimeClockID']))
+		{
+
 		foreach ($_REQUEST['TimeClockID'] as $TimeClockID => $td)
 		{
 			if (!isset($td['StartDate']) && isset($td['StartDay']) && isset($td['StartHour']))
@@ -52,9 +54,13 @@ class Review extends CI_Controller {
 		}
 
 		$auth = timeclock_update();
-	
-
-		redirect('/review/save/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		$rep = '&' . http_build_query($auth);
+		}
+		else
+		{
+			$rep = '';	
+		}
+		redirect('/review/save/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'] . $rep , 'refresh');
 	}
 
 	public function timepost()
