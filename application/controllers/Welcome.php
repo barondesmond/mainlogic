@@ -38,7 +38,7 @@ class Welcome extends CI_Controller {
 		
 		$data['push'] = $this->load->view('push', $data, true);
 		$data['widget'] = $this->load->view('widget', $data, true);
-		$data['wdiget2'] = $this->load->view('widget2', $data, true);
+		$data['widget2'] = $this->load->view('widget2', $data, true);
 		$data['mainnav'] = $this->load->view('mainnav', $data, true);
 		$data['content'] = $this->load->view('welcome_message', $data, true);
 		$this->load->view('main', $data);
