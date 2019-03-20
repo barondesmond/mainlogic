@@ -71,7 +71,7 @@ class Timesheet extends CI_Controller {
 	{
 		$data = assign();
 	
-		$data = $this->load->navigation($data);
+		$data = $this->navigation($data);
 		$data['content'] = $this->load->view('assigngroup', $data, true);
 		$this->load->view('main', $data);
 	}
