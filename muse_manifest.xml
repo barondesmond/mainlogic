@@ -1,0 +1,125 @@
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="cloudproapps.com" resolutions="1x" timestamp="1553025349681">
+  <folder name="css">
+    <file name="site_global.css" crc="133766301"/>
+    <file name="gps_report.css" crc="98622147" ref="gps_report"/>
+    <file name="employee_time.css" crc="92693933" ref="employee_time"/>
+    <file name="non_billable_report.css" crc="324870454" ref="non_billable_report"/>
+    <file name="pto_by_employee.css" crc="493193709" ref="pto_by_employee"/>
+    <file name="admin.css" crc="283738881" ref="admin"/>
+    <file name="rules.css" crc="4207138962" ref="rules"/>
+    <file name="job_assignment.css" crc="14365723" ref="job_assignment"/>
+    <file name="index.css" crc="4227694234" ref="index"/>
+    <file name="time_sheet.css" crc="4155656313" ref="time_sheet"/>
+    <file name="employee_report.css" crc="3973254748" ref="employee_report"/>
+  </folder>
+  <folder name="assets">
+    <file name="epslogo.eps" crc="249891616" seo="true" mt="312786000000"/>
+    <file name="pslogo.ps" crc="231121940" seo="true" mt="312786000000"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:employee_time:admin:time_sheet:gps_report:pto_by_employee:employee_report:non_billable_report:rules:job_assignment"/>
+    <file name="museutils.js" crc="340535759" ref="index:employee_time:admin:time_sheet:gps_report:pto_by_employee:employee_report:non_billable_report:rules:job_assignment"/>
+    <file name="whatinput.js" crc="86476730" ref="index:employee_time:admin:time_sheet:gps_report:pto_by_employee:employee_report:non_billable_report:rules:job_assignment"/>
+    <file name="museconfig.js" crc="310584261" ref="index:employee_time:admin:time_sheet:gps_report:pto_by_employee:employee_report:non_billable_report:rules:job_assignment"/>
+    <file name="jquery.watch.js" crc="51536988" ref="index:employee_time:admin:time_sheet:gps_report:pto_by_employee:employee_report:non_billable_report:rules:job_assignment"/>
+    <file name="require.js" crc="7928878" ref="index:employee_time:admin:time_sheet:gps_report:pto_by_employee:employee_report:non_billable_report:rules:job_assignment"/>
+    <file name="webpro.js" crc="4059564322" ref="time_sheet"/>
+    <file name="form_check.php" crc="4020933626" ref="time_sheet"/>
+    <file name="form_throttle.php" crc="4259590256" ref="time_sheet"/>
+    <file name="form_process.php" crc="37464564" ref="time_sheet"/>
+    <file name="form-u6459.php" crc="3769470101" ref="time_sheet"/>
+  </folder>
+  <folder name="images">
+    <file name="400dpilogocropped.png" crc="284844430" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="blank.gif" crc="4208392903" ref="index:employee_time:admin:time_sheet:gps_report:pto_by_employee:employee_report:non_billable_report:rules:job_assignment"/>
+    <file name="u2598.png" crc="4043090889" ref="index"/>
+    <file name="u2598-r.png" crc="4043090889" ref="index"/>
+    <file name="u4150-4.png" crc="4175918297" ref="employee_time"/>
+    <file name="u4162-4.png" crc="43866679" ref="employee_time"/>
+    <file name="u4159-4.png" crc="163544750" ref="employee_time"/>
+    <file name="u4163-4.png" crc="4282423050" ref="employee_time"/>
+    <file name="u2906.png" crc="193805634" ref="employee_time"/>
+    <file name="u2906-r.png" crc="193805634" ref="employee_time"/>
+    <file name="400dpilogocropped455x100.png" crc="3930767816" seo="true" ref="employee_time">
+      <caption webpage="employee_time" alt=""/>
+    </file>
+    <file name="u2908.png" crc="4194255742" ref="employee_time"/>
+    <file name="u2908-r.png" crc="4194255742" ref="employee_time"/>
+    <file name="u5332-4.png" crc="4175918297" ref="admin"/>
+    <file name="u5330-4.png" crc="43866679" ref="admin"/>
+    <file name="u5328-4.png" crc="163544750" ref="admin"/>
+    <file name="u5329-4.png" crc="4282423050" ref="admin"/>
+    <file name="u5322.png" crc="193805634" ref="admin"/>
+    <file name="u5322-r.png" crc="193805634" ref="admin"/>
+    <file name="u5316.png" crc="4194255742" ref="admin"/>
+    <file name="u5316-r.png" crc="4194255742" ref="admin"/>
+    <file name="u5428-4.png" crc="4175918297" ref="time_sheet"/>
+    <file name="u5426-4.png" crc="43866679" ref="time_sheet"/>
+    <file name="u5424-4.png" crc="163544750" ref="time_sheet"/>
+    <file name="u5425-4.png" crc="4282423050" ref="time_sheet"/>
+    <file name="u5418.png" crc="193805634" ref="time_sheet"/>
+    <file name="u5418-r.png" crc="193805634" ref="time_sheet"/>
+    <file name="u5412.png" crc="4194255742" ref="time_sheet"/>
+    <file name="u5412-r.png" crc="4194255742" ref="time_sheet"/>
+    <file name="u5504-4.png" crc="4175918297" ref="gps_report"/>
+    <file name="u5502-4.png" crc="43866679" ref="gps_report"/>
+    <file name="u5500-4.png" crc="163544750" ref="gps_report"/>
+    <file name="u5501-4.png" crc="4282423050" ref="gps_report"/>
+    <file name="u5494.png" crc="193805634" ref="gps_report"/>
+    <file name="u5494-r.png" crc="193805634" ref="gps_report"/>
+    <file name="u5488.png" crc="4194255742" ref="gps_report"/>
+    <file name="u5488-r.png" crc="4194255742" ref="gps_report"/>
+    <file name="u5576-4.png" crc="4175918297" ref="pto_by_employee"/>
+    <file name="u5574-4.png" crc="43866679" ref="pto_by_employee"/>
+    <file name="u5572-4.png" crc="163544750" ref="pto_by_employee"/>
+    <file name="u5573-4.png" crc="4282423050" ref="pto_by_employee"/>
+    <file name="u5566.png" crc="193805634" ref="pto_by_employee"/>
+    <file name="u5566-r.png" crc="193805634" ref="pto_by_employee"/>
+    <file name="u5560.png" crc="4194255742" ref="pto_by_employee"/>
+    <file name="u5560-r.png" crc="4194255742" ref="pto_by_employee"/>
+    <file name="u5648-4.png" crc="4175918297" ref="employee_report"/>
+    <file name="u5646-4.png" crc="43866679" ref="employee_report"/>
+    <file name="u5644-4.png" crc="163544750" ref="employee_report"/>
+    <file name="u5645-4.png" crc="4282423050" ref="employee_report"/>
+    <file name="u5638.png" crc="193805634" ref="employee_report"/>
+    <file name="u5638-r.png" crc="193805634" ref="employee_report"/>
+    <file name="u5632.png" crc="4194255742" ref="employee_report"/>
+    <file name="u5632-r.png" crc="4194255742" ref="employee_report"/>
+    <file name="u5720-4.png" crc="4175918297" ref="non_billable_report"/>
+    <file name="u5718-4.png" crc="43866679" ref="non_billable_report"/>
+    <file name="u5716-4.png" crc="163544750" ref="non_billable_report"/>
+    <file name="u5717-4.png" crc="4282423050" ref="non_billable_report"/>
+    <file name="u5710.png" crc="193805634" ref="non_billable_report"/>
+    <file name="u5710-r.png" crc="193805634" ref="non_billable_report"/>
+    <file name="u5704.png" crc="4194255742" ref="non_billable_report"/>
+    <file name="u5704-r.png" crc="4194255742" ref="non_billable_report"/>
+    <file name="u5792-4.png" crc="4175918297" ref="rules"/>
+    <file name="u5790-4.png" crc="43866679" ref="rules"/>
+    <file name="u5788-4.png" crc="163544750" ref="rules"/>
+    <file name="u5789-4.png" crc="4282423050" ref="rules"/>
+    <file name="u5782.png" crc="193805634" ref="rules"/>
+    <file name="u5782-r.png" crc="193805634" ref="rules"/>
+    <file name="u5776.png" crc="4194255742" ref="rules"/>
+    <file name="u5776-r.png" crc="4194255742" ref="rules"/>
+    <file name="u5864-4.png" crc="4175918297" ref="job_assignment"/>
+    <file name="u5862-4.png" crc="43866679" ref="job_assignment"/>
+    <file name="u5860-4.png" crc="163544750" ref="job_assignment"/>
+    <file name="u5861-4.png" crc="4282423050" ref="job_assignment"/>
+    <file name="u5854.png" crc="193805634" ref="job_assignment"/>
+    <file name="u5854-r.png" crc="193805634" ref="job_assignment"/>
+    <file name="u5848.png" crc="4194255742" ref="job_assignment"/>
+    <file name="u5848-r.png" crc="4194255742" ref="job_assignment"/>
+  </folder>
+  <file name="index.html" crc="464145686" seo="true" mt="1553019360529" redirect="true"/>
+  <file name="employee_time.html" crc="4208552025" seo="true" mt="1553015022675" redirect="true"/>
+  <file name="admin.html" crc="350075704" seo="true" mt="1553015299148" redirect="true"/>
+  <file name="time_sheet.html" crc="58711457" seo="true" mt="1553025235265" redirect="true"/>
+  <file name="gps_report.html" crc="80923449" seo="true" mt="1553015208278" redirect="true"/>
+  <file name="pto_by_employee.html" crc="4206243125" seo="true" mt="1553015172411" redirect="true"/>
+  <file name="employee_report.html" crc="3886191925" seo="true" mt="1553015145428" redirect="true"/>
+  <file name="non_billable_report.html" crc="4189884383" seo="true" mt="1553015116772" redirect="true"/>
+  <file name="rules.html" crc="4245394269" seo="true" mt="1553015091552" redirect="true"/>
+  <file name="job_assignment.html" crc="3912391741" seo="true" mt="1553015065239" redirect="true"/>
+</manifest>
