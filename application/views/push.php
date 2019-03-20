@@ -48,8 +48,9 @@ if (isset($push))
 	{
 		echo 'navMenu.push({label: "' . $label . '", url: "' . $url . '", target: "_self"});';
 	}
-	echo 'navMenu = navMenu.splice(0,originalCount+8+0);';
-    echo 'return navMenu;';
+	echo 'navMenu = navMenu.splice(0,originalCount+8+0);
+    return navMenu;  
+	}';
 }
 else
 {
