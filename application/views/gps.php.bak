@@ -79,6 +79,7 @@ if (isset($error))
 if (!isset($locationapi))
 {
 	echo "<P>No GPS Updates Found";
+	return false;
 }
 $table = '<table border=1>';
 foreach($locationapi as $lid=>$lc)
