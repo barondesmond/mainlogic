@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html class="nojs html css_verticalspacer" lang="en-US">
- <head>
-
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-  <meta name="generator" content="2018.1.0.386"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-  <script type="text/javascript">
-   // Update the 'nojs'/'js' class on the html node
-document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
-
-// Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "require.js", "employee_time.css"], "outOfDate":[]};
-</script>
-  
-  <title>employee_time</title>
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=133766301"/>
-  <link rel="stylesheet" type="text/css" href="css/employee_time.css?crc=92693933" id="pagesheet"/>
-    <!--HTML Widget code-->
-  
+<?php echo $widget;?>
 
 <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
 
@@ -756,92 +735,10 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
  </head>
  <body>
 
-  <div class="clearfix borderbox" id="page"><!-- group -->
-   <div class="clearfix grpelem" id="pu2914"><!-- column -->
-    <div class="clearfix colelem" id="u2914"><!-- group -->
-     <div class="Button rounded-corners button clearfix grpelem" id="buttonu2910" data-visibility="changed" style="visibility:hidden"><!-- container box -->
-      <div class="rounded-corners colelem" id="u2911"><!-- simple frame --></div>
-      <div class="rounded-corners colelem" id="u2913"><!-- simple frame --></div>
-      <div class="rounded-corners colelem" id="u2912"><!-- simple frame --></div>
-     </div>
-     <div class="clearfix grpelem" id="u2909-4"><!-- content -->
-      <p>CP</p>
-     </div>
+  <?php echo $mainnav;?><!-- content -->
+     <p><?php echo $content;?></p>
     </div>
-    <div class="clearfix colelem" id="u4168"><!-- column -->
-     <div class="clearfix colelem" id="pu4057"><!-- group -->
-      <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u4057" href="employee_time.html"><!-- group --><img class="grpelem" id="u4150-4" alt="Time Sheet" src="images/u4150-4.png?crc=4175918297" data-image-width="141"/><!-- rasterized frame --></a>
-      <div class="clearfix grpelem" id="u4060"><!-- group -->
-       <img class="grpelem" id="u4162-4" alt="Dispatch" src="images/u4162-4.png?crc=43866679" data-image-width="109"/><!-- rasterized frame -->
-      </div>
-     </div>
-     <div class="clearfix colelem" id="pu4063"><!-- group -->
-      <div class="clearfix grpelem" id="u4063"><!-- group -->
-       <img class="grpelem" id="u4159-4" alt="Accounting" src="images/u4159-4.png?crc=163544750" data-image-width="141"/><!-- rasterized frame -->
-      </div>
-      <div class="clearfix grpelem" id="u4066"><!-- group -->
-       <img class="grpelem" id="u4163-4" alt="Estimating" src="images/u4163-4.png?crc=4282423050" data-image-width="126"/><!-- rasterized frame -->
-      </div>
-     </div>
-    </div>
-    <a class="nonblock nontext Button clearfix colelem" id="buttonu2905" href="admin.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2906"><!-- state-based BG images --><img alt="Administration" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
-    <div class="clip_frame colelem" id="u2899"><!-- image -->
-     <img class="block" id="u2899_img" src="images/400dpilogocropped455x100.png?crc=3930767816" alt="" data-heightwidthratio="0.22112211221122113" data-image-width="303" data-image-height="67"/>
-    </div>
-    <a class="nonblock nontext Button clearfix colelem" id="buttonu2907" href="index.html" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2908"><!-- state-based BG images --><img alt="Logout" src="images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
-   </div>
-   <div class="clearfix" id="u2901-3"><!-- content -->
-    <p>&nbsp;</p>
-   </div>
-   <div class="clearfix grpelem" id="pu5128-4"><!-- group -->
-    <div class="clearfix grpelem" id="u5128-4"><!-- content -->
-     <p>Employee_time</p>
-    </div>
-    <div class="size_fluid_width grpelem" id="u2902" data-sizePolicy="fluidWidth" data-pintopage="page_fluidx"><!-- custom html -->
-     
-
-    	
-    </div>
-   </div>
-   <div class="verticalspacer" data-offset-top="1001" data-content-above-spacer="1001" data-content-below-spacer="0" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
-  </div>
-  <div class="preload_images">
-   <img class="preload" src="images/u2906-r.png?crc=193805634" alt=""/>
-   <img class="preload" src="images/u2908-r.png?crc=4194255742" alt=""/>
-  </div>
-  <!-- JS includes -->
-  <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js?crc=209076791" type="text/javascript">\x3C/script>');
-</script>
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   // Decide whether to suppress missing file error or not based on preference setting
-var suppressMissingFileError = false
-</script>
-  <script type="text/javascript">
-   window.Muse.assets.check=function(c){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},d=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
-16);return 0},f=function(f){for(var g=document.getElementsByTagName("link"),j=0;j<g.length;j++)if("text/css"==g[j].type){var l=(g[j].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!l||!l[1]||!l[2])break;b[l[1]]=l[2]}g=document.createElement("div");g.className="version";g.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(g);for(j=0;j<Muse.assets.required.length;){var l=Muse.assets.required[j],k=l.match(/([\w\-\.]+)\.(\w+)$/),i=k&&k[1]?
-k[1]:null,k=k&&k[2]?k[2]:null;switch(k.toLowerCase()){case "css":i=i.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");g.className+=" "+i;i=a(d(g,"color"));k=a(d(g,"backgroundColor"));i!=0||k!=0?(Muse.assets.required.splice(j,1),"undefined"!=typeof b[l]&&(i!=b[l]>>>24||k!=(b[l]&16777215))&&Muse.assets.outOfDate.push(l)):j++;g.className="version";break;case "js":j++;break;default:throw Error("Unsupported file type: "+k);}}c?c().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
-g.parentNode.removeChild(g);if(Muse.assets.outOfDate.length||Muse.assets.required.length)g="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",f&&Muse.assets.outOfDate.length&&(g+="\nOut of date: "+Muse.assets.outOfDate.join(",")),f&&Muse.assets.required.length&&(g+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(g+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(g)):alert(g)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
-setTimeout(function(){f(!0)},5E3):f()}};
-var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.watch"],function(c){var $ = c;$(document).ready(function(){try{
-window.Muse.assets.check($);/* body */
-Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
-Muse.Utils.fullPage('#page');/* 100% height page */
-Muse.Utils.showWidgetsWhenReady();/* body */
-Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
-
-</script>
-  <!-- RequireJS script -->
-  <script src="scripts/require.js?crc=7928878" type="text/javascript" async data-main="scripts/museconfig.js?crc=310584261" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
-  
-  <!--HTML Widget code-->
+   <?php echo $widget2; ?>  <!--HTML Widget code-->
   
 
 <script type="text/javascript">

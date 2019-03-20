@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="en-US">
+ <head>
+
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="2018.1.0.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <script type="text/javascript">
+   // Update the 'nojs'/'js' class on the html node
+document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
+
+// Check that all required assets are uploaded and up-to-date
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "require.js", "employee_time.css"], "outOfDate":[]};
+</script>
+  
+  <title>employee_time</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/site_global.css?crc=133766301"/>
+  <link rel="stylesheet" type="text/css" href="/css/employee_time.css?crc=92693933" id="pagesheet"/>
+    <!--HTML Widget code-->
+  
