@@ -128,13 +128,7 @@ class Review extends CI_Controller {
 				$this->load->view('main', $data);
 	}
 
-	public function nonbillable()
-	{
 
-				$data = $this->navigation();
-				$data['content'] = $this->load->view('nonbillable', $data, true);
-				$this->load->view('main', $data);
-	}
 	public function reports()
 	{
 

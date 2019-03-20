@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Review extends CI_Controller {
+class Timesheet extends CI_Controller {
 
 	function __construct()
 	{
