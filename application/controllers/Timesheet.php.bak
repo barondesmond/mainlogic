@@ -57,11 +57,11 @@ class Timesheet extends CI_Controller {
  
 	public function assigned()
 	{
-
-		$this->load->view('header');
-		$assign = assign();
-		$this->load->view('assigned', $assign);
-		$this->load->view('footer');
+		$data = assign();
+	
+		$data = $this->navigation();
+		$data['content'] = $this->load->view('assigned', $data, true);
+		$this->load->view('main', $data);
 
 	}
 
@@ -69,11 +69,11 @@ class Timesheet extends CI_Controller {
 	
 	public function assign()
 	{
-		
-		$this->load->view('header');
-		$assign = assign();
-		$this->load->view('assigngroup', $assign);
-		$this->load->view('footer');
+		$data = assign();
+	
+		$data = $this->load->navigation($data);
+		$data['content'] = $this->load->view('assigngroup', $data, true);
+		$this->load->view('main', $data);
 	}
  
 	public function add()
@@ -170,13 +170,13 @@ class Timesheet extends CI_Controller {
 	
 
 		$data = timesheet();
-				$data = $this->navigation();
-				$data['content'] = $this->load->view('timesheet', $data, true);
-				$this->load->view('main', $data);
+		$data = $this->navigation($data);
+		$data['content'] = $this->load->view('timesheet', $data, true);
+		$this->load->view('main', $data);
 	}
 
 
-	public function navigation()
+	public function navigation($data='')
 	{
 		$data['controller'] = $this->uri->segment(1);	
 		$data['push'] = $this->load->view('push', $data, true);
@@ -212,8 +212,9 @@ class Timesheet extends CI_Controller {
 	}
 	public function gps()
 	{
+				$data = gps();
+				$data = $this->load->navigation($data);
 
-				$data = $this->navigation();
 				$data['content'] = $this->load->view('gps', $data, true);
 				$this->load->view('main', $data);
 	}
@@ -234,13 +235,13 @@ class Timesheet extends CI_Controller {
 		//print_r($timeclock);
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($timeclock->Post->$_REQUEST['EmpNo']))
 		{
-				$data = $this->navigation();
+				$data = $this->load->navigation($data);
 				$data['content'] = $this->load->view('save', $data, true);
 				$this->load->view('main', $data);
 		}
 		else
 		{
-				$data = $this->navigation();
+				$data = $this->load->navigation($data);
 				$data['content'] = $this->load->view('review', $data, true);
 				$this->load->view('main', $data);
 		}
