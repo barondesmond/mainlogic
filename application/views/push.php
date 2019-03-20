@@ -46,7 +46,7 @@ if (isset($push))
     var originalCount = navMenu.length;";
 	foreach ($push as $label => $url)
 	{
-		echo 'navMenu.push({label: "' . $desc . '", url: "' . $url . '", target: "_self"});';
+		echo 'navMenu.push({label: "' . $lable . '", url: "' . $url . '", target: "_self"});';
 	}
 	echo 'navMenu = navMenu.splice(0,originalCount+8+0);';
     echo 'return navMenu;';
