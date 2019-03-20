@@ -104,8 +104,8 @@ class Review extends CI_Controller {
 
 		$data = timesheet();
 				$data = $this->navigation();
-				$data['content'] = $this->load->view('review', $data, true);
-				$this->load->view('timesheet', $data);
+				$data['content'] = $this->load->view('timesheet', $data, true);
+				$this->load->view('main', $data);
 	}
 
 
