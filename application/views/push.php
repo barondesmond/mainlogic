@@ -30,7 +30,7 @@ $push_element = '
 
 $nav['review'] = array("Employee Time" => "/review/", "TimeSheet" => "/review/timesheet/", "GPS Review" => "/gps/", 'PTO BY EMPLOYEE' => "/pto/", 'EMPLOYEE REPORT'=>'/reports/', "Job Assignment" => "/assign/", "Rules"=> "/rules/", "Non-Billable Report" => "/nonbillable/", "Process Employee Reports" => "/reports/");
 
-if (isset($controller))
+if (isset($controller) && isset($nav[$controller]))
 {
 	$push = $nav[$controller];
 }
