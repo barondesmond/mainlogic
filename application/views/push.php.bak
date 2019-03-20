@@ -28,7 +28,7 @@ $push_element = '
 
 
 
-$nav['timesheet'] = array("Employee Time" => "/timesheet/", "TimeSheet" => "/timesheet/timesheet/", "GPS Review" => "/timesheet/gps/", 'PTO BY EMPLOYEE' => "/timesheet/pto/", 'EMPLOYEE REPORT'=>'/timesheet/reports/', "Job Assignment" => "/timesheet/assign/", "Rules"=> "/timesheet//rules/", "Non-Billable Report" => "/timesheet//nonbillable/", "Process Employee Reports" => "/timesheet/reports/", "LOGOUT" => "/login/logout/);
+$nav['timesheet'] = array("Employee Time" => "/timesheet/", "TimeSheet" => "/timesheet/timesheet/", "GPS Review" => "/timesheet/gps/", 'PTO BY EMPLOYEE' => "/timesheet/pto/", 'EMPLOYEE REPORT'=>'/timesheet/reports/', "Job Assignment" => "/timesheet/assign/", "Rules"=> "/timesheet/rules/", "Non-Billable Report" => "/timesheet/nonbillable/", "Process Employee Reports" => "/timesheet/reports/", "LOGOUT" => "/login/logout/);
 
 if (isset($controller) && isset($nav[$controller]))
 {
