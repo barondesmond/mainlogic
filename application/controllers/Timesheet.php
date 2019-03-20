@@ -8,6 +8,73 @@ class Timesheet extends CI_Controller {
 		parent::__construct();
         verify_session(); 
 	}
+
+
+	public function addjobgroup()
+	{
+		//print_r($_REQUEST);
+		$resp = add_job_group();
+		redirect('/timesheet/assign/?' . http_build_query($resp), 'refresh');
+	}
+
+	public function deletejobgroup()
+	{
+		//print_r($_REQUEST);
+		$resp = delete_job_group();
+		redirect('/timesheet/assigned/?' . http_build_query($resp), 'refresh');
+	}
+
+	public function addjge()
+	{
+		$resp = add_job_group_employee();
+		redirect('/timesheet/assigned/?' . http_build_query($resp), 'refresh');
+
+	}
+
+	public function jobgroup()
+	{
+		if (isset($_REQUEST['submit']))
+		{
+			if ($_REQUEST['submit'] == 'Assign Jobs' || $_REQUEST['submit'] == 'Assign Employees')
+			{
+				$resp = add_job_group_employee();
+			}
+			elseif ($_REQUEST['submit'] == 'Remove Jobs' || $_REQUEST['submit'] == 'Remove Employees')
+			{
+				$resp = delete_job_group();
+			}
+			else
+			{
+				$resp = $_REQUEST;
+			}
+		}
+		else
+		{
+						$resp = $_REQUEST;
+		}
+		redirect('/timesheet/assign/?' . http_build_query($resp), 'refresh');
+	}
+ 
+	public function assigned()
+	{
+		$data = assign();
+	
+		$data = $this->navigation();
+		$data['content'] = $this->load->view('assigned', $data, true);
+		$this->load->view('main', $data);
+
+	}
+
+
+	
+	public function assign()
+	{
+		$data = assign();
+	
+		$data = $this->navigation();
+		$data['content'] = $this->load->view('assigngroup', $data, true);
+		$this->load->view('main', $data);
+	}
  
 	public function add()
 	{
@@ -19,10 +86,10 @@ class Timesheet extends CI_Controller {
 
 	public function save()
 	{
-		$timeclock = timeclock();
-		$this->load->view('header', $timeclock);
-		$this->load->view('save', $timeclock);
-		$this->load->view('footer');
+		$data = timeclock();
+		$data = $this->navigation();
+		$data['content'] = $this->load->view('save', $data, true);
+		$this->load->view('main', $data);
 
 	}
 
