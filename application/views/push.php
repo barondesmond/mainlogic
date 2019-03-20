@@ -25,19 +25,12 @@
   }
 */
 
-function push_element()
-{
-$this->load->helper('url');
 
-$currentURL = current_url();
-print_r($currentURL);
-}
-$push = push_element();
 
 $nav['review'] = array("Employee Time" => "review", "TimeSheet" => "review/timesheet", "GPS Review" => "gps", "Job Assignment" => "assign", "Rules"=> "rules", "Non-Billable Report" => "nonbillable", "Process Employee Reports" => "reports");
-if (isset($nav[$this->uri->segment(1)]))
+if (isset($controller))
 {
-	$push = $nav[$this->uri->segment(1)];
+	$push = $nav[$controller];
 }
 
 if (isset($push))
