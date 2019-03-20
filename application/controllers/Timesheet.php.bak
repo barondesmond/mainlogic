@@ -60,7 +60,7 @@ class Timesheet extends CI_Controller {
 		$data = assign();
 	
 		$data = $this->navigation($data);
-		$data['content'] = $this->load->view('assigned', $data, true);
+		$data->content = $this->load->view('assigned', $data, true);
 		$this->load->view('main', $data);
 
 	}
@@ -72,7 +72,7 @@ class Timesheet extends CI_Controller {
 		$data = assign();
 	
 		$data = $this->navigation($data);
-		$data['content'] = $this->load->view('assigngroup', $data, true);
+		$data->content = $this->load->view('assigngroup', $data, true);
 		$this->load->view('main', $data);
 	}
  
@@ -88,7 +88,7 @@ class Timesheet extends CI_Controller {
 	{
 		$data = timeclock();
 		$data = $this->navigation($data);
-		$data['content'] = $this->load->view('save', $data, true);
+		$data->content = $this->load->view('save', $data, true);
 		$this->load->view('main', $data);
 
 	}
@@ -171,7 +171,7 @@ class Timesheet extends CI_Controller {
 
 		$data = timesheet();
 		$data = $this->navigation($data);
-		$data['content'] = $this->load->view('timesheet', $data, true);
+		$data->content = $this->load->view('timesheet', $data, true);
 		$this->load->view('main', $data);
 	}
 
@@ -191,7 +191,7 @@ class Timesheet extends CI_Controller {
 	{
 
 				$data = $this->navigation();
-				$data['content'] = $this->load->view('nonbillable', $data, true);
+				$data->content = $this->load->view('nonbillable', $data, true);
 				$this->load->view('main', $data);
 	}
 
@@ -200,14 +200,14 @@ class Timesheet extends CI_Controller {
 	{
 
 				$data = $this->navigation();
-				$data['content'] = $this->load->view('reports', $data, true);
+				$data->content = $this->load->view('reports', $data, true);
 				$this->load->view('main', $data);
 	}
 	public function pto()
 	{
 
 				$data = $this->navigation();
-				$data['content'] = $this->load->view('pto', $data, true);
+				$data->content = $this->load->view('pto', $data, true);
 				$this->load->view('main', $data);
 	}
 	public function gps()
@@ -215,7 +215,7 @@ class Timesheet extends CI_Controller {
 				$data = gps();
 				$data = $this->load->navigation($data);
 
-				$data['content'] = $this->load->view('gps', $data, true);
+				$data->content = $this->load->view('gps', $data, true);
 				$this->load->view('main', $data);
 	}
 
@@ -236,13 +236,13 @@ class Timesheet extends CI_Controller {
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($timeclock->Post->$_REQUEST['EmpNo']))
 		{
 				$data = $this->load->navigation($data);
-				$data['content'] = $this->load->view('save', $data, true);
+				$data->content = $this->load->view('save', $data, true);
 				$this->load->view('main', $data);
 		}
 		else
 		{
 				$data = $this->load->navigation($data);
-				$data['content'] = $this->load->view('review', $data, true);
+				$data->content = $this->load->view('review', $data, true);
 				$this->load->view('main', $data);
 		}
 	}
