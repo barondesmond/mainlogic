@@ -53,7 +53,7 @@ class Gps extends CI_Controller {
 		$data = gps();
 
 				$data = $this->navigation();
-				$data['content'] = $this->load->view('review', $data, true);
+				$data['content'] = $this->load->view('gps', $data, true);
 				$this->load->view('main', $data);
 	}
 }
