@@ -128,6 +128,12 @@ class Review extends CI_Controller {
 				$this->load->view('main', $data);
 	}
 
+	public function gps_update()
+	{
+		$gps = gps_update();
+
+		redirect('/timesheet/gps/?update=1&' . http_build_query($gps), 'refresh');
+	}
 	public function index()
 	{
 		if (!isset($_REQUEST['Offset']))

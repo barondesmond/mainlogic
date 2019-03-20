@@ -28,7 +28,7 @@ $push_element = '
 
 
 
-$nav['review'] = array("Employee Time" => "/review/", "TimeSheet" => "/review/timesheet/", "GPS Review" => "/gps/", 'PTO BY EMPLOYEE' => "/pto/", 'EMPLOYEE REPORT'=>'/reports/', "Job Assignment" => "/assign/", "Rules"=> "/rules/", "Non-Billable Report" => "/nonbillable/", "Process Employee Reports" => "/reports/");
+$nav['timesheet'] = array("Employee Time" => "/timesheet/", "TimeSheet" => "/timesheet/timesheet/", "GPS Review" => "/timesheet/gps/", 'PTO BY EMPLOYEE' => "/timesheet/pto/", 'EMPLOYEE REPORT'=>'/timesheet//reports/', "Job Assignment" => "/timesheet/assign/", "Rules"=> "/timesheet//rules/", "Non-Billable Report" => "/timesheet//nonbillable/", "Process Employee Reports" => "/timesheet/reports/", "LOGOUT" => "/login/logout/);
 
 if (isset($controller) && isset($nav[$controller]))
 {
@@ -36,7 +36,7 @@ if (isset($controller) && isset($nav[$controller]))
 }
 else
 {
-	$push = $nav['review'];
+	$push = $nav['tiesheet'];
 }
 
 if (isset($push))
