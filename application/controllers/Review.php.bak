@@ -131,9 +131,9 @@ class Review extends CI_Controller {
 		//print_r($timeclock);
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($timeclock->Post->$_REQUEST['EmpNo']))
 		{
-				$this->load->view('header', $timeclock);
-				$this->load->view('save', $timeclock);
-				$this->load->view('footer');
+				$data = $this->navigation();
+				$data['content'] = $this->load->view('save', $data, true);
+				$this->load->view('main', $data);
 		}
 		else
 		{
