@@ -1,6 +1,6 @@
 <?php
 
-/*
+$push_element = '
  function push_element(){
     navMenu = [];
     var originalCount = navMenu.length;
@@ -22,8 +22,9 @@
     navMenu.push({label: "", url: "http://", target: "_self"});
     navMenu = navMenu.splice(0,originalCount+8+0);
     return navMenu;
-  }
-*/
+  }';
+
+
 
 
 
@@ -44,6 +45,10 @@ if (isset($push))
 	}
 	echo 'navMenu = navMenu.splice(0,originalCount+8+0);';
     echo 'return navMenu;';
+}
+else
+{
+	echo $push_element;
 }
 
 
