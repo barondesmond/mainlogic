@@ -29,10 +29,14 @@ $push_element = '
 
 
 $nav['review'] = array("Employee Time" => "review", "TimeSheet" => "review/timesheet", "GPS Review" => "gps", "Job Assignment" => "assign", "Rules"=> "rules", "Non-Billable Report" => "nonbillable", "Process Employee Reports" => "reports");
-$nav[''] = $nav['review'];
+
 if (isset($controller))
 {
 	$push = $nav[$controller];
+}
+else
+{
+	$push = $nav['review'];
 }
 
 if (isset($push))
@@ -49,7 +53,7 @@ if (isset($push))
 }
 else
 {
-	echo $push_element;
+	
 }
 
 
