@@ -210,6 +210,13 @@ class Timesheet extends CI_Controller {
 				$data->content = $this->load->view('pto', $data, true);
 				$this->load->view('main', $data);
 	}
+	public function pto()
+	{
+
+				$data = $this->navigation();
+				$data->content = $this->load->view('rules', $data, true);
+				$this->load->view('main', $data);
+	}
 	public function gps()
 	{
 				$data = gps();
