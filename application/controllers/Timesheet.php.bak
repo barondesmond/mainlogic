@@ -119,7 +119,36 @@ class Review extends CI_Controller {
 
 	return $data;
 	}
-	
+
+	public function nonbillable()
+	{
+
+				$data = $this->navigation();
+				$data['content'] = $this->load->view('nonbillable', $data, true);
+				$this->load->view('main', $data);
+	}
+
+	public function nonbillable()
+	{
+
+				$data = $this->navigation();
+				$data['content'] = $this->load->view('nonbillable', $data, true);
+				$this->load->view('main', $data);
+	}
+	public function reports()
+	{
+
+				$data = $this->navigation();
+				$data['content'] = $this->load->view('reports', $data, true);
+				$this->load->view('main', $data);
+	}
+	public function pto()
+	{
+
+				$data = $this->navigation();
+				$data['content'] = $this->load->view('pto', $data, true);
+				$this->load->view('main', $data);
+	}
 	public function gps()
 	{
 
