@@ -36,6 +36,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['controller'] = $this->uri->segment(1);
 		print_r($data);
+		exit;
 		$data['push'] = $this->load->view('push', $data, true);
 		$this->load->view('main', $data);
 
