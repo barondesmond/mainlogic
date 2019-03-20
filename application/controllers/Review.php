@@ -108,25 +108,38 @@ class Review extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+
+	public function navigation()
+	{
+		$data['controller'] = $this->uri->segment(1);	
+		$data['push'] = $this->load->view('push', $data, true);
+		$data['widget'] = $this->load->view('widget', $data, true);
+		$data['widget2'] = $this->load->view('widget2', $data, true);
+		$data['mainnav'] = $this->load->view('mainnav', $data, true);
+
+	return $data;
+	}
+	
+
 	public function index()
 	{
 		if (!isset($_REQUEST['Offset']))
 		{
 			$_REQUEST['Offset'] = -1;
 		}		
-		$timeclock = timeclock();
+		$data = timeclock();
 		//print_r($timeclock);
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($timeclock->Post->$_REQUEST['EmpNo']))
 		{
-				$this->load->view('header', $timeclock);
-				$this->load->view('save', $timeclock);
-				$this->load->view('footer');
+				$data = $this->navigation();
+				$data['content'] = $this->load->view('save', $data, true);
+				$this->load->view('main', $data);
 		}
 		else
 		{
-				$this->load->view('header', $timeclock);
-				$this->load->view('review', $timeclock);
-				$this->load->view('footer');
+				$data = $this->navigation();
+				$data['content'] = $this->load->view('review', $data, true);
+				$this->load->view('main', $data);
 		}
 	}
 }
