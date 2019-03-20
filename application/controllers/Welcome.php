@@ -34,7 +34,7 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-		$data['push'] = $this->load->view('push', $data, true);
+		$data['push'] = $this->load->view('push', NULL, true);
 		$this->load->view('main', $data);
 
 	}
