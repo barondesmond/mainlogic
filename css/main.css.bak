@@ -30,7 +30,7 @@
  width: 500px;
  text-align: center;
  color: white;
- font-size:18px;
+ font-size:12px;
  font-weight:bold; 
  float: left;
  position:relative;
