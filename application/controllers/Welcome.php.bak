@@ -31,16 +31,22 @@ class Welcome extends CI_Controller {
 		return index();
 	}
 
-	
-	public function index()
+	public function navigation()
 	{
-		$data['controller'] = $this->uri->segment(1);
-		
+		$data['controller'] = $this->uri->segment(1);	
 		$data['push'] = $this->load->view('push', $data, true);
 		$data['widget'] = $this->load->view('widget', $data, true);
 		$data['widget2'] = $this->load->view('widget2', $data, true);
 		$data['mainnav'] = $this->load->view('mainnav', $data, true);
 		$data['content'] = $this->load->view('welcome_message', $data, true);
+
+	return $data;
+	}
+	
+	public function index()
+	{
+		$data = $this->navigation();
+
 		$this->load->view('main', $data);
 
 	}
