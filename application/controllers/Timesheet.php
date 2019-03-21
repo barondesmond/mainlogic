@@ -239,7 +239,7 @@ class Timesheet extends CI_Controller {
 		redirect('/timesheet/gps/?update=1&' . http_build_query($gps), 'refresh');
 	}
 
-	public function timesheet()
+	public function review()
 	{
 		if (!isset($_REQUEST['Offset']))
 		{
@@ -264,7 +264,7 @@ class Timesheet extends CI_Controller {
 
 	public function index()
 	{
-		redirect('/timesheet/timesheet/');
+		redirect('/timesheet/review/');
 
 	}
 }
