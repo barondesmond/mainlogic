@@ -34,6 +34,8 @@ class Welcome extends CI_Controller {
 	public function navigation()
 	{
 		$this->controller = $this->uri->segment(1);	
+		$this->funcion = $this->uri->segment(2);	
+
 		$this->push = $this->load->view('push', $this, true);
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
