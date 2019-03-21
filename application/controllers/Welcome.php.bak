@@ -38,7 +38,7 @@ class Welcome extends CI_Controller {
 		$data['widget'] = $this->load->view('widget', $data, true);
 		$data['widget2'] = $this->load->view('widget2', $data, true);
 		$data['mainnav'] = $this->load->view('mainnav', $data, true);
-		$data['content'] = $this->load->view('welcome_message', $data, true);
+		$data['content'] = $this->load->view('topnav', $data, true);
 
 	return $data;
 	}
@@ -46,7 +46,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data = $this->navigation();
-		$data['period'] = $this->load->view('period', $data, true);
+
 		$this->load->view('main', $data);
 
 	}
