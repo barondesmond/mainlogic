@@ -736,7 +736,7 @@
  <body>
 
   <?php echo $mainnav;?><!-- content -->
-     <p><?php echo $content;?></p>
+ <?php echo $topnav;  ?>  <p><?php echo $content;?></p>
     </div>
    <?php echo $widget2; ?>  <!--HTML Widget code-->
   

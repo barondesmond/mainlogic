@@ -1,4 +1,4 @@
-{WIDGET}
+<?php echo $widget;?>
 
 <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
 
@@ -735,10 +735,10 @@
  </head>
  <body>
 
-  {MAINNAV}<!-- content -->
-     <p>{CONTENT}</p>
+  <?php echo $mainnav;?><!-- content -->
+     <p><?php echo $content;?></p>
     </div>
-   {WIDGET2}  <!--HTML Widget code-->
+   <?php echo $widget2; ?>  <!--HTML Widget code-->
   
 
 <script type="text/javascript">
