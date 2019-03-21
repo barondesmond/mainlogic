@@ -6,6 +6,7 @@
 }
 else 
 { 
+	echo $controller . $function . $TimeClock;
 	echo '{PERIOD}'; 
 } 
 ?>
