@@ -1,4 +1,4 @@
-<div id="leftcolumn"><?php if (isset($TimeClock) && isset($controller) && isset($function))
+<div id="leftcolumn"><?php if (isset($TimeClock))
 {
 	echo '<form method=post action="/' . $controller . '/' . $function . '/">';
 
@@ -6,8 +6,7 @@
 }
 else 
 { 
-	echo $controller . $function;
-	var_dump($TimeClock);
+
 	echo '{PERIOD}'; 
 } 
 ?>
