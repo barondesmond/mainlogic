@@ -14,7 +14,7 @@
    <?php echo $widget2; ?>  <!--HTML Widget code-->
   
 
-<script type="text/javascript" src="/scripts/dream.js">
+<script type="text/javascript" src="/scripts/dream.js"></script>
 
 
 		
