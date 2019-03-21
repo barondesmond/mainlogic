@@ -31,7 +31,6 @@
  text-align: center;
  color: white;
  font-size:18px;
- line-height:58px;
  font-weight:bold; 
  float: left;
  }
