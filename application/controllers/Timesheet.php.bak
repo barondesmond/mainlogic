@@ -179,6 +179,7 @@ class Timesheet extends CI_Controller {
 	public function navigation($data='')
 	{
 		$data->controller = $this->uri->segment(1);	
+		$data->function = $this=>uri->segment(2);
 		$data->push = $this->load->view('push', $data, true);
 		$data->widget = $this->load->view('widget', $data, true);
 		$data->widget2 = $this->load->view('widget2', $data, true);
