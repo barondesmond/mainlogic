@@ -1,4 +1,4 @@
 
-<div><?php if (isset($period)) { echo $period ; } ?></div>
+<div>{PERIOD}</div>
 <form method=post action=/timesheet/><input type=submit class="buttonmain" value="UPDATE"></form>
-<div><?php if (isset($input)) { echo $input ; } ?></div>
+<div>{INPUT}</div>
