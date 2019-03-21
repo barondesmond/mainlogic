@@ -40,7 +40,7 @@ class Welcome extends CI_Controller {
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
 		$this->mainnav = $this->load->view('mainnav', $this, true);
-		$this->content = $this->load->view('topnav', $this, true);
+		$this->topnav = $this->load->view('topnav', $this, true);
 
 
 	}
@@ -48,7 +48,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{	
 		$this->navigation();
-
+		$this->content = $this->load->view('welcome_message', $this, true);
 		$this->load->view('main', $this);
 
 	}
