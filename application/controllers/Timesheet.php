@@ -238,7 +238,8 @@ class Timesheet extends CI_Controller {
 
 		redirect('/timesheet/gps/?update=1&' . http_build_query($gps), 'refresh');
 	}
-	public function index()
+
+	public functin timesheet()
 	{
 		if (!isset($_REQUEST['Offset']))
 		{
@@ -259,6 +260,11 @@ class Timesheet extends CI_Controller {
 
 		}
 		$this->load->view('main', $this);
+	}
+
+	public function index()
+	{
+		redirect('/timesheet/timesheet/');
 
 	}
 }
