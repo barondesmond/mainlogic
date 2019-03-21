@@ -1,5 +1,5 @@
 
-<div class="lefttopnav" id="leftcolumn"><?php if (isset($TimeClock))
+<div class="buttonmain" id="leftcolumn"><?php if (isset($TimeClock))
 {
 	echo	period_check($TimeClock);
 }
