@@ -249,8 +249,8 @@ class Timesheet extends CI_Controller {
 		else
 		{
 				$data = $this->navigation($data);
-				$data->period = $this->load->view('topnav', $data, true);
-				$data->content = $this->load->view('review', $data, true);
+				$data->content = $this->load->view('topnav', $data, true);
+				$data->content .= $this->load->view('review', $data, true);
 				$this->load->view('main', $data);
 		}
 	}
