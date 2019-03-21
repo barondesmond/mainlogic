@@ -143,7 +143,7 @@ if (!isset($TimeClock) || $TimeClock=='')
 {
 	return false;
 }
-period_select($_SERVER['REQUEST_URI']);
+period_select($controller . $function);
 
 
 
