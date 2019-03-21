@@ -176,6 +176,10 @@ function period_select($action='/review/timesheet')
 
 	echo "Pay Period ";
 
+			if (!isset($_REQUEST['EmpNo']))
+			{
+				$_REQUEST['EmpNo'] = '';
+			}
 
 	echo '<select name=Offset onchange="javascript:location.href = this.value;">';
 		for ($i=0; $i>-24; $i--)
@@ -193,10 +197,7 @@ function period_select($action='/review/timesheet')
 			{
 				$offsel = '';
 			}
-			if (!isset($_REQUEST['EmpNo']))
-			{
-				$_REQUEST['EmpNo'] = '';
-			}
+
 			echo "<option value=$action?Offset=$i&EmpNo=" . $_REQUEST['EmpNo'] . " $offsel>$period</option>";
 		}
 	echo "</select>";
