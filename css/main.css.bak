@@ -15,5 +15,8 @@
 }
 .buttonmain:hover{background-color:black;}
 .buttonmain:ButtonSelected{background-color:transparent;}
-#leftcolumn { width: 300px; border: 1px solid red; float: left}
-#rightcolumn { width: 300px; border: 1px solid red; float: right}
+#leftcolumn { width: 300px;  float: left}
+#centercolumn { width: 300px;  float: left}
+#rightcolumn { width: 300px;  float: left}
+
+
