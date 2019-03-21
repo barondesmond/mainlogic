@@ -9,13 +9,19 @@
  color: white;
  font-size:48px;
  line-height:58px;
- font-weight:bold;
- float: left;
-
- 
+ font-weight:bold; 
 }
 .buttonmain:hover{background-color:black;}
 .buttonmain:ButtonSelected{background-color:transparent;}
+.column{
+ height: 92px;
+ width: 300px;
+ text-align: center;
+ color: white;
+ font-size:48px;
+ line-height:58px;
+ font-weight:bold; 
+}
 #leftcolumn { 
 
  float: left;
@@ -23,7 +29,7 @@
 #centercolumn {float: left;}
 #rightcolumn { 
 
- float: left;
+ float: right;
 }
 
 
