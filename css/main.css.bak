@@ -7,6 +7,10 @@
  width: 200px;
  text-align: center;
  color: white;
+ font-size:48px;
+ line-height:58px;
+ font-weight:bold
+
  font: bold 3.2em/95px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
  
 }
