@@ -10,34 +10,11 @@
  font-size:48px;
  line-height:58px;
  font-weight:bold; 
+ float: left;
 }
 .buttonmain:hover{background-color:black;}
 .buttonmain:ButtonSelected{background-color:transparent;}
 
-#leftcolumn { 
- height: 92px;
- width: 300px;
- text-align: center;
- color: white;
- font-size:48px;
- line-height:58px;
- font-weight:bold; 
- float: left;
- background-color:#9A5252;
 
-}
-#centercolumn {float: left;}
-#rightcolumn { 
- height: 92px;
- width: 300px;
- text-align: center;
- color: white;
- font-size:48px;
- line-height:58px;
- font-weight:bold; 
- background-color:#9A5252;
- float: left;
-
-}
 
 
