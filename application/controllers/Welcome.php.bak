@@ -47,7 +47,7 @@ class Welcome extends CI_Controller {
 	{	
 		$this->navigation($data);
 
-		$this->load->view('main', $data);
+		$this->load->view('main', $this);
 
 	}
 }
