@@ -29,7 +29,7 @@
 #centercolumn {float: left;}
 #rightcolumn { 
 
- float: left;
+ float: right;
 }
 
 
