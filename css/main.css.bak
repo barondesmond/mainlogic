@@ -24,7 +24,7 @@
  width: 300px;
  text-align: center;
  color: white;
- font-size:12px;
+ font-size:48px;
  line-height:58px;
  font-weight:bold; 
 
