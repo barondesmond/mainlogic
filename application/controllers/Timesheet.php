@@ -184,6 +184,8 @@ class Timesheet extends CI_Controller {
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
 		$this->mainnav = $this->load->view('mainnav', $this, true);
+		$this->period = $this->load->view('period', $this, true);
+		$this->input = $this->load->view('input', $this, true);
 		$this->topnav = $this->load->view('topnav', $this, true);
 
 	return $data;
