@@ -10,11 +10,22 @@
  font-size:48px;
  line-height:58px;
  font-weight:bold; 
- float: left;
+
 }
 .buttonmain:hover{background-color:black;}
 .buttonmain:ButtonSelected{background-color:transparent;}
 
+#leftcolumn{
+ float: left;
+ }
+
+#centercolumn{
+ float: left;
+}
+
+#rightcolumn{
+ float: left;
+}
 
 
 
