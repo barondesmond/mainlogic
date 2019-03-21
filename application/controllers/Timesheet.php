@@ -180,7 +180,7 @@ class Timesheet extends CI_Controller {
 	{
 
 		$this->controller = $this->uri->segment(1);	
-		$this->function = $this->uri->segment(2);
+		$this->func = $this->uri->segment(2);
 		$this->push = $this->load->view('push', $this, true);
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);

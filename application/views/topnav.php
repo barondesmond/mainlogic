@@ -1,6 +1,6 @@
 <div id="leftcolumn"><?php if (isset($TimeClock))
 {
-	echo '<form method=post action="/' . $controller . '/' . $function . '/">';
+	echo '<form method=post action="/' . $controller . '/' . $func . '/">';
 
 	echo	period_check($TimeClock);
 }

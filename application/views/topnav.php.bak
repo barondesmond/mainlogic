@@ -6,8 +6,7 @@
 }
 else 
 { 
-	echo $controller . $function;
-	var_dump($TimeClock);
+
 	echo '{PERIOD}'; 
 } 
 ?>
