@@ -9,5 +9,5 @@
  font: bold 3.2em/95px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
  
 }
-.buttonmain:hover{background-color:#545454;min-height:0px;width:10.5%;margin:24px -10000px 0px 0%;}
+.buttonmain:hover{background-color:#545454;}
 .buttonmain:ButtonSelected{background-color:transparent;min-height:0px;width:10.5%;margin:24px -10000px 0px 0%;}
