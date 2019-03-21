@@ -9,14 +9,17 @@
  color: white;
  font-size:48px;
  line-height:58px;
- font-weight:bold
+ font-weight:bold;
+ float: left;
 
  
 }
 .buttonmain:hover{background-color:black;}
 .buttonmain:ButtonSelected{background-color:transparent;}
-#leftcolumn { width: 300px; height: 92px; float: left  background-color:#9A5252;}
-#centercolumn { width: 300px; height: 92px; float: left}
-#rightcolumn { width: 300px;  height: 92px; float: left}
+#leftcolumn { 
+
+ float: left;
+}
+#centercolumn {float: left;}
 
 

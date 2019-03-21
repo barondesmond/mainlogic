@@ -16,20 +16,14 @@
 }
 .buttonmain:hover{background-color:black;}
 .buttonmain:ButtonSelected{background-color:transparent;}
-#column { 
- border-width:1px;
- border-color:#787878;
- background-color:#9A5252;
- border-radius:2px;
- height: 92px;
- width: 300px;
- text-align: center;
- color: white;
- font-size:48px;
- line-height:58px;
- font-weight:bold;
+#leftcolumn { 
+
  float: left;
 }
 #centercolumn {float: left;}
+#rightcolumn { 
+
+ float: left;
+}
 
 
