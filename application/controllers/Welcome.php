@@ -33,20 +33,19 @@ class Welcome extends CI_Controller {
 
 	public function navigation()
 	{
-		$data->controller = $this->uri->segment(1);	
-		$data->push = $this->load->view('push', $data, true);
-		$data->widget = $this->load->view('widget', $data, true);
-		$data->widget2 = $this->load->view('widget2', $data, true);
-		$data->mainnav = $this->load->view('mainnav', $data, true);
-		$data->content = $this->load->view('topnav', $data, true);
+		$this->controller = $this->uri->segment(1);	
+		$this->push = $this->load->view('push', $this, true);
+		$this->widget = $this->load->view('widget', $this, true);
+		$this->widget2 = $this->load->view('widget2', $this, true);
+		$this->mainnav = $this->load->view('mainnav', $this, true);
+		$this->content = $this->load->view('topnav', $this, true);
 
-	return $data;
+
 	}
 	
 	public function index()
 	{	
-		$data = $this;
-		$data = $this->navigation($data);
+		$this->navigation($data);
 
 		$this->load->view('main', $data);
 
