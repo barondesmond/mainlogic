@@ -1,7 +1,12 @@
 .button{
-border-width:1px;border-color:#787878;background-color:#9A5252;border-radius:2px;
+ border-width:1px;
+ border-color:#787878;
+ background-color:#9A5252;
+ border-radius:2px;
  height: 100px;
  width: 300px;
-
+ text-align: center;
+ font: bold 3.2em/100px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+ 
 }
  
