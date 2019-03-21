@@ -1,5 +1,5 @@
-<div id="leftcolumn">{PERIOD}</div>
-<div id="centercolumn"><form method=post action=/timesheet/><input type=submit class="buttonmain" value="UPDATE"></form></div>
-<div id="rightcolumn">{INPUT}</div>
+<div id="leftcolumn" class="buttonmain">{PERIOD}</div>
+<div id="centercolumn" class="buttonmain"><form method=post action=/timesheet/><input type=submit class="buttonmain" value="UPDATE"></form></div>
+<div id="rightcolumn" class="buttonmain">{INPUT}</div>
 
 
