@@ -1,4 +1,4 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<p>Master Information Screen</p>
+<form method=post action=/timesheet/><input type=submit class="button" value="UPDATE"></form>
