@@ -46,7 +46,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data = $this->navigation();
-		$data['period'] = $this->load->view('period', $data, true);
+
 		$this->load->view('main', $data);
 
 	}
