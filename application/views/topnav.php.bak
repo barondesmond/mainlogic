@@ -1,6 +1,7 @@
-<form method=post action=/timesheet/>
-<div id="leftcolumn"><?php if (isset($TimeClock))
+<div id="leftcolumn"><?php if (isset($TimeClock) && isset($controller) && isset($function))
 {
+	echo '<form method=post action="/' . $controller . '/' . $function . '/">';
+
 	echo	period_check($TimeClock);
 }
 else 
