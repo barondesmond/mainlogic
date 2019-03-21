@@ -4,7 +4,7 @@
  background-color:#9A5252;
  border-radius:2px;
  height: 92px;
- width: 200px;
+ width: 300px;
  text-align: center;
  color: white;
  font-size:48px;
@@ -15,3 +15,5 @@
 }
 .buttonmain:hover{background-color:black;}
 .buttonmain:ButtonSelected{background-color:transparent;}
+#leftcolumn { width: 300px; border: 1px solid red; float: left}
+#rightcolumn { width: 300px; border: 1px solid red; float: right}
