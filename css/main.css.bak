@@ -33,7 +33,7 @@
  font-size:12px;
  font-weight:bold; 
  float: left;
- position:relative;
+ line-height: 50px;
 
  }
 
