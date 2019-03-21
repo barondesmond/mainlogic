@@ -7,7 +7,8 @@
  width: 200px;
  text-align: center;
  font: bold 3.2em/95px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
- hover #u2911;
  
 }
- 
+a.buttonmain{
+ hover #u2911;
+}
