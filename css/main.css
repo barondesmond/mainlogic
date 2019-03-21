@@ -25,11 +25,15 @@
 #leftcolumn { 
 
  float: left;
+ background-color:#9A5252;
+
 }
 #centercolumn {float: left;}
 #rightcolumn { 
+ background-color:#9A5252;
 
  float: left;
+
 }
 
 
