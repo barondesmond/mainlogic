@@ -1,2 +1,5 @@
-.button{border-width:1px;border-color:#787878;background-color:transparent;border-radius:2px;}
+.button{
+border-width:1px;border-color:#787878;background-color:#9A5252;border-radius:2px;
+
+}
  
