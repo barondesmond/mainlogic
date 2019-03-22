@@ -24,7 +24,7 @@
 #leftcolumn{
 
  border-color:#787878;
- background-color:transparent;
+ background-color:gray;
  border: 0px;
  height: 51px;
  width: 500px;
