@@ -146,7 +146,7 @@ if (!isset($TimeClock) || $TimeClock=='')
 period_select($controller . $function);
 
 
-
+print_r($TimeClock);
 $db = timeclock_employee($TimeClock);
 print_r($db);
 exit;

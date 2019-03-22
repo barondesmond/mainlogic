@@ -148,7 +148,8 @@ period_select($controller . $function);
 
 
 $db = timeclock_employee($TimeClock);
-
+print_r($db);
+exit;
 $Time = $db['Time'];
 $Job = $db['Job'];
 
