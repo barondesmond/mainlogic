@@ -146,7 +146,10 @@ if (!isset($TimeClock) || $TimeClock=='')
 }
 period_select($controller . $function);
 
-
+	if (!isset($timeClock->TimeClock))
+	{
+	return false;
+	}
 
 $db = timeclock_employee($TimeClock);
 

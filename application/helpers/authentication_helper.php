@@ -146,7 +146,7 @@ if (!isset($TimeClock) || $TimeClock=='')
 }
 period_select($controller . $function);
 
-	if (!isset($timeClock->TimeClock))
+	if (!isset($TimeClock->TimeClock))
 	{
 	return false;
 	}
