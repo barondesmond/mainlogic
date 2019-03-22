@@ -140,8 +140,9 @@ function period_check($TimeClock='', $controller='', $function='')
 date_default_timezone_set('America/Chicago');
 echo 'period check timeclock';
 print_r($TimeClock);
-echo 'controller';
+echo 'controller = ';
 echo $controller;
+echo 'func = ' . $function;
 
 if (!isset($TimeClock) || $TimeClock=='')
 {
