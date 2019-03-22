@@ -59,7 +59,7 @@
  background-color: gray;
  }
 #content{
-background-color: gray;
+background-color: blue;
 float:none;
 }
 
