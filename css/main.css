@@ -38,7 +38,7 @@
  }
 
 #centercolumn{
- float: left;
+
 }
 
 #rightcolumn{
@@ -51,7 +51,7 @@
  color: white;
  font-size:12px;
  font-weight:bold; 
- float: left;
+
  line-height: 51px;
 }
 #topnav{
@@ -60,7 +60,7 @@
  }
 #content{
 background-color: gray;
-float:none;
+clear:left;
 }
 
 
