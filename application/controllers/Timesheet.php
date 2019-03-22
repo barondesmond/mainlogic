@@ -191,7 +191,6 @@ class Timesheet extends CI_Controller {
 		$this->topnav = $this->load->view('topnav', $this, true);
 
 
-	return $data;
 	}
 
 	public function nonbillable()
