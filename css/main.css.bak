@@ -57,6 +57,7 @@
 #topnav{
  padding: 20px 20px 20px 20px;
  background-color: #464343;
+ height: 91px;
  }
 #content{
 background-color: gray;
