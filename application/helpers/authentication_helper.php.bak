@@ -322,8 +322,9 @@ return $db;
 		print_r($TimeClock);
 		foreach ($TimeClock as $id=>$event)
 		{
-			echo 'event';
+			echo 'event id ' $id ;
 		print_r($event);
+		echo 'current event above ';
 		if (isset($event->StartTime) && isset($event->StopTime))
 		{
 			echo 'is StartTime Event ';
