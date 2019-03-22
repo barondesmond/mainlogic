@@ -41,7 +41,9 @@
 
 #centercolumn{
  float: left;
- margin-left: 20px:
+ margin-left: 20px;
+ margin-right: 20px;
+ background-color: transparent;
 }
 
 #rightcolumn{
@@ -56,7 +58,7 @@
  font-weight:bold; 
  float: left;
  line-height: 51px;
- margin-left: 20px:
+
 
 }
 #topnav{

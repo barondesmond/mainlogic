@@ -11,8 +11,10 @@ else
 } 
 ?>
 </div>
-<div class="buttonmain" id="centercolumn"><input type=submit class="buttonmain" value="UPDATE"></form></div>
-<div class="buttonmain" id="rightcolumn">{INPUT}</div>
+<div  id="centercolumn1"><input type=submit class="buttonmain" value="UPDATE"></form></div>
+<div  id="centercolumn2"><input type=submit class="buttonmain" value="ADD"></form></div>
+
+<div id="rightcolumn">{INPUT}</div>
 
 
 
