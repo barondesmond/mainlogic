@@ -1,5 +1,5 @@
 <?php
-
+print_r($TimeClock);
 if (isset($TimeClock) && isset($controller) && isset($func))
 {
 	echo 'controller = ' . $controller . ' func = ' . $func;
