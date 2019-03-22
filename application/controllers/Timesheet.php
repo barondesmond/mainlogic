@@ -86,10 +86,11 @@ class Timesheet extends CI_Controller {
 
 	public function save()
 	{
-		$data = timeclock();
-		$data = $this->navigation($data);
-		$data->content = $this->load->view('save', $data, true);
-		$this->load->view('main', $data);
+		$this->TimeClock = timeclock();
+
+		$this->navigation();
+		$this->content = $this->load->view('save', $this, true);
+		$this->load->view('main', $this);
 
 	}
 
@@ -244,11 +245,15 @@ class Timesheet extends CI_Controller {
 		{
 			$_REQUEST['Offset'] = -1;
 		}		
-		if (isset($_REQUEST['submit']))
+		if (isset($_REQUEST['submit']) == 'UPDATE')
 		{
-			$fu = 'review_' . strtolower($_REQUEST['submit']) . '()';
-			unset($_REQUEST['submit']);
 			$this->review_update();
+
+			return false;
+		}
+		if (isset($_REQUEST['submit']) == 'ADD')
+		{
+			$this->review_add();
 
 			return false;
 		}
