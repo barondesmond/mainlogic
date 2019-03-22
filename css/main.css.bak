@@ -55,9 +55,13 @@
  line-height: 91px;
 }
 #topnav{
- padding: 10px;
- background-color: gray
+ padding: 20px;
+ background-color: gray;
  }
+#content{
+background-color: gray;
+float:none;
+}
 
 
 
