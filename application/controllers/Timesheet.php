@@ -239,6 +239,22 @@ class Timesheet extends CI_Controller {
 		redirect('/timesheet/gps/?update=1&' . http_build_query($gps), 'refresh');
 	}
 
+	function timeclock_api()
+	{
+		if (!isset($_REQUEST['StartTime']) || !isset($_REQUEST['StopTime']))
+		{
+			$gpb = get_period_bounds($_REQUEST['Offset']);
+			$StartTime = $gpb[0];
+			$StopTime = $gpb[1];
+		}
+		else
+		{
+			$StartTime = $_REQUEST['StartTime'];
+			$StopTime = $_REQUEST['StopTime'];
+		}
+		$uri = "timeclock_json.php?timeclock=1&StartTime=$StartTime&StopTime=$StopTime";
+		return app_api($uri);
+	}
 	public function review()
 	{
 		if (!isset($_REQUEST['Offset']))
@@ -257,7 +273,7 @@ class Timesheet extends CI_Controller {
 
 			return false;
 		}
-		$this->timeclock();
+		$this->timeclock_api();
 
 		$this->navigation();
 
