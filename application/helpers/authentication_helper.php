@@ -320,7 +320,7 @@ return $db;
 		$Employee = array();
 		echo 'timeclock employee' ;
 		print_r($TimeClock);
-		foreach ($TimeClock as $event)
+		foreach ($TimeClock as $id=>$event)
 		{
 			echo 'event';
 		print_r($event);
