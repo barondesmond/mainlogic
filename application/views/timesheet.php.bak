@@ -261,4 +261,11 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 	}
 	echo '</table>';
 
+
 }
+?>
+	   <div class="clearfix grpelem" id="u6085"><!-- group -->
+       <div class="clearfix grpelem" id="u6088-4"><!-- content -->
+        <p>POST</p>
+       </div>
+      </div>
