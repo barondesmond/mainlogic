@@ -322,10 +322,12 @@ return $db;
 		print_r($TimeClock);
 		foreach ($TimeClock as $event)
 		{
-	
+			echo 'event';
 		print_r($event);
 		if (isset($event->StartTime) && isset($event->StopTime))
 		{
+			echo 'is StartTime Event ';
+
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 		$key = $event->Name . $event->Dispatch;
 		if ($key == '')

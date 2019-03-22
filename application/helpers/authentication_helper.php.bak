@@ -155,9 +155,9 @@ print_r($TimeClock);
 echo 'controller = ';
 echo $controller;
 echo 'func = ' . $function;
-
+echo 'entering timeclock employee';
 $db = timeclock_employee($TimeClock);
-
+echo 'exiting timeclock employee';
 $Time = $db['Time'];
 $Job = $db['Job'];
 
