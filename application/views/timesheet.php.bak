@@ -146,10 +146,7 @@ return $rows;
 period_select();
 
 
-if (isset($TimeClock))
-{
-	$TimeSheet = $TimeClock->TimeSheet;
-}
+
 if (!isset($TimeSheet))
 {
 	return false;
