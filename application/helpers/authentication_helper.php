@@ -322,7 +322,7 @@ return $db;
 		{
 	
 
-		if (isset($event->StartDate) && isset($event->StopDate))
+		if (isset($event->StartTime) && isset($event->StopTime))
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 		$key = $event->Name . $event->Dispatch;
@@ -380,7 +380,8 @@ return $db;
 	$db['Job']  = $Job;
 	$db['Employee'] = $Employee;
 	$db['Save'] = $Save;
-
+	print_r($db);
+	exit;
 return $db;
 
 }

@@ -380,7 +380,7 @@ return $db;
 	$db['Job']  = $Job;
 	$db['Employee'] = $Employee;
 	$db['Save'] = $Save;
-
+	print_r($db);
 return $db;
 
 }
