@@ -43,7 +43,7 @@
 
 #rightcolumn{
  border-color:#787878;
- background-color:#9A5252;
+ background-color:#7F7F7F;
  border: 0px;
  height: 51px;
  width: 500px;
