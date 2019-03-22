@@ -146,11 +146,15 @@ return $rows;
 period_select();
 
 
-
+if (isset($TimeClock))
+{
+	$TimeSheet = $TimeClock->TimeSheet;
+}
 if (!isset($TimeSheet))
 {
 	return false;
 }
+
 
 $db = timesheet_employee($TimeSheet);
 $Employee['EmpNo'] = '<option value="/review/index/">Select Employee</option>';
