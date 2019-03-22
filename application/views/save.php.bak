@@ -24,7 +24,6 @@ if (isset($_REQUEST['EmpNo']))
 				echo '</p>';
 			}
 		}
-    echo '<input type=submit name="next" value="Next"></form>';
 }
 
 ?>
