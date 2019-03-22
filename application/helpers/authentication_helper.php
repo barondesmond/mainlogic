@@ -146,10 +146,7 @@ if (!isset($TimeClock) || $TimeClock=='')
 }
 period_select($controller . $function);
 
-	if (!isset($TimeClock->TimeClock))
-	{
-	return false;
-	}
+
 
 $db = timeclock_employee($TimeClock);
 
@@ -313,10 +310,7 @@ return $db;
 		$Save = array();
 		$Job = array();
 		$Employee = array();
-		if (!isset($TimeClock->TimeClock))
-		{
-			return false;
-		}
+
 		foreach ($TimeClock->TimeClock as $id=>$event)
 		{
 
