@@ -12,6 +12,8 @@ if (isset($error) && __DEV__== 'Dev')
 if (isset($_REQUEST['EmpNo']))
 {
 	$db = timeclock_employee($TimeClock);
+	$Job = $db['Job'];
+	$Save = $db['Save'];
 	echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';		
 
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
