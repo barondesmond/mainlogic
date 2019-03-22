@@ -249,7 +249,7 @@ class Timesheet extends CI_Controller {
 
 		$this->navigation();
 
-		//print_r($timeclock);
+
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($this->TimeClock->Post->$_REQUEST['EmpNo']))
 		{
 				$this->content = $this->load->view('save', $this, true);

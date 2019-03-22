@@ -178,7 +178,7 @@ class Timesheet extends CI_Controller {
 
 	public function navigation()
 	{
-		print_r($this->TimeClock);
+
 		$this->controller = $this->uri->segment(1);	
 		$this->func = $this->uri->segment(2);
 
