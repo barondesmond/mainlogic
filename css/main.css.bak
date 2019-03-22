@@ -7,7 +7,7 @@
  border-color:#787878;
  background-color:#9A5252;
  border: 0px;
- height: 91px;
+ height: 51px;
  width: 300px;
  text-align: center;
  color: white;
@@ -26,14 +26,14 @@
  border-color:#787878;
  background-color:#9A5252;
  border: 0px;
- height: 91px;
+ height: 51px;
  width: 500px;
  text-align: center;
  color: white;
  font-size:12px;
  font-weight:bold; 
  float: left;
- line-height: 91px;
+ line-height: 51px;
 
  }
 
@@ -45,14 +45,14 @@
  border-color:#787878;
  background-color:#9A5252;
  border: 0px;
- height: 91px;
+ height: 51px;
  width: 500px;
  text-align: center;
  color: white;
  font-size:12px;
  font-weight:bold; 
  float: left;
- line-height: 91px;
+ line-height: 51px;
 }
 #topnav{
  padding: 20px;
