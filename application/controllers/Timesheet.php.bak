@@ -80,7 +80,7 @@ class Timesheet extends CI_Controller {
 	{
 		
 		$timeclock = timeclock_add();
-		redirect('/timesheet/index/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		redirect('/timesheet/review/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
 
 	}
 

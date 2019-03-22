@@ -246,8 +246,8 @@ class Timesheet extends CI_Controller {
 		}		
 		if (isset($_REQUEST['submit']))
 		{
-			$fu = 'review_' . strtolower($_REQUEST['submit']) . ();
-			$this-?$fu;
+			$fu = 'review_' . strtolower($_REQUEST['submit']) . '()';
+			$this->$fu;
 		}
 		$this->TimeClock = timeclock();
 
