@@ -2,6 +2,6 @@
 
 if (isset($TimeClock))
 {
-	echo	period_check($TimeClock, $controller, $function);
+	echo	period_check($TimeClock, $controller, $func);
 }
 ?>
