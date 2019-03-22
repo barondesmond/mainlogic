@@ -143,7 +143,7 @@ return $rows;
 }
 
 
-period_select();
+
 
 
 
