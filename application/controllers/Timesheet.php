@@ -248,7 +248,7 @@ class Timesheet extends CI_Controller {
 		{
 			$fu = 'review_' . strtolower($_REQUEST['submit']) . '()';
 			unset($_REQUEST['submit']);
-			$this->${fu};
+			$this->review_update();
 
 			return false;
 		}
