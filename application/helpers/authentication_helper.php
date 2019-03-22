@@ -310,7 +310,8 @@ return $db;
 		$Save = array();
 		$Job = array();
 		$Employee = array();
-
+		if (isset($TimeClock->TimeClock))
+		{
 		foreach ($TimeClock->TimeClock as $id=>$event)
 		{
 
@@ -368,6 +369,7 @@ return $db;
 				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
 				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
 			}
+		}
 		}
 		}
 	$db['Time'] = $Time;
