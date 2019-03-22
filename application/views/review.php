@@ -7,7 +7,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 	$db = timeclock_employee($TimeClock);
 	$Job = $db['Job'];
-
+	$Time = $db['Time'];
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
 		echo '<table>';

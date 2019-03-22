@@ -6,6 +6,7 @@ Review what?
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 	$db = timeclock_employee($TimeClock);
+	$Job = $db['Job'];
 
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
