@@ -135,7 +135,7 @@
 		$uri = "timesheet_post_json.php?timesheet_post=1&". http_build_query($db) . '&Dev=' . __DEV__;
 		return app_api($uri);
 	}
-function period_check($TimeClock='')
+function period_check($TimeClock='', $controller, $function)
 {
 date_default_timezone_set('America/Chicago');
 
@@ -143,7 +143,7 @@ if (!isset($TimeClock) || $TimeClock=='')
 {
 	return false;
 }
-period_select($_SERVER['REQUEST_URI']);
+period_select($controller . $function);
 
 
 
