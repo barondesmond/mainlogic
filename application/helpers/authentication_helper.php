@@ -135,6 +135,84 @@
 		$uri = "timesheet_post_json.php?timesheet_post=1&". http_build_query($db) . '&Dev=' . __DEV__;
 		return app_api($uri);
 	}
+
+	function timeclock_employee($TimeClock)
+	{
+		$screen = array('Job' => '$event->Name', 'Dispatch' => '$event->Dispatch', 'Employee' => '');
+		$Time = array();
+		$Save = array();
+		$Job = array();
+		$Employee = array();
+		if (isset($TimeClock->TimeClock))
+		{
+		foreach ($TimeClock->TimeClock as $id=>$event)
+		{
+
+		if (isset($event->StartTime) && isset($event->StopTime))
+		{
+
+
+		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
+		$key = $event->Name . $event->Dispatch;
+		if ($key == '')
+		{
+			$key = $event->EmpNo;
+		}
+		if (!isset($Time[$event->EmpNo][$event->Screen][$key]) )
+		{
+			$Time[$event->EmpNo][$event->Screen][$key] = '';
+			$Save[$event->EmpNo][$event->Screen][$key] = '';
+			$Job[$event->EmpNo][$event->Screen][$key] = '';
+
+		}
+		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
+		{
+			$selected = 'selected';
+		}
+		else
+		{
+			$selected = '';
+		}
+
+		$Employee[$event->EmpNo] = '<option value="/timesheet/review/?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
+		$Job[$event->EmpNo][$event->Screen][$key] = $event->Name . $event->Dispatch .  ' ' . $event->LocName;
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
+		$Save[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+			if ($event->Screen != 'Dispatch')
+			{
+				$exp = explode(' ' , $event->StartDate);
+				$event->StartDay = $exp[0];
+				$event->StartHour = $exp[1];
+				$exp2 = explode(' ',$event->StopDate);
+				$event->StopDay = $exp2[0];
+				$event->StopHour = $exp2[1];
+				if ($event->StartDay == $event->StopDay)
+				{
+				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '">' . $event->StartDay;
+				$Time[$event->EmpNo][$event->Screen][$key] .= ' Start: <input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="8" maxlength="8">';
+				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
+				$Time[$event->EmpNo][$event->Screen][$key] .= ' Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8">' ;
+				$Time[$event->EmpNo][$event->Screen][$key] .= ' Event: ' . $event->event . "<BR>\r\n"  ;
+				}
+			}
+			else
+			{
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
+				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+			}
+		}
+		}
+		}
+	$db['Time'] = $Time;
+	$db['Job']  = $Job;
+	$db['Employee'] = $Employee;
+	$db['Save'] = $Save;
+
+return $db;
+
+}
 function period_check($TimeClock='', $controller='', $function='')
 {
 date_default_timezone_set('America/Chicago');
@@ -303,83 +381,7 @@ return $db;
 		return app_api($uri);
 	}
 
-	function timeclock_employee($TimeClock)
-	{
-		$screen = array('Job' => '$event->Name', 'Dispatch' => '$event->Dispatch', 'Employee' => '');
-		$Time = array();
-		$Save = array();
-		$Job = array();
-		$Employee = array();
-		if (isset($TimeClock->TimeClock))
-		{
-		foreach ($TimeClock->TimeClock as $id=>$event)
-		{
 
-		if (isset($event->StartTime) && isset($event->StopTime))
-		{
-
-
-		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
-		$key = $event->Name . $event->Dispatch;
-		if ($key == '')
-		{
-			$key = $event->EmpNo;
-		}
-		if (!isset($Time[$event->EmpNo][$event->Screen][$key]) )
-		{
-			$Time[$event->EmpNo][$event->Screen][$key] = '';
-			$Save[$event->EmpNo][$event->Screen][$key] = '';
-			$Job[$event->EmpNo][$event->Screen][$key] = '';
-
-		}
-		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
-		{
-			$selected = 'selected';
-		}
-		else
-		{
-			$selected = '';
-		}
-
-		$Employee[$event->EmpNo] = '<option value="/timesheet/review/?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
-		$Job[$event->EmpNo][$event->Screen][$key] = $event->Name . $event->Dispatch .  ' ' . $event->LocName;
-		$Save[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
-		$Save[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
-		$Save[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-			if ($event->Screen != 'Dispatch')
-			{
-				$exp = explode(' ' , $event->StartDate);
-				$event->StartDay = $exp[0];
-				$event->StartHour = $exp[1];
-				$exp2 = explode(' ',$event->StopDate);
-				$event->StopDay = $exp2[0];
-				$event->StopHour = $exp2[1];
-				if ($event->StartDay == $event->StopDay)
-				{
-				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '">' . $event->StartDay;
-				$Time[$event->EmpNo][$event->Screen][$key] .= ' Start: <input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="8" maxlength="8">';
-				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
-				$Time[$event->EmpNo][$event->Screen][$key] .= ' Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8">' ;
-				$Time[$event->EmpNo][$event->Screen][$key] .= ' Event: ' . $event->event . "<BR>\r\n"  ;
-				}
-			}
-			else
-			{
-				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
-				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
-				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-			}
-		}
-		}
-		}
-	$db['Time'] = $Time;
-	$db['Job']  = $Job;
-	$db['Employee'] = $Employee;
-	$db['Save'] = $Save;
-
-return $db;
-
-}
 
     function verify_session(){
        $CI = &get_instance();
