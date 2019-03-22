@@ -276,8 +276,8 @@ class Timesheet extends CI_Controller {
 
 			return false;
 		}
-		$this->timeclock_api();
-
+		$TimeClock = timeclock();
+		$this = $TimeClock;
 		$this->navigation();
 
 

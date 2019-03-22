@@ -253,7 +253,8 @@ class Timesheet extends CI_Controller {
 			$StopTime = $_REQUEST['StopTime'];
 		}
 		$uri = "timeclock_json.php?timeclock=1&StartTime=$StartTime&StopTime=$StopTime";
-		return app_api($uri);
+		$app =  app_api($uri);
+		$this->TimeClock = $app->TimeClock;
 	}
 
 
