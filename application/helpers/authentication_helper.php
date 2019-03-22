@@ -310,7 +310,10 @@ return $db;
 		$Save = array();
 		$Job = array();
 		$Employee = array();
-
+		if (!isset($TimeClock->TimeClock))
+		{
+			return false;
+		}
 		foreach ($TimeClock->TimeClock as $id=>$event)
 		{
 
