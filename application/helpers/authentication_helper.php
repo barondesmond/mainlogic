@@ -148,12 +148,13 @@ period_select($controller . $function);
 
 
 $db = timeclock_employee($TimeClock);
-
+print_r($db);
+exit;
 $Time = $db['Time'];
 $Job = $db['Job'];
 
 
-$Employee['EmpNo'] = '<option value="' . $_SERVER['REQUEST_URI'] . '">Select Employee</option>';
+$Employee['EmpNo'] = '<option value="">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
 
 if (isset($Employee))

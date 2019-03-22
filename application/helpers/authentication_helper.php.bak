@@ -135,7 +135,7 @@
 		$uri = "timesheet_post_json.php?timesheet_post=1&". http_build_query($db) . '&Dev=' . __DEV__;
 		return app_api($uri);
 	}
-function period_check($TimeClock='', $controller, $function)
+function period_check($TimeClock='', $controller='', $function='')
 {
 date_default_timezone_set('America/Chicago');
 
@@ -153,7 +153,7 @@ $Time = $db['Time'];
 $Job = $db['Job'];
 
 
-$Employee['EmpNo'] = '<option value="' . $_SERVER['REQUEST_URI'] . '">Select Employee</option>';
+$Employee['EmpNo'] = '<option value="">Select Employee</option>';
 $Employee = array_merge($Employee, $db['Employee']);
 
 if (isset($Employee))
