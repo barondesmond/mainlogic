@@ -318,6 +318,8 @@ return $db;
 		$Save = array();
 		$Job = array();
 		$Employee = array();
+		echo 'timeclock employee' ;
+		print_r($TimeClock);
 		foreach ($TimeClock as $event)
 		{
 	
