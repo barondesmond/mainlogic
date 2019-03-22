@@ -150,6 +150,11 @@ if (!isset($TimeClock) || $TimeClock=='')
 }
 period_select($controller . $function);
 
+echo 'period select timeclock';
+print_r($TimeClock);
+echo 'controller = ';
+echo $controller;
+echo 'func = ' . $function;
 
 $db = timeclock_employee($TimeClock);
 

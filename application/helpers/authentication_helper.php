@@ -322,7 +322,7 @@ return $db;
 		{
 	
 
-		if (isset($event->StartTime) && isset($event->StopTime))
+		if (isset($event->StartDate) && isset($event->StopDate))
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 		$key = $event->Name . $event->Dispatch;
