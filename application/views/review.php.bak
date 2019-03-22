@@ -1,11 +1,11 @@
 Review what?
 
-<div class="review">
+
 <?php
 
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
-
+	$db = timeclock_employee($TimeClock);
 
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
@@ -30,7 +30,6 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 
 }
 
-//var_dump($_REQUEST);
+
 ?>
 
-</div>
