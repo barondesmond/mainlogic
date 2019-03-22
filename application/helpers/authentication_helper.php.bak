@@ -318,16 +318,13 @@ return $db;
 		$Save = array();
 		$Job = array();
 		$Employee = array();
-		echo 'timeclock employee' ;
-		print_r($TimeClock);
-		foreach ($TimeClock as $id=>$event)
+
+		foreach ($TimeClock->TimeClock as $id=>$event)
 		{
-			echo 'event id ' . $id ;
-		print_r($event);
-		echo 'current event above ';
+
 		if (isset($event->StartTime) && isset($event->StopTime))
 		{
-			echo 'is StartTime Event ';
+
 
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 		$key = $event->Name . $event->Dispatch;

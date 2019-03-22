@@ -138,11 +138,7 @@
 function period_check($TimeClock='', $controller='', $function='')
 {
 date_default_timezone_set('America/Chicago');
-echo 'period check timeclock';
-print_r($TimeClock);
-echo 'controller = ';
-echo $controller;
-echo 'func = ' . $function;
+
 
 if (!isset($TimeClock) || $TimeClock=='')
 {
@@ -150,14 +146,10 @@ if (!isset($TimeClock) || $TimeClock=='')
 }
 period_select($controller . $function);
 
-echo 'period select timeclock';
-print_r($TimeClock);
-echo 'controller = ';
-echo $controller;
-echo 'func = ' . $function;
-echo 'entering timeclock employee';
+
+
 $db = timeclock_employee($TimeClock);
-echo 'exiting timeclock employee';
+
 $Time = $db['Time'];
 $Job = $db['Job'];
 
@@ -318,16 +310,13 @@ return $db;
 		$Save = array();
 		$Job = array();
 		$Employee = array();
-		echo 'timeclock employee' ;
-		print_r($TimeClock);
+
 		foreach ($TimeClock->TimeClock as $id=>$event)
 		{
-			echo 'event id ' . $id ;
-		print_r($event);
-		echo 'current event above ';
+
 		if (isset($event->StartTime) && isset($event->StopTime))
 		{
-			echo 'is StartTime Event ';
+
 
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
 		$key = $event->Name . $event->Dispatch;
@@ -385,8 +374,7 @@ return $db;
 	$db['Job']  = $Job;
 	$db['Employee'] = $Employee;
 	$db['Save'] = $Save;
-	print_r($db);
-	exit;
+
 return $db;
 
 }
