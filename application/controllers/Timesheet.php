@@ -182,7 +182,7 @@ class Timesheet extends CI_Controller {
 		$this->controller = $this->uri->segment(1);	
 		$this->func = $this->uri->segment(2);
 		echo 'controller = ' . $this->controller;
-		echo 'func' = . $this->func;
+		echo 'func'  . $this->func;
 		exit;
 		$this->push = $this->load->view('push', $this, true);
 		$this->widget = $this->load->view('widget', $this, true);
