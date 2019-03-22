@@ -11,8 +11,8 @@ else
 } 
 ?>
 </div>
-<div  id="centercolumn1"><input type=submit class="buttonmain" name="<?php $controller . '_' . $func ?>" value="UPDATE"></div>
-<div  id="centercolumn2"><input type=submit class="buttonmain" name="<?php $controller . '_' . $func ?>" value="ADD"></div>
+<div  id="centercolumn1"><input type=submit class="buttonmain" name="submit" value="UPDATE"></div>
+<div  id="centercolumn2"><input type=submit class="buttonmain" name="submit" value="ADD"></div>
 
 <div id="rightcolumn">{INPUT}</div>
 
