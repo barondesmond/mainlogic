@@ -170,10 +170,10 @@ class Timesheet extends CI_Controller {
 		}
 	
 
-		$data = timesheet();
-		$data = $this->navigation($data);
-		$data->content = $this->load->view('timesheet', $data, true);
-		$this->load->view('main', $data);
+		$this->TimeClock = timesheet();
+		$this->navigation();
+		$this->content = $this->load->view('timesheet', $this, true);
+		$this->load->view('main', $this);
 	}
 
 
