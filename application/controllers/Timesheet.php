@@ -76,11 +76,11 @@ class Timesheet extends CI_Controller {
 		$this->load->view('main', $data);
 	}
  
-	public function add()
+	public function review_add()
 	{
 		
 		$timeclock = timeclock_add();
-		redirect('/timesheet/index/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
+		redirect('/timesheet/review/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
 
 	}
 
@@ -98,7 +98,7 @@ class Timesheet extends CI_Controller {
 		return $this->index();
 	}
 	
-	public function update()
+	public function review_update()
 	{
 		if (isset($_REQUEST['TimeClockID']))
 		{
@@ -244,6 +244,11 @@ class Timesheet extends CI_Controller {
 		{
 			$_REQUEST['Offset'] = -1;
 		}		
+		if (isset($_REQUEST['submit']))
+		{
+			$fu = 'review_' . strtolower($_REQUEST['submit']) . ();
+			$this-?$fu;
+		}
 		$this->TimeClock = timeclock();
 
 		$this->navigation();
