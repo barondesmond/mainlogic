@@ -321,7 +321,7 @@ return $db;
 		foreach ($TimeClock as $event)
 		{
 	
-
+		print_r($event);
 		if (isset($event->StartTime) && isset($event->StopTime))
 		{
 		//echo '<p>Job: ' . $event->Name . ' Dispatch: ' . $event->Dispatch . ' Start: ' . $event->StartDate . ' StopDate: ' . $event->StopDate . ' event: ' .$event->event . '</p>';
