@@ -286,10 +286,10 @@ class Timesheet extends CI_Controller {
 	
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'UPDATE')
 		{
-			$save = $this;
-			$save-> review_update();
-			$save->TimeClock = timeclock();
-			$save->TimeClock = $save->TimeClock->TimeClock;
+
+			review_update();
+			$save = timeclock();
+x
 
 			
 		}
