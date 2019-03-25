@@ -76,6 +76,16 @@
 background-color: gray;
 clear:left;
 }
+#reviewcolumn{
+width: 50%;
+}
+#savecolumn{
+width: 50%;
+float:left;
+}
+
+
+
 
 
 

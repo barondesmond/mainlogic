@@ -1,8 +1,9 @@
 Review what?
 
 
-<?php
+<div id="reviewcolumn">
 
+<?php
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 	$db = timeclock_employee($TimeClock);
@@ -33,4 +34,8 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 
 
 ?>
+</div>
+<div id="savecolumn">
+{<?php if (isset($save)) { echo $save }?>
+</div>
 

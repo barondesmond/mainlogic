@@ -82,7 +82,6 @@ class Timesheet extends CI_Controller {
 		$_REQUEST['StopDate'] = date("Y:m:d H:i:s", time());
 
 		$timeclock = timeclock_add();
-		redirect('/timesheet/review/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
 
 	}
 
@@ -133,7 +132,7 @@ class Timesheet extends CI_Controller {
 		{
 			$rep = '';	
 		}
-		redirect('/timesheet/save/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'] . $rep , 'refresh');
+
 	}
 
 	public function timepost()
@@ -269,6 +268,17 @@ class Timesheet extends CI_Controller {
 
 	public function review()
 	{
+
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ADD')
+		{
+			$this->review_add();
+
+		}
+
+		$this->TimeClock = timeclock();
+		$this->TimeClock = $this->TimeClock->TimeClock;
+		$this->navigation();
+
 		if (!isset($_REQUEST['Offset']))
 		{
 			$_REQUEST['Offset'] = -1;
@@ -277,30 +287,19 @@ class Timesheet extends CI_Controller {
 		{
 			$this->review_update();
 
-			return false;
+			
 		}
-		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ADD')
-		{
-			$this->review_add();
+	
 
-			return false;
-		}
-
-		$this->TimeClock = timeclock();
-		$this->TimeClock = $this->TimeClock->TimeClock;
-		$this->navigation();
 
 
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($this->TimeClock->Post->$_REQUEST['EmpNo']))
 		{
-				$this->content = $this->load->view('save', $this, true);
+				$this->save = $this->load->view('save', $this, true);
 		}
-		else
-		{
+	
+		$this->content = $this->load->view('review', $this, true);
 
-				$this->content = $this->load->view('review', $this, true);
-
-		}
 		$this->load->view('main', $this);
 	}
 
