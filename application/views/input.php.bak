@@ -13,7 +13,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 	echo 'Type<select name="ScreenType" onchange="javascript:location.href = this.value;>';
 	foreach ($arraytype as $type)
 	{
-		echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '&Screen=' . $type  '"';
+		echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '&Screen=' . $type . '"';
 		if ($_REQUEST['Screen'] == $type)
 		{
 			echo ' selected ' ;
