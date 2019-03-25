@@ -78,7 +78,7 @@ class Timesheet extends CI_Controller {
  
 	public function review_add()
 	{
-		$_REQUEST['StartDate'] = date("Y:m:d H:i:s", time());
+		$_REQUEST['StartDate'] = date("Y:m:d H:i:s", time())-60*60);
 		$_REQUEST['StopDate'] = date("Y:m:d H:i:s", time());
 		if (isset($_REQUEST['TimeClockID']))
 		{
