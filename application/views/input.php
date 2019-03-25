@@ -8,7 +8,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 	{
 		$_REQUEST['Screen'] = 'Employee';
 	}
-	$array = ('Employee', 'Job', 'Dispatch');
+	$array = array('Employee', 'Job', 'Dispatch');
 
 	echo 'Type<select name="ScreenType" onchange="javascript:location.href = this.value;>';
 	foreach ($array as $type)
