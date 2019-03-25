@@ -288,8 +288,8 @@ class Timesheet extends CI_Controller {
 		{
 
 			review_update();
-			$save->TimeClock = timeclock();
-			$save->TimeClock = $save->TimeClock->TimeClock;
+			$save = timeclock();
+x
 
 			
 		}
