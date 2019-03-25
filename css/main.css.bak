@@ -78,6 +78,7 @@ clear:left;
 }
 #reviewcolumn{
 width: 50%;
+float:left:
 }
 #savecolumn{
 width: 50%;

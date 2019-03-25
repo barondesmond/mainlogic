@@ -11,7 +11,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	$Time = $db['Time'];
 	if (isset($Job[$_REQUEST['EmpNo']]))
 	{
-		echo '<table>';
+
 
 		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 		echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';		
@@ -19,15 +19,15 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 		{
 			foreach ($jd as $key=>$JobDisp)
 			{
-				echo '<tr><td>' . $screen . ' ' . $JobDisp .  '</td></tr>';
-				echo '<tr><td class="cell">Employee Input</td></tr>';
-				echo '<tr><td class="cell">';
+				echo '<p>' . $screen . ' ' . $JobDisp . '</p>';
+				echo '<br>Employee Input</td></tr>';
+				echo '<br>';
 				echo $Time[$_REQUEST['EmpNo']][$screen][$key];
-				echo '</td></tr>';
+				echo '';
 			}
 		}
 	
-	echo '</table>';
+
 	}
 
 }
