@@ -42,10 +42,12 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 		}
 		echo '</select>';
 		echo '<input type=hidden name=StartDay value="' . $_REQUEST['StartDay'] . '">';
+
+		echo '<input type=hidden name="Screen" value="'  .$_REQUEST['Screen'] . '" >';
+		echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></SELECT>';
+
 	}
 
-	echo '<input type=hidden name="Screen" value="'  .$_REQUEST['Screen'] . '" >';
-	echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></SELECT>';
 
 	if (isset(${$_REQUEST['Screen']}))
 	{
