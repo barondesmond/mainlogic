@@ -289,14 +289,14 @@ class Timesheet extends CI_Controller {
 			$save-> review_update();
 			$save->TimeClock = timeclock();
 			$save->TimeClock = $save->TimeClock->TimeClock;
-			$save->TimeClock->Post->$_REQUEST['EmpNo'];
+
 			
 		}
 	
 
 
 
-		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($save->TimeClock->Post->$_REQUEST['EmpNo']))
+		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && (isset($save))
 		{
 				$this->save = $this->load->view('save', $save, true);
 		}
