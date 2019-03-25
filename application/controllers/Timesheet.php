@@ -268,16 +268,17 @@ class Timesheet extends CI_Controller {
 
 	public function review()
 	{
+		if (!isset($_REQUEST['Offset']))
+		{
+			$_REQUEST['Offset'] = -1;
+		}	
 
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ADD')
 		{
 			$this->review_add();
 
 		}
-		if (!isset($_REQUEST['Offset']))
-		{
-			$_REQUEST['Offset'] = -1;
-		}	
+	
 		$this->TimeClock = timeclock();
 		$this->TimeClock = $this->TimeClock->TimeClock;
 		$this->navigation();
