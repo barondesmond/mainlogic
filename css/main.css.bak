@@ -74,7 +74,7 @@
  }
 #content{
  background-color: gray;
- clear:left;
+
 }
 #reviewcolumn{
 border: 1px;
