@@ -288,10 +288,7 @@ class Timesheet extends CI_Controller {
 		{
 
 			review_update();
-			$save = timeclock();
-x
-
-			
+			$save = timeclock();	
 		}
 
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($save))
