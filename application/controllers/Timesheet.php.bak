@@ -285,17 +285,17 @@ class Timesheet extends CI_Controller {
 		}		
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'UPDATE')
 		{
-			$this->review_update();
-			$this->TimeClock->Post->$_REQUEST['EmpNo'];
+			$save->review_update();
+			$save->TimeClock->Post->$_REQUEST['EmpNo'];
 			
 		}
 	
 
 
 
-		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($this->TimeClock->Post->$_REQUEST['EmpNo']))
+		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($save->TimeClock->Post->$_REQUEST['EmpNo']))
 		{
-				$this->save = $this->load->view('save', $this, true);
+				$this->save = $this->load->view('save', $save, true);
 		}
 	
 		$this->content = $this->load->view('review', $this, true);
