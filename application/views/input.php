@@ -8,7 +8,6 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 	{
 		$_REQUEST['Screen'] = 'Employee';
 	}
-	$arraytype = array('Employee', 'Job', 'Dispatch');
 
 	if (!isset($_REQUEST['StartDay']) || $_REQUEST['StartDay'] == '')
 	{
@@ -29,7 +28,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 	}
 	else
 	{
-
+		$arraytype = array('Employee', 'Job', 'Dispatch');
 		echo 'Type<select name="ScreenType" onchange="javascript:location.href = this.value;"><OPTION>Select Type</OPTION>';
 		foreach ($arraytype as $type)
 		{
@@ -45,15 +44,16 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 
 		echo '<input type=hidden name="Screen" value="'  .$_REQUEST['Screen'] . '" >';
 		echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></SELECT>';
+		if (isset(${$_REQUEST['Screen']}))
+		{
+			echo ${$_REQUEST['Screen']};
+		}
+	
 
 	}
 
 
-	if (isset(${$_REQUEST['Screen']}))
-	{
-		echo ${$_REQUEST['Screen']};
-	}
-		
+
 
 
 ?>
