@@ -78,13 +78,13 @@
 }
 #reviewcolumn{
 border: 1px;
-border-color: red;
+border-color: #787878;
  width: 50%;
  float:right:
 }
 #savecolumn{
 border: 2px;
-border-color: green:
+border-color: #787878:
  width: 50%;
  float:right;
 }
