@@ -8,7 +8,18 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 	{
 		$_REQUEST['Screen'] = 'Employee';
 	}
-	echo 'Type<select name="Screen"><OPTION>Employee</OPTION><OPTION>Job</OPTION><OPTION>Dispatch</OPTION></SELECT>';	
+	$array = ('Employee'=>, 'Job', 'Dispatch');
+
+	echo 'Type<select name="ScreenType" onchange="javascript:location.href = this.value;>';
+	foreach ($array as $type)
+	{
+		echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '&Screen=' . $type  '"';
+		if ($_REQUEST['Screen'] == $type)
+		{
+			echo ' selected ' ;
+		}
+		echo '>' . $type . '</OPTION>';
+	}
 	echo '<input type=hidden name="Screen" value="'  .$_REQUEST['Screen'] . '" >';
 	echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></SELECT>';
 	if (isset(${$_REQUEST['Screen']}))
