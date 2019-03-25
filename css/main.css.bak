@@ -79,12 +79,12 @@
 #reviewcolumn{
 border: 1px;
  width: 50%;
- float:left:
+ float:right:
 }
 #savecolumn{
 border: 2px;
  width: 50%;
- float:left;
+ float:right;
 }
 
 
