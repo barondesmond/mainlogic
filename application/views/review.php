@@ -36,6 +36,6 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 ?>
 </div>
 <div id="savecolumn">
-<?php if (isset($save)) { echo $save }?>
+<?php if (isset($save)) { echo $save; } ?>
 </div>
 
