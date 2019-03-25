@@ -77,10 +77,12 @@
  clear:left;
 }
 #reviewcolumn{
+border: 1px;
  width: 50%;
  float:left:
 }
 #savecolumn{
+border: 2px;
  width: 50%;
  float:left;
 }
