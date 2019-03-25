@@ -1,5 +1,9 @@
 <?php
 //input select
+if (!isset($_REQUEST['EmpNo']))
+{
+	return false;
+}
 	if (!isset($_REQUEST['Screen']))
 	{
 		$_REQUEST['Screen'] = 'Employee';

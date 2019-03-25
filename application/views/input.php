@@ -1,6 +1,6 @@
 <?php
 //input select
-if (!isset($_REQUEST['EmpNo']))
+if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 {
 	return false;
 }
