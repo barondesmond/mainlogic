@@ -8,10 +8,10 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 	{
 		$_REQUEST['Screen'] = 'Employee';
 	}
-	$array = array('Employee', 'Job', 'Dispatch');
+	$arraytype = array('Employee', 'Job', 'Dispatch');
 
 	echo 'Type<select name="ScreenType" onchange="javascript:location.href = this.value;>';
-	foreach ($array as $type)
+	foreach ($arraytype as $type)
 	{
 		echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '&Screen=' . $type  '"';
 		if ($_REQUEST['Screen'] == $type)
