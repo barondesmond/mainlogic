@@ -292,11 +292,8 @@ class Timesheet extends CI_Controller {
 
 			
 		}
-	
 
-
-
-		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && (isset($save))
+		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($save))
 		{
 				$this->save = $this->load->view('save', $save, true);
 		}
