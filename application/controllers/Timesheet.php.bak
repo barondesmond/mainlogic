@@ -78,7 +78,9 @@ class Timesheet extends CI_Controller {
  
 	public function review_add()
 	{
-		
+		$_REQUEST['StartTime'] = time();
+		$_REQUEST['StopTime'] = time();
+
 		$timeclock = timeclock_add();
 		redirect('/timesheet/review/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
 

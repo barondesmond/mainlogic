@@ -88,8 +88,10 @@ class Timesheet extends CI_Controller {
 
 	public function save()
 	{
-		$this->TimeClock = timeclock();
+	
 
+	$this->TimeClock = timeclock();
+		$this->TimeClock = $this->TimeClock->TimeClock;
 		$this->navigation();
 		$this->content = $this->load->view('save', $this, true);
 		$this->load->view('main', $this);
