@@ -20,9 +20,9 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 		echo 'Date <select name=StartDay  onchange="javascript:location.href = this.value;"><OPTION value="">Select Date</OPTION>';
 		for ($i=0; $i < $days; $i++)
 		{
-			$StartDay = date("Y:m:d", $Start + $i*86400) 
+			$StartDay = date("Y:m:d", $Start + $i*86400);
 
-			echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '&StartDay=' . $StartDay . '"' . $StartDay . '</OPTION>';
+			echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '&StartDay=' . $StartDay . '">' . $StartDay . '</OPTION>';
 		}
 		echo "</select>";
 		

@@ -17,10 +17,12 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 		$Stop = $gpb[1];
 		$time = $Stop-$Start;
 		$days = $time / 86400;
-		echo 'Date <select name=StartDay value=""><OPTION>Select Date</OPTION>';
+		echo 'Date <select name=StartDay  onchange="javascript:location.href = this.value;"><OPTION value="">Select Date</OPTION>';
 		for ($i=0; $i < $days; $i++)
 		{
-			echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '">' . date("Y:m:d", $Start + $i*86400) . "</OPTION>";
+			$StartDay = date("Y:m:d", $Start + $i*86400) 
+
+			echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '&StartDay=' . $StartDay . '"' . $StartDay . '</OPTION>';
 		}
 		echo "</select>";
 		
