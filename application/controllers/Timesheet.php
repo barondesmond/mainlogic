@@ -273,13 +273,13 @@ class Timesheet extends CI_Controller {
 		{
 			$_REQUEST['Offset'] = -1;
 		}		
-		if (isset($_REQUEST['submit']) == 'UPDATE')
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'UPDATE')
 		{
 			$this->review_update();
 
 			return false;
 		}
-		if (isset($_REQUEST['submit']) == 'ADD')
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ADD')
 		{
 			$this->review_add();
 
