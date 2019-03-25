@@ -78,10 +78,17 @@ class Timesheet extends CI_Controller {
  
 	public function review_add()
 	{
-		$gpb = get_period_bounds($_REQUEST['Offset']);
-		$StopTime = $gpb[1]-60;
-		$StartTime = $gpb[1] - 60*60-60;
-
+		if (!isset($_REQUEST['StartDay']))
+		{
+			$gpb = get_period_bounds($_REQUEST['Offset']);
+			$StopTime = $gpb[1]-60;
+			$StartTime = $gpb[1] - 60*60-60;
+		}
+		else
+		{
+			$StartTime = strtotime($_REQUEST['StartDay'] . '01:00:00');
+			$StopTime = strtotime($_REQUEST['StartDay'] . '02:00:00');
+		}
 		$_REQUEST['StartDate'] = date("Y:m:d H:i:s",$StartTime);
 		$_REQUEST['StopDate'] = date("Y:m:d H:i:s", $StopTime);
 		if (isset($_REQUEST['TimeClockID']))
