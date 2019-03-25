@@ -11,8 +11,8 @@ else
 } 
 ?>
 </div>
-<div  id="centercolumn1"><input type=submit class="buttonmain" name="submit" value="UPDATE"></div>
-<div  id="centercolumn2"><input type=submit class="buttonmain" name="submit" value="ADD"></div>
+<div  id="centercolumn1"><?php if(isset($centercolumn1)) {echo $centercolumn1} ?></div>
+<div  id="centercolumn2"><?php if(isset($centercolumn2)) {echo $centercolumn2} ?></div>
 
 <div id="rightcolumn"><?php if (isset($inputnav)){echo $inputnav;}else{ }?></div>
 
