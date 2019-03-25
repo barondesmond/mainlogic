@@ -73,16 +73,16 @@
  height: 51px;
  }
 #content{
-background-color: gray;
-clear:left;
+ background-color: gray;
+ clear:left;
 }
 #reviewcolumn{
-width: 50%;
-float:left:
+ width: 50%;
+ float:left:
 }
 #savecolumn{
-width: 50%;
-float:left;
+ width: 50%;
+ float:left;
 }
 
 
