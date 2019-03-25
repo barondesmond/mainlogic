@@ -272,7 +272,7 @@ class Timesheet extends CI_Controller {
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ADD')
 		{
 			$this->review_add();
-
+			$this->TimeClock->Post->$_REQUEST['EmpNo'];
 		}
 
 		$this->TimeClock = timeclock();

@@ -273,7 +273,6 @@ class Timesheet extends CI_Controller {
 		{
 			$this->review_add();
 
-			return false;
 		}
 
 		$this->TimeClock = timeclock();
