@@ -50,7 +50,7 @@ foreach ($employees as $employee)
 		$e++;
 	}
 }
-if ($e > 0)
+if ($e > 0 && !isset($_REQUEST['Assign'])
 {
 	echo "<P>Employees<P> <select multiple name=Employee[] size=$e >";
 
@@ -96,7 +96,7 @@ foreach ($jobs as $job)
 		$j++;
 	}
 }
-if ($j > 0)
+if ($j > 0 && !isset($_REQUEST['Assign'])
 {
 	echo "<P>Job<P> <select multiple name=Job[] size=$j >";
 
