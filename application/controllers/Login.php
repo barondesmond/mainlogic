@@ -70,7 +70,7 @@ public function navigation()
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
 		$this->mainnav = $this->load->view('mainnav', $this, true);
-		$this->input = $this->load->view('login_form', $this, true);
+		$this->inputnav = $this->load->view('login_form', $this, true);
 	
 		$this->topnav = $this->load->view('topnav', $this, true);
 
