@@ -70,6 +70,8 @@ class Timesheet extends CI_Controller {
 	public function assign()
 	{
 		$assign = assign();
+		print_r($assign);
+		exit;
 		$this->jobgroups = $assign->jobgroups;
 		$this->employees = $assign->employees;
 		$this->jobgroupemployees = $assign->jobgroupemployees;
