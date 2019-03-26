@@ -58,6 +58,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 		}
 		if (isset($Dispatch))
 		{
+			print_r($Dispatch);
 			echo 'Dispatch#<select name="JD"><OPTION>Select Dispatch</OPTION>';
 			foreach ($Dispatch->dispatchs as $dispatch)
 			{
