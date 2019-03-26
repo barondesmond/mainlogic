@@ -1,2 +1,2 @@
-<input type=submit class="buttonmain" name="submit" value="ADD">
+<input type=submit class="buttonmain" name="submit" value="ASSIGN">
 
