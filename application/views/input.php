@@ -49,8 +49,8 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 		echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></SELECT>';
 		if (isset(${$_REQUEST['Screen']}))
 		{
-			print_r(${$_REQUEST['Screen']));
-			echo ${$_REQUEST['Screen']};
+			print_r(${$_REQUEST['Screen']});
+			//echo ${$_REQUEST['Screen']};
 		}
 	
 
