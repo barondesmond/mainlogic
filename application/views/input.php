@@ -54,6 +54,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 			{
 				echo '<OPTION value="' . $job['Name'] . '">' . $job['Name'] . ' ' . $job['LocName'] . '</OPTION>';
 			}
+			echo '</select>';
 		}
 	
 
