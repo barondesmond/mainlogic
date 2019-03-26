@@ -34,7 +34,7 @@
     <div class="clip_frame colelem" id="u2899"><!-- image -->
      <img class="block" id="u2899_img" src="/images/400dpilogocropped455x100.png?crc=3930767816" alt="" data-heightwidthratio="0.22112211221122113" data-image-width="303" data-image-height="67"/>
     </div>
-    <a class="nonblock nontext Button clearfix colelem" id="buttonu2907" href="/" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2908"><!-- state-based BG images --><img alt="Logout" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
+    <a class="nonblock nontext Button clearfix colelem" id="buttonu2907" href="/login/logout/" data-visibility="changed" style="visibility:hidden"><!-- container box --><div class="grpelem" id="u2908"><!-- state-based BG images --><img alt="Logout" src="/images/blank.gif?crc=4208392903"/><div class="fluid_height_spacer"></div></div></a>
    </div>
    <div class="clearfix" id="u2901-3"><!-- content -->
     <p>&nbsp;</p>
