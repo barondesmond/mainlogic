@@ -62,7 +62,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 			echo 'Dispatch#<select name="JD"><OPTION>Select Dispatch</OPTION>';
 			foreach ($Dispatch->dispatchs as $dispatch)
 			{
-				echo '<OPTION value="' . $dispatch->Dispatch . '">' . substr($dispatch->Dispatch . ' ' . $jdispatch->DispatchName, 0, 20) . '</OPTION>';
+				echo '<OPTION value="' . $dispatch->Dispatch . '">' . substr($dispatch->Dispatch . ' ' . $dispatch->DispatchName, 0, 20) . '</OPTION>';
 			}
 			echo '</select>';
 		}
