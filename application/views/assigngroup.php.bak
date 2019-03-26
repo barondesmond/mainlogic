@@ -101,7 +101,7 @@ if ($j > 0 && !isset($_REQUEST['Assign']))
 	echo "<P>Job<P> <select multiple name=Job[] size=$j >";
 
 	echo $joboptions;
-	echo "</select><p><input type=submit name='submit' value='Remove Jobs' >";
+	echo "</select>";
 }
 else
 {
@@ -112,7 +112,7 @@ else
 	{
 		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Assign Jobs' >";
+	echo "</select>";
 
 }
 
@@ -126,7 +126,7 @@ else
 	{
 		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Assign Jobs' >";
+	echo "</select>";
 }
 echo '</td></tr></table>';
 
