@@ -59,11 +59,30 @@ class Login extends CI_Controller {
 			$this->load->view('footer');
 		}
 	}
+
+
+public function navigation()
+	{
+
+		$this->controller = $this->uri->segment(1);	
+		$this->func = $this->uri->segment(2);
+		$this->push = $this->load->view('push', $this, true);
+		$this->widget = $this->load->view('widget', $this, true);
+		$this->widget2 = $this->load->view('widget2', $this, true);
+		$this->mainnav = $this->load->view('mainnav', $this, true);
+	
+		$this->topnav = $this->load->view('topnav', $this, true);
+
+
+	}
+
 	public function index()
 	{
-		$this->load->view('header');
-		$this->load->view('login_form');
-		$this->load->view('footer');
+		$this->navigation();
 
+
+		$this->content = $this->load->view('login_form', $this, true);
+
+		$this->load->view('main', $this);
 	}
 }
