@@ -10,7 +10,7 @@
 
   
 <?php echo $mainnav;?><!-- content -->
- <?php echo $topnav;  ?>  <p><?php echo $content;?></p>
+<div id="topnav"> <?php echo $topnav;  ?> </div> <div id="content"><p><?php echo $content;?></p></div>
    <?php echo $widget2; ?>  <!--HTML Widget code-->
   
 
