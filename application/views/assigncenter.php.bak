@@ -45,6 +45,6 @@ elseif (!isset($_REQUEST['Assign']) && $remove_valid)
 }
 else
 {
-  echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
+  echo '<input type=submit class="buttonmain" name="submit" value="REMOVE">';
 	
 }

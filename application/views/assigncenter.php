@@ -31,15 +31,15 @@ if (isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count
 	}
 	else
 	{
-		$_REQUEST['submit'] = 'ASSIGN';
-		$_REQUEST['Assign'] = 'Assign';
+		$assign = true;
+
 	}
 }
-if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN' || isset($_REQUEST['Assign']))
+if ($assign)
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
 }
-elseif (!isset($_REQUEST['Assign']) && $remove_valid)
+elseif ($remove_valid)
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="REMOVE">';
 }
