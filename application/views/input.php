@@ -52,7 +52,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 			echo 'Job#<select name="Name"><OPTION>Select Job</OPTION>';
 			foreach ($Job->jobs as $job)
 			{
-				echo '<OPTION value="' . $job['Name'] . '">' . $job['Name'] . ' ' . $job['LocName'] . '</OPTION>';
+				echo '<OPTION value="' . $job->Name . '">' . $job->Name . ' ' . $job->LocName . '</OPTION>';
 			}
 			echo '</select>';
 		}
