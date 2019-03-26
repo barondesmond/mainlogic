@@ -35,7 +35,7 @@ if (!isset($jobgroupemployees))
 
 <?php
 
-echo '<table><tr><td>';
+echo '<div id="assigncolumn1">';
 //employees
 $employeeoptions = '';
 $e=0;
@@ -80,7 +80,7 @@ else
 	}
 	echo "</select>";
 }
-echo '</td><td class="column">';
+echo '</div><div id="assigncolumn2">';
 //jobs
 if (isset($jobs))
 {
@@ -128,7 +128,7 @@ else
 	}
 	echo "</select>";
 }
-echo '</td></tr></table>';
+echo '</div>';
 
 
 
