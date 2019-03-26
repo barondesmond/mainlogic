@@ -13,11 +13,11 @@ if (isset($_REQUEST['Remove']) && isset($_REQUEST['submit']) && $_REQUEST['submi
 {
 	$switch = 'Assign';
 }
-	if (isset($_REQUEST['submit'] &&$_REQUEST['submit'] == 'ASSIGN')
+	if (isset($_REQUEST['submit']) &&$_REQUEST['submit'] == 'ASSIGN')
 	{
 		$switch = 'Assign';
 	}
-	if (isset($_REQUEST['submit'] && $_REQUESt['submit'] == 'REMOVE')
+	if (isset($_REQUEST['submit']) && $_REQUESt['submit'] == 'REMOVE')
 	{
 		$switch = 'Remove';
 	}

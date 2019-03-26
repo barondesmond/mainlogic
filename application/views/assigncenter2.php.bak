@@ -21,6 +21,10 @@ if (isset($_REQUEST['Remove']) && isset($_REQUEST['submit']) && $_REQUEST['submi
 	{
 		$switch = 'Remove';
 	}
+	if (!isset($switch))
+	{
+		$switch = 'Assign';
+	}	
 	echo '<input type=hidden name="' . $switch . '" value="' . $switch . '">';
 
 
