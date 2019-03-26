@@ -79,6 +79,10 @@ public function navigation()
 
 	public function index()
 	{
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'LOGIN')
+		{
+			$this->auth();
+		}
 		$this->navigation();
 
 
