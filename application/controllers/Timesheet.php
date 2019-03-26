@@ -69,8 +69,8 @@ class Timesheet extends CI_Controller {
 	
 	public function assign()
 	{
-		$this->assign = assign();
-	
+		$assign = assign();
+		$this->jobgroups = $assign->jobgroups;
 		$this->navigation();
 		$this->content = $this->load->view('assigngroup', $this, true);
 		$this->load->view('main', $this);
