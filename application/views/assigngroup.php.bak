@@ -55,7 +55,7 @@ if ($e > 0 && !isset($_REQUEST['Assign']))
 	echo "<P>Employees<P> <select multiple name=Employee[] size=$e >";
 
 	echo $employeeoptions;
-	echo "</select><p><input type=submit name='submit' value='Remove Employees' >";
+	echo "</select>";
 }
 else
 	{
