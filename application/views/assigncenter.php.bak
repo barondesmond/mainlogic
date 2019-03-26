@@ -5,7 +5,6 @@ if (!isset($_REQUEST['JobGroup']))
 }
 
 
-}
 if (isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count($employees) > 0 && count($jobgroups) > 0 && count($jobgroupemployees)>0)
 {
 	$e=0;
