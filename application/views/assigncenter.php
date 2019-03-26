@@ -3,11 +3,11 @@ if (!isset($_REQUEST['JobGroup']))
 {
 	return false;
 }
-if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN' || isset($_REQUEST['Assign']) || (!isset($employees) || !isset($jobs) || !isset($jobgroupemployees)))
+if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN' || isset($_REQUEST['Assign']))
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
 }
-elseif (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'REMOVE' || isset($_REQUEST['Remove']))
+elseif (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'REMOVE' && !isset($_REQUEST['Assign'] && isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count($employees) > 0 && count($jobgroups) > 0 && count($jobgroupemployees)>0)
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="REMOVE">';
 }

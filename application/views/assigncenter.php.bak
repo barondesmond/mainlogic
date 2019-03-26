@@ -3,7 +3,7 @@ if (!isset($_REQUEST['JobGroup']))
 {
 	return false;
 }
-if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN' || isset($_REQUEST['Assign']))
+if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN' || isset($_REQUEST['Assign']) || (!isset($employees) || !isset($jobs) || !isset($jobgroupemployees)))
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
 }
