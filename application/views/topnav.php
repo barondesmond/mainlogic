@@ -7,9 +7,9 @@ if (isset($TimeClock))
 
 	echo	period_check($TimeClock);
 }
-else 
+elseif (isset($periodnav))
 { 
-
+	echo $periodnav;
 	
 } 
 ?>
