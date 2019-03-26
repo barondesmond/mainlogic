@@ -211,7 +211,7 @@ class Timesheet extends CI_Controller {
 	{
 		$this->periodnav = $this->load->view('assignperiod', $this, true);
 		$this->centercolumn1 = $this->load->view('assigncenter', $this, true);
-		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+		$this->centercolumn2 = $this->load->view('assigncenter2', $this, true);
 		$this->inputnav = $this->load->view('assigninput', $this, true);
 
 	}
