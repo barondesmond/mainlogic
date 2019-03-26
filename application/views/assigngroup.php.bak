@@ -24,7 +24,10 @@ if (!isset($_REQUEST['JobGroup']))
 {
 	return false;
 }
-
+if (!isset($jobgroupemployees))
+{
+	$jobgroupemployees = '';
+}
 ?>
 
 <form method=get action=/assign/jobgroup/>

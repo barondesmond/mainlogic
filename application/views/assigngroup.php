@@ -34,14 +34,7 @@ if (!isset($jobgroupemployees))
 <input type=hidden name=JobGroup[] value="<?php echo $_REQUEST['JobGroup'][0]; ?>">
 
 <?php
-if (!isset($_REQUEST['Assign']))
-{
-	echo "<input type=submit name='Assign' value='Switch To Assign' >";
-}
-else
-{
-	echo "<input type=submit name='Remove' value='Switch to Remove' >";
-}
+
 echo '<table><tr><td>';
 //employees
 $employeeoptions = '';
@@ -73,7 +66,7 @@ else
 	{
 		echo "<option value=$employee->EmpNo >$employee->EmpName $employee->Email</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Assign Employees' >";
+	echo "</select>";
 	}
 }
 else
@@ -85,7 +78,7 @@ else
 	{
 		echo "<option value=$employee->EmpNo >$employee->EmpName $employee->Email</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Assign Employees' >";
+	echo "</select>";
 }
 echo '</td><td class="column">';
 //jobs
