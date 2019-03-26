@@ -47,10 +47,13 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 
 		echo '<input type=hidden name="Screen" value="'  .$_REQUEST['Screen'] . '" >';
 		echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></SELECT>';
-		if (isset(${$_REQUEST['Screen']}))
+		if (isset($Jobs)
 		{
-			print_r(${$_REQUEST['Screen']});
-			//echo ${$_REQUEST['Screen']};
+			echo 'Job#<select name="Name"><OPTION>Select Job</OPTION>'
+			foreach ($Jobs->jobs as $job)
+			{
+				echo '<OPTION value="' . $job['Name'] . '">' . $job['Name'] . ' ' . $job['LocName'] . '</OPTION>';
+			}
 		}
 	
 

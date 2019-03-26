@@ -50,7 +50,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 		if (isset(${$_REQUEST['Screen']}))
 		{
 			print_r(${$_REQUEST['Screen']});
-			echo ${$_REQUEST['Screen']};
+			//echo ${$_REQUEST['Screen']};
 		}
 	
 
