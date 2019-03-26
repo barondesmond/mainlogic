@@ -52,7 +52,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 			echo 'Job#<select name="JD"><OPTION>Select Job</OPTION>';
 			foreach ($Job->jobs as $job)
 			{
-				echo '<OPTION value="' . $job->Name . '">' . substr($job->Name . ' ' . $job->LocName, 0, 20) . '</OPTION>';
+				echo '<OPTION value="' . $job->Name . ':' . $dispatch->JobID . '">' . substr($job->Name . ' ' . $job->LocName, 0, 20) . '</OPTION>';
 			}
 			echo '</select>';
 		}
@@ -62,7 +62,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 			echo 'Dispatch#<select name="JD"><OPTION>Select Dispatch</OPTION>';
 			foreach ($Dispatch->dispatchs as $dispatch)
 			{
-				echo '<OPTION value="' . $dispatch->Dispatch . '">' . substr($dispatch->Dispatch . ' ' . $dispatch->DispatchName, 0, 20) . '</OPTION>';
+				echo '<OPTION value="' . $dispatch->Dispatch . ':' . $dispatch->Counter . '">' . substr($dispatch->Dispatch . ' ' . $dispatch->DispatchName, 0, 20) . '</OPTION>';
 			}
 			echo '</select>';
 		}
