@@ -196,8 +196,21 @@ class Timesheet extends CI_Controller {
 		$this->content = $this->load->view('timesheet', $this, true);
 		$this->load->view('main', $this);
 	}
+	public function navigation_review()
+	{
+		$this->period = $this->load->view('period', $this, true);
+		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
+		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+		$this->inputnav = $this->load->view('input', $this, true);
+	}
 
-
+	public function navigation_assign()
+	{
+		$this->period = $this->load->view('period', $this, true);
+		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
+		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+		$this->inputnav = $this->load->view('input', $this, true);
+	}
 	public function navigation()
 	{
 
@@ -207,11 +220,6 @@ class Timesheet extends CI_Controller {
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
 		$this->mainnav = $this->load->view('mainnav', $this, true);
-		$this->period = $this->load->view('period', $this, true);
-		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
-		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
-
-		$this->inputnav = $this->load->view('input', $this, true);
 
 		$this->topnav = $this->load->view('topnav', $this, true);
 
@@ -221,40 +229,40 @@ class Timesheet extends CI_Controller {
 	public function nonbillable()
 	{
 
-				$data = $this->navigation();
-				$data->content = $this->load->view('nonbillable', $data, true);
-				$this->load->view('main', $data);
+				 $this->navigation();
+				$this->content = $this->load->view('nonbillable', $this, true);
+				$this->load->view('main', $this);
 	}
 
 
 	public function reports()
 	{
 
-				$data = $this->navigation();
-				$data->content = $this->load->view('reports', $data, true);
-				$this->load->view('main', $data);
+				 $this->navigation();
+				$this->content = $this->load->view('reports', $this, true);
+				$this->load->view('main', $this);
 	}
 	public function pto()
 	{
 
-				$data = $this->navigation();
-				$data->content = $this->load->view('pto', $data, true);
-				$this->load->view('main', $data);
+			 $this->navigation();
+				$this->content = $this->load->view('pto', $this, true);
+				$this->load->view('main', $this);
 	}
 	public function rules()
 	{
 
-				$data = $this->navigation();
-				$data->content = $this->load->view('rules', $data, true);
-				$this->load->view('main', $data);
+			 $this->navigation();
+				$this->content = $this->load->view('rules', $this, true);
+				$this->load->view('main', $this);
 	}
 	public function gps()
 	{
 				$data = gps();
-				$data = $this->navigation($data);
-
-				$data->content = $this->load->view('gps', $data, true);
-				$this->load->view('main', $data);
+				$this->gps = $data->gps;				
+				$this->navigation();
+				$this->content = $this->load->view('gps', $this, true);
+				$this->load->view('main', $this);
 	}
 
 	public function gps_update()
@@ -309,6 +317,7 @@ class Timesheet extends CI_Controller {
 	
 		$this->TimeClock = timeclock();
 		$this->TimeClock = $this->TimeClock->TimeClock;
+		$this->navigation_review();
 		$this->navigation();
 
 	

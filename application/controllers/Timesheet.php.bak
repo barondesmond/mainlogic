@@ -196,7 +196,13 @@ class Timesheet extends CI_Controller {
 		$this->content = $this->load->view('timesheet', $this, true);
 		$this->load->view('main', $this);
 	}
-
+	public function navigation_review()
+	{
+		$this->period = $this->load->view('period', $this, true);
+		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
+		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+		$this->inputnav = $this->load->view('input', $this, true);
+	}
 
 	public function navigation()
 	{
@@ -207,13 +213,7 @@ class Timesheet extends CI_Controller {
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
 		$this->mainnav = $this->load->view('mainnav', $this, true);
-		$this->period = $this->load->view('period', $this, true);
-		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
-		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
 
-		$this->inputnav = $this->load->view('input', $this, true);
-		echo $this->periodnav;
-		exit;
 		$this->topnav = $this->load->view('topnav', $this, true);
 
 
@@ -310,6 +310,7 @@ class Timesheet extends CI_Controller {
 	
 		$this->TimeClock = timeclock();
 		$this->TimeClock = $this->TimeClock->TimeClock;
+		$this->navigation_review();
 		$this->navigation();
 
 	
