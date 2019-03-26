@@ -96,7 +96,7 @@ foreach ($jobs as $job)
 		$j++;
 	}
 }
-if ($j > 0 && !isset($_REQUEST['Assign']))
+if ($j > 0)
 {
 	echo "<P>Job<P> <select multiple name=Job[] size=$j >";
 
