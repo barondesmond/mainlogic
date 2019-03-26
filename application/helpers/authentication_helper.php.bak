@@ -61,7 +61,14 @@
 
 	function jobs()
 	{
-		$uri = 'jobs_json.php?latitude=34.253725&longitude=-88.6843';
+		$uri = 'jobs_json.php?latitude=34.253725&longitude=-88.6843&ServiceMan=' . $_REQUEST['EmpNo'];
+		return app_api($uri);
+
+	}
+
+	function dispatchs()
+	{
+		$uri = 'dispatchs_json.php?latitude=34.253725&longitude=-88.6843&ServiceMan=' . $_REQUEST['EmpNo'];
 		return app_api($uri);
 
 	}

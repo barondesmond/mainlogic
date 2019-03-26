@@ -7,35 +7,7 @@ if (isset($error))
 	}
 }
 
-function is_selected($key, $id, $jobgroupemployees='', $JobGroup)
-{
-	foreach ($jobgroupemployees as $jobgroupemployee)
-	{
-		if (!isset($jobgroupemployee->$key))
-		{
-			return;
-		}
-		if ($jobgroupemployee->$key==$id && select_group($key, $jobgroupemployee->JobGroupID, $JobGroup) == 'selected')
-		{
-			return 'selected';
-		}
-	
-	}
-}
 
-function select_group($key, $id, $JobGroup)
-{
-
-	if (!isset($JobGroup))
-	{
-		
-	}
-	elseif ($id == $JobGroup['0'])
-	{
-		return 'selected';
-	}
-
-}
 
 
 ?>
