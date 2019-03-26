@@ -40,10 +40,8 @@ function select_group($key, $id, $JobGroup)
 
 ?>
 
-<form method=post action=/assign/addjobgroup/>
 
 
-Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group" ></form>
 <p>
 
 

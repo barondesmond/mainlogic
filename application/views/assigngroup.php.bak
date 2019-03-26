@@ -43,7 +43,7 @@ function select_group($key, $id, $JobGroup)
 <form method=post action=/assign/addjobgroup/>
 
 
-Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group" class="my-button"></form>
+Job Group<input type=text name=JobGroup><input type=submit value="Add Job Group" ></form>
 <p>
 
 
@@ -70,13 +70,13 @@ if (!isset($_REQUEST['JobGroup']))
 <?php
 if (!isset($_REQUEST['Assign']))
 {
-	echo "<input type=submit name='Assign' value='Switch To Assign' class='my-button'>";
+	echo "<input type=submit name='Assign' value='Switch To Assign' >";
 }
 else
 {
-	echo "<input type=submit name='Remove' value='Switch to Remove' class='my-button'>";
+	echo "<input type=submit name='Remove' value='Switch to Remove' >";
 }
-echo '<table class="table"><tr><td class="column">';
+echo '<table><tr><td>';
 //employees
 $employeeoptions = '';
 $e=0;
@@ -96,7 +96,7 @@ if ($e > 0 && !isset($_REQUEST['Assign']))
 	echo "<P>Employees<P> <select multiple name=Employee[] size=$e >";
 
 	echo $employeeoptions;
-	echo "</select><p><input type=submit name='submit' value='Remove Employees' class='my-button'>";
+	echo "</select><p><input type=submit name='submit' value='Remove Employees' >";
 }
 else
 	{
@@ -107,7 +107,7 @@ else
 	{
 		echo "<option value=$employee->EmpNo >$employee->EmpName $employee->Email</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Assign Employees' class='my-button'>";
+	echo "</select><p><input type=submit name='submit' value='Assign Employees' >";
 	}
 }
 else
@@ -119,7 +119,7 @@ else
 	{
 		echo "<option value=$employee->EmpNo >$employee->EmpName $employee->Email</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Assign Employees' class='my-button'>";
+	echo "</select><p><input type=submit name='submit' value='Assign Employees' >";
 }
 echo '</td><td class="column">';
 //jobs
@@ -142,7 +142,7 @@ if ($j > 0 && !isset($_REQUEST['Assign']))
 	echo "<P>Job<P> <select multiple name=Job[] size=$j >";
 
 	echo $joboptions;
-	echo "</select><p><input type=submit name='submit' value='Remove Jobs' class='my-button'>";
+	echo "</select><p><input type=submit name='submit' value='Remove Jobs' >";
 }
 else
 {
@@ -153,7 +153,7 @@ else
 	{
 		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Assign Jobs' class='my-button'>";
+	echo "</select><p><input type=submit name='submit' value='Assign Jobs' >";
 
 }
 
@@ -167,7 +167,7 @@ else
 	{
 		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
 	}
-	echo "</select><p><input type=submit name='submit' value='Assign Jobs' class='my-button'>";
+	echo "</select><p><input type=submit name='submit' value='Assign Jobs' >";
 }
 echo '</td></tr></table>';
 
