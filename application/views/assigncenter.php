@@ -11,7 +11,7 @@ if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN' || isset($_REQ
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
 }
-elseif (isset($_REQUEST['Remove'])) && $remove_valid)
+elseif (!isset($_REQUEST['Assign']) && $remove_valid)
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="REMOVE">';
 }
