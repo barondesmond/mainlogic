@@ -80,8 +80,9 @@ public function navigation()
 	{
 		$this->navigation();
 
-		$this->load->view('login_form');
-		$this->load->view('footer');
 
+		$this->content = $this->load->view('login_form', $this, true);
+
+		$this->load->view('main', $this);
 	}
 }
