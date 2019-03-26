@@ -1,5 +1,5 @@
 <?php
-if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN')
+if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN' || (isset($_REQEST['Assign')))
 {
 	$switch = 'Remove';
 }
