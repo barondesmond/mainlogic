@@ -212,8 +212,7 @@ class Timesheet extends CI_Controller {
 		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
 
 		$this->inputnav = $this->load->view('input', $this, true);
-		echo $this->periodnav;
-		exit;
+
 		$this->topnav = $this->load->view('topnav', $this, true);
 
 

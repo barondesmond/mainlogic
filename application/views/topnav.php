@@ -1,17 +1,16 @@
 <div id="leftcolumn">
 <?php 
 	echo '<form method=post action="/' . $controller . '/' . $func . '/">';
-if (isset($TimeClock))
+if (isset($periodnav))
+{
+	echo $periodnav;
+}
+elseif (isset($TimeClock))
 {
 
 
 	echo	period_check($TimeClock);
 }
-elseif (isset($periodnav))
-{ 
-	echo $periodnav;
-	
-} 
 ?>
 </div>
 <div  id="centercolumn1"><?php if(isset($centercolumn1)) {echo $centercolumn1;} ?></div>
