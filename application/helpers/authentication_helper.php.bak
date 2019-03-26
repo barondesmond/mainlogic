@@ -143,9 +143,8 @@
 		$Save = array();
 		$Job = array();
 		$Employee = array();
-		if (isset($TimeClock->TimeClock))
-		{
-		foreach ($TimeClock->TimeClock as $id=>$event)
+
+		foreach ($TimeClock as $id=>$event)
 		{
 
 		if (isset($event->StartTime) && isset($event->StopTime))
@@ -204,7 +203,7 @@
 			}
 		}
 		}
-		}
+	
 	$db['Time'] = $Time;
 	$db['Job']  = $Job;
 	$db['Employee'] = $Employee;

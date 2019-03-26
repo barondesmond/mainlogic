@@ -86,8 +86,8 @@ class Timesheet extends CI_Controller {
 		}
 		else
 		{
-			$StartTime = strtotime($_REQUEST['StartDay'] . '01:00:00');
-			$StopTime = strtotime($_REQUEST['StartDay'] . '02:00:00');
+			$StartTime = strtotime($_REQUEST['StartDay'] . ' 01:00:00');
+			$StopTime = strtotime($_REQUEST['StartDay'] . ' 02:00:00');
 		}
 		$_REQUEST['StartDate'] = date("Y:m:d H:i:s",$StartTime);
 		$_REQUEST['StopDate'] = date("Y:m:d H:i:s", $StopTime);
