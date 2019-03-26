@@ -35,7 +35,7 @@ if (isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count
 
 	}
 }
-if ($assign)
+if (isset($assign))
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
 }
