@@ -50,7 +50,7 @@ foreach ($employees as $employee)
 		$e++;
 	}
 }
-if ($e > 0 && ((!isset($_REQUEST['submit']) || (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'REMOVE'))
+if ($e > 0 && ((!isset($_REQUEST['submit']) || (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'REMOVE')))
 {
 	echo "<P>Employees<P> <select multiple name=Employee[] size=$e >";
 
