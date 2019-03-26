@@ -49,7 +49,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 		echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></SELECT>';
 		if (isset($Job))
 		{
-			echo 'Job#<select name="Name"><OPTION>Select Job</OPTION>';
+			echo 'Job#<select name="JD"><OPTION>Select Job</OPTION>';
 			foreach ($Job->jobs as $job)
 			{
 				echo '<OPTION value="' . $job->Name . '">' . substr($job->Name . ' ' . $job->LocName, 0, 20) . '</OPTION>';
