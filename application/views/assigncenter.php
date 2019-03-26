@@ -39,7 +39,7 @@ if (isset($assign) || (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'SWI
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
 }
-elseif ($remove_valid)
+elseif (isset($remove_valid))
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="REMOVE">';
 }

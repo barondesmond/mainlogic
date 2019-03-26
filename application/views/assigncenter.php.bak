@@ -35,7 +35,7 @@ if (isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count
 
 	}
 }
-if (isset($assign))
+if (isset($assign) || (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'SWITCH' && isset($_REQUEST['Assign'])))
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
 }
