@@ -71,7 +71,7 @@ class Timesheet extends CI_Controller {
 	{
 		$assign = assign();
 		$this->jobgroups = $assign->jobgroups;
-		$this->periodnav = $this->load->view('assigngroup', $this, true);
+		//$this->periodnav = $this->load->view('assigngroup', $this, true);
 		$this->navigation_assign();
 		$this->navigation();
 
@@ -206,7 +206,7 @@ class Timesheet extends CI_Controller {
 
 	public function navigation_assign()
 	{
-		//$this->periodnav = $this->load->view('assignperiod', $this, true);
+		$this->periodnav = $this->load->view('assignperiod', $this, true);
 		//$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
 		$this->centercolumn2 = $this->load->view('assigncenter', $this, true);
 		$this->inputnav = $this->load->view('assigninput', $this, true);
