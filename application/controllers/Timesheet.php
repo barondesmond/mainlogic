@@ -69,11 +69,11 @@ class Timesheet extends CI_Controller {
 	
 	public function assign()
 	{
-		$data = assign();
+		$this->assign = assign();
 	
-		$data = $this->navigation($data);
-		$data->content = $this->load->view('assigngroup', $data, true);
-		$this->load->view('main', $data);
+		$this->navigation();
+		$this->content = $this->load->view('assigngroup', $this, true);
+		$this->load->view('main', $this);
 	}
  
 	public function review_add()

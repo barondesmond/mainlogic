@@ -292,6 +292,17 @@ class Timesheet extends CI_Controller {
 			$this->review_add();
 
 		}
+		if (isset($_REQUEST['Screen']))
+		{
+			if ($_REQUEST['Screen'] == 'Job')
+			{
+				$this->Job = jobs();
+			}
+			if ($_REQUEST['Screen'] == 'Dispatch')
+			{
+				$this->Dispatch = dispatchs();
+			}
+		}
 	
 		$this->TimeClock = timeclock();
 		$this->TimeClock = $this->TimeClock->TimeClock;
@@ -309,6 +320,7 @@ class Timesheet extends CI_Controller {
 		{
 				$this->save = $this->load->view('save', $save, true);
 		}
+
 	
 		$this->content = $this->load->view('review', $this, true);
 
