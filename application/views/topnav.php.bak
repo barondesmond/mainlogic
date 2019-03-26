@@ -7,7 +7,7 @@
 else 
 { 
 
-	echo '{PERIOD}'; 
+	
 } 
 ?>
 </div>
