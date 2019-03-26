@@ -10,65 +10,18 @@ class Timesheet extends CI_Controller {
 	}
 
 
-	public function addjobgroup()
-	{
-		//print_r($_REQUEST);
-		$resp = add_job_group();
-		redirect('/timesheet/assign/?' . http_build_query($resp), 'refresh');
-	}
-
-	public function deletejobgroup()
-	{
-		//print_r($_REQUEST);
-		$resp = delete_job_group();
-		redirect('/timesheet/assigned/?' . http_build_query($resp), 'refresh');
-	}
-
-	public function addjge()
-	{
-		$resp = add_job_group_employee();
-		redirect('/timesheet/assigned/?' . http_build_query($resp), 'refresh');
-
-	}
-
-	public function jobgroup()
-	{
-		if (isset($_REQUEST['submit']))
-		{
-			if ($_REQUEST['submit'] == 'Assign Jobs' || $_REQUEST['submit'] == 'Assign Employees')
-			{
-				$resp = add_job_group_employee();
-			}
-			elseif ($_REQUEST['submit'] == 'Remove Jobs' || $_REQUEST['submit'] == 'Remove Employees')
-			{
-				$resp = delete_job_group();
-			}
-			else
-			{
-				$resp = $_REQUEST;
-			}
-		}
-		else
-		{
-						$resp = $_REQUEST;
-		}
-		redirect('/timesheet/assign/?' . http_build_query($resp), 'refresh');
-	}
- 
-	public function assigned()
-	{
-		$data = assign();
 	
-		$data = $this->navigation($data);
-		$data->content = $this->load->view('assigned', $data, true);
-		$this->load->view('main', $data);
-
-	}
-
-
 	
 	public function assign()
 	{
+		if (isset($_REQUEST['submit'] && ($_REQUEST['submit'] == 'REMOVE' )
+		{
+			delete_job_group();
+		}
+		if (isset($_REQUEST['submit'] && $_REQUEST['submit'] == 'ASSIGN')
+		{
+			add_job_group_employee();
+		}
 		$assign = assign();
 
 		$this->jobgroups = $assign->jobgroups;
