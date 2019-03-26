@@ -88,6 +88,10 @@
 
 function is_selected($key, $id, $jobgroupemployees='', $JobGroup)
 {
+	if (!isset($jobgroupemployees) || $jobgroupemployees == '')
+	{
+		return ;
+	}
 	foreach ($jobgroupemployees as $jobgroupemployee)
 	{
 		if (!isset($jobgroupemployee->$key))
