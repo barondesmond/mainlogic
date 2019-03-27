@@ -1,13 +1,7 @@
 <?php 
 
 
-if (isset($error) && __DEV__== 'Dev')
-{
-	foreach ($error as $id=> $e)
-	{
-		echo "$e<BR>\r\n";
-	}
-}
+
 
 if (isset($_REQUEST['EmpNo']))
 {
