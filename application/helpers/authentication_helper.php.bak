@@ -395,7 +395,7 @@ return $db;
 			$StartTime = $_REQUEST['StartTime'];
 			$StopTime = $_REQUEST['StopTime'];
 		}
-		$uri = "timeclock_json.php?timeclock=1&StartTime=$StartTime&StopTime=$StopTime";
+		$uri = "timeclock_json.php?timeclock=1&StartTime=$StartTime&StopTime=$StopTime&Dev=" . __DEV__;
 		return app_api($uri);
 	}
 

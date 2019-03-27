@@ -68,7 +68,7 @@
 
 	function dispatchs()
 	{
-		$uri = 'dispatchs_json.php?latitude=34.253725&longitude=-88.6843&ServiceMan=' . $_REQUEST['EmpNo'];
+		$uri = 'dispatchs_json.php?latitude=34.253725&longitude=-88.6843&ServiceMan=' . $_REQUEST['EmpNo'] . '&Dev=' . __DEV__;
 		return app_api($uri);
 
 	}
