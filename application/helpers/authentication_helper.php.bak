@@ -218,8 +218,8 @@ function select_group($key, $id, $JobGroup)
 		$Save[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
 		$Save[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
 		$Save[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-			if ($event->Screen != 'Dispatch')
-			{
+			//if ($event->Screen != 'Dispatch')
+			//{
 				$exp = explode(' ' , $event->StartDate);
 				$event->StartDay = $exp[0];
 				$event->StartHour = $exp[1];
@@ -234,13 +234,13 @@ function select_group($key, $id, $JobGroup)
 				$Time[$event->EmpNo][$event->Screen][$key] .= ' Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8">' ;
 				$Time[$event->EmpNo][$event->Screen][$key] .= ' Event: ' . $event->event . "<BR>\r\n"  ;
 				}
-			}
-			else
-			{
+			//}
+			//else
+			//{
 				$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
 				$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
 				$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-			}
+			//}
 		}
 		}
 	
