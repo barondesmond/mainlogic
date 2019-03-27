@@ -20,7 +20,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 
 			foreach ($jd as $key=>$JobDisp)
 			{
-				echo '<p>' . $screen . ' ' . $JobDisp . '</p>';
+				echo '<p><br>' . $screen . ' ' . $JobDisp . '</p>';
 				echo 'Employee Input<br>';
 				echo $Time[$_REQUEST['EmpNo']][$screen][$key];
 
