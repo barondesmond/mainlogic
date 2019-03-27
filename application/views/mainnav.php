@@ -13,7 +13,7 @@
  
     <div class="clearfix colelem" id="u4168"><!-- column -->
      <div class="clearfix colelem" id="pu4057"><!-- group -->
-      <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u4057" href="/timesheet/"><!-- group --><img class="grpelem" id="u4150-4" alt="Time Sheet" src="/images/u4150-4.png?crc=4175918297" data-image-width="141"/><!-- rasterized frame --></a>
+      <a class="nonblock nontext Button clearfix colelem" id="u4057" href="/timesheet/"><!-- group --><img class="grpelem" id="u4150-4" alt="Time Sheet" src="/images/u4150-4.png?crc=4175918297" data-image-width="141"/><!-- rasterized frame --></a>
 
       <div class="clearfix grpelem" id="u4060"><!-- group -->
 	
