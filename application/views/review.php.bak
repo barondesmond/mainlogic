@@ -24,7 +24,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 				echo $Time[$_REQUEST['EmpNo']][$screen][$key];
 
 			}
-			echo '<p>';
+			echo '<p><br>';
 		}
 	
 

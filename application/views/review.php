@@ -17,6 +17,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 		echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';		
 		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
 		{
+			echo '<p><br>';
 			foreach ($jd as $key=>$JobDisp)
 			{
 				echo '<p>' . $screen . ' ' . $JobDisp . '</p><br>';
@@ -24,7 +25,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 				echo $Time[$_REQUEST['EmpNo']][$screen][$key];
 
 			}
-			echo '<p><br>';
+
 		}
 	
 
