@@ -1,14 +1,11 @@
 <?php
 
-if (isset($TimeSheet))
-{
 
-	period_check($TimeSheet);
-}
 
 if (isset($TimeSheet))
 {
 	
+period_select($controller . $function);
 
 
 $db = timesheet_employee($TimeSheet);
