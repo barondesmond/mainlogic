@@ -1,11 +1,9 @@
 <?php
 
-if (isset($TimeClock) && isset($controller) && isset($func))
+if (isset($TimeSheet))
 {
-	echo 'controller = ' . $controller . ' func = ' . $func;
-	echo 'entering period check';
-	period_check($TimeClock, $controller, $func);
-	echo 'exiting period check';
+
+	period_check($TimeSheet);
 }
 
 if (isset($TimeSheet))
