@@ -239,11 +239,11 @@ class Timesheet extends CI_Controller {
 				{
 					if ($_REQUEST['submit'] == 'APPROVE')
 					{
-										$_REQUEST['AcceptDeny'] = 'Accept';
+										$_REQUEST['Deny'] = 'Accept';
 					}
 					if ($_REQUEST['submit'] == 'DENY')
 					{
-										$_REQUEST['AcceptDeny'] = 'Deny';
+										$_REQUEST['Deny'] = 'Deny';
 					}
 					unset($_REQUEST['submit']);
 				}
