@@ -28,7 +28,10 @@ echo '<div id="file"><input type=hidden name=file value="' . $Details->file . '"
 echo '<div id=assigncolumn2>';
 foreach ($Details as $key=> $val)
 {
-
+	if ($key == 'location_map' || $key == 'override_map')
+	{
+		echo '<br><img src="' . $val . '">';
+	}
 	echo '<BR>' . $key . ' : ' . $val;
 }
 echo '</div>';
