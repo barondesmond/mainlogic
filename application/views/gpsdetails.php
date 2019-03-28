@@ -32,7 +32,10 @@ foreach ($Details as $key=> $val)
 	{
 		echo '<br><img src="' . $val . '">';
 	}
-	echo '<BR>' . $key . ' : ' . $val;
+	else
+	{
+		echo '<BR>' . $key . ' : ' . $val;
+	}	
 }
 echo '</div>';
 
