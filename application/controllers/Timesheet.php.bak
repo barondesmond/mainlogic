@@ -239,7 +239,7 @@ class Timesheet extends CI_Controller {
 				{
 					$gps = gps_update();
 				}
-				elseif (isset($_REQUEST['file']))
+				if (isset($_REQUEST['file']))
 				{
 					$gps = gps_details($_REQUEST['file']);
 					$this->content = $this->load->view('gpsdetails', $gps, true);
@@ -255,11 +255,6 @@ class Timesheet extends CI_Controller {
 				$this->content = $this->load->view('gps', $gps, true);
 				$this->load->view('main', $this);
 	}
-
-
-
-
-
 
 	public function review()
 	{
