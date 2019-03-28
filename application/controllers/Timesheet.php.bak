@@ -247,12 +247,12 @@ class Timesheet extends CI_Controller {
 				else
 				{
 					$gps = gps();
+					$this->content = $this->load->view('gps', $gps, true);
 				}
 				$this->navigation_gps();
 
 				$this->navigation();
 	
-				$this->content = $this->load->view('gps', $gps, true);
 				$this->load->view('main', $this);
 	}
 
