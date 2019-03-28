@@ -142,13 +142,41 @@ class Timesheet extends CI_Controller {
 		}
 
 	}
+
+	public function timepost()
+	{
+		//print_r($_REQUEST);
+	
+		if ($_REQUEST['submit']=='UPDATE')
+		{
+			//update hours
+			//print_r($_REQUEST);
+			//exit;
+			$atu = http_build_query($_REQUEST);
+			redirect('/review/timesheet/?' . $atu , 'refresh');
+		}
+		elseif ($_REQUEST['submit']=='POST')
+		{
+			//post timesheet
+			//print_r($_REQUEST);
+			unset($_REQUEST['submit']);
+			$res = timesheet_post($_REQUEST);
+			redirect('/review/timesheet/?' . http_build_query($res) , 'refresh');
+
+		}
+		
+
+	}
 	public function timesheet()
 	{
 		if (!isset($_REQUEST['Offset']))
 		{
 			$_REQUEST['Offset'] = -1;
 		}
-	
+		if (isset($_REQUEST['submit'])
+		{
+			$this->timepost();
+		}
 
 		$this->TimeSheet = timesheet();
 
@@ -161,7 +189,7 @@ class Timesheet extends CI_Controller {
 
 	public function navigation_timesheet()
 	{
-		$this->periodnav = $this->load->view('period', $this, true);
+		$this->periodnav = $this->load->view('period', $this->TimeSheet, true);
 		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
 		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
 		//$this->inputnav = $this->load->view('input', $this, true);

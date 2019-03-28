@@ -142,13 +142,41 @@ class Timesheet extends CI_Controller {
 		}
 
 	}
+
+	public function timepost()
+	{
+		//print_r($_REQUEST);
+	
+		if ($_REQUEST['submit']=='UPDATE')
+		{
+			//update hours
+			//print_r($_REQUEST);
+			//exit;
+			$atu = http_build_query($_REQUEST);
+			redirect('/timesheet/timesheet/?' . $atu , 'refresh');
+		}
+		elseif ($_REQUEST['submit']=='POST')
+		{
+			//post timesheet
+			//print_r($_REQUEST);
+			unset($_REQUEST['submit']);
+			$res = timesheet_post($_REQUEST);
+			redirect('/timesheet/timesheet/?' . http_build_query($res) , 'refresh');
+
+		}
+		
+
+	}
 	public function timesheet()
 	{
 		if (!isset($_REQUEST['Offset']))
 		{
 			$_REQUEST['Offset'] = -1;
 		}
-	
+		if (isset($_REQUEST['submit'])
+		{
+			$this->timepost();
+		}
 
 		$this->TimeSheet = timesheet();
 
