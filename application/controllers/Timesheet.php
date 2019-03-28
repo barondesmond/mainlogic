@@ -235,22 +235,26 @@ class Timesheet extends CI_Controller {
 	}
 	public function gps()
 	{
-				$gps = gps();
+				if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'UPDATE')
+				{
+					$gps = gps_update();
+				}
+				if (isset($_REQUEST['file']))
+				{
+					$gps = gps_details($_REQUEST['file']);
+					$this->content = $this->load->view('gpsdetails', $gps, true);
+				}
+				else
+				{
+					$gps = gps();
+				}
 				$this->navigation_gps();
+
 				$this->navigation();
+	
 				$this->content = $this->load->view('gps', $gps, true);
 				$this->load->view('main', $this);
 	}
-
-	public function gps_update()
-	{
-		$gps = gps_update();
-
-		redirect('/timesheet/gps/?update=1&' . http_build_query($gps), 'refresh');
-	}
-
-
-
 
 	public function review()
 	{
