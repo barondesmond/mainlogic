@@ -235,7 +235,7 @@ class Timesheet extends CI_Controller {
 	}
 	public function gps()
 	{
-				if (isset($_REQUEST['submit']) && ($_REQUEST['submit'] == 'APPROVE' || $_REQUEST['submit'] == 'DENY' || $_REQUEST['submit'] == 'UPDATE')
+				if (isset($_REQUEST['submit']) && ($_REQUEST['submit'] == 'APPROVE' || $_REQUEST['submit'] == 'DENY' || $_REQUEST['submit'] == 'UPDATE'))
 				{
 					$gps = gps_update();
 				}
