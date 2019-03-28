@@ -111,37 +111,6 @@ class Timesheet extends CI_Controller {
 
 	}
 
-	public function timepost()
-	{
-		//print_r($_REQUEST);
-		if (isset($_REQUEST['review_timesheet']))
-		{
-			redirect('/timesheet/index/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'], 'refresh');
-		}
-		elseif (isset($_REQUEST['update_hours']))
-		{
-			//update hours
-			//print_r($_REQUEST);
-			//exit;
-			$atu = http_build_query($_REQUEST);
-			redirect('/timesheet/timesheet/?' . $atu , 'refresh');
-		}
-		elseif (isset($_REQUEST['post_timesheet']))
-		{
-			//post timesheet
-			//print_r($_REQUEST);
-			$res = timesheet_post($_REQUEST);
-			//exit;
-			
-			redirect('/timesheet/timesheet/?' . http_build_query($res) , 'refresh');
-
-		}
-		else
-		{
-			redirect('/timesheet/timesheet/?Error=error');	
-		}
-
-	}
 
 	public function timepost()
 	{

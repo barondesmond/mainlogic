@@ -142,7 +142,7 @@ class Timesheet extends CI_Controller {
 		{
 			$_REQUEST['Offset'] = -1;
 		}
-		if (isset($_REQUEST['submit'])
+		if (isset($_REQUEST['submit']))
 		{
 			$this->timepost();
 		}
