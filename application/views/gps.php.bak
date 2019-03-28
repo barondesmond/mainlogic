@@ -69,7 +69,7 @@ return $table;
 }
 function table_form($row)
 {
-	$table = '<td><form method=post action=/gps/update/><input type=hidden name=file value="' . $row->file . '"><input type=submit name="Accept" value="Accept"><input type=submit name="Deny" value="Deny"></form>';
+	$table = '<td><form method=post action=/timesheet/gps_update/><input type=hidden name=file value="' . $row->file . '"><input type=submit name="Accept" value="Accept"><input type=submit name="Deny" value="Deny"></form>';
 return $table;
 }
 if (isset($error))
