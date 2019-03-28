@@ -148,7 +148,6 @@ if (isset($TimeSheet) && isset($_REQUEST['EmpNo']))
 {
 	$db = timesheet_employee($TimeSheet);
 	$Time = $db['Time'];
-	$PRHours = $db['PRHours'];
 }
 
 

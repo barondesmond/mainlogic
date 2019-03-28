@@ -147,7 +147,10 @@ return $rows;
 if (isset($TimeSheet) && isset($_REQUEST['EmpNo']))
 {
 	$db = timesheet_employee($TimeSheet);
-	$Time = $db['Time'];
+	if (isset($db['Time']))
+	{	
+		$Time = $db['Time'];
+	}
 }
 
 
