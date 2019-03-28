@@ -155,7 +155,7 @@ if (isset($TimeSheet) && isset($_REQUEST['EmpNo']))
 
 
 //Wage Item, Job, JobClass, Date1-Date7, Total, Department, Dispatch, Memo, WorkmansCompCode, Processed
-if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
+if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]) && $_REQUEST['EmpNo'] != '')
 {
 	$max = 0;
 
