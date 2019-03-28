@@ -79,26 +79,26 @@
 #reviewcolumn{
 border: 1px;
 border-color: #787878;
- width: 50%;
+
  float:left;
 }
 #savecolumn{
 border: 2px;
 border-color: #787878:
- width: 50%;
+
  float:left;
 }
 
 #assigncolumn1{
 border: 1px;
 border-color: #787878;
- width: 50%;
+
  float:left;
 }
 #assigncolumn2{
 border: 2px;
 border-color: #787878:
- width: 50%;
+
  float:left;
 }
 
