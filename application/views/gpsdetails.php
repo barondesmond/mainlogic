@@ -24,7 +24,8 @@ if (!isset($Details))
 	echo "<P>No GPS Updates Found";
 	return false;
 }
-
+echo '<div id=assigncolumn1><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($val) . '" width="250"></div>';
+echo '<div id=assigncolumn2>';
 foreach ($Details as $key=> $val)
 {
 	if ($key == 'file')
@@ -33,6 +34,7 @@ foreach ($Details as $key=> $val)
 	}	
 	echo '<BR>' . $key . ' : ' . $val;
 }
+echo '</div>';
 
 
 

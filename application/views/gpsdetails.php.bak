@@ -24,15 +24,17 @@ if (!isset($Details))
 	echo "<P>No GPS Updates Found";
 	return false;
 }
-
+echo '<div id=#file><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($val) . '" width="250"></div>';
+echo '<div id=#details>';
 foreach ($Details as $key=> $val)
 {
 	if ($key == 'file')
 	{
-		echo '<BR><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($val) . '">';
+		echo '<BR><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($val) . '" width="250">';
 	}	
 	echo '<BR>' . $key . ' : ' . $val;
 }
+echo '</div>';
 
 
 
