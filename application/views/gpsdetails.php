@@ -28,10 +28,7 @@ echo '<div id=assigncolumn1><img src="' . APPURL . 'upload/?show=1&file=' . urle
 echo '<div id=assigncolumn2>';
 foreach ($Details as $key=> $val)
 {
-	if ($key == 'file')
-	{
-		echo '<BR><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($val) . '" width="250">';
-	}	
+
 	echo '<BR>' . $key . ' : ' . $val;
 }
 echo '</div>';
