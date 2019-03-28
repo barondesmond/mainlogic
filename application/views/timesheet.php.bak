@@ -144,9 +144,11 @@ return $rows;
 
 
 
-
-$db = timesheet_employee($TimeSheet);
-
+if (isset($TimeSheet) && isset($_REQUEST['EmpNo']))
+{
+	$db = timesheet_employee($TimeSheet);
+	$Time = $db[$_REQUEST['EmpNo']];
+}
 
 
 //Wage Item, Job, JobClass, Date1-Date7, Total, Department, Dispatch, Memo, WorkmansCompCode, Processed
