@@ -245,6 +245,10 @@ class Timesheet extends CI_Controller {
 					{
 										$_REQUEST['AcceptDeny'] = 'Deny';
 					}
+					unset($_REQUEST['submit']);
+				}
+				if (isset($_REQUEST['AcceptDeny']))
+				{
 					$gps = gps_update();
 					unset($_REQUEST['file']);
 				}
