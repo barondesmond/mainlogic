@@ -153,7 +153,7 @@ class Timesheet extends CI_Controller {
 			//print_r($_REQUEST);
 			//exit;
 			$atu = http_build_query($_REQUEST);
-			redirect('/review/timesheet/?' . $atu , 'refresh');
+			redirect('/timesheet/timesheet/?' . $atu , 'refresh');
 		}
 		elseif ($_REQUEST['submit']=='POST')
 		{
@@ -161,7 +161,7 @@ class Timesheet extends CI_Controller {
 			//print_r($_REQUEST);
 			unset($_REQUEST['submit']);
 			$res = timesheet_post($_REQUEST);
-			redirect('/review/timesheet/?' . http_build_query($res) , 'refresh');
+			redirect('/timesheet/timesheet/?' . http_build_query($res) , 'refresh');
 
 		}
 		
