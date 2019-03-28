@@ -74,7 +74,9 @@ function table_form($row)
 	{
 		$id = 0;
 	}
+	
 	$table = '<td><input type=hidden name=file[' . $id . '] value="' . $row->file . '"><input type=radio name="AD['  . $id . ']" value="Accept"> Accept <input type=radio name="AD['  . $id . ']" value="Deny">Deny';
+	$i++;
 return $table;
 }
 if (isset($error))
