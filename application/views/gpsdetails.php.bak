@@ -24,8 +24,8 @@ if (!isset($Details))
 	echo "<P>No GPS Updates Found";
 	return false;
 }
-$table = '<table border=1>';
-foreach ($Details as $key, $val)
+
+foreach ($Details as $key=> $val)
 {
 	if ($key == 'file')
 	{
