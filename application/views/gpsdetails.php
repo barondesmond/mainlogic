@@ -24,7 +24,7 @@ if (!isset($Details))
 	echo "<P>No GPS Updates Found";
 	return false;
 }
-echo '<div id="file"><input type=hidden name=file value="' . $Details->file . '"<img src="' . APPURL . 'upload/?show=1&file=' . urlencode($Details->file) . '" id="file"></div>';
+echo '<div id="file"><input type=hidden name=file value="' . $Details->file . '"><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($Details->file) . '" id="file"></div>';
 echo '<div id=assigncolumn2>';
 foreach ($Details as $key=> $val)
 {
