@@ -268,8 +268,12 @@ class Timesheet extends CI_Controller {
 		}
 	
 		$this->TimeClock = timeclock();
-		$this->TimeClock = $this->TimeClock->TimeClock;
-		$this->navigation_review();
+		if (isset($this->TimeClock->TimeClock))
+		{
+			$this->TimeClock = $this->TimeClock->TimeClock;
+		}
+			$this->navigation_review();
+
 		$this->navigation();
 
 	

@@ -121,6 +121,8 @@ class Timesheet extends CI_Controller {
 			//update hours
 			//print_r($_REQUEST);
 			//exit;
+			unset($_REQUEST['submit']);
+
 			$atu = http_build_query($_REQUEST);
 			redirect('/timesheet/timesheet/?' . $atu , 'refresh');
 		}
