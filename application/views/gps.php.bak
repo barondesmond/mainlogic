@@ -69,7 +69,12 @@ return $table;
 }
 function table_form($row)
 {
-	$table = '<td><form method=post action=/timesheet/gps_update/><input type=hidden name=file value="' . $row->file . '"><input type=submit name="Accept" value="Accept"><input type=submit name="Deny" value="Deny"></form>';
+	static $id;
+	if (!isset($id))
+	{
+		$id = 0;
+	}
+	$table = '<td><<input type=hidden name=file[' . $id . '] value="' . $row->file . '"><input type=radio name="AD['  . $id . ']" value="Accept"><input type=radio name="AD['  . $id . ']" value="Deny">';
 return $table;
 }
 if (isset($error))
