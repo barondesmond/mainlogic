@@ -144,15 +144,18 @@ return $rows;
 
 
 
-
-
+if (isset($TimeSheet) && isset($_REQUEST['EmpNo']))
+{
+	$db = timesheet_employee($TimeSheet);
+	$Time = $db[$_REQUEST['EmpNo']];
+}
 
 
 //Wage Item, Job, JobClass, Date1-Date7, Total, Department, Dispatch, Memo, WorkmansCompCode, Processed
 if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 {
 	$max = 0;
-	echo '<form method=post action=/review/timepost/>';
+
 	echo '<input type=hidden name=EmpNo value=' . $_REQUEST['EmpNo'] . '><input type=hidden name=Offset value=' . $_REQUEST['Offset'] . '>';
 	echo '<table class="table">';
 	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
@@ -242,8 +245,3 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]))
 
 }
 ?>
-	   <div class="clearfix grpelem" id="u6085"><!-- group -->
-       <div class="clearfix grpelem" id="u6088-4"><!-- content -->
-        <p>POST</p>
-       </div>
-      </div>
