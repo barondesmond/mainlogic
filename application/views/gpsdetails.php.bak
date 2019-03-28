@@ -1,4 +1,4 @@
-Big Brother is Gpsing You.
+Big Brother has found You.
 
 <?php 
 //files, location, locationapi
