@@ -4,7 +4,7 @@ Big Brother has found You.
 //files, location, locationapi
 //print_r($location);
 
-
+print_r($gps);
 if (isset($error))
 {
 	echo "<P>$error";
