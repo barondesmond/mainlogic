@@ -247,7 +247,7 @@ class Timesheet extends CI_Controller {
 					}
 					unset($_REQUEST['submit']);
 				}
-				if (isset($_REQUEST['AcceptDeny']))
+				if (isset($_REQUEST['Accept']) || isset($_REQUEST['Deny']))
 				{
 					$gps = gps_update();
 					unset($_REQUEST['file']);
