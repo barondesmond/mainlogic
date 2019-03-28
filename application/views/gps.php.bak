@@ -75,7 +75,7 @@ function table_form($row)
 		$id = 0;
 	}
 	
-	$table = '<td><input type=hidden name=file[' . $id . '] value="' . $row->file . '"><input type=radio name="AD['  . $id . ']" value="Accept"> Accept <input type=radio name="AD['  . $id . ']" value="Deny">Deny';
+	$table = '<td><input type=hidden name=file[' . $id . '] value="' . $row->file . '" width="250"></td>';
 	$id++;
 return $table;
 }
@@ -92,7 +92,7 @@ $table = '<table border=1>';
 foreach($locationapi as $lid=>$lc)
 {
 
-	$table .= '<tr>' . table_head() . '<td>Accept/Deny</td></tr>';
+	$table .= '<tr>' . table_head();
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '';
 	foreach ($locrow->$lid as $id=>$row)

@@ -75,7 +75,7 @@ function table_form($row)
 		$id = 0;
 	}
 	
-	$table = '<td><input type=hidden name=file[' . $id . '] value="' . $row->file . '"></td>';
+	$table = '<td><input type=hidden name=file[' . $id . '] value="' . $row->file . '" width="30%"></td>';
 	$id++;
 return $table;
 }
