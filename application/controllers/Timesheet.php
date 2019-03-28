@@ -151,12 +151,11 @@ class Timesheet extends CI_Controller {
 	
 
 		$this->TimeSheet = timesheet();
-		$this->TimeSheet = $this->TimeSheet->TimeSheet;
-		$this->PRHours = $this->TimeSheet->PRHours;
-		
+
+
 		$this->navigation_timesheet();
 		$this->navigation();
-		$this->content = $this->load->view('timesheet', $this, true);
+		$this->content = $this->load->view('timesheet', $this->TimeSheet, true);
 		$this->load->view('main', $this);
 	}
 
