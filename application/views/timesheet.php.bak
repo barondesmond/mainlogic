@@ -148,7 +148,7 @@ if (isset($TimeSheet) && isset($_REQUEST['EmpNo']))
 {
 	$db = timesheet_employee($TimeSheet);
 	print_r($db);
-	$Time = $db[$_REQUEST['EmpNo']];
+	$Time = $db['Time'];
 }
 
 
