@@ -123,8 +123,6 @@ class Timesheet extends CI_Controller {
 			//exit;
 			unset($_REQUEST['submit']);
 
-			$atu = http_build_query($_REQUEST);
-			redirect('/timesheet/timesheet/?' . $atu , 'refresh');
 		}
 		elseif ($_REQUEST['submit']=='POST')
 		{
