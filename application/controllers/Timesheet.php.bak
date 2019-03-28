@@ -184,8 +184,8 @@ class Timesheet extends CI_Controller {
 	public function navigation_gps()
 	{
 		//$this->period = $this->load->view('period', $this, true);
-		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
-		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+		$this->centercolumn1 = $this->load->view('gpscenter1', $this, true);
+		$this->centercolumn2 = $this->load->view('gpscenter2', $this, true);
 		$this->inputnav = $this->load->view('input', $this, true);
 	}
 	public function navigation()
@@ -222,14 +222,14 @@ class Timesheet extends CI_Controller {
 	public function pto()
 	{
 
-			 $this->navigation();
+				 $this->navigation();
 				$this->content = $this->load->view('pto', $this, true);
 				$this->load->view('main', $this);
 	}
 	public function rules()
 	{
 
-			 $this->navigation();
+				$this->navigation();
 				$this->content = $this->load->view('rules', $this, true);
 				$this->load->view('main', $this);
 	}
@@ -241,6 +241,7 @@ class Timesheet extends CI_Controller {
 				}
 				if (isset($_REQUEST['file']))
 				{
+					$this->navigation_gps();
 					$gps = gps_details($_REQUEST['file']);
 					$this->content = $this->load->view('gpsdetails', $gps, true);
 				}
@@ -249,7 +250,6 @@ class Timesheet extends CI_Controller {
 					$gps = gps();
 					$this->content = $this->load->view('gps', $gps, true);
 				}
-				$this->navigation_gps();
 
 				$this->navigation();
 	
