@@ -21,7 +21,7 @@
 		$json = json_decode($api);
 		if ($empauth == 'auth' && $auth == '' && isset($json->EmpNo) && isset($json->authorized) && $json->authorized == 1)
 		{
-			$auth = '&EmpNo=' .  $json->EmpNo . '&installationId=' . INSTID;
+			$auth = '&EmpNo=' .  $json->EmpNo . '&installationId=' . $json->installationId;
 		}
 
 	return $json;
@@ -30,6 +30,13 @@
 	function empauth($db)
 	{
 		$uri = 'empauth_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&installationId=' . INSTID;
+		$auth = app_api($uri, 'auth');
+	return $auth;
+	}
+
+	function admin($db)
+	{
+		$uri = 'admin_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&username=' . urlencode($db['username']) . '&password=' . password_hash($db['password'], PASSWORD_DEFAULT);
 		$auth = app_api($uri, 'auth');
 	return $auth;
 	}

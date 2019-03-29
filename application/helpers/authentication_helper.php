@@ -36,7 +36,7 @@
 
 	function admin($db)
 	{
-		$uri = 'admin_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&username=' . urlencode($db['username']) . '&password=' . password_hash($db['password'], PASSWORD_DEFAULT);
+		$uri = 'admin_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&username=' . urlencode($db['username']) . '&password=' . md5($db['password']);
 		$auth = app_api($uri, 'auth');
 	return $auth;
 	}
