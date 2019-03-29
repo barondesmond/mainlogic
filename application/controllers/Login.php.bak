@@ -31,8 +31,11 @@ class Login extends CI_Controller {
 	}
 	public function auth()
 	{
-		$auth = empauth($_REQUEST);
+		if (isset($_REQUEST['password']))
+		{
 
+		$auth = admin($_REQUEST);
+		
 		if ($auth->authorized == '1')
 		{
 

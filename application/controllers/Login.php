@@ -50,11 +50,12 @@ class Login extends CI_Controller {
 				redirect('/', 'refresh');
 		
 		}
+		}
 	
 	}
 
 
-public function navigation()
+	public function navigation()
 	{
 
 		$this->controller = $this->uri->segment(1);	
