@@ -29,7 +29,7 @@
 
 	function empauth($db)
 	{
-		$uri = 'empauth_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&installationId=' . INSTID;
+		$uri = 'empauth_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&installationId=' . $db['installationId'];
 		$auth = app_api($uri, 'auth');
 	return $auth;
 	}
@@ -440,6 +440,7 @@ return $db;
 
        $db['EmpName'] = $CI->session->userdata('EmpName');
 	   $db['Email'] = $CI->session->userdata('Email');
+	   $db['installationId'] = $Ci->session->userdata('installationId'); 
 	   $auth = empauth($db);
 
        if($auth->authorized  !=  '1') {
