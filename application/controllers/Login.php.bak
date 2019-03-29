@@ -40,24 +40,14 @@ class Login extends CI_Controller {
 				  'EmpName'  => $auth->EmpName,
 				   'Email'     => $auth->Email,
 					'EmpNo' => $auth->EmpNo,
-				   'authorized' => $auth->authorized
+				   'authorized' => $auth->authorized,
+					'installationId' => $auth->installationId
 				);
 				$this->session->set_userdata($newdata);
 				redirect('/', 'refresh');
 		
 		}
-		elseif ($auth->authorized == '0' && isset($auth->Email))
-		{
-			$this->load->view('header');	
-			$this->load->view('notauthorized', $auth);
-			$this->load->view('footer');
-		}
-		else
-		{
-			$this->load->view('header');	
-			$this->load->view('notauthorized');
-			$this->load->view('footer');
-		}
+	
 	}
 
 
@@ -79,6 +69,10 @@ public function navigation()
 
 	public function index()
 	{
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'LOGIN')
+		{
+			$this->auth();
+		}
 		$this->navigation();
 
 

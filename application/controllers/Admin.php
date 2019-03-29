@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Admin extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,40 +18,15 @@ class Login extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	function _construct()
+	function __construct()
 	{
+		parent::__construct();
+        verify_session(); 
+	}
 
 
  
-	}
-	public function logout()
-	{
-		$this->session->sess_destroy();
-		redirect('login', 'refresh');
-	}
-	public function auth()
-	{
-		$auth = empauth($_REQUEST);
-
-		if ($auth->authorized == '1')
-		{
-
-				$newdata = array(
-				  'EmpName'  => $auth->EmpName,
-				   'Email'     => $auth->Email,
-					'EmpNo' => $auth->EmpNo,
-				   'authorized' => $auth->authorized,
-					'installationId' => $auth->installationId
-				);
-				$this->session->set_userdata($newdata);
-				redirect('/', 'refresh');
-		
-		}
-	
-	}
-
-
-public function navigation()
+	public function navigation()
 	{
 
 		$this->controller = $this->uri->segment(1);	
@@ -60,8 +35,9 @@ public function navigation()
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
 		$this->mainnav = $this->load->view('mainnav', $this, true);
-		$this->inputnav = $this->load->view('login_form', $this, true);
 		$this->periodnav = $this->load->view('login_form_period', $this, true);
+
+		$this->inputnav = $this->load->view('login_form', $this, true);
 		$this->centercolumn2 = $this->load->view('centerlogin', $this,true);
 		$this->topnav = $this->load->view('topnav', $this, true);
 
@@ -80,4 +56,4 @@ public function navigation()
 
 		$this->load->view('main', $this);
 	}
-}
+
