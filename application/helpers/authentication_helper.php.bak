@@ -72,16 +72,22 @@
 		return app_api($uri);
 
 	}
+	function gps_details()
+	{
+		$ur = http_build_query($_REQUEST);
+		$uri = 'location_details_json.php?location_details=1&' . $ur . '&Dev=' . __DEV__;
+		return app_api($uri);
+	}
 
 	function gps_update()
 	{
 		$ur = http_build_query($_REQUEST);
-		$uri = 'location_json.php?location_update=1&' . $ur . '&dev=' . __DEV__;
+		$uri = 'location_json.php?location_update=1&' . $ur . '&Dev=' . __DEV__;
 		return app_api($uri);
 	}
 	function gps()
 	{
-		$uri = 'location_json.php?location_query=1&dev=' . __DEV__;
+		$uri = 'location_json.php?location_query=1&Dev=' . __DEV__;
 		return app_api($uri);
 
 	}
