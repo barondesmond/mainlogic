@@ -440,7 +440,7 @@ return $db;
 
        $db['EmpName'] = $CI->session->userdata('EmpName');
 	   $db['Email'] = $CI->session->userdata('Email');
-	   $db['installationId'] = $Ci->session->userdata('installationId'); 
+	   $db['installationId'] = $CI->session->userdata('installationId'); 
 	   $auth = empauth($db);
 
        if($auth->authorized  !=  '1') {
