@@ -48,8 +48,8 @@
 #u2908{z-index:12;vertical-align:top;position:relative;margin-right:-10000px;margin-top:30px;width:48%;left:26%;background:transparent url("../images/u2908.png?crc=4194255742") no-repeat center;background-size:100%;}
 #u2908 .fluid_height_spacer{padding-bottom:15.104166666666666%;}#buttonu2907:hover #u2908{background:transparent url("../images/u2908-r.png?crc=4194255742") no-repeat center;background-size:100%;}
 #u2901-3{z-index:7;min-height:1001px;border-width:0px;border-color:transparent;background-color:#1D5980;position:fixed;top:0px;left:0px;width:20.84%;}
-#pu5128-4{z-index:2;margin-right:-10000px;margin-top:1px;width:83.34%;margin-left:20.84%;}
-#u5128-4{z-index:2;min-height:1000px;background-color:transparent;position:relative;margin-right:-10000px;width:100%;min-width:1400px;}
+#pu5128-4{z-index:2;margin-right:-10000px;margin-top:1px;width:83.34%;margin-left:20.84%;min-width:1400px;}
+#u5128-4{z-index:2;min-height:1000px;background-color:transparent;position:relative;margin-right:-10000px;width:100%;}
 #u2902{z-index:6;height:65px;border-width:0px;border-color:transparent;background-color:transparent;max-width:100000px;position:relative;margin-right:-10000px;margin-top:844px;width:13.32%;left:0.57%;}
 .css_verticalspacer .verticalspacer{height:calc(100vh - 1001px);}
 .html{background-color:#7F7F7F;}
