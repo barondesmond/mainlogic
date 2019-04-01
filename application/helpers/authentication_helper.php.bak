@@ -250,8 +250,8 @@ function select_group($key, $id, $JobGroup)
 				$event->StopHour = $exp2[1];
 				if ($event->StartDay == $event->StopDay)
 				{
-					$Save[$event->EmpNo][$event->Screen][$key] = timeclock_row($event, '!');
-					$Time[$event->EmpNo][$event->Screen][$key] = timeclock_row($event);
+					$Save[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, '!');
+					$Time[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event);
 
 				}
 	
