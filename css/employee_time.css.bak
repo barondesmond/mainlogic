@@ -1,6 +1,6 @@
 .version.employee_time{color:#000005;background-color:#8665AD;}
 #muse_css_mq{background-color:#FFFFFF;}
-#page{z-index:1;min-height:1000px;min-width:1500px;background-image:none;border-width:0px;border-color:#000000;background-color:#7F7F7F;width:100%;}
+#page{z-index:1;min-height:1000px;background-image:none;border-width:0px;border-color:#000000;background-color:#7F7F7F;width:100%;}
 #pu2914{z-index:14;padding-bottom:0px;margin-right:-10000px;width:20.84%;}
 #u2914{z-index:14;background-color:#464343;padding-bottom:18px;position:relative;width:100%;}
 #buttonu2910{z-index:15;border-style:solid;border-width:1px;padding-top:11px;padding-bottom:11px;position:relative;margin-right:-10000px;margin-top:24px;width:10.5%;left:4.75%;}
