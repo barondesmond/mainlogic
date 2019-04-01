@@ -226,6 +226,7 @@ function select_group($key, $id, $JobGroup)
 			$Time[$event->EmpNo][$event->Screen][$key] = '';
 			$Save[$event->EmpNo][$event->Screen][$key] = '';
 			$Job[$event->EmpNo][$event->Screen][$key] = '';
+			$Chron[$event->EmpNo]['Chron'][$key] = '';
 
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
@@ -252,7 +253,7 @@ function select_group($key, $id, $JobGroup)
 				{
 					$Save[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, '!');
 					$Time[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event);
-
+					$Chron[$event->EmpNo]['Chron'][$key] .= timeclock_row($event);
 				}
 	
 		}
@@ -262,6 +263,7 @@ function select_group($key, $id, $JobGroup)
 	$db['Job']  = $Job;
 	$db['Employee'] = $Employee;
 	$db['Save'] = $Save;
+	$db['Chron'] = $Chron;
 
 return $db;
 
