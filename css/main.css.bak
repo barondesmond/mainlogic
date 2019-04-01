@@ -101,7 +101,12 @@ border-color: #787878:
 
  float:left;
 }
-
+#file{
+border: 1px;
+border-color: #787878;
+width: 500px;
+ float:left;
+}
 
 
 
