@@ -31,7 +31,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	
 
 	}
-	if (isset($_REQUEST['switch']) && $_REQUEST['switch'] == 'Chron') && isset($Chron[$_REQUEST['EmpNo']))
+	if (isset($_REQUEST['switch']) && $_REQUEST['switch'] == 'Chron' && isset($Chron[$_REQUEST['EmpNo']))
 	{
 			echo '<p><b>' . 'Chronological' . '</b></p>';
 			echo 'Employee Input<br>';
