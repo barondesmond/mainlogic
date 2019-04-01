@@ -23,10 +23,10 @@
 #u4168{z-index:29;border-width:0px;border-color:transparent;background-color:transparent;position:relative;width:100%;}
 #pu4057{z-index:30;width:100%;}
 #u4057{z-index:30;background-color:#9A5252;padding-bottom:86px;position:relative;margin-right:-10000px;width:50%;}
-#u4057:hover,
+#u4057:hover{background-color:#000000;min-height:0px;width:50%;margin:0px -10000px 0px 0%;}
 #u4150-4{z-index:34;display:block;vertical-align:top;position:relative;margin-right:-10000px;margin-top:85px;width:70.5%;left:16.5%;}
 #u4060{z-index:31;background-color:#5C5858;padding-bottom:86px;position:relative;margin-right:-10000px;width:50%;left:50%;}
-#u4060:hover,
+#u4060:hover{background-color:#000000;min-height:0px;width:50%;margin:0px -10000px 0px 0%;}
 
 #u4162-4{z-index:42;display:block;vertical-align:top;position:relative;margin-right:-10000px;margin-top:85px;width:54.51%;left:22.5%;}
 #pu4063{z-index:32;width:100%;}
