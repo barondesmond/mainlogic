@@ -253,7 +253,7 @@ function select_group($key, $id, $JobGroup)
 				{
 					$Save[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, '!');
 					$Time[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event);
-					$Chron[$event->EmpNo]['Chron'][$key] .= '<b>' . $event->Screen . ' ' . $key . '</b> ' . timeclock_row($event);
+					$Chron[$event->EmpNo]['Chron'][$key] .= '<b>' . strpad($event->Screen . ' ' . $key, 20, ' ' , STR_PAD_RIGHT) . '</b> ' . timeclock_row($event);
 				}
 	
 		}
