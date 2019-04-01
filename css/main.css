@@ -71,7 +71,7 @@
  background-color: #464343;
  height: 51px;
  min-width: 1400px;
- position: relative;
+ position: absolute;
  }
 #content{
  background-color: gray;
