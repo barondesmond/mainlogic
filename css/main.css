@@ -28,6 +28,8 @@
  border: 0px;
  height: 51px;
  width: 500px;
+ min-width: 500px;
+
  text-align: center;
  color: white;
  font-size:12px;
@@ -63,6 +65,8 @@
  font-weight:bold; 
  float: left;
  line-height: 51px;
+ min-width: 500px;
+
 
 
 }
@@ -71,7 +75,7 @@
  background-color: #464343;
  height: 51px;
  min-width: 1400px;
- position: absolute;
+
  }
 #content{
  background-color: gray;
