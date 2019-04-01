@@ -15,7 +15,7 @@ if (isset($_REQUEST['EmpNo']))
 		{
 			foreach ($jd as $key=>$JobDisp)
 			{
-				echo '<p>' . $screen . ' ' . $JobDisp .  "</p>";
+				echo '<p><b>' . $screen . '</b> ' . $JobDisp .  "</p>";
 				echo 'Adjusted<br>';
 				echo $Save[$_REQUEST['EmpNo']][$screen][$key];
 				echo '<br>';
