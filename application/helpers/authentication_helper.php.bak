@@ -192,7 +192,7 @@ function select_group($key, $id, $JobGroup)
 	function timeclock_row($event, $input = '')
 	{
 		$row = '';
-		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '">' . $event->StartDay;
+		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '"><b>' . $event->StartDay . '</b>';
 		$row .= ' Start: <' . $input . 'input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="8" maxlength="8">';
 		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
 		$row .= ' Stop: <' . $input . 'input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8">' ;
@@ -238,7 +238,7 @@ function select_group($key, $id, $JobGroup)
 		}
 
 		$Employee[$event->EmpNo] = '<option value="/timesheet/review/?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
-		$Job[$event->EmpNo][$event->Screen][$key] = $event->Name . $event->Dispatch .  ' ' . $event->LocName;
+		$Job[$event->EmpNo][$event->Screen][$key] = '<b>' . $event->Name . $event->Dispatch .  ' ' . $event->LocName . '</b>';
 
 			//if ($event->Screen != 'Dispatch')
 			//{
