@@ -189,6 +189,17 @@ function select_group($key, $id, $JobGroup)
 		return app_api($uri);
 	}
 
+	function timeclock_row($event, $input = '')
+	{
+		$row = '';
+		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '">' . $event->StartDay;
+		$row .= ' Start: <' . $input . 'input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="8" maxlength="8">';
+		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
+		$row .= ' Stop: <' . $input . 'input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8">' ;
+		$row .= ' Event: ' . $event->event . "<BR>\r\n"  ;
+	return $row;
+	}
+
 	function timeclock_employee($TimeClock)
 	{
 		$screen = array('Job' => '$event->Name', 'Dispatch' => '$event->Dispatch', 'Employee' => '');
@@ -227,10 +238,8 @@ function select_group($key, $id, $JobGroup)
 		}
 
 		$Employee[$event->EmpNo] = '<option value="/timesheet/review/?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
-		$Job[$event->EmpNo][$event->Screen][$key] = $event->Name . $event->Dispatch .  ' ' . $event->LocName;
-		$Save[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
-		$Save[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
-		$Save[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
+		$Job[$event->EmpNo][$event->Screen][$key] = timeclock_row($event, '!');
+
 			//if ($event->Screen != 'Dispatch')
 			//{
 				$exp = explode(' ' , $event->StartDate);
@@ -241,19 +250,10 @@ function select_group($key, $id, $JobGroup)
 				$event->StopHour = $exp2[1];
 				if ($event->StartDay == $event->StopDay)
 				{
-				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '">' . $event->StartDay;
-				$Time[$event->EmpNo][$event->Screen][$key] .= ' Start: <input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="8" maxlength="8">';
-				$Time[$event->EmpNo][$event->Screen][$key] .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
-				$Time[$event->EmpNo][$event->Screen][$key] .= ' Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8">' ;
-				$Time[$event->EmpNo][$event->Screen][$key] .= ' Event: ' . $event->event . "<BR>\r\n"  ;
+				$Time[$event->EmpNo][$event->Screen][$key] = timeclock_row($event);
+
 				}
-			//}
-			//else
-			//{
-				//$Time[$event->EmpNo][$event->Screen][$key] .= 'Start: ' . $event->StartDate . ' ';
-				//$Time[$event->EmpNo][$event->Screen][$key] .= 'Stop: ' . $event->StopDate . ' ';
-				//$Time[$event->EmpNo][$event->Screen][$key] .= 'Event: ' . $event->event . "<BR>\r\n"  ;
-			//}
+	
 		}
 		}
 	
