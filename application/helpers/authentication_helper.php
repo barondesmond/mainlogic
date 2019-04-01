@@ -238,7 +238,8 @@ function select_group($key, $id, $JobGroup)
 		}
 
 		$Employee[$event->EmpNo] = '<option value="/timesheet/review/?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
-		$Job[$event->EmpNo][$event->Screen][$key] = timeclock_row($event, '!');
+		$Job[$event->EmpNo][$event->Screen][$key] = $event->Name . $event->Dispatch .  ' ' . $event->LocName;
+		$Save[$event->EmpNo][$event->Screen][$key] = timeclock_row($event, '!');
 
 			//if ($event->Screen != 'Dispatch')
 			//{
