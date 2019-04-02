@@ -203,7 +203,7 @@ function select_group($key, $id, $JobGroup)
 		$row .= ' Event: ' . $event->event . "<BR>\r\n"  ;
 		if (isset($event->updated))
 		{
-			$row .= '</style>';
+			$row .= ' ' . $event->updated->StartDate . ' ' . $event->updated->StopDate . '</style>';   
 		}
 	return $row;
 	}
