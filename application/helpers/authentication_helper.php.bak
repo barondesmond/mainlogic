@@ -222,7 +222,7 @@ function select_group($key, $id, $JobGroup)
 		if (isset($event->updated))
 		{
 			$row .= '<b> Adjusted <b>';
-			$row .= ' Start: ' . $event->updated->StartHour . ' Stop: ' . $event->updated->StopHour . '</h1>';   
+			$row .= ' Start: ' . $event->updated->StartHour . ' Stop: ' . $event->updated->StopHour . '</b>';   
 		}
 		$row .=  "<BR>\r\n";
 	return $row;
