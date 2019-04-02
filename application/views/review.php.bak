@@ -1,6 +1,6 @@
 
 <input type=submit name="switch" value="Chron" class="buttonmain")
-
+<p>
 <div id="reviewcolumn">
 
 <?php
