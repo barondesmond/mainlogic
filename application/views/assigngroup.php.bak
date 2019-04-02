@@ -98,7 +98,7 @@ foreach ($jobs as $job)
 		$j++;
 	}
 }
-if ($j > 0 && !isset($_REQUEST['ASSIGN']))
+if ($j > 0 && $_REQUEST['AD'] == 'REMOVE')
 {
 	echo "<P>Job<P> <select multiple name=Job[] size=$j >";
 
@@ -118,18 +118,7 @@ else
 
 }
 
-}
-else
-{
-		echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)  . ">
-	";
 
-	foreach ($jobs as $job)
-	{
-		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
-	}
-	echo "</select>";
-}
 echo '</div>';
 
 
