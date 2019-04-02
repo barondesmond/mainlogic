@@ -26,7 +26,8 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	if (isset($Job[$_REQUEST['EmpNo']]) && (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'Group'))
 	{
 
-
+		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
+		echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';	
 	
 		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
 		{
