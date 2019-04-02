@@ -315,20 +315,13 @@ class Timesheet extends CI_Controller {
 		{
 
 			$this->review_update();
-			$save = timeclock();
-			foreach ($save->TimeClock as $id=>$tc)
+			foreach ($this->timeclock_update as $id=>$tc)
 			{
-				$tid = $tc->TimeClockID;
+					print_r($tc);
 
-				if (isset($this->timeclock_update->TimeClock->$tid))
-				{
-				print_r($tid);
-				print_r($tc);
-					$this->timeclock_update->TimeClock->$tid = $tc;
-				}
+	
 			}
-			print_r($this->timeclock_update);
-			$this->save = $this->load->view('save', $this->timeclock_update, true);
+			//$this->save = $this->load->view('save', $this->timeclock_update, true);
 			exit;
 		}
 
