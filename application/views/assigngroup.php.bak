@@ -35,6 +35,7 @@ if (!isset($jobgroupemployees))
 
 <?php
 
+
 echo '<div id="assigncolumn1">';
 //employees
 $employeeoptions = '';

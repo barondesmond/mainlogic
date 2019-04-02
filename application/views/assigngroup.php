@@ -32,7 +32,7 @@ if (!isset($jobgroupemployees))
 
 <form method=get action=/assign/jobgroup/>
 <input type=hidden name=JobGroup[] value="<?php echo $_REQUEST['JobGroup'][0]; ?>">
-
+<input type=submit name="switch" value="SWITCH" class="buttonmain">
 <?php
 
 
