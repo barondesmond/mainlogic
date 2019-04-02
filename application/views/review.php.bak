@@ -6,7 +6,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	{
 		$_REQUEST['switch'] = $_REQUEST['current'];
 	}
-}
+
 if (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'Group')
 {
    echo '<input type=submit name="current" value="' . $_REQUEST['switch'] . '">';
