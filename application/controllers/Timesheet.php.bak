@@ -319,8 +319,8 @@ class Timesheet extends CI_Controller {
 			foreach ($save->TimeClock as $id=>$tc)
 			{
 				$tid = $tc->TimeClockID;
-				print_r($tid);
-				print_r($tc);
+				//print_r($tid);
+				//print_r($tc);
 				if (isset($this->timeclock_update->TimeClock->$tid))
 				{
 					$this->timeclock_update->TimeClock->$tid = $tc;
@@ -328,6 +328,7 @@ class Timesheet extends CI_Controller {
 			}
 			print_r($this->timeclock_update);
 			$this->save = $this->load->view('save', $this->timeclock_update, true);
+			exit;
 		}
 
 	

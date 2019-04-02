@@ -319,10 +319,11 @@ class Timesheet extends CI_Controller {
 			foreach ($save->TimeClock as $id=>$tc)
 			{
 				$tid = $tc->TimeClockID;
-				//print_r($tid);
-				//print_r($tc);
+
 				if (isset($this->timeclock_update->TimeClock->$tid))
 				{
+				print_r($tid);
+				print_r($tc);
 					$this->timeclock_update->TimeClock->$tid = $tc;
 				}
 			}
