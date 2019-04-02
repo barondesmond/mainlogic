@@ -1,5 +1,5 @@
 
-
+<input type=submit name="switch" value="Chron" class="mainbutton")
 
 <div id="reviewcolumn">
 
