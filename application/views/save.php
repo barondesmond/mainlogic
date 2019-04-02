@@ -3,7 +3,7 @@
 
 
 
-if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($Job[$_REQUEST['EmpNo']))
+if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($Job[$_REQUEST['EmpNo']]))
 {
 	$db = timeclock_employee($TimeClock);
 	$Job = $db['Job'];
