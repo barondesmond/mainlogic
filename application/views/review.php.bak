@@ -10,8 +10,9 @@ else
 {
 	echo '<input type=submit name="switch" value="Group" class="buttonmain")';
 }
-?>
 }
+?>
+
 <p>
 <div id="reviewcolumn">
 

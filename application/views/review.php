@@ -27,8 +27,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	{
 
 
-		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
-		echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';		
+	
 		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
 		{
 
@@ -46,6 +45,8 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	}
 	if (isset($_REQUEST['switch']) && $_REQUEST['switch'] == 'Chron' && isset($Chron) &&  isset($Chron[$_REQUEST['EmpNo']]))
 	{
+		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
+		echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';	
 			echo '<p><b>' . 'Chronological' . '</b></p>';
 			echo 'Employee Input<br>';
 			echo '<table border=0>';
