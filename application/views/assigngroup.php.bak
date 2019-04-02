@@ -98,7 +98,7 @@ foreach ($jobs as $job)
 		$j++;
 	}
 }
-if ($j > 0 && $_REQUEST['AD'] == 'REMOVE')
+if ($j > 0 && isset($_REQUEST['AD'] && $_REQUEST['AD'] == 'REMOVE')
 {
 	echo "<P>Job<P> <select multiple name=Job[] size=$j >";
 
