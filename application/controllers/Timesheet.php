@@ -315,6 +315,7 @@ class Timesheet extends CI_Controller {
 		{
 
 			$this->review_update();
+			print_r($this->timeclock_update);
 			if (isset($this->timeclock_update))
 			{
 				$save = $this->timeclock_update;	
