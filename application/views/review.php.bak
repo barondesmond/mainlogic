@@ -14,7 +14,7 @@ if (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'Group')
 }
 else
 {
-   echo '<input type=submit name="current" value="' . $_REQUEST['switch'] . '">'
+   echo '<input type=submit name="current" value="' . $_REQUEST['switch'] . '">';
 	echo '<input type=submit name="switch" value="Group" class="buttonmain")';
 }
 }
