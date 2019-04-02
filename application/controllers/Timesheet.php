@@ -106,7 +106,7 @@ class Timesheet extends CI_Controller {
 		foreach ($this->TimeClock as $tc)
 		{
 			$tcid = $tc->TimeClockID;
-			if (strtotime($_REQUEST['TimeClockID'][$tcid]['StartDate']) == $tc->StartTime && strtotime($_REQUEST['TimeClockID'][$tcid]['StopDate']) == $tc->StopTime)
+			if (isset($_REQUEST['TimeClockID'][$tcid]) && strtotime($_REQUEST['TimeClockID'][$tcid]['StartDate']) == $tc->StartTime && strtotime($_REQUEST['TimeClockID'][$tcid]['StopDate']) == $tc->StopTime)
 			{
 				unset($_REQUEST['TimeClockID'][$tcid]);
 			}
