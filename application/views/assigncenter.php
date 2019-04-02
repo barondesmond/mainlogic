@@ -27,15 +27,29 @@ if (isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count
 	}
 	if ($e>0 && $j>0)
 	{
-		$_REQUEST['Remove'] = true;
+		$_REQUEST['Remove'] = 'Remove';
 	}
 	else
 	{
-		$_REQUEST['Assign'] = true;
+		$_REQUEST['Assign'] = 'Assign';
 
 	}
 }
+if (isset($_REQUEST['switch']))
+{
 
+	if (isset($_REQUEST['Remove']))
+	{
+		unset($_REQUEST['Remove']);
+		$_REQUEST['Assign'] = 'Assign';
+		unset($_REQUEST['switch']);
+	}
+	if (isset($_REQUEST['Assign']))
+	{
+		unset($_REQUEST['Assign']);
+		$_REQUEST['Assign'] = 'Assign';
+		unset($_REQUEST['switch']);
+	}
 if (isset($_REQUEST['Assign']))
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
