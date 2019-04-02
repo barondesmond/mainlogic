@@ -22,7 +22,7 @@ class Timesheet extends CI_Controller {
 		{
 			add_job_group_employee();
 		}
-		if (isset(_$_REQUEST['submit']) && $_REQUEST['submit'] == 'DELETE')
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'DELETE')
 		{
 			delete_job_group();
 		}
