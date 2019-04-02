@@ -1,8 +1,8 @@
 <?php 
 
-if (isset($this->timeclock_review))
+if (isset($TimeClockID))
 {
-	foreach ($this->timeclock_review as $TimeClockID => $event)
+	foreach ($TimeClockID as $tid => $event)
 	{
 		echo '<p>';
 		echo 'Adjusted<br>';
@@ -13,7 +13,7 @@ if (isset($this->timeclock_review))
 				$event->StopDay = $exp2[0];
 				$event->StopHour = $exp2[1];
 
-		echo $TimeClockID . ' ' . $event->StartDay . ' Start: ' . $event->StartHour . ' Stop: ' . $event->StopHour;
+		echo $tid . ' ' . $event->StartDay . ' Start: ' . $event->StartHour . ' Stop: ' . $event->StopHour;
 		echo '<br>';
 	}
 }
