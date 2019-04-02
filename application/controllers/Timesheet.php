@@ -107,15 +107,10 @@ class Timesheet extends CI_Controller {
 				unset($_REQUEST['TimeClockID'][$TimeClockID]['StopHour']);
 			}
 		}
-	
-		$auth = timeclock_update();
-		$rep = '&' . http_build_query($auth);
-		}
-		else
+		if (isset($_REQUEST['TimeClockID']))
 		{
-			$rep = '';	
+			$this->timeclock_update = timeclock_update();
 		}
-
 	}
 
 
@@ -314,7 +309,10 @@ class Timesheet extends CI_Controller {
 		{
 
 			$this->review_update();
-			$save = timeclock();	
+			if (isset($this->timeclock_update))
+			{
+				$save = $this->timeclock_update;	
+			}			
 		}
 
 		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($save))
