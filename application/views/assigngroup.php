@@ -54,7 +54,7 @@ if (isset($employees))
 			$e++;
 		}
 	}
-	if ($e > 0 && !isset($_REQUEST['ASSIGN']))
+	if ($e > 0  && isset($_REQUEST['AD']) && $_REQUEST['AD'] == 'REMOVE')
 	{
 		echo "<P>Employees<P> <select multiple name=Employee[] size=$e >";
 
