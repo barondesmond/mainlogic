@@ -50,6 +50,7 @@ if (isset($_REQUEST['switch']))
 		$_REQUEST['Assign'] = 'Assign';
 		unset($_REQUEST['switch']);
 	}
+}
 if (isset($_REQUEST['Assign']))
 {
 	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';

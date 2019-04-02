@@ -44,11 +44,15 @@ if (isset($_REQUEST['switch']))
 		$_REQUEST['Assign'] = 'Assign';
 		unset($_REQUEST['switch']);
 	}
-	if (isset($_REQUEST['Assign']))
+	elseif (isset($_REQUEST['Assign']))
 	{
 		unset($_REQUEST['Assign']);
 		$_REQUEST['Assign'] = 'Assign';
 		unset($_REQUEST['switch']);
+	}
+	else
+	{
+		$_REQUEST['Assign'] = 'Assign';
 	}
 }
 if (isset($_REQUEST['Assign']))
