@@ -1,5 +1,14 @@
 
-<input type=submit name="switch" value="Chron" class="buttonmain")
+<?php
+if (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'Group')
+{
+   echo '<input type=submit name="switch" value="Chron" class="buttonmain")';
+}
+else
+{
+	echo '<input type=submit name="switch" value="Group" class="buttonmain")';
+}
+?>
 <p>
 <div id="reviewcolumn">
 
