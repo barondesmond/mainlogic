@@ -16,11 +16,15 @@ class Timesheet extends CI_Controller {
 	{
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'REMOVE' )
 		{
-			delete_job_group();
+			delete_job_group_employee();
 		}
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ASSIGN')
 		{
 			add_job_group_employee();
+		}
+		if (isset(_$_REQUEST['submit']) && $_REQUEST['submit'] == 'DELETE')
+		{
+			delete_job_group();
 		}
 		$assign = assign();
 
