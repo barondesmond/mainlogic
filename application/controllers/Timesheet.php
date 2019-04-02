@@ -83,7 +83,14 @@ class Timesheet extends CI_Controller {
 	{
 		if (isset($_REQUEST['TimeClockID']))
 		{
-
+		foreach ($this->TimeClock as $tc)
+		{
+			$tcid = $tc['TimeClockID'];
+			if (strtotime($_REQUEST['TimeClockID'][$tcid]['StartDate']) == $tc['StartTime'] && strtotime($_REQUEST['TimeClockID'][$tcid]['StopDate']) == $tc['StopTime'])
+			{
+				unset($_REQUEST['TimeClockID'][$tcid]);
+			}
+		}
 		foreach ($_REQUEST['TimeClockID'] as $TimeClockID => $td)
 		{
 			if (!isset($td['StartDate']) && isset($td['StartDay']) && isset($td['StartHour']))
@@ -100,7 +107,7 @@ class Timesheet extends CI_Controller {
 				unset($_REQUEST['TimeClockID'][$TimeClockID]['StopHour']);
 			}
 		}
-
+	
 		$auth = timeclock_update();
 		$rep = '&' . http_build_query($auth);
 		}
