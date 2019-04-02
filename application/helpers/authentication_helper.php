@@ -207,6 +207,7 @@ function select_group($key, $id, $JobGroup)
 		$Save = array();
 		$Job = array();
 		$Employee = array();
+		$Chron = array();
 
 		foreach ($TimeClock as $id=>$event)
 		{
