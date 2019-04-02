@@ -1,6 +1,6 @@
 <?php
 
-if (!isset($JobGroup))
+if (!isset($_REQUEST['JobGroup']))
 {
 	echo '<input type=submit name="submit" value="ADD" class="buttonmain">';
 }
