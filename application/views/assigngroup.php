@@ -32,9 +32,11 @@ if (!isset($jobgroupemployees))
 
 <form method=get action=/assign/jobgroup/>
 <input type=hidden name=JobGroup[] value="<?php echo $_REQUEST['JobGroup'][0]; ?>">
-<input type=submit name="<?php echo $_REQUEST['AD']; ?>" value="SWITCH" class="buttonmain">
-
 <?php
+if (isset($_REQUEST['AD']))
+{
+	echo '<input type=submit name="' .   $_REQUEST['AD'] . '" value="SWITCH" class="buttonmain">';
+}
 
 
 echo '<div id="assigncolumn1">';
