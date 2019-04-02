@@ -116,6 +116,7 @@ class Timesheet extends CI_Controller {
 		{
 			$this->timeclock_update = timeclock_update();
 		}
+		exit;
 	}
 
 
