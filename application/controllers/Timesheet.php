@@ -322,7 +322,7 @@ class Timesheet extends CI_Controller {
 					if (isset($this->TimeClock->$id))
 					{		
 						$this->TimeClock->$id->updated = $ss;
-				print_r($this->TimeClock->$id);
+						print_r($this->TimeClock->$id);
 						exit;
 					}
 			}
