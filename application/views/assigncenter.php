@@ -5,6 +5,8 @@ if (!isset($_REQUEST['JobGroup']))
 }
 
 
+
+
 if (isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count($employees) > 0 && count($jobgroups) > 0 && count($jobgroupemployees)>0)
 {
 	$e=0;
@@ -27,44 +29,27 @@ if (isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count
 	}
 	if ($e>0 && $j>0)
 	{
-		$_REQUEST['Remove'] = 'Remove';
+		$_REQUEST['AD'] = 'REMOVE';
 	}
 	else
 	{
-		$_REQUEST['Assign'] = 'Assign';
+		$_REQUEST['AD'] = 'ASSIGN';
 
 	}
 }
-if (isset($_REQUEST['switch']))
+if (!isset($_REQUEST['submit']) && isset($_REQUEST['AD']) && isset($_REQUEST[$_REQUEST['AD']]))
+{
+	if ($_REQUEST[$_REQUEST['AD']] == 'SWITCH')
+	{
+		if ($_REQUEST['AD'] == 'REMOVE')
+		{
+			$_REQUEST['AD'] = 'ASSIGN';
+		}
+	}
+}
+if (isset($_REQUEST['AD'])
 {
 
-	if (isset($_REQUEST['Remove']))
-	{
-		unset($_REQUEST['Remove']);
-		$_REQUEST['Assign'] = 'Assign';
-		unset($_REQUEST['switch']);
-	}
-	elseif (isset($_REQUEST['Assign']))
-	{
-		unset($_REQUEST['Assign']);
-		$_REQUEST['Assign'] = 'Assign';
-		unset($_REQUEST['switch']);
-	}
-	else
-	{
-		$_REQUEST['Assign'] = 'Assign';
-	}
-}
-if (isset($_REQUEST['Assign']))
-{
-	echo '<input type=submit class="buttonmain" name="submit" value="ASSIGN">';
-}
-elseif (isset($_REQUEST['Remove']))
-{
-	echo '<input type=submit class="buttonmain" name="submit" value="REMOVE">';
-}
-else
-{
-  echo '<input type=submit class="buttonmain" name="submit" value="REMOVE">';
-	
+	echo '<input type=submit class="buttonmain" name="submit" value="' . $_REQUEST['AD'] . '">';
+
 }

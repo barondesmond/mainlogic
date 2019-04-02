@@ -32,7 +32,8 @@ if (!isset($jobgroupemployees))
 
 <form method=get action=/assign/jobgroup/>
 <input type=hidden name=JobGroup[] value="<?php echo $_REQUEST['JobGroup'][0]; ?>">
-<input type=submit name="switch" value="SWITCH" class="buttonmain">
+<input type=submit name="<?php echo $_REQUEST['AD']; ?>" value="SWITCH" class="buttonmain">
+
 <?php
 
 
@@ -51,7 +52,7 @@ foreach ($employees as $employee)
 		$e++;
 	}
 }
-if ($e > 0 && !isset($_REQUEST['Assign']))
+if ($e > 0 && !isset($_REQUEST['ASSIGN']))
 {
 	echo "<P>Employees<P> <select multiple name=Employee[] size=$e >";
 
@@ -97,7 +98,7 @@ foreach ($jobs as $job)
 		$j++;
 	}
 }
-if ($j > 0 && !isset($_REQUEST['Assign']))
+if ($j > 0 && $_REQUEST['AD'] == 'REMOVE')
 {
 	echo "<P>Job<P> <select multiple name=Job[] size=$j >";
 
@@ -117,18 +118,7 @@ else
 
 }
 
-}
-else
-{
-		echo "<p>Job <p><select multiple name=Job[] size=" . count($jobs)  . ">
-	";
 
-	foreach ($jobs as $job)
-	{
-		echo "<option value=$job->Name  >$job->Name $job->LocName</option>\r\n";
-	}
-	echo "</select>";
-}
 echo '</div>';
 
 
