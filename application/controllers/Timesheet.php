@@ -315,7 +315,7 @@ class Timesheet extends CI_Controller {
 		{
 
 			$this->review_update();
-			$this->save = this->load_view('review_update', $this, true);
+			$this->save = this->load->view('review_update', $this->timeclock_update, true);
 			
 		}
 
