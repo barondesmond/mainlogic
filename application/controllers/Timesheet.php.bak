@@ -315,15 +315,7 @@ class Timesheet extends CI_Controller {
 		{
 
 			$this->review_update();
-			if (isset($this->timeclock_update))
-			{
-				$save = $this->timeclock_update;	
-			}			
-		}
-
-		if (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Offset']) && isset($save))
-		{
-				$this->save = $this->load->view('save', $save, true);
+				
 		}
 
 	
