@@ -326,8 +326,8 @@ class Timesheet extends CI_Controller {
 					$this->timeclock_update->TimeClock->$tid = $tc;
 				}
 			}
+			print_r($this->timeclock_update);
 			$this->save = $this->load->view('save', $this->timeclock_update, true);
-			
 		}
 
 	
