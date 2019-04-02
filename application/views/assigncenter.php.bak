@@ -37,6 +37,16 @@ if (isset($employees) && isset($jobgroups) && isset($jobgroupemployees) && count
 
 	}
 }
+if (!isset($_REQUEST['submit']) && isset($_REQUEST['AD']) && isset($_REQUEST[$_REQUEST['AD']]))
+{
+	if ($_REQUEST[$_REQUEST['AD']] == 'SWITCH')
+	{
+		if ($_REQUEST['AD'] == 'REMOVE')
+		{
+			$_REQUEST['AD'] = 'ASSIGN';
+		}
+	}
+}
 if (isset($_REQUEST['AD'])
 {
 

@@ -47,7 +47,7 @@ if (!isset($_REQUEST['submit']) && isset($_REQUEST['AD']) && isset($_REQUEST[$_R
 		}
 	}
 }
-if (isset($_REQUEST['AD'])
+if (isset($_REQUEST['AD']))
 {
 
 	echo '<input type=submit class="buttonmain" name="submit" value="' . $_REQUEST['AD'] . '">';
