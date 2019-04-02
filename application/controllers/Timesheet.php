@@ -326,6 +326,7 @@ class Timesheet extends CI_Controller {
 					exit;
 				}
 			}
+			exit;
 
 			
 		}
