@@ -29,7 +29,7 @@
  height: 51px;
  width: 500px;
  min-width: 500px;
-
+ margin-right: 20px;
  text-align: center;
  color: white;
  font-size:12px;
@@ -42,13 +42,12 @@
 
 #centercolumn1{
  float: left;
- margin-left: 20px;
+ margin-right: 20px;
 
  background-color: transparent;
 }
 #centercolumn2{
  float: left;
- margin-left: 20px;
  margin-right: 20px;
  background-color: transparent;
 }
