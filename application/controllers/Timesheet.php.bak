@@ -91,6 +91,7 @@ class Timesheet extends CI_Controller {
 				unset($_REQUEST['TimeClockID'][$tcid]);
 			}
 		}
+		}
 		foreach ($_REQUEST['TimeClockID'] as $TimeClockID => $td)
 		{
 			if (!isset($td['StartDate']) && isset($td['StartDay']) && isset($td['StartHour']))
