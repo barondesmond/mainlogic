@@ -315,24 +315,16 @@ class Timesheet extends CI_Controller {
 		{
 
 			$this->review_update();
-			print_r($this->timeclock_update->TimeClockID);
 			foreach ($this->timeclock_update->TimeClockID as $id=>$ss)
 			{
 				
 					if (isset($this->TimeClock->$id))
 					{		
 						$this->TimeClock->$id->updated = $ss;
-						print_r($this->TimeClock->$id);
-						exit;
+	
 					}
-					else
-					{
-						print_r($this->TimeClock);
-						exit;
-					}
+	
 			}
-			exit;
-
 			
 		}
 
