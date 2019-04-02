@@ -195,16 +195,34 @@ function select_group($key, $id, $JobGroup)
 		if (isset($event->updated))
 		{
 			$input = '!';
+			$exp = explode(' ' , $event->updated->StartDate);
+			$event->updated->StartHour = $exp[1];
+			$exp2 = explode(' ' , $event->updated->StopDate);
+			$event->updated->StopHour = $exp2[1];
 		}
 		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '"><b>' . $event->StartDay . '</b>';
-		$row .= ' Start: <' . $input . 'input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="8" maxlength="8">';
+		if ($input == '')
+		{	
+			$row .= ' Start: <' . $input . 'input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="8" maxlength="8">';
+		}
+		else
+		{
+			$row .= ' Start: ' . $event->StartHour;
+		}
 		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
-		$row .= ' Stop: <' . $input . 'input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8">' ;
+		if ($input == '')
+		{
+			$row .= ' Stop: <' . $input . 'input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8">' ;
+		}
+		else
+		{
+			$row .= ' Stop: ' . $event->StopHour;
+		}
 		$row .= ' Event: ' . $event->event ;
 		if (isset($event->updated))
 		{
-			$row .= 'Adjusted ';
-			$row .= ' ' . $event->updated->StartDate . ' ' . $event->updated->StopDate . '</h1>';   
+			$row .= ' Adjusted ';
+			$row .= ' Start: ' . $event->updated->StartHour . ' Stop: ' . $event->updated->StopHour . '</h1>';   
 		}
 		$row .=  "<BR>\r\n";
 	return $row;
