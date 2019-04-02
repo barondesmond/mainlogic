@@ -1,6 +1,6 @@
 
 <?php
-if (isset($_REQUEST['EmpNo'] && $_REQUEST['EmpNo'] != '')
+if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 if (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'Group')
 {
