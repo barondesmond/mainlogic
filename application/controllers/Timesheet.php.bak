@@ -81,17 +81,7 @@ class Timesheet extends CI_Controller {
 	
 	public function review_update()
 	{
-		if (isset($_REQUEST['TimeClockID']))
-		{
-		foreach ($this->TimeClock as $tc)
-		{
-			$tcid = $tc['TimeClockID'];
-			if (strtotime($_REQUEST['TimeClockID'][$tcid]['StartDate']) == $tc['StartTime'] && strtotime($_REQUEST['TimeClockID'][$tcid]['StopDate']) == $tc['StopTime'])
-			{
-				unset($_REQUEST['TimeClockID'][$tcid]);
-			}
-		}
-		}
+	
 		if (isset($_REQUEST['TimeClockID']))
 		{
 		foreach ($_REQUEST['TimeClockID'] as $TimeClockID => $td)
@@ -108,6 +98,17 @@ class Timesheet extends CI_Controller {
 				$_REQUEST['TimeClockID'][$TimeClockID]['StopDate'] = $td['StopDay'] . ' ' . $td['StopHour'];
 				unset($_REQUEST['TimeClockID'][$TimeClockID]['StopDay']);
 				unset($_REQUEST['TimeClockID'][$TimeClockID]['StopHour']);
+			}
+		}
+		}
+		if (isset($_REQUEST['TimeClockID']))
+		{
+		foreach ($this->TimeClock as $tc)
+		{
+			$tcid = $tc['TimeClockID'];
+			if (strtotime($_REQUEST['TimeClockID'][$tcid]['StartDate']) == $tc['StartTime'] && strtotime($_REQUEST['TimeClockID'][$tcid]['StopDate']) == $tc['StopTime'])
+			{
+				unset($_REQUEST['TimeClockID'][$tcid]);
 			}
 		}
 		}
