@@ -207,7 +207,7 @@ function select_group($key, $id, $JobGroup)
 		$row .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '"><b>' . $event->StartDay . '</b>';
 		$row .= ' Start: <input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="6" maxlength="6" $input>';
 		$row .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopDay]" value="' . $event->StopDay . '">';
-		$row .= ' Stop: <' . $input . ' input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="6" maxlength="6" $input>';
+		$row .= ' Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="6" maxlength="6" $input>';
 		$row .= ' Event: ' . $event->event ;
 		if (isset($event->updated))
 		{
