@@ -340,6 +340,11 @@ class Timesheet extends CI_Controller {
 	
 				}
 			}	
+			else
+			{
+				print_r($this->timeclock_update);
+				exit;
+			}
 		}
 
 	
