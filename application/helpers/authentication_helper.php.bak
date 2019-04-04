@@ -205,6 +205,7 @@ function select_group($key, $id, $JobGroup)
 			$event->updated->StartHour = $exp[1];
 			$exp2 = explode(' ' , $event->updated->StopDate);
 			$event->updated->StopHour = $exp2[1];
+			$row .= '<font color="red">';
 		}
 		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '"><b>' . $event->StartDay . '</b>';
 		if ($input == '')
@@ -225,11 +226,10 @@ function select_group($key, $id, $JobGroup)
 			$row .= ' Stop: ' . $event->StopHour;
 		}
 		$row .= ' Event: ' . $event->event ;
-		//if (isset($event->updated))
-		//{
-		//	$row .= '<b> Adjusted ';
-		//	$row .= ' Start: ' . $event->updated->StartHour . ' Stop: ' . $event->updated->StopHour . '</b>';   
-		//}
+		if (isset($event->updated))
+		{
+			$row .= '</font>';
+		}
 		$row .=  "<BR>\r\n";
 	return $row;
 	}

@@ -201,10 +201,7 @@ function select_group($key, $id, $JobGroup)
 		if (isset($event->updated))
 		{
 			$input = '!';
-			$exp = explode(' ' , $event->updated->StartDate);
-			$event->updated->StartHour = $exp[1];
-			$exp2 = explode(' ' , $event->updated->StopDate);
-			$event->updated->StopHour = $exp2[1];
+
 			$row .= '<font color="red">';
 		}
 		$row .= '<' . $input . 'input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '"><b>' . $event->StartDay . '</b>';
