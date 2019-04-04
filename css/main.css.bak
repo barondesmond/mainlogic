@@ -1,5 +1,6 @@
 
-
+input.input-readonly, textarea { background: gray; }
+input.input-box, textarea { background: white; }
 
 
 .buttonmain{
