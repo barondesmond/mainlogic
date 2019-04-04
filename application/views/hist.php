@@ -5,7 +5,7 @@
 
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($TimeClockHist))
 {
-	$db = timeclock_employee($TimeClockHist);
+	$db = timeclock_employee($TimeClockHist, 'readyonly');
 	$Job = $db['Job'];
 	$Time = $db['Time'];
 	$Chron = $db['Chron'];
