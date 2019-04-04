@@ -10,7 +10,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['hi
 	$Job = $db['Job'];
 	$Save = $db['Save'];
 	echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';		
-	print_r($db);
+
 	echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
 		{
