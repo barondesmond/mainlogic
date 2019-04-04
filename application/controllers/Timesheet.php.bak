@@ -311,6 +311,10 @@ class Timesheet extends CI_Controller {
 		{
 			$this->TimeClock = $this->TimeClock->TimeClock;
 		}
+		if (isset($_REQUEST['history']))
+		{
+			$this->save = $this->load->view('save', $this->TimeClock->TimeClockHist, true);
+		}
 			$this->navigation_review();
 
 		$this->navigation();
