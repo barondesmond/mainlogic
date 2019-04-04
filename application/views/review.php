@@ -20,7 +20,10 @@ else
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
 	echo '<input type=submit name="switch" value="Group" class="buttonmain">';
 }
-echo '<input type=submit name="history" value="HISTORY" class="buttonmain">';
+	if (isset($TimeClockHist))
+	{
+		echo '<input type=submit name="history" value="HISTORY" class="buttonmain">';
+	}	
 }
 ?>
 <p>

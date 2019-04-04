@@ -13,12 +13,12 @@ if (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'Group')
 	{
 	  echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
 	}	
-   echo '<input type=submit name="switch" value="Chron" class="buttonmain")';
+   echo '<input type=submit name="switch" value="Chron" class="buttonmain">';
 }
 else
 {
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
-	echo '<input type=submit name="switch" value="Group" class="buttonmain")';
+	echo '<input type=submit name="switch" value="Group" class="buttonmain">';
 }
 echo '<input type=submit name="history" value="HISTORY" class="buttonmain">';
 }
