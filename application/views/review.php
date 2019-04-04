@@ -1,5 +1,8 @@
+<p>
+<div id="reviewcolumn">
 
 <?php
+
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 	if (isset($_REQUEST['current']) && $_REQUEST['current'] != '' && !isset($_REQUEST['switch']))
@@ -20,16 +23,10 @@ else
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
 	echo '<input type=submit name="switch" value="Group" class="buttonmain">';
 }
-	if (isset($TimeClockHist))
-	{
-		echo '<input type=submit name="history" value="HISTORY" class="buttonmain">';
-	}	
-}
-?>
-<p>
-<div id="reviewcolumn">
 
-<?php
+
+}
+
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 	$db = timeclock_employee($TimeClock);
@@ -77,6 +74,8 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 ?>
 </div>
 <div id="savecolumn">
+<input type=submit name="history" value="HISTORY" class="buttonmain">
+
 <?php if (isset($save)) { echo $save; } ?>
 </div>
 </p>
