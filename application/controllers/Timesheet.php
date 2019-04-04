@@ -327,8 +327,10 @@ class Timesheet extends CI_Controller {
 		{
 
 			$this->review_update();
-			foreach ($this->timeclock_update->TimeClockID as $id=>$ss)
+			if (isset($this->timeclock_update->TimeClockID))
 			{
+				foreach ($this->timeclock_update->TimeClockID as $id=>$ss)
+				{
 				
 					if (isset($this->TimeClock->$id))
 					{		
@@ -336,8 +338,8 @@ class Timesheet extends CI_Controller {
 	
 					}
 	
-			}
-			
+				}
+			}	
 		}
 
 	
