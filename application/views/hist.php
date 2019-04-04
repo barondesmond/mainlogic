@@ -1,7 +1,8 @@
 <?php 
 
 
-
+		print_r($TimeClockHist);
+		exit;
 
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['history']) && isset($TimeClocHist))
 {

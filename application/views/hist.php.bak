@@ -1,9 +1,10 @@
 <?php 
 
 
+		print_r($TimeClock->TimeClockHist);
+		exit;
 
-
-if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['history']))
+if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['history']) && isset($TimeClocHist))
 {
 	$db = timeclock_employee($TimeClockHist);
 	$Job = $db['Job'];
