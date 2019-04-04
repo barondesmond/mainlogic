@@ -47,7 +47,7 @@
 		return app_api($uri);
 	}
 
-	function delete_job_group_()
+	function delete_job_group()
 	{
 		$uri = 'assign_json.php?delete_job_group=1&' . http_build_query($_REQUEST);
 		return app_api($uri);
