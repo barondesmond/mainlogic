@@ -1,12 +1,12 @@
 <?php 
 
 
-		print_r($TimeClockHist);
-		exit;
+
 
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['history']) && isset($TimeClocHist))
 {
 	$db = timeclock_employee($TimeClockHist);
+	print_r($db);
 	$Job = $db['Job'];
 	$Save = $db['Save'];
 	echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';		
@@ -25,5 +25,6 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['hi
 
 		}
 }
+exit;
 
 ?>
