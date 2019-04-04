@@ -25,6 +25,6 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['hi
 
 		}
 }
-exit;
+
 
 ?>

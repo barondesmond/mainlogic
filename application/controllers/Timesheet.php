@@ -307,11 +307,12 @@ class Timesheet extends CI_Controller {
 		}
 	
 		$TimeClock = timeclock();
-		print_r($TimeClock->TimeClockHist);
-		exit;
+
 		if (isset($_REQUEST['history']) && isset($TimeClock->TimeClockHist))
 		{
 			$this->save = $this->load->view('hist', $TimeClock, true);
+			print_r($this->save);
+			exit;
 		}
 		if (isset($TimeClock->TimeClock))
 		{
