@@ -19,7 +19,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['hi
 			{
 				echo '<p><b>' . $screen . '</b> ' . $JobDisp . '</p>';
 				echo 'History<br>';
-				echo $Save[$_REQUEST['EmpNo']][$screen][$key];
+				echo $Job[$_REQUEST['EmpNo']][$screen][$key];
 				echo '<br>';
 			}
 
