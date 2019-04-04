@@ -306,14 +306,14 @@ class Timesheet extends CI_Controller {
 			}
 		}
 	
-		$this->TimeClock = timeclock();
-		if (isset($_REQUEST['history']) && isset($this->TimeClock->TimeClockHist))
+		$TimeClock = timeclock();
+		if (isset($_REQUEST['history']) && isset($TimeClock->TimeClockHist))
 		{
-			$this->save = $this->load->view('save', $this->TimeClock->TimeClockHist, true);
+			$this->save = $this->load->view('save', $TimeClock, true);
 		}
-		if (isset($this->TimeClock->TimeClock))
+		if (isset($TimeClock->TimeClock)
 		{
-			$this->TimeClock = $this->TimeClock->TimeClock;
+			$this->TimeClock = $TimeClock->TimeClock;
 		}
 	
 			$this->navigation_review();
