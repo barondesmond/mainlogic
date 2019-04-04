@@ -3,7 +3,7 @@
 
 <?php
 
-if (isset($switch) { echo $switch;} 
+if (isset($switchnav) { echo $switch;} 
 
 if (isset($review)) { echo $review;} 
 
