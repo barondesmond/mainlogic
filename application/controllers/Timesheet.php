@@ -311,7 +311,7 @@ class Timesheet extends CI_Controller {
 		{
 			$this->save = $this->load->view('hist', $TimeClock, true);
 		}
-		if (isset($TimeClock->TimeClock)
+		if (isset($TimeClock->TimeClock))
 		{
 			$this->TimeClock = $TimeClock->TimeClock;
 		}
