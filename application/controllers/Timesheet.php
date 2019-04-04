@@ -307,6 +307,7 @@ class Timesheet extends CI_Controller {
 		}
 	
 		$TimeClock = timeclock();
+		print_r($TimeClock);
 		$this->TimeClock = $TimeClock->TimeClock;
 		if (isset($_REQUEST['history']) && isset($TimeClock->TimeClockHist))
 		{
