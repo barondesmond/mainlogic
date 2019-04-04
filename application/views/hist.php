@@ -3,7 +3,7 @@
 
 
 print_r($TimeClockHist);
-if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['history']) && isset($TimeClocHist))
+if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['history']) && isset($TimeClockHist))
 {
 	$db = timeclock_employee($TimeClockHist);
 	print_r($db);
