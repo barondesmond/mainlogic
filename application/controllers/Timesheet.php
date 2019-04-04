@@ -329,7 +329,7 @@ class Timesheet extends CI_Controller {
 			$this->review_update();
 
 			$TimeClock = timeclock();
-			foreach ($this->timeclock_update as $TC => $tid)
+			foreach ($this->timeclock_update->TimeClock as $tid => $db)
 			{
 				if (isset($TimeClock->TimeClock->$tid))
 				{
