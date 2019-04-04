@@ -1,5 +1,5 @@
 <?php
-period_select();
+period_selecct();
 if (isset($TimeClock))
 {
 	period_check($TimeClock);
