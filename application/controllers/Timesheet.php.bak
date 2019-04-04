@@ -322,7 +322,6 @@ class Timesheet extends CI_Controller {
 		$this->switchnav = $this->load->view('switch', $this, true);
 
 		$this->navigation();
-		$this->review = $this->load->view('time', $TimeClock, true);
 	
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'UPDATE')
 		{
@@ -333,8 +332,8 @@ class Timesheet extends CI_Controller {
 			$this->TimeClock = $TimeClock->TimeClock;
 	
 		}
+		$this->review = $this->load->view('time', $TimeClock, true);
 
-	
 		$this->content = $this->load->view('review', $this, true);
 
 		$this->load->view('main', $this);
