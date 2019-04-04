@@ -203,6 +203,9 @@ function select_group($key, $id, $JobGroup)
 		{
 			$input = 'readonly';
 			$row .= '<font color="red">';
+		}
+		if ($input == 'readonly')
+		{
 			$class = 'readonly';
 		}
 		if ($input == '')
