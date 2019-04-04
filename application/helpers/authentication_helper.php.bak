@@ -370,7 +370,7 @@ function period_select($action='')
 				$offsel = '';
 			}
 
-			echo "<option value=$action?Offset=$i&EmpNo=" . $_REQUEST['EmpNo'] . " $offsel>$period</option>";
+			echo "<option value=$action?Offset=$i $offsel>$period</option>";
 		}
 	echo "</select>";
 
