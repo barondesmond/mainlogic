@@ -2,11 +2,11 @@
 
 
 
-print_r($TimeClockHist);
+
 if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['history']) && isset($TimeClockHist))
 {
 	$db = timeclock_employee($TimeClockHist);
-	print_r($db);
+
 	$Job = $db['Job'];
 	$Save = $db['Save'];
 	echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';		
@@ -19,7 +19,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($_REQUEST['hi
 			{
 				echo '<p><b>' . $screen . '</b> ' . $JobDisp . '</p>';
 				echo 'History<br>';
-				echo $Save[$_REQUEST['EmpNo']][$screen][$key];
+				echo $Job[$_REQUEST['EmpNo']][$screen][$key];
 				echo '<br>';
 			}
 
