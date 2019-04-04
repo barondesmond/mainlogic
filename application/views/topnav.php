@@ -5,12 +5,7 @@ if (isset($periodnav))
 {
 	echo $periodnav;
 }
-elseif (isset($TimeClock))
-{
 
-
-	echo	period_check($TimeClock);
-}
 ?>
 </div>
 <div  id="centercolumn1"><?php if(isset($centercolumn1)) {echo $centercolumn1;} ?></div>

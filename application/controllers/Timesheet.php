@@ -179,7 +179,7 @@ class Timesheet extends CI_Controller {
 
 	public function navigation_review()
 	{
-		//$this->period = $this->load->view('period', $this, true);
+		$this->period = $this->load->view('periodreview', $this, true);
 		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
 		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
 		$this->inputnav = $this->load->view('input', $this, true);
@@ -307,8 +307,7 @@ class Timesheet extends CI_Controller {
 		}
 	
 		$TimeClock = timeclock();
-		print_r($TimeClock);
-		$this->TimeClock = $TimeClock->TimeClock;
+	
 		if (isset($_REQUEST['history']) && isset($TimeClock->TimeClockHist))
 		{
 			$this->save = $this->load->view('hist', $TimeClock, true);

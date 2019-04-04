@@ -316,7 +316,6 @@ if (!isset($TimeClock) || $TimeClock=='')
 {
 	return false;
 }
-period_select($controller . $function);
 
 
 
