@@ -178,7 +178,7 @@ class Timesheet extends CI_Controller {
 	}
 
 	public function navigation_review()
-	{
+	{	
 		$this->periodnav = $this->load->view('periodreview', $this, true);
 		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
 		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
@@ -319,9 +319,9 @@ class Timesheet extends CI_Controller {
 		}
 	
 		$this->navigation_review();
+		$this->switchnav = $this->load->view('switch', $this, true);
 
 		$this->navigation();
-
 	
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'UPDATE')
 		{
@@ -332,8 +332,8 @@ class Timesheet extends CI_Controller {
 			$this->TimeClock = $TimeClock->TimeClock;
 	
 		}
+		$this->review = $this->load->view('time', $TimeClock, true);
 
-	
 		$this->content = $this->load->view('review', $this, true);
 
 		$this->load->view('main', $this);

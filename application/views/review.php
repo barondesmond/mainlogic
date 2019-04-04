@@ -3,71 +3,9 @@
 
 <?php
 
-if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
-{
-	if (isset($_REQUEST['current']) && $_REQUEST['current'] != '' && !isset($_REQUEST['switch']))
-	{
-		$_REQUEST['switch'] = $_REQUEST['current'];
-	}
+if (isset($switchnav) { echo $switch;} 
 
-if (!isset($_REQUEST['switch']))
-{
-   $_REQUEST['switch'] = 'GROUP';
-   echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
-   echo '<input type=submit name="switch" value="CHRON" class="buttonmain">';
-}
-else
-{
-   echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
-	echo '<input type=submit name="switch" value="GROUP" class="buttonmain">';
-}
-
-
-}
-
-if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
-{
-	$db = timeclock_employee($TimeClock);
-	$Job = $db['Job'];
-	$Time = $db['Time'];
-	$Chron = $db['Chron'];
-		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
-		echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';	
-	
-	if (isset($Job[$_REQUEST['EmpNo']]) && (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'GROUP'))
-	{
-
-
-	
-		foreach ($Job[$_REQUEST['EmpNo']] as $screen=>$jd)
-		{
-
-			foreach ($jd as $key=>$JobDisp)
-			{
-				echo '<p><b>' . $screen . '</b> ' . $JobDisp . '</p>';
-				echo 'Employee Input<br>';
-				echo $Time[$_REQUEST['EmpNo']][$screen][$key];
-				echo '<br>';
-			}
-
-		}
-	
-
-	}
-	if (isset($_REQUEST['switch']) && $_REQUEST['switch'] == 'CHRON' && isset($Chron) &&  isset($Chron[$_REQUEST['EmpNo']]))
-	{
-
-			echo '<p><b>' . 'Chronological' . '</b></p>';
-			echo 'Employee Input<br>';
-			echo '<table border=0>';
-		foreach ($Chron[$_REQUEST['EmpNo']]['Chron'] as $key=>$out)
-		{
-
-			echo $out;
-		}
-		echo '</table>';
-	}
-}
+if (isset($review)) { echo $review;} 
 
 
 ?>
