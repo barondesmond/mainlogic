@@ -12,7 +12,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 
 if (!isset($_REQUEST['switch']))
 {
-   $_REQUEST['switch'] = 'Group';
+   $_REQUEST['switch'] = 'GROUP';
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
    echo '<input type=submit name="switch" value="Chron" class="buttonmain">';
 }
@@ -31,7 +31,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	$Job = $db['Job'];
 	$Time = $db['Time'];
 	$Chron = $db['Chron'];
-	if (isset($Job[$_REQUEST['EmpNo']]) && (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'Group'))
+	if (isset($Job[$_REQUEST['EmpNo']]) && (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'GROUP'))
 	{
 
 		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
@@ -52,7 +52,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	
 
 	}
-	if (isset($_REQUEST['switch']) && $_REQUEST['switch'] == 'Chron' && isset($Chron) &&  isset($Chron[$_REQUEST['EmpNo']]))
+	if (isset($_REQUEST['switch']) && $_REQUEST['switch'] == 'CHRON' && isset($Chron) &&  isset($Chron[$_REQUEST['EmpNo']]))
 	{
 		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 		echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';	
