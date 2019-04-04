@@ -72,9 +72,13 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 ?>
 </div>
 <div id="savecolumn">
-<input type=submit name="history" value="HISTORY" class="buttonmain">
 
-<?php if (isset($save)) { echo $save; } ?>
+<?php 
+if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
+{
+	echo '<input type=submit name="history" value="HISTORY" class="buttonmain">';
+}
+if (isset($save)) { echo $save; } ?>
 </div>
 </p>
 

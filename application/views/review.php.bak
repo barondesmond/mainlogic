@@ -10,12 +10,10 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 		$_REQUEST['switch'] = $_REQUEST['current'];
 	}
 
-if (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'Group')
+if (!isset($_REQUEST['switch']))
 {
-	if (isset($_REQUEST['switch']))
-	{
-	  echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
-	}	
+   $_REQUEST['switch'] = 'Group';
+   echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
    echo '<input type=submit name="switch" value="Chron" class="buttonmain">';
 }
 else
