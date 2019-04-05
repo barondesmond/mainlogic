@@ -14,8 +14,6 @@ if (!isset($_REQUEST['switch']) && !isset($_REQUEST['current']))
 }
 elseif (isset($_REQUEST['switch']) && isset($_REQUEST['current']))
 	{
-		echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
-		echo '<input type=submit name="switch" value="' . $_REQUEST['current'] . '" class="buttonmain">';
 		if ($_REQUEST['switch'] == 'GROUP')
 		{
 			$_REQUEST['current'] == 'GROUP';
@@ -25,6 +23,9 @@ elseif (isset($_REQUEST['switch']) && isset($_REQUEST['current']))
 			$_REQUEST['current'] = 'CHRON';
 			$_REQUEST['switch'] = 'GROUP';
 		}
+		echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
+		echo '<input type=submit name="switch" value="' . $_REQUEST['current'] . '" class="buttonmain">';
+
 	}		
 elseif (isset($_REQUEST['current']) && !isset($_REQUEST['switch']))
 {
