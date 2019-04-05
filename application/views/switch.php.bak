@@ -6,6 +6,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 
 if (!isset($_REQUEST['switch']) && !isset($_REQUEST['current']))
 {
+	echo '1';
    $_REQUEST['switch'] = 'CHRON';
    $_REQUEST['current'] = 'GROUP';
 
@@ -14,6 +15,7 @@ if (!isset($_REQUEST['switch']) && !isset($_REQUEST['current']))
 }
 elseif (isset($_REQUEST['switch']) && isset($_REQUEST['current']))
 	{
+	echo '2';
 		if ($_REQUEST['switch'] == 'GROUP' && $_REQUEST['current'] == 'CHRON')
 		{
 			$_REQUEST['current'] == 'GROUP';
@@ -29,6 +31,7 @@ elseif (isset($_REQUEST['switch']) && isset($_REQUEST['current']))
 	}		
 elseif (isset($_REQUEST['current']) && !isset($_REQUEST['switch']))
 {
+	echo '3';
 	if ($_REQUEST['current'] == 'CHRON')
 	{
 		$_REQUEST['switch'] = 'GROUP';
