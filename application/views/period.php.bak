@@ -5,7 +5,7 @@
 if (isset($TimeSheet))
 {
 	
-period_select($controller . $function);
+period_select();
 
 
 $db = timesheet_employee($TimeSheet);

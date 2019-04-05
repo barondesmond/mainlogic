@@ -1,11 +1,11 @@
 <?php
 
+period_select();
 
 
 if (isset($TimeSheet))
 {
 	
-period_select();
 
 
 $db = timesheet_employee($TimeSheet);
