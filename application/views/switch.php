@@ -7,8 +7,10 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 if (!isset($_REQUEST['switch']) && !isset($_REQUEST['current']))
 {
    $_REQUEST['switch'] = 'GROUP';
-   echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
-   echo '<input type=submit name="switch" value="CHRON" class="buttonmain">';
+   $_REQUEST['current'] = 'CHRON';
+
+   echo '<input type=hidden name="current" value="' . $_REQUEST['current'] . '">';
+   echo '<input type=submit name="switch" value="' . $_REQUESST['switch'] . '" class="buttonmain">';
 }
 elseif (isset($_REQUEST['switch']) && isset($_REQUEST['current']))
 	{

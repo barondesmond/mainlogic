@@ -24,7 +24,7 @@ elseif (isset($_REQUEST['switch']) && isset($_REQUEST['current']))
 			$_REQUEST['switch'] = 'GROUP';
 		}
 	}		
-elseif (isset($_REQUEST['current']) && !isset($_REQUEST['switch'])
+elseif (isset($_REQUEST['current']) && !isset($_REQUEST['switch']))
 {
 	if ($_REQUEST['current'] == 'CHRON')
 	{
