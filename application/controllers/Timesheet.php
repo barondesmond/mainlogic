@@ -62,7 +62,7 @@ class Timesheet extends CI_Controller {
 		{
 			unset($_REQUEST['TimeClockID']);
 		}
-		$timeclock = timeclock_add();
+		$this->timeclock_add = timeclock_add();
 
 	}
 
@@ -289,11 +289,7 @@ class Timesheet extends CI_Controller {
 			$_REQUEST['Offset'] = -1;
 		}	
 
-		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ADD')
-		{
-			$this->review_add();
-
-		}
+	
 		if (isset($_REQUEST['Screen']))
 		{
 			if ($_REQUEST['Screen'] == 'Job')
@@ -308,6 +304,18 @@ class Timesheet extends CI_Controller {
 	
 		$TimeClock = timeclock();
 	
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'ADD')
+		{
+			$this->review_add();
+			$TimeClock = timeclock();
+			foreach ($this->timeclock_add  as $tid=> $db)
+			{
+				if (isset($Timeclock->TimeClock->$tid))
+				{
+					$TimeClock->TimeClock->$tid->added = true;
+				}
+			}
+		}
 		if (isset($_REQUEST['history']) && isset($TimeClock->TimeClockHist))
 		{
 			$this->save = $this->load->view('hist', $TimeClock, true);

@@ -210,8 +210,9 @@ function select_group($key, $id, $JobGroup)
 		}
 		if ($input == '')
 		{
-			$row .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '"><b>' . $event->StartDay . '</b>';
+			$row .= '<input type=hidden name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartDay]" value="' . $event->StartDay . '">'; 
 		}
+		$row .= '<b>' . $event->StartDay . '</b>';
 		$row .= ' Start: <input type=Text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StartHour]" value="' . $event->StartHour . '" size="8" maxlength="8" class="' . $class . '" ' .  $input .' >';
 		if ($input == '')
 		{
