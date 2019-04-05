@@ -30,7 +30,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($TimeClockHis
 	
 
 	}
-	if ((isset($_REQUEST['current']) && $_REQUEST['current'] == 'GROUP') && isset($Chron) &&  isset($Chron[$_REQUEST['EmpNo']]))
+	if ((isset($_REQUEST['current']) && $_REQUEST['current'] == 'CHRON') && isset($Chron) &&  isset($Chron[$_REQUEST['EmpNo']]))
 	{
 		echo '<input type=hidden name="EmpNo" value="' . $_REQUEST['EmpNo'] . '">';
 		echo '<input type=hidden name="Offset" value="' . $_REQUEST['Offset'] . '">';	
