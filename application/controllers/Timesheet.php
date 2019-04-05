@@ -312,14 +312,12 @@ class Timesheet extends CI_Controller {
 			{
 			foreach ($this->timeclock_add  as $tid=> $db)
 			{
-				if (isset($Timeclock->TimeClock->$tid))
+				if (isset($TimeClock->TimeClock->$tid))
 				{
 					$TimeClock->TimeClock->$tid->added = true;
 				}
 			}
-			print_r($this->timeclock_add);
-			print_r($TimeClock->TimeClock->$tid);
-			exit;
+
 			}
 		}
 		if (isset($_REQUEST['history']) && isset($TimeClock->TimeClockHist))
