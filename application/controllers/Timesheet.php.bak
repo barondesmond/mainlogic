@@ -160,20 +160,26 @@ class Timesheet extends CI_Controller {
 			$this->timepost();
 		}
 
-		$this->TimeSheet = timesheet();
-
-
+		$TimeSheet = timesheet();
+		$this->TimeSheet = $TimeSheet->TimeSheet;
+		if (isset($TimeSheet->Post))
+		{
+			$this->Post = $TimeSheet->Post;
+		}
 		$this->navigation_timesheet();
 		$this->navigation();
-		$this->content = $this->load->view('timesheet', $this->TimeSheet, true);
+		$this->content = $this->load->view('timesheet', $TimeSheet, true);
 		$this->load->view('main', $this);
 	}
 
 	public function navigation_timesheet()
 	{
 		$this->periodnav = $this->load->view('period', $this->TimeSheet, true);
-		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
-		$this->centercolumn2 = $this->load->view('centerpost', $this, true);
+		if (isset($_REQUEST['EmpNo']) && !isset($this->Post->$_REQUEST['EmpNo']))
+		{
+			$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
+			$this->centercolumn2 = $this->load->view('centerpost', $this, true);
+		}
 		//$this->inputnav = $this->load->view('input', $this, true);
 	}
 

@@ -174,7 +174,7 @@ class Timesheet extends CI_Controller {
 
 	public function navigation_timesheet()
 	{
-		$this->periodnav = $this->load->view('period', $this->TimeSheet, true);
+		$this->periodnav = $this->load->view('period', $this, true);
 		if (isset($_REQUEST['EmpNo']) && !isset($this->Post->$_REQUEST['EmpNo']))
 		{
 			$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
