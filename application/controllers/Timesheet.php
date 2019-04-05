@@ -315,6 +315,9 @@ class Timesheet extends CI_Controller {
 					$TimeClock->TimeClock->$tid->added = true;
 				}
 			}
+			print_r($this->timeclock_add);
+			print_r($TimeClock->TimeClock->$tid);
+			exit;
 		}
 		if (isset($_REQUEST['history']) && isset($TimeClock->TimeClockHist))
 		{
