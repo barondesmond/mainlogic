@@ -223,7 +223,7 @@ function select_group($key, $id, $JobGroup)
 		}
 		$row .= ' Stop: <input type=text name="TimeClockID' . '[' . $event->TimeClockID . ']' . '[StopHour]" value="' . $event->StopHour . '" size="8" maxlength="8" class="' . $class . '" ' . $input .' >';
 		$row .= ' Event: ' . $event->event ;
-		if (isset($event->updated))
+		if (isset($event->updated) || isset($event->added))
 		{
 			$row .= '</font>';
 		}
