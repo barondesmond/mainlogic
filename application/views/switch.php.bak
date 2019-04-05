@@ -4,7 +4,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 {
 
 
-if (!isset($_REQUEST['switch']) && !isset($_REQUEST['current'])
+if (!isset($_REQUEST['switch']) && !isset($_REQUEST['current']))
 {
    $_REQUEST['switch'] = 'GROUP';
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
