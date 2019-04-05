@@ -10,7 +10,7 @@ if (!isset($_REQUEST['switch']) && !isset($_REQUEST['current']))
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
    echo '<input type=submit name="switch" value="CHRON" class="buttonmain">';
 }
-elseif (isset($_REQUEST['switch'] && isset($_REQUEST['current']))
+elseif (isset($_REQUEST['switch']) && isset($_REQUEST['current']))
 	{
 		echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
 		echo '<input type=submit name="switch" value="' . $_REQUEST['current'] . '" class="buttonmain">';
