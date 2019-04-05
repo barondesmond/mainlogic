@@ -7,7 +7,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 		$_REQUEST['switch'] = $_REQUEST['current'];
 	}
 
-if (!isset($_REQUEST['switch']) || $_REQUEST['current'] == 'CHRON')
+if (!isset($_REQUEST['switch']) || $_REQUEST['current'] == 'CHRON' || $_REQUEST['switch'] == 'GROUP')
 {
    $_REQUEST['switch'] = 'GROUP';
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
