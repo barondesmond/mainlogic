@@ -289,7 +289,7 @@ function select_group($key, $id, $JobGroup)
 					$Save[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, 'readonly');
 					$Time[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, $input);
 					$str = $event->Screen . ' ' . $key . ' ';
-					$Chron[$event->EmpNo]['Chron'][$key] .= '<tr><td><b>' . $str. '</b> </td><td> ' . timeclock_row($event) . ' </td></tr>';
+					$Chron[$event->EmpNo]['Chron'][$key] .= '<tr><td><b>' . $str. '</b> </td><td> ' . timeclock_row($event, $input) . ' </td></tr>';
 				}
 	
 		}

@@ -203,7 +203,7 @@ function select_group($key, $id, $JobGroup)
 		{
 			$input = 'readonly';
 		}
-		if (isset($event->added))
+		if (isset($event->added) || isset($event->updated))
 		{
 				$row .= '<font color="red">';
 		}
