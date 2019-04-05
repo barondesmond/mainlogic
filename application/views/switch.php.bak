@@ -13,8 +13,9 @@ if (!isset($_REQUEST['switch']))
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
    echo '<input type=submit name="switch" value="CHRON" class="buttonmain">';
 }
-elseif ($_REQUEST['switch'] == 'CHRON')
+else
 {
+	$_REQUEST['switch'] = 'CHRON';
    echo '<input type=hidden name="current" value="' . $_REQUEST['switch'] . '">';
 	echo '<input type=submit name="switch" value="GROUP" class="buttonmain">';
 }
