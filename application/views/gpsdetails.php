@@ -20,14 +20,14 @@ Big Brother has found You.
 
 function location_gps_div($type, $location, $lat, $long, $map)
 {
-	echo '<tr><td>';
+	echo '<tr><td valign="top">';
 
 	echo $type;
 	echo '<br>' . $location;
 	echo '<br>latitude: ' . $lat;
 	echo '<br>longitude: ' . $long;
 	echo '</td>';
-	echo '<td>';
+	echo '<td valign="top">';
 	echo '<img src="' . $map . '">';
 	echo '</td></tr>';
 }

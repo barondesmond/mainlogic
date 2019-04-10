@@ -20,7 +20,7 @@ Big Brother has found You.
 
 function location_gps_div($type, $location, $lat, $long, $map)
 {
-	echo '<table class="gps_table"><tr><td>';
+	echo '<tr><td>';
 
 	echo $type;
 	echo '<br>' . $location;
@@ -29,7 +29,7 @@ function location_gps_div($type, $location, $lat, $long, $map)
 	echo '</td>';
 	echo '<td>';
 	echo '<img src="' . $map . '">';
-	echo '</td></tr></table>';
+	echo '</td></tr>';
 }
 
 if (!isset($Details))
@@ -52,9 +52,10 @@ foreach ($array as $key)
 		echo '<BR>' . $key . ' : ' . $Details->$key;
 	}	
 }
+echo '<table>';
 location_gps_div('location_gps', $Details->location_gps, $Details->location_latitude,  $Details->location_longitude, $Details->location_map);
 location_gps_div('override_gps', $Details->override_gps, $Details->override_longitude, $Details->override_longitude, $Details->override_map);
-
+echo '</table>';
 echo '</div>';
 
 
