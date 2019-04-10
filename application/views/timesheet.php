@@ -86,8 +86,10 @@ function timesheet_row($db, $head, $select)
 		$row .= '<td class="timesheet_hour_cell">';
 		if (isset($db->$key) && isset($db->$display) && !isset($select[$key]))
 		{
-	
-				$row .=  '<input type=hidden name=' . $db->ID . '[' . $key . '] value=' . $db->$key . '>';
+				if ($db->Screen != 'Dispatch')
+				{
+					$row .=  '<input type=hidden name=' . $db->ID . '[' . $key . '] value=' . $db->$key . '>';
+				}
 				$row .= $db->$display;
 			
 		}

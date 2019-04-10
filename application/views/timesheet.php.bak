@@ -50,7 +50,7 @@ function timesheet_head($head)
 	$row = '';
 		foreach ($head as $key=>$value)
 		{
-			$row .= '<td class="cell">' . $key . '</td>';
+			$row .= '<td class="timesheet_hour_cell">' . $key . '</td>';
 		}
 return $row;
 
@@ -83,7 +83,7 @@ function timesheet_row($db, $head, $select)
 
 	foreach ($head as $key=>$display)
 	{
-		$row .= '<td class="cell">';
+		$row .= '<td class="timesheet_hour_cell">';
 		if (isset($db->$key) && isset($db->$display) && !isset($select[$key]))
 		{
 	
