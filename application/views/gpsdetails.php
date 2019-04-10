@@ -22,6 +22,7 @@ function location_gps_div($type, $location, $lat, $long, $map)
 {
 	echo '<div class="gps_cell"><div class="gps_cell1">';
 	echo $type;
+	echo '<br>' . $location;
 	echo '<br>latitude: ' . $lat;
 	echo '<br>longitude: ' . $long;
 	echo '</div>';
@@ -50,8 +51,8 @@ foreach ($array as $key)
 		echo '<BR>' . $key . ' : ' . $Details->$key;
 	}	
 }
-location_gps_div('location_gps', $Details->location_gps, $Details->location_latitude, $Details->location_longitude, $Details->location_map);
-location_gps_div('override_gps', $Details->override_gps,$Details->override_longitude, $Details->override_longitude, $Details->override_map);
+location_gps_div('location_gps', $Details->location_gps, $Details->location_latitude,  $Details->location_longitude, $Details->location_map);
+location_gps_div('override_gps', $Details->override_gps, $Details->override_longitude, $Details->override_longitude, $Details->override_map);
 
 echo '</div>';
 
