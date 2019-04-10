@@ -121,7 +121,8 @@ clear:left;
 .gps_table{
 border: 3px;
 border-color: black;
- text-align: center;
+vertical-align: text-top;
+
 }
 
 .gps_cell1{
