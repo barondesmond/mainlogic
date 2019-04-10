@@ -20,7 +20,7 @@ Big Brother has found You.
 
 function location_gps_div($type, $location, $lat, $long, $map)
 {
-	echo '<table border=1><tr><td>';
+	echo '<table class="gps_table"><tr><td>';
 
 	echo $type;
 	echo '<br>' . $location;
