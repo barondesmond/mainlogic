@@ -50,8 +50,8 @@ foreach ($array as $key)
 		echo '<BR>' . $key . ' : ' . $Details->$key;
 	}	
 }
-location_gps_div('location_gps', $Details->location_latitude, $Details->location_longitude, $Details->location_map);
-location_gps_div('override_gps', $Details->override_longitude, $Details->override_longitude, $Details->override_map);
+location_gps_div('location_gps', $Dteails->location_gps, $Details->location_latitude, $Details->location_longitude, $Details->location_map);
+location_gps_div('override_gps', $Details->override_gps,$Details->override_longitude, $Details->override_longitude, $Details->override_map);
 
 echo '</div>';
 
