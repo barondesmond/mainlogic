@@ -27,7 +27,7 @@ function location_gps_div($type, $location, $lat, $long, $map)
 	echo '</div>';
 	echo '<div class="gps_cell2">';
 	echo '<img src="' . $map . '">';
-	echo '</div>';
+	echo '</div></div>';
 }
 
 if (!isset($Details))
