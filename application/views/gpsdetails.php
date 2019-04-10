@@ -43,15 +43,15 @@ foreach ($array as $key)
 {
 	if ($key == 'location_map' || $key == 'override_map')
 	{
-		echo '<br><img src="' . $Details[$key] . '">';
+		echo '<br><img src="' . $Details->$key . '">';
 	}
 	else
 	{
-		echo '<BR>' . $key . ' : ' . $Details[$key];
+		echo '<BR>' . $key . ' : ' . $Details->$key;
 	}	
 }
-location_gps_div('location_gps', $Details['location_latitude'], $Details['location_longitude'], $Details['location_map']);
-location_gps_div('override_gps', $Details['override_longitude'], $Details['override_longitude'], $Details['override_map']);
+location_gps_div('location_gps', $Details->location_latitude, $Details->location_longitude, $Details->location_map);
+location_gps_div('override_gps', $Details->override_longitude, $Details->override_longitude, $Details->override_map);
 
 echo '</div>';
 
