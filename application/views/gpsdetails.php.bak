@@ -18,6 +18,17 @@ Big Brother has found You.
 
 */
 
+function location_gps_div($type, $location, $lat, $long, $map)
+{
+	echo '<div class="gps_cell"><div class="gps_cell1">';
+	echo $type;
+	echo '<br>latitude: ' . $lat;
+	echo '<br>longitude: ' . $long;
+	echo '</div>';
+	echo '<div class="gps_cell2">';
+	echo '<img src="' . $map . '">';
+	echo '</div>';
+}
 
 if (!isset($Details))
 {
@@ -26,7 +37,9 @@ if (!isset($Details))
 }
 echo '<div id="file"><input type=hidden name=file value="' . $Details->file . '"><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($Details->file) . '" id="file"></div>';
 echo '<div id=assigncolumn2>';
-foreach ($Details as $key=> $val)
+
+$array = array('Date', 'EmpNo', 'Desc', 'location');
+foreach ($array as $key)
 {
 	if ($key == 'location_map' || $key == 'override_map')
 	{
@@ -37,6 +50,9 @@ foreach ($Details as $key=> $val)
 		echo '<BR>' . $key . ' : ' . $val;
 	}	
 }
+location_gps_div('location_gps', $Details['location_latitude'], $Details['location_longitude'], $Details['location_map']);
+location_gps_div('override_gps', $Details['override_longitude'], $Details['override_longitude'], $Details['override_map']);
+
 echo '</div>';
 
 
