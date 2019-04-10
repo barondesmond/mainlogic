@@ -114,13 +114,13 @@ width: 500px;
 
 
 .gps_table {
-	background-color: #e6e6e6
+	background-color: #cccccc
 	vertical-align: text-top;
 }
 
 tr.gps_table td {
 border-bottom:1pt solid black;
-	background-color: #e6e6e6
+	background-color: #cccccc
 
 }
 
