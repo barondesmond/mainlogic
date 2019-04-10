@@ -20,15 +20,16 @@ Big Brother has found You.
 
 function location_gps_div($type, $location, $lat, $long, $map)
 {
-	echo '<div class="gps_cell"><div class="gps_cell1">';
+	echo '<table border=1><tr><td>';
+
 	echo $type;
 	echo '<br>' . $location;
 	echo '<br>latitude: ' . $lat;
 	echo '<br>longitude: ' . $long;
-	echo '</div>';
-	echo '<div class="gps_cell2">';
+	echo '</td>';
+	echo '<td>';
 	echo '<img src="' . $map . '">';
-	echo '</div></div>';
+	echo '</td></tr></table>';
 }
 
 if (!isset($Details))
