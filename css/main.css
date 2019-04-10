@@ -119,8 +119,8 @@ clear:left;
 }
 
 .gps_table{
-border: 3px;
-border-color: black;
+border-bottom:1pt solid black;
+
 vertical-align: text-top;
 
 }

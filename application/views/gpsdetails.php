@@ -20,14 +20,14 @@ Big Brother has found You.
 
 function location_gps_div($type, $location, $lat, $long, $map)
 {
-	echo '<tr><td valign="top" border-bottom="1px solid #000">';
+	echo '<tr><td valign="top" >';
 
 	echo $type;
 	echo '<br>' . $location;
 	echo '<br>latitude: ' . $lat;
 	echo '<br>longitude: ' . $long;
 	echo '</td>';
-	echo '<td valign="top" border-bottom="1px solid #000">';
+	echo '<td valign="top" >';
 	echo '<img src="' . $map . '">';
 	echo '</td></tr>';
 }
@@ -52,7 +52,7 @@ foreach ($array as $key)
 		echo '<BR>' . $key . ' : ' . $Details->$key;
 	}	
 }
-echo '<table>';
+echo '<table class="gps_table">';
 location_gps_div('location_gps', $Details->location_gps, $Details->location_latitude,  $Details->location_longitude, $Details->location_map);
 location_gps_div('override_gps', $Details->override_gps, $Details->override_longitude, $Details->override_longitude, $Details->override_map);
 echo '</table>';
