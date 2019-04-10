@@ -115,6 +115,7 @@ width: 500px;
 .gps_cell{
 border: 3px;
 border-color: black;
+float:clear;
 }
 .gps_cell1{
 float:left;
