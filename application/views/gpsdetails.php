@@ -52,7 +52,7 @@ foreach ($array as $key)
 		echo '<BR>' . $key . ' : ' . $Details->$key;
 	}	
 }
-echo '<table>';
+echo '<table border=1>';
 location_gps_div('location_gps', $Details->location_gps, $Details->location_latitude,  $Details->location_longitude, $Details->location_map);
 location_gps_div('override_gps', $Details->override_gps, $Details->override_longitude, $Details->override_longitude, $Details->override_map);
 echo '</table>';
