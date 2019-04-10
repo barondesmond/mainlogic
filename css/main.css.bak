@@ -115,6 +115,7 @@ width: 500px;
 .gps_cell{
 border: 3px;
 border-color: black;
+background-color: #e6e6e6
 clear:left;
 }
 
