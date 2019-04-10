@@ -119,10 +119,13 @@ clear:left;
 }
 
 .gps_table{
-border-bottom:1pt solid black;
+
 
 vertical-align: text-top;
 
+}
+tr.gps_table td {
+border-bottom:1pt solid black;
 }
 
 .gps_cell1{
