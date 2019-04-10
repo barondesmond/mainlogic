@@ -118,6 +118,9 @@ padding: 1px;
 .timesheet_hour_cell{
 padding: 1px;
 }
+td.timesheet_hour_cell td {
+padding: 1px;
+}
 
 .gps_table {
 	background-color: #cccccc;
