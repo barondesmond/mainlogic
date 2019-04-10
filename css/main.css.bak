@@ -112,28 +112,14 @@ width: 500px;
  float:left;
 }
 
-.gps_cell{
-border: 3px;
-border-color: black;
-background-color: #e6e6e6
-clear:left;
+
+.gps_table {
+	background-color: #e6e6e6
+	vertical-align: text-top;
 }
 
-.gps_table{
-
-
-vertical-align: text-top;
-
-}
 tr.gps_table td {
 border-bottom:1pt solid black;
-}
-
-.gps_cell1{
-float:left;
-}
-.gps_cell2{
-float:left;
 }
 
 
