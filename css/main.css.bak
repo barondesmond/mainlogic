@@ -83,13 +83,14 @@ input.input-box, textarea { background: white; }
 #reviewcolumn{
 border: 1px;
 border-color: #787878;
+padding: 20px;
 
  float:left;
 }
 #savecolumn{
 border: 2px;
 border-color: #787878:
-
+padding: 20px;
  float:left;
 }
 
