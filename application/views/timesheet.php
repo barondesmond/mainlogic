@@ -160,7 +160,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]) && $_REQUEST['
 	$max = 0;
 
 	echo '<input type=hidden name=EmpNo value=' . $_REQUEST['EmpNo'] . '><input type=hidden name=Offset value=' . $_REQUEST['Offset'] . '>';
-	echo '<table class="table">';
+	echo '<table class="timesheet_table">';
 	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
 	{
 		$table[$key]['timehead'] = timesheet_head($head);
