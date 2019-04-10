@@ -112,6 +112,9 @@ width: 500px;
  float:left;
 }
 
+.timesheet_table{
+padding: 1px;
+}
 
 .gps_table {
 	background-color: #cccccc;

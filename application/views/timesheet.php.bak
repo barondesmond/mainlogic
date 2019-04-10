@@ -133,8 +133,8 @@ $rows = '';
 			$db->Hours = '';
 		}
 		$row .= '<tr>';
-		$row .= '<td class="cell">' . $db->Name . '</td>';
-		$row .= '<td class="cell"><input type=text name=PRHours[' . $db->ItemID . '] value=' . $db->Hours . '></td>';
+		$row .= '<td >' . $db->Name . '</td>';
+		$row .= '<td ><input type=text name=PRHours[' . $db->ItemID . '] value=' . $db->Hours . '></td>';
 		$row .= '</tr>';
 		$rows .= $row;
 	}
@@ -160,7 +160,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]) && $_REQUEST['
 	$max = 0;
 
 	echo '<input type=hidden name=EmpNo value=' . $_REQUEST['EmpNo'] . '><input type=hidden name=Offset value=' . $_REQUEST['Offset'] . '>';
-	echo '<table class="timesheet_table">';
+	echo '<table cellpadding="1">';
 	foreach ($Time[$_REQUEST['EmpNo']] as $key=>$date)
 	{
 		$table[$key]['timehead'] = timesheet_head($head);
@@ -228,7 +228,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]) && $_REQUEST['
 		echo '<tr>';
 		echo $table[$key]['timerow'];
 		echo $table[$key]['row'];
-		echo '<td class="cell">' . $total . '</td>';
+		echo '<td >' . $total . '</td>';
 		echo '</tr>';
 		$max = $max + $total;
 
@@ -238,7 +238,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]) && $_REQUEST['
 		$tchours = $max;
 		echo timesheet_prhours($PRHours, $max);
 	}
-	echo '<tr><td class="cell">Total Hours</td><td class="cell"><input type=hidden name=PRHours[TCHours] value=' . $tchours . '> ' . $max . '</td></tr>';
+	echo '<tr><td >Total Hours</td><td ><input type=hidden name=PRHours[TCHours] value=' . $tchours . '> ' . $max . '</td></tr>';
 
 	echo '</table>';
 
