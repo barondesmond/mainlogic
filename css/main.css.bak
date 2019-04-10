@@ -101,7 +101,8 @@ border-color: #787878;
 }
 #assigncolumn2{
 border: 2px;
-border-color: #787878:
+border-color: #787878;
+vertical-align: top;
 
  float:left;
 }
@@ -114,13 +115,13 @@ width: 500px;
 
 
 .gps_table {
-	background-color: #cccccc
+	background-color: #cccccc;
 	vertical-align: text-top;
 }
 
 tr.gps_table td {
 border:1pt solid black;
-	background-color: #cccccc
+	background-color: #cccccc;
 
 }
 
