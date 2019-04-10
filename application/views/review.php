@@ -18,5 +18,5 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 }
 if (isset($save)) { echo $save; } ?>
 </div>
-</p>
+
 
