@@ -117,6 +117,13 @@ border: 3px;
 border-color: black;
 clear:left;
 }
+
+.gps_table{
+border: 3px;
+border-color: black;
+ text-align: center;
+}
+
 .gps_cell1{
 float:left;
 }
