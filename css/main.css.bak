@@ -1,5 +1,5 @@
 
-input.input-readonly, textarea { background: gray; }
+input.readonly, textarea { background: gray; }
 input.input-box, textarea { background: white; }
 
 
@@ -110,6 +110,11 @@ border: 1px;
 border-color: #787878;
 width: 500px;
  float:left;
+}
+
+.gps_cell{
+border: 3px;
+border-color: black;
 }
 
 

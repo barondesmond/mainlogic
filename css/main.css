@@ -112,6 +112,17 @@ width: 500px;
  float:left;
 }
 
+.gps_cell{
+border: 3px;
+border-color: black;
+}
+.gps_cell1{
+float:left;
+}
+.gps_cell2{
+float:left;
+}
+
 
 
 
