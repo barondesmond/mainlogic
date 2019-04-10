@@ -124,7 +124,7 @@ clear:left;
 vertical-align: text-top;
 
 }
-tr.border_bottom td {
+tr.gps_table td {
 border-bottom:1pt solid black;
 }
 
