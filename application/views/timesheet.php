@@ -36,7 +36,12 @@ function hour_row($db, $key)
 {
 	if (isset($db->Hours) && $db->Hours > 0)
 	{
-		$row = '<td class="timesheet_hour_cell"><input type=hidden name=' . $db->ID . '[' . urlencode($db->Date) . '] value=' . $db->Hours . '>' . $db->Hours . '</td>';
+		$row = '<td class="timesheet_hour_cell">';
+		if ($db->Screen != 'Dispatch')
+		{
+			$row .= '<input type=hidden name=' . $db->ID . '[' . urlencode($db->Date) . '] value=' . $db->Hours . '>';
+		}
+		$row .= $db->Hours . '</td>';
 	}
 	else
 	{
@@ -95,7 +100,10 @@ function timesheet_row($db, $head, $select)
 		}
 		elseif (isset($select[$key]) && isset($db->$select[$key]) && isset($db->$display))
 		{
-				$row .= timesheet_select_key($db->ID, $key, $db->$select[$key], $db->$display);
+				if ($db->Screen != 'Dispatch')
+				{
+					$row .= timesheet_select_key($db->ID, $key, $db->$select[$key], $db->$display);
+				}
 				if (isset($db->$display) && $display != $select[$key])
 				{
 					//echo $db->$display;
