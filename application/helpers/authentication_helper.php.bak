@@ -485,7 +485,7 @@ return $db;
 	   if (isset($access) && $access != '')
 	   {
 
-		   $db['access'] = $CI->session->userdata($access);
+		   $db[$access] = $CI->session->userdata($access);
 		   if ($db[$access] != '1')
 		  {
 			   echo $access;
