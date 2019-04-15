@@ -21,7 +21,7 @@ class Dispatch extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-        verify_session('Dispatch'); 
+        verify_session('dispatch'); 
 	}
 
 
