@@ -70,23 +70,23 @@ class Login extends CI_Controller {
 	}
 	public function dispatch()
 	{
-		login_access('dispatch');
+		$this->login_access('dispatch');
 	}
 	public function timesheet()
 	{
-		login_access('timesheet');
+		$this->login_access('timesheet');
 	}
 	public function accounting()
 	{
-		login_access('accounting');
+		$this->login_access('accounting');
 	}
 	public function admin()
 	{
-		login_access('admin');
+		$this->login_access('admin');
 	}
 	public function estimating()
 	{
-		login_access('estimating');
+		$this->login_access('estimating');
 	}
 	public function navigation()
 	{
