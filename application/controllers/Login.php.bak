@@ -46,6 +46,14 @@ class Login extends CI_Controller {
 				   'authorized' => $auth->authorized,
 					'installationId' => $auth->installationId
 				);
+				$arr = array('admin', 'timesheet', 'estimating', 'accounting', 'dispatch');
+				foreach ($arr as $access)
+				{
+					if (isset($auth->$access))
+					{
+						$newdata[$access] = $auth->$access;
+					}
+				}
 				$this->session->set_userdata($newdata);
 				redirect('/', 'refresh');
 		

@@ -484,8 +484,9 @@ return $db;
 	   $db['installationId'] = $CI->session->userdata('installationId'); 
 	   if (isset($access) && $access != '')
 	   {
-		   $db['access'] = $CI->session->userdata('access');
-		   if ($access != $db['access'])
+
+		   $db['access'] = $CI->session->userdata($access);
+		   if ($db[$access]) != '1')
 		  {
 			  redirect('login');
 

@@ -479,15 +479,21 @@ return $db;
 
     function verify_session($access=''){
        $CI = &get_instance();
-	   $db['access'] = $CI->session->userdata('access');
        $db['EmpName'] = $CI->session->userdata('EmpName');
 	   $db['Email'] = $CI->session->userdata('Email');
 	   $db['installationId'] = $CI->session->userdata('installationId'); 
-	   if (isset($access) && $access != '')
+	   if (isset($access) && $access != '' && isset($CI->session->userdate($access)))
 	   {
+		   $db['access'] = $CI->session->userdata($access);
+		   if ($db[$access]) != '1')
+		  {
+			  redirect('login');
 
-	     $auth = empauth($db);
+		  }
+
 	   }
+	    $auth = empauth($db);
+
        if($auth->authorized  !=  '1') {
 		  
           redirect('login');

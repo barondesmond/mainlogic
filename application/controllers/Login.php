@@ -49,7 +49,7 @@ class Login extends CI_Controller {
 				$arr = array('admin', 'timesheet', 'estimating', 'accounting', 'dispatch');
 				foreach ($arr as $access)
 				{
-					if (isset($auth->$access))
+					if (isset($auth->$access) && $auth->$access == '1')
 					{
 						$newdata[$access] = $auth->$access;
 					}
