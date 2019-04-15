@@ -35,6 +35,8 @@ class Admin extends CI_Controller {
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
 		$this->mainnav = $this->load->view('mainnav', $this, true);
+		$this->periodnav = $this->load->view('login_form_period', $this, true);
+
 		$this->inputnav = $this->load->view('login_form', $this, true);
 		$this->centercolumn2 = $this->load->view('centerlogin', $this,true);
 		$this->topnav = $this->load->view('topnav', $this, true);
