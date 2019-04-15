@@ -21,7 +21,7 @@ class Admin extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-        verify_session('accounting'); 
+        verify_session('Dispatch'); 
 	}
 
 

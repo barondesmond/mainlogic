@@ -51,7 +51,7 @@ class Admin extends CI_Controller {
 			$this->auth();
 		}
 		$this->navigation();
-		$this->content = 'Estimating Level Access';
+		$this->content = 'Dispatch Level Access';
 
 
 		$this->load->view('main', $this);
