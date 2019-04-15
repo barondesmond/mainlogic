@@ -490,6 +490,7 @@ return $db;
 		  {
 			   echo $access;
 			   echo $CI->session->userdata($access);
+			   exit;
 			  //redirect('login');
 
 		  }
