@@ -30,7 +30,7 @@
 	function empauth($db)
 	{
 		$uri = 'empauth_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&installationId=' . $db['installationId'];
-		if (isset($db['access'])
+		if (isset($db['access']))
 		{
 			$uri .= '&access=' . $db['access'];
 		}
