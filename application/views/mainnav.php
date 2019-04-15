@@ -22,8 +22,8 @@
      </div>
      <div class="clearfix colelem" id="pu4063"><!-- group -->
       <div class="clearfix grpelem" id="u4063"><!-- group -->
-	
-       <img class="grpelem" id="u4159-4" alt="Accounting" src="/images/u4159-4.png?crc=163544750" data-image-width="141"/><!-- rasterized frame -->
+	      <a class="nonblock nontext Button clearfix colelem" id="u4057" href="/accounting/" data-visibility="changed" style="visibility:hidden">
+       <img class="grpelem" id="u4159-4" alt="Accounting" src="/images/u4159-4.png?crc=163544750" data-image-width="141"/></A><!-- rasterized frame -->
       </div>
       <div class="clearfix grpelem" id="u4066"><!-- group -->
        <img class="grpelem" id="u4163-4" alt="Estimating" src="/images/u4163-4.png?crc=4282423050" data-image-width="126"/><!-- rasterized frame -->
