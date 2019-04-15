@@ -30,7 +30,7 @@
 	function empauth($db)
 	{
 		$uri = 'empauth_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&installationId=' . $db['installationId'];
-		if (isset($db['access'])
+		if (isset($db['access']))
 		{
 			$uri .= '&access=' . $db['access'];
 		}
@@ -479,13 +479,13 @@ return $db;
 
     function verify_session($access=''){
        $CI = &get_instance();
-
+	   $db['access'] = $CI->session->userdata('access');
        $db['EmpName'] = $CI->session->userdata('EmpName');
 	   $db['Email'] = $CI->session->userdata('Email');
 	   $db['installationId'] = $CI->session->userdata('installationId'); 
 	   if (isset($access) && $access != '')
 	   {
-	     $db['access'] = $access;
+
 	     $auth = empauth($db);
 	   }
        if($auth->authorized  !=  '1') {
