@@ -6,7 +6,7 @@ class Timesheet extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-        verify_session(); 
+        verify_session('timesheet'); 
 	}
 
 
