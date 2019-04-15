@@ -54,7 +54,7 @@ foreach ($array as $key)
 }
 echo '<table class="gps_table">';
 location_gps_div('location_gps', $Details->location_gps, $Details->location_latitude,  $Details->location_longitude, $Details->location_map);
-location_gps_div('override_gps', $Details->override_gps, $Details->override_longitude, $Details->override_longitude, $Details->override_map);
+location_gps_div('override_gps', $Details->override_gps, $Details->override_latitude, $Details->override_longitude, $Details->override_map);
 echo '</table>';
 echo '</div>';
 
