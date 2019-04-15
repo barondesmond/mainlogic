@@ -486,7 +486,7 @@ return $db;
 	   {
 
 		   $db['access'] = $CI->session->userdata($access);
-		   if ($db[$access]) != '1')
+		   if ($db[$access] != '1')
 		  {
 			  redirect('login');
 

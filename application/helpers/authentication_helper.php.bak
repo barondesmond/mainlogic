@@ -482,8 +482,9 @@ return $db;
        $db['EmpName'] = $CI->session->userdata('EmpName');
 	   $db['Email'] = $CI->session->userdata('Email');
 	   $db['installationId'] = $CI->session->userdata('installationId'); 
-	   if (isset($access) && $access != '' && isset($CI->session->userdate($access)))
+	   if (isset($access) && $access != '')
 	   {
+
 		   $db['access'] = $CI->session->userdata($access);
 		   if ($db[$access]) != '1')
 		  {
