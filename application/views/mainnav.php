@@ -22,7 +22,7 @@
      </div>
      <div class="clearfix colelem" id="pu4063"><!-- group -->
       <div class="clearfix grpelem" id="u4063"><!-- group -->
-	      <a class="nonblock nontext Button clearfix colelem"  href="/accounting/" data-visibility="changed" style="visibility:hidden">
+	      <a  href="/accounting/" data-visibility="changed" style="visibility:hidden">
        <img class="grpelem" id="u4159-4" alt="Accounting" src="/images/u4159-4.png?crc=163544750" data-image-width="141"/></A><!-- rasterized frame -->
       </div>
       <div class="clearfix grpelem" id="u4066"><!-- group -->
