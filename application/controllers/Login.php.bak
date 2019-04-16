@@ -65,7 +65,7 @@ class Login extends CI_Controller {
 	public function login_access($access)
 	{
 		$this->navigation();
-		$this->Content = $access . ' level access required';
+		$this->content = $access . ' level access required';
 		$this->load->view('main', $this);
 	}
 	public function dispatch()
