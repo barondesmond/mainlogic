@@ -59,8 +59,7 @@ class Login extends CI_Controller {
 		
 		}
 		}
-		print_r($auth);
-		exit;
+	
 	
 	}
 

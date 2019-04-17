@@ -119,6 +119,10 @@ class Login extends CI_Controller {
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'LOGIN')
 		{
 			$this->auth();
+			if (isset($this->auth->authorized) && $this->auth->authorized != '1')
+			{
+				$this->content = 'Login failed, not authorized';
+			}
 		}
 		$this->navigation();
 
