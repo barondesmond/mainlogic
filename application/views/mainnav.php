@@ -13,7 +13,7 @@
  
     <div class="clearfix colelem" id="u4168"><!-- column -->
      <div class="clearfix colelem" id="pu4057"><!-- group -->
-      <a class="nonblock nontext Button clearfix colelem" id="u4057" href="<?php echo base_url() ?>/timesheet/" data-visibility="changed" style="visibility:hidden"><!-- group --><img class="grpelem" id="u4150-4" alt="Time Sheet" src="/images/u4150-4.png?crc=4175918297" data-image-width="141"/><!-- rasterized frame --></a>
+      <a class="nonblock nontext Button clearfix colelem" id="u4057" href="<?php echo base_url() ?>/timesheet/" data-visibility="changed" style="visibility:hidden"><!-- group --><img class="grpelem" id="u4150-4" alt="Time Sheet" src="<?php echo base_url() ?>/images/u4150-4.png?crc=4175918297" data-image-width="141"/><!-- rasterized frame --></a>
 
       <div class="clearfix grpelem" id="u4060"><!-- group -->
 	<a href="<?php echo base_url() ?>/dispatch/">
@@ -26,7 +26,7 @@
        <img class="grpelem" id="u4159-4" alt="Accounting" src="<?php echo base_url() ?>/images/u4159-4.png?crc=163544750" data-image-width="141"/></A><!-- rasterized frame -->
       </div>
       <div class="clearfix grpelem" id="u4066"><!-- group -->
-	  <a href="/estimating/">
+	  <a href="<?php echo base_url() ?>/estimating/">
        <img class="grpelem" id="u4163-4" alt="Estimating" src="<?php echo base_url() ?>/images/u4163-4.png?crc=4282423050" data-image-width="126"/></a><!-- rasterized frame -->
       </div>
      </div>
