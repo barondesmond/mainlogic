@@ -69,6 +69,10 @@ class Login extends CI_Controller {
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'LOGIN')
 		{
 			$this->auth();
+			if (isset($this->auth->authorized) && $this->auth->authorized == '1')
+			{
+				redirect(base_url() . $access);
+			}
 		}
 		$this->navigation();
 		$this->content = $access . ' level access required';
