@@ -489,7 +489,7 @@ return $db;
 		   if ($db[$access] != '1')
 		  {
 	
-			  redirect('login/' . $access);
+			  redirect('login/' . strtolower($access));
 
 		  }
 
