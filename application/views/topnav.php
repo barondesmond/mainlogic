@@ -1,6 +1,6 @@
 <div id="leftcolumn">
 <?php 
-	echo '<form method=post action="/' . $controller . '/' . $func . '/">';
+	echo '<form method=post action="">';
 if (isset($periodnav))
 {
 	echo $periodnav;
