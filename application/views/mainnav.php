@@ -22,7 +22,7 @@
      </div>
      <div class="clearfix colelem" id="pu4063"><!-- group -->
       <div class="clearfix grpelem" id="u4063"><!-- group -->
-	      <a  href="<? echo base_url() ?>/accounting/">
+	      <a  href="<?php echo base_url() ?>/accounting/">
        <img class="grpelem" id="u4159-4" alt="Accounting" src="/images/u4159-4.png?crc=163544750" data-image-width="141"/></A><!-- rasterized frame -->
       </div>
       <div class="clearfix grpelem" id="u4066"><!-- group -->
