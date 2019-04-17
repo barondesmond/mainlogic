@@ -66,6 +66,10 @@ class Login extends CI_Controller {
 
 	public function login_access($access)
 	{
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'LOGIN')
+		{
+			$this->auth();
+		}
 		$this->navigation();
 		$this->content = $access . ' level access required';
 		$this->load->view('main', $this);
