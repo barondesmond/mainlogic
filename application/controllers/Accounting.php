@@ -43,6 +43,13 @@ class Accounting extends CI_Controller {
 
 
 	}
+	
+	public function billing()
+	{
+		$this->navigation();
+		$this->content = 'Billing';
+		$this->load->view('main', $this);
+	}
 
 	public function index()
 	{

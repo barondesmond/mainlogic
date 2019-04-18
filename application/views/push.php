@@ -30,6 +30,8 @@ $push_element = '
 
 $nav['timesheet'] = array("Employee Time" => base_url() . "/timesheet/", "TimeSheet" => base_url() . "/timesheet/timesheet/", "GPS Review" => base_url() . "/timesheet/gps/", 'PTO BY EMPLOYEE' => base_url() . "/timesheet/pto/", 'EMPLOYEE REPORT'=>base_url() . '/timesheet/reports/', "Job Assignment" => base_url() . "/timesheet/assign/", "Rules"=> base_url() . "/timesheet/rules/", "Non-Billable Report" => base_url() . "/timesheet/nonbillable/", "Process Employee Reports" => base_url() . "/timesheet/reports/", "LOGOUT" => base_url() . "/login/logout/");
 
+$nav['accounting'] = array("Billing" => base_url() . "/accounting/billing/",  "LOGOUT" => base_url() . "/login/logout/");
+
 if (isset($controller) && isset($nav[$controller]))
 {
 	$push = $nav[$controller];
