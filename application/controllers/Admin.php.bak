@@ -51,7 +51,7 @@ class Admin extends CI_Controller {
 			$this->auth();
 		}
 		$this->navigation();
-
+		$this->content = 'Admin Level Access';
 
 
 		$this->load->view('main', $this);
