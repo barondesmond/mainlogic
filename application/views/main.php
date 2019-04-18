@@ -65,7 +65,7 @@ var outPush = [1,2,4,5,9,10,11,12,13];
 
     if('true' == 'true'){
       var sidebarHeading = document.createElement("H2");
-      sidebarHeading.innerHTML += 'TIME ENTRY';
+      sidebarHeading.innerHTML += '<?php echo strtoupper($controller); ?>';
       $('#sidebar-heading').append(sidebarHeading);
     }
   }, 500);  

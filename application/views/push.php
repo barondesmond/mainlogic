@@ -20,7 +20,7 @@ $push_element = '
     navMenu.push({label: "", url: "http://", target: "_self"});
     navMenu.push({label: "", url: "http://", target: "_self"});
     navMenu.push({label: "", url: "http://", target: "_self"});
-    navMenu = navMenu.splice(0,originalCount+8+0);
+    navMenu = navMenu.splice(0,originalCount+10+0);
     return navMenu;
   }';
 
@@ -31,6 +31,15 @@ $push_element = '
 $nav['timesheet'] = array("Employee Time" => base_url() . "/timesheet/", "TimeSheet" => base_url() . "/timesheet/timesheet/", "GPS Review" => base_url() . "/timesheet/gps/", 'PTO BY EMPLOYEE' => base_url() . "/timesheet/pto/", 'EMPLOYEE REPORT'=>base_url() . '/timesheet/reports/', "Job Assignment" => base_url() . "/timesheet/assign/", "Rules"=> base_url() . "/timesheet/rules/", "Non-Billable Report" => base_url() . "/timesheet/nonbillable/", "Process Employee Reports" => base_url() . "/timesheet/reports/", "LOGOUT" => base_url() . "/login/logout/");
 
 $nav['accounting'] = array("Billing" => base_url() . "/accounting/billing/",  "LOGOUT" => base_url() . "/login/logout/");
+
+$nav['estimating'] = array("LOGOUT" => base_url() . "/login/logout/");
+
+$nav['dispatch'] = array("LOGOUT" => base_url() . "/login/logout/");
+
+$nav['admin'] = array("LOGOUT" => base_url() . "/login/logout/");
+
+$nav['login'] = array("LOGIN" => base_url() . "/login/login/", "LOGOUT" => base_url() . "/login/logout/");
+
 
 if (isset($controller) && isset($nav[$controller]))
 {
@@ -43,6 +52,7 @@ else
 
 if (isset($push))
 {
+	$i = count($push) + 1;
 	echo " function push_element(){
     navMenu = [];
     var originalCount = navMenu.length;";
@@ -50,7 +60,7 @@ if (isset($push))
 	{
 		echo 'navMenu.push({label: "' . $label . '", url: "' . $url . '", target: "_self"});';
 	}
-	echo 'navMenu = navMenu.splice(0,originalCount+8+0);
+	echo 'navMenu = navMenu.splice(0,originalCount+' . $i . '+0);
     return navMenu;  
 	}';
 }
