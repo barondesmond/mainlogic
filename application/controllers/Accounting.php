@@ -48,7 +48,7 @@ class Accounting extends CI_Controller {
 	public function billing()
 	{
 		$this->navigation();
-		$this->content = 'Billing';
+		$this->content = $this->load->view('continuation', $this, true);
 		$this->load->view('main', $this);
 	}
 
