@@ -54,7 +54,3 @@ for ($row=1; $row < $rows; $row++)
 
 echo '</table>';
 }
-if (isset($continuation))
-{
-	print_r($continuation);
-}
