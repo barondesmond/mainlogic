@@ -2,9 +2,9 @@
 if (!isset($rows) || !isset($pages))
 {
 	$rows = '29';
-	$pages = '1';
+	$pages = '2';
 }
-for ($page=0; $page< $pages; $page++)
+for ($page=1; $page< $pages; $page++)
 {
 	echo '
 
@@ -22,27 +22,39 @@ for ($page=0; $page< $pages; $page++)
 <tr id="row11"><td id="a11"></td><td id="b11"></td><td id="c11"></td><td id="d11">Application</td><td id="e11"></td><td id="f11">Stored</td><td id="g11" >And Stored</td><td id="h11"><td id="i11">)C - G)</td><td id="j11">Rate)</td><td id="k11"></td><td id="l11">Variable</td></tr>
 <tr id="row12"><td id="a12"></td><td id="b12"></td><td id="c12"></td><td id="d12">(D + E)</td><td id="e12"></td><td id="f12">(Not In</td><td id="g12" >To Date</td><td id="h12"><td id="i12"></td><td id="j12"></td><td id="k12"></td><td id="l12">Retainage</td></tr>
 <tr id="row13"><td id="a13"></td><td id="b13"></td><td id="c13"></td><td id="d13"></td><td id="e13"></td><td id="f13">D or E)</td><td id="g13" >(D + E + F)</td><td id="h1e"><td id="i12"></td><td id="j12"></td><td id="k12"></td><td id="l12">Rate (%)</td></tr>';
-$collet = array('a' => 'row', 'b' => '<input type=text name="$vallet">', 'c' => '<input type=text name="$vallet" value="{$vallet}">' , 'd' => '$page[$j][$de]', 'e' => '<input type=text name="$vallet">', 'f' => '<input type=text name="$vallet">', 'g' => '$d+$e+$f', 'h' => '$g/$c', 'i' => '$c-$g', 'j' => '$g*$j', 'k' => '$k', 'l' => '<input type=text name="$vallet">');
+$collet = array('a' => '{row}', 'b' => '<input type=text name="continuation[{page}][{row}][{col}]" value={val}>', 'c' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}">' , 'd' => '{val}', 'e' => '<input type=text name="continuation[{page}][{row}][{col}]" value={val}>', 'f' => '<input type=text name="continuation[{page}][{row}][{col}]" value={val}>', 'g' => '{val}', 'h' => '{val}', 'i' => '{val}', 'j' => '{val}', 'k' => '{val}', 'l' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}">');
+
 for ($row=1; $row < $rows; $row++)
 {
 	$off = 14 + $row;
 
 	echo '<tr id="row' . $off . '">';
+	$col = 1;
 	foreach ($collet as $let=>$ev)
 	{
 		$vallet = $let . $row;
-		if (!isset(${$vallet}) && isset(${$ev}))
+		$ev = str_replace('{page}', $page, $ev);
+		$ev = str_replace('{row}', $row, $ev);
+		$ev = str_replace('{col}', $col, $ev);
+		if (isset($continuation->$page->$row->$col))
 		{
-			${$vallet} = ${$ev};
+			$val = $continuation->$page->$row->$col;
 		}
 		else
 		{
-			${$vallet} = str_replace('$vallet', $vallet, $ev);
+			$val = '';
 		}
-		echo '<td id="' . $vallet . '">' . ${$vallet} . '</td>';
+		$ev = str_replace('{val}', $val, $ev);
+
+		echo '<td id="' . $vallet . '">' . $ev . '</td>';
+		$col++;
 	}
 	echo '</tr>' . "\r\n";
 }
 
 echo '</table>';
+}
+if (isset($continuation))
+{
+	print_r($continuation);
 }

@@ -48,7 +48,7 @@
 
 	function continuation()
 	{
-		$uri = 'continuation_json.php?continuation=1&' . http_build_query($_REQUEST);
+		$uri = 'continuation_json.php?continuation_update=1&' . http_build_query($_REQUEST);
 		return app_api($uri);
 	}
 

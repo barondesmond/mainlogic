@@ -38,7 +38,7 @@ class Accounting extends CI_Controller {
 		$this->periodnav = '';
 
 		$this->inputnav = '';
-		$this->centercolumn1 = '';
+		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
 		$this->centercolumn2 = '';
 		$this->topnav = $this->load->view('topnav', $this, true);
 

@@ -38,11 +38,18 @@
 	return $auth;
 	}
 
+
 	function admin($db)
 	{
 		$uri = 'admin_json.php?EmpName=' . urlencode($db['EmpName']) . '&Email='  . urlencode($db['Email']) . '&username=' . urlencode($db['username']) . '&password=' . md5($db['password']);
 		$auth = app_api($uri, 'auth');
 	return $auth;
+	}
+
+	function continuation()
+	{
+		$uri = 'continuation_json.php?continuation=1&' . http_build_query($_REQUEST);
+		return app_api($uri);
 	}
 
 	function delete_job_group_employee()
