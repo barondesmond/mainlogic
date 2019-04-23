@@ -277,7 +277,7 @@ function select_group($key, $id, $JobGroup)
 			$selected = '';
 		}
 
-		$Employee[$event->EmpNo] = '<option value="/timesheet/review/?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
+		$Employee[$event->EmpNo] = '<option value="?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
 		$Job[$event->EmpNo][$event->Screen][$key] = '<b>' . $event->Name . $event->Dispatch .  ' ' . $event->LocName . '</b>';
 
 			//if ($event->Screen != 'Dispatch')

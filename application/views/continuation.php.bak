@@ -37,7 +37,7 @@ for ($row=1; $row < $rows; $row++)
 		}
 		else
 		{
-			${$vallet} = $ev;
+			${$vallet} = str_replace('$vallet', $vallet, $ev);
 		}
 		echo '<td id="' . $vallet . '">' . ${$vallet} . '</td>';
 	}
