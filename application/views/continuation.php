@@ -1,3 +1,11 @@
+<style>
+table, th, td {
+border: 1px solid black;
+padding: 1px;
+}
+</style>
+
+
 <?php
 if (!isset($rows) || !isset($pages))
 {
@@ -9,7 +17,7 @@ for ($page=1; $page< $pages; $page++)
 	echo '
 
 <table id="page' . $page . '">
-<tr id="row1"><td id="ab12 colspan="2" rowspan="2">CONTINUATION SHEET</td><td id="c1"></td><td id="d1"></td><td id="e1"></td><td id="f1"></td><td id="g1"></td><td id="h1"></td><td id="i1"></td><td id="j1"></td><td id="k1"></td><td id="l1"></td></tr>
+<tr id="row1"><td id="ab12" colspan="2" rowspan="2">CONTINUATION SHEET</td><td id="c1"></td><td id="d1"></td><td id="e1"></td><td id="f1"></td><td id="g1"></td><td id="h1"></td><td id="i1"></td><td id="j1"></td><td id="k1"></td><td id="l1"></td></tr>
 <tr id="row2"><td id="c2"></td><td id="d2"></td><td id="e2"></td><td id="f2"></td><td id="g2">Page 2 Of<td id="h2"><input type=text name="h2" id="h2" length="3"></td><td id="ij2" colspan="2">Pages</td><td id="k2"></td><td id="l2"></td></tr>
 <tr id="row3"><td id="ab3" colspan="2">ATTACHMENT TO PAY APPLICATION</td><td id="c3"></td><td id="d3"></td><td id="e3"></td><td id="fgh3" colspan="3">APPLICATION NUMBER:</td><td id="i3"></td><td id="j3"></td><td id="k3"></td><td id="l3"></td></tr>
 <tr id="row4"><td id="a4"></td><td id="b4">PROJECT:</td><td id="c4"></td><td id="d4"></td><td id="e4"></td><td id="fgh4" colspan="3">APPLICATION DATE:</td><td id="i4"><input type=text name="i4"></td><td id="j4"></td><td id="k4"></td><td id="l4"></td></tr>
