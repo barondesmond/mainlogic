@@ -1,8 +1,11 @@
  <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+	
+
 
 	function app_api($uri, $empauth='')
 	{
 		static $auth;
+		$par = parse_url($uri);
 		if (!$auth)
 		{
 			$auth = '';
@@ -11,12 +14,22 @@
     "ssl"=>array(
         "verify_peer"=>false,
         "verify_peer_name"=>false,
-    ),
+		 'method' => 'POST',
+         'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+         'content' => $par['query'] . $auth
+                                
+    ),'http'=> array('method' => 'POST',
+         'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+         'content' => $par['query'] . $auth), 
+	  'https'=> array('method' => 'POST',
+         'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+         'content' => $par['query'] . $auth)
+
 );  
 
 
 
-  		$url = APPURL . $uri . $auth;
+  		$url = APPURL . $par['path'];
 		$api = file_get_contents($url,false, stream_context_create($arrContextOptions));
 		$json = json_decode($api);
 		if ($empauth == 'auth' && $auth == '' && isset($json->EmpNo) && isset($json->authorized) && $json->authorized == 1)
@@ -48,7 +61,7 @@
 
 	function continuation()
 	{
-		$uri = 'continuation_json.php?continuation=1&' . http_build_query($_REQUEST);
+		$uri = 'continuation_json.php?continuation_update=1&' . http_build_query($_REQUEST);
 		return app_api($uri);
 	}
 
