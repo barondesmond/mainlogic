@@ -4,6 +4,9 @@ border: 1px solid black;
 padding: 1px;
 text-align: center;
 }
+#nopqrstuvwxyz1014 {
+font-size: 8px;
+}
 </style>
 
 
@@ -21,6 +24,9 @@ function apphead()
 	$hrow[8] = array('<tr id="row8"><td id="hi8" colspan="2"></td>', '<td id="qrstuvw8" colspan="7"></td>', '<td id="x8"><input type=text name="sheet[other]" value="{other}" size="1"></td>', '<td id="yz8" colspan="2"></td></tr>');
 	$hrow[9] = array('<tr id="row9"><td id="hi9" colspan="2"></td>','<td id="qrstuvwxyz9" colspan="10"></td></tr>');
 	$hrow[10] = array('<tr id="row10"><td id="abc10" colspan="3">CONTRACT FOR:</td>','<td id="defghijklmnopqrs10" colspan="16"><input type=text name="sheet[contractfor]" value="{contractfor}" size="59"></td>', '<td id="tuvwxyz10" colspan="7" ></td></tr>'); 
+	$hrow[11] = array('<tr id="row11"><td id="abcdefghijl11" colspan="12">CONTRACTOR\'S APPLICATION FOR PAYMENT</td>','<td id="m11" colspan="1"></td>', '<td id="nopqrstuvwxyz1014" colspan="13" rowspan="4"> <style="font-size:6px;">The undersigned Contractor certifies that to the best of the Contractor\'s knowledge, information and belief the Work covered by this<br> Application for Payment has been completed in accordance with the Contract Documents, that all amounts have been paid by the Contractor<br> for Work for which previous Certificates for Payment were issued and payments received from the Owner, and that current payment shown<br> therein is now due.</td></tr>');								$hrow[12] = array('<tr id="row12"><td id="abcdefghijkl12" colspan="12">Application is made for payment, as shown below, in connection with the Contract.</td>', '<td></td></tr>');	
+	$hrow[13] = array('<tr id="row13"><td id="abcdefghijkl13" colspan="12">Continuation Sheet is attached.											</td>', '<td></td></tr>');
+	$hrow[14] = array('<tr id="row14"><td id="abcdefghijkl14" colspan="12"></td>', '<td></td></tr>');
 	return $hrow;
 }
 
