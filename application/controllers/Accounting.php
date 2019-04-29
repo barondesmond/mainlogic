@@ -46,20 +46,25 @@ class Accounting extends CI_Controller {
 
 
 	}
+
+
+
 	
 	public function billing()
 	{
 		$continuation = continuation();
+		$this->navigation();
+
+	
+		$this->content = $this->load->view('continuation', $continuation, true);
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'PRINT')
 		{
-
-			$this->load->view('continuation', $continuation);
-			return true;
+			$this->load->view('printmain', $this);
 		}
-		$this->navigation();
-			$this->content = $this->load->view('continuation', $continuation, true);
-
-		$this->load->view('main', $this);
+		else
+		{
+			$this->load->view('main', $this);
+		}
 	}
 
 	public function index()

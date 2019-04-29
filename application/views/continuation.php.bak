@@ -1,10 +1,17 @@
+
 <style>
+
 table, th, td {
 border: 1px solid black;
 padding: 1px;
+cellpadding: 0px;
 text-align: center;
+background-color: white;
 }
 #nopqrstuvwxyz1014 {
+font-size: 8px;
+}
+#nz2731 {
 font-size: 8px;
 }
 </style>
@@ -35,6 +42,20 @@ function apphead()
 	$hrow[20] = array('<tr id="row20"><td id="ab20" colspan="2">5. RETAINAGE:</td>','<td id="cdefghijkl20" colspan="10"></td>','<td id="m22" colspan="1"></td>','<td id="no20" colspan="2">County Of:</td>','<td id="pqrst20" colspan="5"><input type=text name="sheet[countyof]" value="{countyof}"></td>','<td id="uvwxyz20" colspan="6"></td></tr>');
 	$hrow[21] = array('<tr id="row21"><td id="a21" colspan="1">a.</td>','<td id="b21" colspan="1"><input type=text name="sheet[percentcompleted]" value="{percentcompleted}" size="3"></td>','<td id="cde21" colspan="3">Of Completed Work</td>','<td id="f21" colspan="1"></td><td id="g21" colspan="1">$</td>','<td id="hij21" colspan="3">{completedwork}</td>','<td id="kl21" colspan="2"></td>','<td id="m22" colspan="1"></td>','<td id="nopqr21" colspan="5">Subscribed and sworn to before</td>','<td id="stuvwxyz21" colspan="8"></td></tr>');
 	$hrow[22] = array('<tr id="row22"><td id="a22" colspan="1"></td>','<td id="bcdef22" colspan="5">(Columns D + E on Continuation Sheet)</td>','<td id="ghijkl22" colspan="6"></td>','<td id="m22" colspan="1"></td>','<td id="n22">me this</td>','<td id="o22"></td>','<td id="p22"><input type=text name="sheet[methis]" value="{methis}" size="3"><td id="qr22" colspan="2">day of</td>','<td id="stuv22" colspan="4"><input type=text name="sheet[dayof]"></td>','<td id="wxyz22" colspan="4"></td></tr>');
+	$hrow[23] = array('<tr id="row23"><td id="a23">b.</td><td id="b23"><input type=text name="sheet[percentstored]" value="{percentstored}" size="3"></td>','<td id="cde23" colspan="3">of Stored Material</td>','<td id="f23"></td>','<td id="g23">$</td>','<td id="hij23" colspan="3">{storedmaterial}</td>','<td id="kl23" colspan="2"></td>','<td id="m23"></td>','<td id="nopqrstuvwxyz23" colspan="13"></td></tr>');
+	$hrow[24] = array('<tr id="row24"><td id="a24"></td><td id="bcdef24" colspan="5">(Column F on Continuation Sheet)</td>','<td id="ghijkl24" colspan="6">','<td id="m24"></td>','<td id="no24" colspan="2">Notary Public</td>','<td id="pqrstuv24" colspan="7"><input type=text name="sheet[notarypublic]" value="{notarypublic}"></td>','<td id="wxyz24" colspan="4"></td></tr>');
+	$hrow[25] = array('<tr id="row25"><td id="abcdef25" colspan="6">Total Retainage (Line 5a + 5b) or</td>','<td id="ghijkl24" colspan="6"></td>','<td id="m25"></td>','<td id="nopqr24" colspan="5">My Commission Expires:</td>','<td id="stuvw24" colspan="5"><input type=text name=sheet"[commissionexpires]" value="{commissionexpires}"></td>','<td id="xyz25" colspan="3"></td></tr>');
+	$hrow[26] = array('<tr id="row26"><td id="abcdefg26" colspan="7">Total in Column I of Continuation Sheet--------						</td>','<td id="h26">$</td>','<td id="ijkl26" colspan="4">{totalretainage}</td>','<td id="m26"></td>','<td id="nopqrst26" colspan="7">CERTIFICATE FOR PAYMENT						</td>','<td id="uvwxyz26" colspan="6"></td></tr>');
+	$hrow[27] = array('<tr id="row27"><td id="abcdefg27" colspan="7">6. TOTAL EARNED LESS RETAINAGE-----------						</td>','<td id="h27">$</td>','<td id="ijkl26" colspan="4">{lessretainage}</td>','<td id="m27"></td>','<td id="nz2731" colspan="13" rowspan="5">
+	In accordance with Contract Documents, based on on-site observations and the data comprising application, the Architect certifies to the<br>
+	Owner that to the best of the Architect\'s knowledge, information and belief the Work has progressed as indicated, the quality of the Work is<br>
+	in accordance with the Contract Documents, and the Contractor is entitled to payment of the AMOUNT CERTIFIED.		</td></tr>');		
+	$hrow[28] = array('<tr id="row28"><td id="a28"></td>','<td id="bcde26" colspan="4">(Line 4 less Line 5 Total)</td>','<td id="fghijkl28" colspan=7"></td>','<td id="m28"></td></tr>');
+	$hrow[29] = array('<tr id="row29"><td id="abcdefg28" colspan="7">7. Less Previous Certificates for Payment</td>','<td id="hijkl28" colspan="5"></td>','<td id="m29"></td></tr>');
+												
+												
+												
+												
 	return $hrow;
 }
 
@@ -130,7 +151,7 @@ if (isset($sheet))
 
 //page1
 $page = 1;
-echo '<table id="page'. $page . '">';
+echo '<table id="page'. $page . '" width="670px">';
 $hrow = apphead();
 for ($off=1; $off< count($hrow) + 1; $off++)
 {
@@ -140,7 +161,7 @@ echo '</table>';
 
 for ($page=2; $page<= $pages; $page++)
 {
-	echo '<table id="page' . $page . '">';
+	echo '<table id="page' . $page . '" width="670px">';
 	$hrow = conhead($page);
 
 	for ($off=1; $off < 14; $off++)
@@ -148,7 +169,7 @@ for ($page=2; $page<= $pages; $page++)
 		echo collet($hrow[$off], $continuation, $page, $off, $off, '1', $sheet);
 	}		
 
-$collet = array('a' => '{row}', 'b' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="30">', 'c' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" maxlength="10" size="10">' , 'd' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" maxlength="10" size="10">', 'e' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" maxlength="10" size="10">', 'f' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" maxlength="10" size="10">', 'g' => '{val}', 'h' => '{val}', 'i' => '{val}', 'j' => '{val}', 'k' => '{val}', 'l' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" maxlength="5" size="5">');
+$collet = array('a' => '{row}', 'b' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="29">', 'c' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="8">' , 'd' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="8">', 'e' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="8">', 'f' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="8">', 'g' => '{val}', 'h' => '{val}', 'i' => '{val}', 'j' => '{val}', 'k' => '{val}', 'l' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="1">');
 
 
 for ($row=1; $row < $rows; $row++)
@@ -163,3 +184,4 @@ echo '</table>';
 
 }
 $off++;
+

@@ -52,12 +52,12 @@ class Accounting extends CI_Controller {
 		$continuation = continuation();
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'PRINT')
 		{
-			echo 'print';
+
 			$this->load->view('continuation', $continuation);
 			return true;
 		}
 		$this->navigation();
-			$this->content = $this->load->view('continuation', $continuation, true);
+		$this->content = $this->load->view('continuation', $continuation, true);
 
 		$this->load->view('main', $this);
 	}
