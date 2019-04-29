@@ -7,6 +7,7 @@ padding: 1px;
 cellpadding: 0px;
 text-align: center;
 background-color: white;
+font-size: 10px;
 }
 #nopqrstuvwxyz1014 {
 font-size: 8px;
@@ -53,6 +54,8 @@ function apphead()
 	$hrow[28] = array('<tr id="row28"><td id="a28"></td>','<td id="bcde26" colspan="4">(Line 4 less Line 5 Total)</td>','<td id="fghijkl28" colspan=7"></td>','<td id="m28"></td></tr>');
 	$hrow[29] = array('<tr id="row29"><td id="abcdefg29" colspan="7">7. Less Previous Certificates for Payment</td>','<td id="hijkl29" colspan="5"></td>','<td id="m29"></td></tr>');
 	$hrow[30] = array('<tr id="row30"><td id="a30"></td>','<td id="bcdefg30" colspan="6">(Line 6 from prior Certificate)-------------------$					</td>','<td id="h30">$</td>','<td id="ijkl30" colspan="4"><input type=text name="sheet[priorcertificate]" value="{priorcertificate}"></td>','<td id="m30"></td></tr>');
+	$hrow[31] = array('<tr id="row31"><td id="abcdefg31" colspan="7">8. CURRENT PAYMENT DUE--------------------------$						</td>','<td id="h31">$</td>','<td id="ijkl31" colspan="4"><input type=text name="sheet[paymentdue]" value="{paymentdue}"></td>','<td id="m31"></td></tr>');
+	$hrow[32] = array('<tr id="row32"><td id="abcdefg32" colspan="7">9. BALANCE TO FINISH, INCLUDING RETAINAGE</td>','<td id="hijkl32" colspan="5"></td>','<td id="m32"></td>','<td id="nopqrst32" colspan="7">AMOUNT CERTIFIED ---------------------------------- $</td>','<td id="uvwxyz32" colspan="6"></td></tr>');
 												
 												
 												
@@ -152,7 +155,7 @@ if (isset($sheet))
 
 //page1
 $page = 1;
-echo '<table id="page'. $page . '" width="670px">';
+echo '<table id="page'. $page . '" width="1200px">';
 $hrow = apphead();
 for ($off=1; $off< count($hrow) + 1; $off++)
 {
@@ -162,7 +165,7 @@ echo '</table>';
 
 for ($page=2; $page<= $pages; $page++)
 {
-	echo '<table id="page' . $page . '" width="670px">';
+	echo '<table id="page' . $page . '" width="1200px">';
 	$hrow = conhead($page);
 
 	for ($off=1; $off < 14; $off++)
