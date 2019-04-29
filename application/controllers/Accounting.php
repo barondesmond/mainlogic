@@ -39,7 +39,9 @@ class Accounting extends CI_Controller {
 
 		$this->inputnav = '';
 		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
-		$this->centercolumn2 = '';
+		$this->centercolumn2 = 'PRINT';
+		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+
 		$this->topnav = $this->load->view('topnav', $this, true);
 
 
@@ -48,8 +50,15 @@ class Accounting extends CI_Controller {
 	public function billing()
 	{
 		$continuation = continuation();
+		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'PRINT')
+		{
+
+			$this->load->view('continuation', $continuation);
+			return true;
+		}
 		$this->navigation();
-		$this->content = $this->load->view('continuation', $continuation, true);
+			$this->content = $this->load->view('continuation', $continuation, true);
+
 		$this->load->view('main', $this);
 	}
 

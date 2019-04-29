@@ -1,5 +1,5 @@
 <?php
-if (!isset($centercolumn2))
+if (!$centercolumn2)
 {
 	$centercolumn2 = 'ADD';
 }

@@ -14,7 +14,7 @@ font-size: 8px;
 
 function apphead()
 {
-	$hrow[1] = array('<tr id="row1"><td id="abcdefg1" colspan="7">APPLICATION AND CRERTIFICATE FOR PAYMENT</td>','<td id="hijklmnopqrstu1" colspan="14"></td>', '<td id="vw2" colspan="2">PAGE ONE OF', '<input type=text name="sheet[pages]" id="h2" size="1" value="{pages}">', '<td id="yz1" colspan="2">PAGES</td></tr>');
+	$hrow[1] = array('<tr id="row1"><td id="abcdefg1" colspan="7">APPLICATION AND CRERTIFICATE FOR PAYMENT</td>','<td id="hijklmnopqrst1" colspan="13"></td>', '<td id="uvw2" colspan="3">PAGE ONE OF', '<input type=text name="sheet[pages]" id="h2" size="1" value="{pages}">', '<td id="yz1" colspan="2">PAGES</td></tr>');
 	$hrow[2] = array('<tr id="row2"><td id="abc2" colspan="3">TO OWNER:</td>', '<td id="defghi2" colspan="6"></td>','<td id="jkl2" colspan="3">PROJECT:</td>', '<td id="mnopqr2" colspan="6"></td>', '<td id="stu2" colspan="3">APPLICATION #:</td>', '<td id="vw2" colspan="2"><input type=text name=sheet[application] value="{application}"></td>', '<td id="xyz2" colspan="3">Distribution to:</td></tr>');
 	$hrow[3] = array('<tr id="row3"><td id="abcdefg345" colspan="7" rowspan="3"><textarea name="sheet[toowner]" rows="3" cols="40">{toowner}</textarea></td>', '', '', '<td id="jklmnop345" colspan="7" rowspan="3"><textarea name="sheet[project]" rows="3" cols="40">{project}</textarea></td>', '', '', '<td id="stu3" colspan="3">PERIOD TO:</td>', '<td id="vw3" colspan="2"><input type=text name="sheet[periodto]" value="{periodto}"></td>', '', '', '<td id="z3"></td></tr>');
 	$hrow[4] = array('<tr id="row4"><td id="hi4" colspan="2"></td>', '<td id="qr4" colspan="2"></td>', '<td id="stu4" colspan="3">PROJECT NOS:</td>','<td id="vw4" colspan="2"><input type=text name="sheet[projectnos]" value="{projectnos}"></td>', '<td id="x4" colspan="1"><input type=text name="sheet[owner]" value="{owner}" size="1"></td>','<td id="yz4" colspan=2">Owner</td></tr>');
@@ -27,6 +27,15 @@ function apphead()
 	$hrow[11] = array('<tr id="row11"><td id="abcdefghijl11" colspan="12">CONTRACTOR\'S APPLICATION FOR PAYMENT</td>','<td id="m11" colspan="1"></td>', '<td id="nopqrstuvwxyz1014" colspan="13" rowspan="4"> <style="font-size:6px;">The undersigned Contractor certifies that to the best of the Contractor\'s knowledge, information and belief the Work covered by this<br> Application for Payment has been completed in accordance with the Contract Documents, that all amounts have been paid by the Contractor<br> for Work for which previous Certificates for Payment were issued and payments received from the Owner, and that current payment shown<br> therein is now due.</td></tr>');								$hrow[12] = array('<tr id="row12"><td id="abcdefghijkl12" colspan="12">Application is made for payment, as shown below, in connection with the Contract.</td>', '<td></td></tr>');	
 	$hrow[13] = array('<tr id="row13"><td id="abcdefghijkl13" colspan="12">Continuation Sheet is attached.											</td>', '<td></td></tr>');
 	$hrow[14] = array('<tr id="row14"><td id="abcdefghijkl14" colspan="12"></td>', '<td></td></tr>');
+	$hrow[15] = array('<tr id="row15"><td id="abcdefg15" colspan="7">1. ORIGINAL CONTRACT SUM-----------------------						</td>', '<td id="h15">$</td>','<td id="ijkl15" colspan="4"><input type=text name="sheet[originalcontract]" value="{originalcontract}"></td>','<td id="m15"></td>', '<td id="nopqrstuvwxyz15" colspan="13">CONTRACTOR:		</td></tr>');
+	$hrow[16] = array('<tr id="row16"><td id="abcdefg16" colspan="7">2. Net change by Change Orders------------------$					</td>', '<td id="h16">$</td>','<td id="ijkl15" colspan="4">{netchange}</td>','<td id="m16"></td>', '<td id="nopqrstuvwxyz16" colspan="13">		</td></tr>');
+	$hrow[17] = array('<tr id="row17"><td id="abcdefg17" colspan="7">3. CONTRACT SUM TO DATE (Line 1 +/- 2)</td>', '<td id="h17">$</td>','<td id="ijkl15" colspan="4">{contractsum}</td>','<td id="m17"></td>', '<td id="n16">By:</td>','<td id="opqrstu17" colspan="7">________________________</td>', '<td id="v17">Date:</td>','<td id="wxy17" colspan="3"><input type=text name="sheet[contractordate]" value="{contractordate}" size="6"></td>','<td></td></tr>');
+	$hrow[18] = array('<tr id="row18"><td id="abcdefgh18" colspan="7">4. TOTAL COMPLETED & STORED TO DATE-$							</td>', '<td id="h17">$</td>', '<td id="ijkl15" colspan="4">{totalcompleted}</td>','<td id="m22" colspan="1"></td>', '<td id="nopqrstuvwxyz18" colspan="13"></td></tr>');
+	$hrow[19] = array('<tr id="row19"><td id="ah19" colspan="8">	(Column G on Continuation Sheet)							</td>', '<td id="ijkl19" colspan="4"></td>','<td id="m22" colspan="1"></td>', '<td id="no19" colspan="2">State Of</td>', '<td id="pqrst19" colspan="5"><input type=text name="sheet[stateof]" value="{stateof}">', '<td id="uvwxyz19" colspan="6"></td></tr>');
+	$hrow[20] = array('<tr id="row20"><td id="ab20" colspan="2">5. RETAINAGE:</td>','<td id="cdefghijkl20" colspan="10"></td>','<td id="m22" colspan="1"></td>','<td id="no20" colspan="2">County Of:</td>','<td id="pqrst20" colspan="5"><input type=text name="sheet[countyof]" value="{countyof}"></td>','<td id="uvwxyz20" colspan="6"></td></tr>');
+	$hrow[21] = array('<tr id="row21"><td id="a21" colspan="1">a.</td>','<td id="b21" colspan="1"><input type=text name="sheet[percentcompleted]" value="{percentcompleted}" size="3"></td>','<td id="cde21" colspan="3">Of Completed Work</td>','<td id="f21" colspan="1"></td><td id="g21" colspan="1">$</td>','<td id="hij21" colspan="3">{completedwork}</td>','<td id="kl21" colspan="2"></td>','<td id="m22" colspan="1"></td>','<td id="nopqr21" colspan="5">Subscribed and sworn to before</td>','<td id="stuvwxyz21" colspan="8"></td></tr>');
+	$hrow[22] = array('<tr id="row22"><td id="a22" colspan="1"></td>','<td id="bcdef22" colspan="5">(Columns D + E on Continuation Sheet)</td>','<td id="ghijkl22" colspan="6"></td>','<td id="m22" colspan="1"></td>','<td id="n22">me this</td>','<td id="o22"></td>','<td id="p22"><input type=text name="sheet[methis]" value="{methis}" size="3"><td id="qr22" colspan="2">day of</td>','<td id="stuv22" colspan="4"><input type=text name="sheet[dayof]"></td>','<td id="wxyz22" colspan="4"></td></tr>');
+	$hrow[23] = array('<tr id="row23"><td id="a23">b.</td><td id="b23"><input type=text name="sheet[percentstored]" value="{percentstored}"></td>','<td id="cde23" colspan="3">of Stored Material</td>','<td id="f23"></td>','<td id="g23">$</td>','<td id="hij23" colspan="3">{storedmaterial}</td>','<td id="kl23" colspan="2"></td>','<td id="m23"></td>','<td id="nopqrstuvwxyz23" colspan="13"></td></tr>');
 	return $hrow;
 }
 
@@ -87,6 +96,12 @@ $cr = array('-', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 			$val = '';
 		}
 		$ev = str_replace('{val}', $val, $ev);
+		while (strpos($ev, '{') !== FALSE && strpos($ev, '}') !== FALSE)
+		{
+			$pos1 = strpos($ev, '{');
+			$pos2 = strpos($ev, '}');
+			$ev = substr($ev, 0, $pos1) . substr($ev, $pos2+1, strlen($ev));
+		}
 		if ($td == '' || strpos($ev, '<td') === FALSE)
 		{
 			$str .= '<td id="' . $vallet . '" colspan="1">' . $ev . '</td>';

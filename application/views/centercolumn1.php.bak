@@ -1,5 +1,5 @@
 <?php 
-if (!isset($centercolumn1))
+if (!$centercolumn1)
 {
 	$centercolumn1 = 'UPDATE';
 }
