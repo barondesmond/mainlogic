@@ -55,7 +55,12 @@ function apphead()
 	$hrow[29] = array('<tr id="row29"><td id="abcdefg29" colspan="7">7. Less Previous Certificates for Payment</td>','<td id="hijkl29" colspan="5"></td>','<td id="m29"></td></tr>');
 	$hrow[30] = array('<tr id="row30"><td id="a30"></td>','<td id="bcdefg30" colspan="6">(Line 6 from prior Certificate)-------------------$					</td>','<td id="h30">$</td>','<td id="ijkl30" colspan="4"><input type=text name="sheet[priorcertificate]" value="{priorcertificate}"></td>','<td id="m30"></td></tr>');
 	$hrow[31] = array('<tr id="row31"><td id="abcdefg31" colspan="7">8. CURRENT PAYMENT DUE--------------------------$						</td>','<td id="h31">$</td>','<td id="ijkl31" colspan="4"><input type=text name="sheet[paymentdue]" value="{paymentdue}"></td>','<td id="m31"></td></tr>');
-	$hrow[32] = array('<tr id="row32"><td id="abcdefg32" colspan="7">9. BALANCE TO FINISH, INCLUDING RETAINAGE</td>','<td id="hijkl32" colspan="5"></td>','<td id="m32"></td>','<td id="nopqrst32" colspan="7">AMOUNT CERTIFIED ---------------------------------- $</td>','<td id="uvwxyz32" colspan="6"></td></tr>');
+	$hrow[32] = array('<tr id="row32"><td id="abcdefg32" colspan="7">9. BALANCE TO FINISH, INCLUDING RETAINAGE</td>','<td id="hijkl32" colspan="5"></td>','<td id="m32"></td>','<td id="nopqrst32" colspan="7">AMOUNT CERTIFIED ---------------------------------- $</td>','<td id="uvwxyz32" colspan="6">___________________</td></tr>');
+	$hrow[33] = array('<tr id="row33"><td id="abcdef33" colspan="6">(Line 3 less Line 6)</td>','<td id="g33">$</td>','<td id="hijkl33" colspan="5">{balancetofinish}</td>','<td id="m33"></td>','<td id="nz3334" rowspan="2" colspan="13">
+	(Attach explanation if amount certified differs from the amount applied for.  Initial all figures on this application and on the Continuation Sheet<BR>
+	that are changed to conform to the amount certified.)</td></tr>');	
+	$hrow[34] = array('<tr id="row34"><td id="al34" colspan="12"></td>','<td id="m34"></td></tr>');
+												
 												
 												
 												
