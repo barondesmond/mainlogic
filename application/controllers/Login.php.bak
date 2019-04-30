@@ -29,7 +29,7 @@ class Login extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('login', 'refresh');
 	}
-	public function auth()
+	public function auth($access='')
 	{
 		if (isset($_REQUEST['password']))
 		{
@@ -55,8 +55,8 @@ class Login extends CI_Controller {
 					}
 				}
 				$this->session->set_userdata($newdata);
-				redirect('/', 'refresh');
-		
+				redirect(base_url() . $access, 'refresh');
+				return $auth;		
 		}
 		}
 	
@@ -67,7 +67,7 @@ class Login extends CI_Controller {
 	{
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'LOGIN')
 		{
-			$this->auth();
+			$this->auth($access);
 			if (isset($this->auth->authorized) && $this->auth->authorized == '1')
 			{
 				redirect(base_url() . $access);
@@ -119,6 +119,10 @@ class Login extends CI_Controller {
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'LOGIN')
 		{
 			$this->auth();
+			if (isset($this->auth->authorized) && $this->auth->authorized != '1')
+			{
+				$this->content = 'Login failed, not authorized';
+			}
 		}
 		$this->navigation();
 

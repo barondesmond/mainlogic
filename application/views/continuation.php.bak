@@ -1,6 +1,8 @@
 
 <style>
-
+input, textarea {
+background-color: yellow;
+}
 table, th, td {
 border: 1px solid black;
 padding: 1px;
@@ -58,7 +60,14 @@ function apphead()
 	$hrow[32] = array('<tr id="row32"><td id="abcdefg32" colspan="7">9. BALANCE TO FINISH, INCLUDING RETAINAGE</td>','<td id="hijkl32" colspan="5"></td>','<td id="m32"></td>','<td id="nopqrst32" colspan="7">AMOUNT CERTIFIED ---------------------------------- $</td>','<td id="uvwxyz32" colspan="6">___________________</td></tr>');
 	$hrow[33] = array('<tr id="row33"><td id="abcdef33" colspan="6">(Line 3 less Line 6)</td>','<td id="g33">$</td>','<td id="hijkl33" colspan="5">{balancetofinish}</td>','<td id="m33"></td>','<td id="nz3334" rowspan="2" colspan="13">
 	(Attach explanation if amount certified differs from the amount applied for.  Initial all figures on this application and on the Continuation Sheet<BR>
-	that are changed to conform to the amount certified.)</td></tr>');												
+	that are changed to conform to the amount certified.)</td></tr>');	
+	$hrow[34] = array('<tr id="row34"><td id="al34" colspan="12"></td>','<td id="m34"></td></tr>');
+	$hrow[35] = array('<tr id="row35"><td id="abcdef35" colspan="6">CHANGE ORDER SUMMARY					</td>','<td id="ghi35" colspan="3">ADDITIONS		</td>','<td id="jkl35" colspan="3">DEDUCTIONS		</td>','<td id="m35"></td>','<td id="nop35" colspan="3">ARCHITECT:</td>','<td id="qrstuvwxyz35" colspan="10"></td></tr>');
+	$hrow[36] = array('<tr id="row36"><td id="abcdef36" colspan="6">Total changes approved in previous months by Owner					</td>','<td id="ghi36" colspan="3"><input type=text name="sheet[totaladditions]" value="{totaladditions}"></td>','<td id="jkl36" colspan="3"><input type=text name="sheet[totaldeductions]" value="{totaldeductions}"></td>','<td id="m36"></td>','<td id="n36">By:</td>','<td id="opqrstuv36" colspan="8">________________</td>','<td id="w36">Date:</td>','<td id="xyz36" colspan="36">_______</td></tr>');
+	$hrow[37] = array('<tr id="row37"><td id="abcdef37" colspan="6">Totals approved this month</td>','<td id="ghi37" colspan="3"><input type=text name="sheet[monthadditions]" value="{monthadditions}"></td>','<td id="jkl37" colspan="3"><input type=text name="sheet[monthdeductions]" value="{monthdeductions}"></td>', '<td id="nz3739" rowspan="3" colspan="13">This Certificate is not negotiable.  The AMOUNT CERTIFIED is payable only to the Contractor named herein.  Issuance, payment and acceptance of payment are without prejudice to any rights of the Owner of Contractor under this Contract.</td></tr>');
+	$hrow[38] = array('<tr id="row38"><td id="abcdef38" colspan="6">Totals</td>','<td id="ghi38" colspan="3">{totalsadditions}</td>','<td id="jkl38" colspan="3">{totalsdeductions}</td>','<td id="m38"></td></tr>');
+	$hrow[39] = array('<tr id="row38"><td id="abcdef38" colspan="6">NET CHANGES by Change Order					</td>','<td id="ghijkl38">{netchages}</td></tr>');
+	$hrow[40] = array('<tr id="row39"><td id="az40" colspan="26"</td></tr>');
 												
 												
 												
