@@ -66,7 +66,7 @@ function apphead()
 	$hrow[36] = array('<tr id="row36"><td id="abcdef36" colspan="6">Total changes approved in previous months by Owner					</td>','<td id="ghi36" colspan="3"><input type=text name="sheet[totaladditions]" value="{totaladditions}"></td>','<td id="jkl36" colspan="3"><input type=text name="sheet[totaldeductions]" value="{totaldeductions}"></td>','<td id="m36"></td>','<td id="n36">By:</td>','<td id="opqrstuv36" colspan="8">________________</td>','<td id="w36">Date:</td>','<td id="xyz36" colspan="36">_______</td></tr>');
 	$hrow[37] = array('<tr id="row37"><td id="abcdef37" colspan="6">Totals approved this month</td>','<td id="ghi37" colspan="3"><input type=text name="sheet[monthadditions]" value="{monthadditions}"></td>','<td id="jkl37" colspan="3"><input type=text name="sheet[monthdeductions]" value="{monthdeductions}"></td>', '<td id="nz3739" rowspan="3" colspan="13">This Certificate is not negotiable.  The AMOUNT CERTIFIED is payable only to the Contractor named herein.  Issuance, payment and acceptance of payment are without prejudice to any rights of the Owner of Contractor under this Contract.</td></tr>');
 	$hrow[38] = array('<tr id="row38"><td id="abcdef38" colspan="6">Totals</td>','<td id="ghi38" colspan="3">{totalsadditions}</td>','<td id="jkl38" colspan="3">{totalsdeductions}</td>','<td id="m38"></td></tr>');
-	$hrow[39] = array('<tr id="row38"><td id="abcdef38" colspan="6">NET CHANGES by Change Order					</td>','<td id="ghijkl38" colspan="6">{netchages}</td></tr>');
+	$hrow[39] = array('<tr id="row38"><td id="abcdef38" colspan="6">NET CHANGES by Change Order					</td>','<td id="ghijkl38" colspan="6">{netchange}</td></tr>');
 	$hrow[40] = array('<tr id="row39"><td id="az40" colspan="26"</td></tr>');
 												
 												
