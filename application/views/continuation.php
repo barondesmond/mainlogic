@@ -256,7 +256,7 @@ for ($page=2; $page<= $pages; $page++)
 		echo collet($hrow[$off], $continuation, $page, $off, $off, '1', $sheet);
 	}		
 
-$collet = array('a' => '{row}', 'b' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="29">', 'c' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="8">' , 'd' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="8">', 'e' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="8">', 'f' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="8">', 'g' => '{val}', 'h' => '{val}', 'i' => '{val}', 'j' => '{val}', 'k' => '{val}', 'l' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="1">');
+$collet = array('a' => '{val}', 'b' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="29">', 'c' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="8">' , 'd' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="8">', 'e' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="8">', 'f' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}"  size="8">', 'g' => '{val}', 'h' => '{val}', 'i' => '{val}', 'j' => '{val}', 'k' => '{val}', 'l' => '<input type=text name="continuation[{page}][{row}][{col}]" value="{val}" size="1">');
 
 
 for ($row=1; $row < $rows; $row++)

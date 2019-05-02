@@ -211,7 +211,7 @@ $cr = array('-', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 
 		if ($td == '' || strpos($ev, '<td') === FALSE)
 		{
-			$str .= '<td id="' . $vallet . '" colspan="1">' . $ev . '</td>';
+			$str .= '<td id="' . $page . $vallet . '" colspan="1">' . $ev . '</td>';
 		}
 		else
 		{
