@@ -1,12 +1,14 @@
 
 <style>
 input, textarea {
+
 background-color: yellow;
 }
 b {
 color:blue;
 }
 table, th, td {
+min-width: 20px;
 #border: 1px solid black;
 border-collapse: 0px;
 padding: 0px;
@@ -34,22 +36,36 @@ border-bottom: 2px solid black;
 border-bottom: 2px solid black;
 }
 #ijkl15 {
+border: 1px solid black;
 background-color: yellow;
 text-align: right;
 }
 #ijkl16 {
+border: 1px solid black;
 background-color: gray;
 text-align : right;
 }
 #ijkl17 {
+border: 1px solid black;
 background-color: gray;
 text-align : right;
 }
 #ijkl18 {
+border: 1px solid black;
 background-color: gray;
 text-align : right;
 }
+#opqrstu17{
+border-bottom: 1px solid black;
+}
 
+#wxy17 {
+font-size:18px;
+
+background-color: yellow;
+border-bottom: 1px solid black;
+
+}
 </style>
 
 
@@ -72,7 +88,7 @@ function apphead()
 	$hrow[14] = array('<tr id="row14"><td id="abcdefghijkl14" colspan="12"></td>', '<td></td></tr>');
 	$hrow[15] = array('<tr id="row15"><td id="abcdefg15" colspan="7">1. ORIGINAL CONTRACT SUM-----------------------						</td>', '<td id="h15">$</td>','<td id="ijkl15" colspan="4"><input type=text name="sheet[originalcontract]" value="{originalcontract}"></td>','<td id="m15"></td>', '<td id="nopqrstuvwxyz15" colspan="13">CONTRACTOR:		</td></tr>');
 	$hrow[16] = array('<tr id="row16"><td id="abcdefg16" colspan="7">2. Net change by Change Orders------------------$					</td>', '<td id="h16">$</td>','<td id="ijkl16" colspan="4">{netchange}</td>','<td id="m16"></td>', '<td id="nopqrstuvwxyz16" colspan="13">		</td></tr>');
-	$hrow[17] = array('<tr id="row17"><td id="abcdefg17" colspan="7">3. CONTRACT SUM TO DATE (Line 1 +/- 2)</td>', '<td id="h17">$</td>','<td id="ijkl17" colspan="4">{contractsum}</td>','<td id="m17"></td>', '<td id="n16">By:</td>','<td id="opqrstu17" colspan="7">________________________</td>', '<td id="v17">Date:</td>','<td id="wxy17" colspan="3"><input type=text name="sheet[contractordate]" value="{contractordate}" size="6"></td>','<td></td></tr>');
+	$hrow[17] = array('<tr id="row17"><td id="abcdefg17" colspan="7">3. CONTRACT SUM TO DATE (Line 1 +/- 2)</td>', '<td id="h17">$</td>','<td id="ijkl17" colspan="4">{contractsum}</td>','<td id="m17"></td>', '<td id="n16">By:</td>','<td id="opqrstu17" colspan="7"></td>', '<td id="v17">Date:</td>','<td id="wxy17" colspan="3"><input type=text name="sheet[contractordate]" value="{contractordate}" size="10"></td>','<td></td></tr>');
 	$hrow[18] = array('<tr id="row18"><td id="abcdefgh18" colspan="7">4. TOTAL COMPLETED & STORED TO DATE-$							</td>', '<td id="h17">$</td>', '<td id="ijkl18" colspan="4">{totalcompleted}</td>','<td id="m22" colspan="1"></td>', '<td id="nopqrstuvwxyz18" colspan="13"></td></tr>');
 	$hrow[19] = array('<tr id="row19"><td id="ah19" colspan="8">	(Column G on Continuation Sheet)							</td>', '<td id="ijkl19" colspan="4"></td>','<td id="m22" colspan="1"></td>', '<td id="no19" colspan="2">State Of</td>', '<td id="pqrst19" colspan="5"><input type=text name="sheet[stateof]" value="{stateof}">', '<td id="uvwxyz19" colspan="6"></td></tr>');
 	$hrow[20] = array('<tr id="row20"><td id="ab20" colspan="2">5. RETAINAGE:</td>','<td id="cdefghijkl20" colspan="10"></td>','<td id="m22" colspan="1"></td>','<td id="no20" colspan="2">County Of:</td>','<td id="pqrst20" colspan="5"><input type=text name="sheet[countyof]" value="{countyof}"></td>','<td id="uvwxyz20" colspan="6"></td></tr>');
@@ -97,9 +113,9 @@ function apphead()
 	$hrow[34] = array('<tr id="row34"><td id="al34" colspan="12"></td>','<td id="m34"></td></tr>');
 	$hrow[35] = array('<tr id="row35"><td id="abcdef35" colspan="6">CHANGE ORDER SUMMARY					</td>','<td id="ghi35" colspan="3">ADDITIONS		</td>','<td id="jkl35" colspan="3">DEDUCTIONS		</td>','<td id="m35"></td>','<td id="nop35" colspan="3">ARCHITECT:</td>','<td id="qrstuvwxyz35" colspan="10"></td></tr>');
 	$hrow[36] = array('<tr id="row36"><td id="abcdef36" colspan="6">Total changes approved in previous months by Owner					</td>','<td id="ghi36" colspan="3"><input type=text name="sheet[totaladditions]" value="{totaladditions}"></td>','<td id="jkl36" colspan="3"><input type=text name="sheet[totaldeductions]" value="{totaldeductions}"></td>','<td id="m36"></td>','<td id="n36">By:</td>','<td id="opqrstuv36" colspan="8">________________</td>','<td id="w36">Date:</td>','<td id="xyz36" colspan="36">_______</td></tr>');
-	$hrow[37] = array('<tr id="row37"><td id="abcdef37" colspan="6">Totals approved this month</td>','<td id="ghi37" colspan="3"><input type=text name="sheet[monthadditions]" value="{monthadditions}"></td>','<td id="jkl37" colspan="3"><input type=text name="sheet[monthdeductions]" value="{monthdeductions}"></td>', '<td id="nz3739" rowspan="3" colspan="13">This Certificate is not negotiable.  The AMOUNT CERTIFIED is payable only to the Contractor named herein.  Issuance, payment and acceptance of payment are without prejudice to any rights of the Owner of Contractor under this Contract.</td></tr>');
+	$hrow[37] = array('<tr id="row37"><td id="abcdef37" colspan="6">Totals approved this month</td>','<td id="ghi37" colspan="3"><input type=text name="sheet[monthadditions]" value="{monthadditions}"></td>','<td id="jkl37" colspan="3"><input type=text name="sheet[monthdeductions]" value="{monthdeductions}"></td>','<td id="m37"></td>', '<td id="nz3739" rowspan="3" colspan="13">This Certificate is not negotiable.  The AMOUNT CERTIFIED is payable only to the Contractor named herein.  Issuance, payment and acceptance of payment are without prejudice to any rights of the Owner of Contractor under this Contract.</td></tr>');
 	$hrow[38] = array('<tr id="row38"><td id="abcdef38" colspan="6">Totals</td>','<td id="ghi38" colspan="3">{totalsadditions}</td>','<td id="jkl38" colspan="3">{totalsdeductions}</td>','<td id="m38"></td></tr>');
-	$hrow[39] = array('<tr id="row39"><td id="abcdef39" colspan="6">NET CHANGES by Change Order					</td>','<td id="ghijkl38" colspan="6">{netchange}</td><td id="mnopqrstuvwxyz39" colspan="14"></td></tr>');
+	$hrow[39] = array('<tr id="row39"><td id="abcdef39" colspan="6">NET CHANGES by Change Order					</td>','<td id="ghijkl38" colspan="6">{netchange}</td><td id="m39"></td><td id="nopqrstuvwxyz39" colspan="13"></td></tr>');
 	$hrow[40] = array('<tr id="row40"><td id="az40" colspan="26"</td></tr>');
 												
 												
