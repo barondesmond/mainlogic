@@ -8,7 +8,6 @@ b {
 color:blue;
 }
 table, th, td {
-min-width: 20px;
 #border: 1px solid black;
 border-collapse: 0px;
 padding: 0px;
@@ -17,12 +16,10 @@ text-align: center;
 background-color: white;
 font-size: 10px;
 }
-#nopqrstuvwxyz1014 {
+#nopqrstuvwxyz1014, #nz2731 {
 font-size: 8px;
 }
-#nz2731 {
-font-size: 8px;
-}
+
 #p1row1 td {
 border-bottom: 2px solid black;
 
@@ -43,36 +40,51 @@ border-bottom: 2px solid black;
 border-bottom: 2px solid black;
 }
 
-
-
-#ijkl16, #ijkl17, #ijkl18, {
+#ijkl16, #ijkl17, #ijkl18 {
 background-color: gray;
 text-align : right;
 border: 1px solid black;
 
 } 
-#ijkl15 {
-background-color: yellow;
-}
 
+#uvwxyz20 {
+border: 0px;
+}
 
 #opqrstu17{
 border-bottom: 1px solid black;
 }
 
 #wxy17 {
-font-size:18px;
 background-color: yellow;
 border-bottom: 1px solid black;
 
 }
-#vw2, #vw3, #vw4, #vw6, #abcdefg345, #abcdefg789{
+
+#pqrst19, #pqrst20 {
+background-color: yellow;
+border-bottom: 1px solid black;
+}
+
+
+#vw2, #vw3, #vw4, #vw6, #abcdefg345, #abcdefg789, #jklmnop345, #jklmnop789 {
 background-color: yellow;
 }
-#x6, #x5, #x4, #x7, #x8 {
+#x6, #x5, #x4, #x7, #x8, #ijkl15,#b21,#b23 {
 border: 1px solid black;
 background-color: yellow;
-
+}
+#uvw2 {
+text-align: right;
+}
+#yz1 {
+text-align: left;
+#x2 {
+background-color: white;
+}
+#x2 input {
+background-color: white;
+}
 </style>
 
 
@@ -80,7 +92,7 @@ background-color: yellow;
 
 function apphead()
 {
-	$hrow[1] = array('<tr id="p1row1"><td id="abcdefg1" colspan="7"><b>APPLICATION AND CRERTIFICATE FOR PAYMENT</b></td>','<td id="hijklmnopqrst1" colspan="13"></td>', '<td id="uvw2" colspan="3">PAGE ONE OF', '<input type=text name="sheet[pages]" id="h2" size="1" value="{pages}">', '<td id="yz1" colspan="2">PAGES</td></tr>');
+	$hrow[1] = array('<tr id="p1row1"><td id="abcdefg1" colspan="7"><b>APPLICATION AND CRERTIFICATE FOR PAYMENT</b></td>','<td id="hijklmnopqrst1" colspan="13"></td>', '<td id="uvw2" colspan="3">PAGE ONE OF', '<td id="x2"><input type=text name="sheet[pages]" " size="1" value="{pages}"></td>', '<td id="yz1" colspan="2">PAGES</td></tr>');
 	$hrow[2] = array('<tr id="p1row2"><td id="abc2" colspan="3">TO OWNER:</td>', '<td id="defghi2" colspan="6"></td>','<td id="jkl2" colspan="3">PROJECT:</td>', '<td id="mnopqr2" colspan="6"></td>', '<td id="stu2" colspan="3">APPLICATION #:</td>', '<td id="vw2" colspan="2"><input type=text name=sheet[application] value="{application}"></td>', '<td id="xyz2" colspan="3">Distribution to:</td></tr>');
 	$hrow[3] = array('<tr id="row3"><td id="abcdefg345" colspan="7" rowspan="3"><textarea name="sheet[toowner]" rows="3" cols="40">{toowner}</textarea></td>', '', '', '<td id="jklmnop345" colspan="7" rowspan="3"><textarea name="sheet[project]" rows="3" cols="40">{project}</textarea></td>', '', '', '<td id="stu3" colspan="3">PERIOD TO:</td>', '<td id="vw3" colspan="2"><input type=text name="sheet[periodto]" value="{periodto}"></td>', '', '', '<td id="z3"></td></tr>');
 	$hrow[4] = array('<tr id="row4"><td id="hi4" colspan="2"></td>', '<td id="qr4" colspan="2"></td>', '<td id="stu4" colspan="3">PROJECT NOS:</td>','<td id="vw4" colspan="2"><input type=text name="sheet[projectnos]" value="{projectnos}"></td>', '<td id="x4" colspan="1"><input type=text name="sheet[owner]" value="{owner}" size="1"></td>','<td id="yz4" colspan=2">Owner</td></tr>');
