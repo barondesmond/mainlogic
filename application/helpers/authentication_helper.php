@@ -94,7 +94,12 @@
 
 	function jobs()
 	{
-		$uri = 'jobs_json.php?latitude=34.253725&longitude=-88.6843&ServiceMan=' . $_REQUEST['EmpNo'];
+		$service = '';
+		if (isset($_REQUEST['EmpNo']))
+		{
+			$service = '&ServiceMan=' . $_REQUEST['EmpNo'];
+		}
+		$uri = 'jobs_json.php?latitude=34.253725&longitude=-88.6843' . $service;
 		return app_api($uri);
 
 	}
@@ -153,6 +158,20 @@ function select_group($key, $id, $JobGroup)
 		
 	}
 	elseif ($id == $JobGroup['0'])
+	{
+		return 'selected';
+	}
+
+}
+
+function select_key($key, $id, $db)
+{
+
+	if (!isset($db))
+	{
+		
+	}
+	elseif ($id == $db[$key])
 	{
 		return 'selected';
 	}

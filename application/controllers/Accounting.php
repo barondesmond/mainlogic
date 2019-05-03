@@ -26,7 +26,7 @@ class Accounting extends CI_Controller {
 
 
  
-	public function navigation()
+	public function navigation_billing()
 	{
 
 		$this->controller = $this->uri->segment(1);	
@@ -46,6 +46,26 @@ class Accounting extends CI_Controller {
 
 
 	}
+	public function navigation()
+	{
+
+		$this->controller = $this->uri->segment(1);	
+		$this->func = $this->uri->segment(2);
+		$this->push = $this->load->view('push', $this, true);
+		$this->widget = $this->load->view('widget', $this, true);
+		$this->widget2 = $this->load->view('widget2', $this, true);
+		$this->mainnav = $this->load->view('mainnav', $this, true);
+		$this->periodnav = $this->load->view('jobcontinuation', $this, true);
+
+		$this->inputnav = '';
+		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
+		$this->centercolumn2 = 'PRINT';
+		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+
+		$this->topnav = $this->load->view('topnav', $this, true);
+
+
+	}
 
 
 
@@ -53,10 +73,14 @@ class Accounting extends CI_Controller {
 	public function billing()
 	{
 		$continuation = continuation();
+		$jobs = jobs();
+		$this->jobs = $jobs->jobs;
 		$this->navigation();
 
-	
-		$this->content = $this->load->view('continuation', $continuation, true);
+		if (isset($_REQUEST['sheet']))
+		{
+			$this->content = $this->load->view('continuation', $continuation, true);
+		}	
 		if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'PRINT')
 		{
 			$this->load->view('printmain', $this);
@@ -73,6 +97,7 @@ class Accounting extends CI_Controller {
 		{
 			$this->auth();
 		}
+
 		$this->navigation();
 		$this->content = 'Accounting Level Access';
 
