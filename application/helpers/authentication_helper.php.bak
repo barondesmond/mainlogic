@@ -171,7 +171,7 @@ function select_key($key, $id, $db)
 	{
 		
 	}
-	elseif ($id == $JobGroup[$key])
+	elseif ($id == $db[$key])
 	{
 		return 'selected';
 	}

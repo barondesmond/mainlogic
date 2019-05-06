@@ -167,7 +167,7 @@ function select_group($key, $id, $JobGroup)
 function select_key($key, $id, $db)
 {
 
-	if (!isset($db))
+	if (!isset($db) || !isset($db[$key]))
 	{
 		
 	}
