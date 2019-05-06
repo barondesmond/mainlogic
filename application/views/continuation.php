@@ -79,7 +79,7 @@ background-color: yellow;
 #uvw2 {
 text-align: right;
 }
-#yz1 {
+#yz1,#b5 {
 text-align: left;
 #x2 {
 background-color: white;
