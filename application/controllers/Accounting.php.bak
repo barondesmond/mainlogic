@@ -56,12 +56,13 @@ class Accounting extends CI_Controller {
 		$this->widget2 = $this->load->view('widget2', $this, true);
 		$this->mainnav = $this->load->view('mainnav', $this, true);
 		$this->periodnav = $this->load->view('jobcontinuation', $this, true);
-
-		$this->inputnav = '';
-		$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
-		$this->centercolumn2 = 'PRINT';
-		$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
-
+		if (isset($_REQUEST['sheet']['JobID']))
+		{
+			$this->inputnav = '';
+			$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
+			$this->centercolumn2 = 'PRINT';
+			$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+		}
 		$this->topnav = $this->load->view('topnav', $this, true);
 
 
@@ -77,7 +78,7 @@ class Accounting extends CI_Controller {
 		$this->jobs = $jobs->jobs;
 		$this->navigation();
 
-		if (isset($_REQUEST['sheet']))
+		if (isset($_REQUEST['sheet']) && isset($continuation->continuation))
 		{
 			$this->content = $this->load->view('continuation', $continuation, true);
 		}	

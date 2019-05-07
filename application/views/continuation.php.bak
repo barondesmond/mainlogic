@@ -79,7 +79,7 @@ background-color: yellow;
 #uvw2 {
 text-align: right;
 }
-#yz1 {
+#yz1,#b5 {
 text-align: left;
 #x2 {
 background-color: white;
@@ -107,7 +107,7 @@ function apphead()
 	$hrow[11] = array('<tr id="row11"><td id="abcdefghijl11" colspan="12">CONTRACTOR\'S APPLICATION FOR PAYMENT</td>','<td id="m11" colspan="1"></td>', '<td id="nopqrstuvwxyz1014" colspan="13" rowspan="4"> <style="font-size:6px;">The undersigned Contractor certifies that to the best of the Contractor\'s knowledge, information and belief the Work covered by this<br> Application for Payment has been completed in accordance with the Contract Documents, that all amounts have been paid by the Contractor<br> for Work for which previous Certificates for Payment were issued and payments received from the Owner, and that current payment shown<br> therein is now due.</td></tr>');								$hrow[12] = array('<tr id="row12"><td id="abcdefghijkl12" colspan="12">Application is made for payment, as shown below, in connection with the Contract.</td>', '<td></td></tr>');	
 	$hrow[13] = array('<tr id="row13"><td id="abcdefghijkl13" colspan="12">Continuation Sheet is attached.											</td>', '<td></td></tr>');
 	$hrow[14] = array('<tr id="row14"><td id="abcdefghijkl14" colspan="12"></td>', '<td></td></tr>');
-	$hrow[15] = array('<tr id="row15"><td id="abcdefg15" colspan="7">1. ORIGINAL CONTRACT SUM-----------------------						</td>', '<td id="h15">$</td>','<td id="ijkl15" colspan="4"><input type=text name="sheet[originalcontract]" value="{originalcontract}"></td>','<td id="m15"></td>', '<td id="nopqrstuvwxyz15" colspan="13">CONTRACTOR:		</td></tr>');
+	$hrow[15] = array('<tr id="row15"><td id="abcdefg15" colspan="7">1. ORIGINAL CONTRACT SUM-----------------------						</td>', '<td id="h15">$</td>','<td id="ijkl15" colspan="4">{originalcontract}</td>','<td id="m15"></td>', '<td id="nopqrstuvwxyz15" colspan="13">CONTRACTOR:		</td></tr>');
 	$hrow[16] = array('<tr id="row16"><td id="abcdefg16" colspan="7">2. Net change by Change Orders------------------$					</td>', '<td id="h16">$</td>','<td id="ijkl16" colspan="4">{netchange}</td>','<td id="m16"></td>', '<td id="nopqrstuvwxyz16" colspan="13">		</td></tr>');
 	$hrow[17] = array('<tr id="row17"><td id="abcdefg17" colspan="7">3. CONTRACT SUM TO DATE (Line 1 +/- 2)</td>', '<td id="h17">$</td>','<td id="ijkl17" colspan="4">{contractsum}</td>','<td id="m17"></td>', '<td id="n16">By:</td>','<td id="opqrstu17" colspan="7"></td>', '<td id="v17">Date:</td>','<td id="wxy17" colspan="3"><input type=text name="sheet[contractordate]" value="{contractordate}" size="10"></td>','<td></td></tr>');
 	$hrow[18] = array('<tr id="row18"><td id="abcdefgh18" colspan="7">4. TOTAL COMPLETED & STORED TO DATE-$							</td>', '<td id="h17">$</td>', '<td id="ijkl18" colspan="4">{totalcompleted}</td>','<td id="m22" colspan="1"></td>', '<td id="nopqrstuvwxyz18" colspan="13"></td></tr>');
