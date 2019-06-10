@@ -92,14 +92,14 @@
 
 	}
 
-	function jobs()
+	function jobs($order='LocName')
 	{
 		$service = '';
 		if (isset($_REQUEST['EmpNo']))
 		{
 			$service = '&ServiceMan=' . $_REQUEST['EmpNo'];
 		}
-		$uri = 'jobs_json.php?latitude=34.253725&longitude=-88.6843' . $service;
+		$uri = 'jobs_json.php?latitude=34.253725&longitude=-88.6843' . $service . '&order=' . $order;
 		return app_api($uri);
 
 	}

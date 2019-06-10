@@ -78,7 +78,7 @@ class Accounting extends CI_Controller {
 		$this->jobs = $jobs->jobs;
 		$this->navigation();
 
-		if (isset($_REQUEST['sheet']) && isset($continuation->continuation))
+		if (isset($_REQUEST['sheet']['JobID']) && isset($continuation->continuation))
 		{
 			$this->content = $this->load->view('continuation', $continuation, true);
 		}	
