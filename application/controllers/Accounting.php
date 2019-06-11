@@ -74,8 +74,7 @@ class Accounting extends CI_Controller {
 	public function billing()
 	{
 		$continuation = continuation();
-		$jobs = jobs('Name');
-		$this->jobs = $jobs->jobs;
+		$this->jobs = $continuation->jobs;
 		$this->navigation();
 
 		if (isset($_REQUEST['sheet']['JobID']) && isset($continuation->continuation))
