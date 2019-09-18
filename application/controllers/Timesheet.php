@@ -277,7 +277,7 @@ class Timesheet extends CI_Controller {
 				else
 				{
 					$viewer = viewer();
-					$this->content = $this->load->view('gps', $viewer, true);
+					$this->content = $this->load->view('viewer', $viewer, true);
 				}
 
 				$this->navigation();

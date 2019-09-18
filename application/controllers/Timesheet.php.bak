@@ -267,28 +267,12 @@ class Timesheet extends CI_Controller {
 
 	public function viewer()
 	{
-				if (isset($_REQUEST['submit']))
-				{
-					if ($_REQUEST['submit'] == 'APPROVE')
-					{
-										$_REQUEST['Accept'] = 'Accept';
-					}
-					if ($_REQUEST['submit'] == 'DENY')
-					{
-										$_REQUEST['Deny'] = 'Deny';
-					}
-					unset($_REQUEST['submit']);
-				}
-				if (isset($_REQUEST['Accept']) || isset($_REQUEST['Deny']))
-				{
-					$gps = gps_update();
-					unset($_REQUEST['file']);
-				}
+
 				if (isset($_REQUEST['file']))
 				{
 					$this->navigation_viewer();
-					$gps = gps_details($_REQUEST['file']);
-					$this->content = $this->load->view('gpsdetails', $gps, true);
+					$gps = viewer_details($_REQUEST['file']);
+					$this->content = $this->load->view('viewerdetails', $gps, true);
 				}
 				else
 				{
