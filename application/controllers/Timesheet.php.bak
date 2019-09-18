@@ -277,6 +277,8 @@ class Timesheet extends CI_Controller {
 				else
 				{
 					$viewer = viewer();
+					print_r($viewer);
+					exit;
 					$this->content = $this->load->view('viewer', $viewer, true);
 				}
 
