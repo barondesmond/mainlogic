@@ -21,7 +21,7 @@ return $table;
 function location_row($row)
 {
 	$table = '';
-	$array = array('CustNo', 'LocNo', 'LocName', 'EmpNo', 'location', 'Desc', 'latitude', 'longitude', 'distance', 'file');
+	$array = array('EmpNo', 'reference', 'location', 'Desc', 'latitude', 'longitude',  'file');
 	$desc = array('Add1', 'City', 'State', 'Zip');
 	foreach ($array as $id => $v)
 	{
@@ -37,7 +37,7 @@ function location_row($row)
 				$value = $row->$v;
 			}
 		}
-		if (!isset($row->$v) && $v == 'Desc')
+		if (!isset($row->$v) && $v == 'location')
 		{
 			
 			foreach ($desc as $num=>$add)
@@ -92,7 +92,7 @@ $table = '<table border=1>';
 foreach(${$_REQUEST['key']} as $id=>$lc)
 {
 
-	$table .= '<tr>' . table_head();
+	//$table .= '<tr>' . table_head();
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '';
 	/*
