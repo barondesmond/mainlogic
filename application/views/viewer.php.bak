@@ -83,26 +83,28 @@ if (isset($error))
 {
 	echo "<P>$error";
 }
-print_r($reference);
-/*
-$table = '<table border=1>';
-foreach($reference as $lid=>$lc)
-{
 
+
+$table = '<table border=1>';
+foreach($reference as $lid=>$lck)
+{
+	$lc = $lck[$lid];
 	$table .= '<tr>' . table_head();
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '';
+	/*
 	foreach ($locrow->$lid as $id=>$row)
 	{
 		$tablerow = location_row($row) . table_form($row);
 		$table .= '<tr>' . $tablerow . '</tr>';
 	}
+	*/
 	unset($tablehead);
 
 	
 }
 $table .= '</table>';
 echo $table;
-*/
+
 
 ?>

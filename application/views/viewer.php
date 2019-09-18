@@ -88,7 +88,7 @@ if (isset($error))
 $table = '<table border=1>';
 foreach($reference as $lid=>$lck)
 {
-	$lc = $lck[$lid];
+	$lc = $file[$lid];
 	$table .= '<tr>' . table_head();
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '';
