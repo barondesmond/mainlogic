@@ -84,11 +84,14 @@ if (isset($error))
 	echo "<P>$error";
 }
 
-
-$table = '<table border=1>';
-foreach($reference as $lid=>$lck)
+if (!isset($_REQUEST['key']))
 {
-	$lc = $lck[$lid];
+	$_REQUEST['key'] = 'reference';
+}
+$table = '<table border=1>';
+foreach(${$_REQUEST['key']} as $id=>$lc)
+{
+	$lc = $file[$lid];
 	$table .= '<tr>' . table_head();
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '';
