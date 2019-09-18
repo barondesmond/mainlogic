@@ -130,6 +130,13 @@
 
 	}
 
+	function viewer()
+	{
+		$uri = 'viewer_json.php?Dev=' . __DEV__;
+		return app_api($uri);
+
+	}
+
 function is_selected($key, $id, $jobgroupemployees='', $JobGroup)
 {
 	if (!isset($jobgroupemployees) || $jobgroupemployees == '')
