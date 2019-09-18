@@ -83,7 +83,8 @@ if (isset($error))
 {
 	echo "<P>$error";
 }
-
+print_r($reference);
+/*
 $table = '<table border=1>';
 foreach($reference as $lid=>$lc)
 {
@@ -102,6 +103,6 @@ foreach($reference as $lid=>$lc)
 }
 $table .= '</table>';
 echo $table;
-
+*/
 
 ?>
