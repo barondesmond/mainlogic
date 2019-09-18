@@ -37,7 +37,7 @@ function location_row($row)
 				$value = $row->$v;
 			}
 		}
-		if (!isset($row->$v) && $v == 'Desc')
+		if (!isset($row->$v) && $v == 'location')
 		{
 			
 			foreach ($desc as $num=>$add)

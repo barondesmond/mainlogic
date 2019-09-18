@@ -91,18 +91,15 @@ if (!isset($_REQUEST['key']))
 $table = '<table border=1>';
 foreach(${$_REQUEST['key']} as $id=>$lc)
 {
-
-	//$table .= '<tr>' . table_head();
+	if (!isset($tablehead))
+	{
+		$tablehead = '<tr>' . table_head() . '</tr>';
+		$table .= $tablehead;
+	}
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '';
-	/*
-	foreach ($locrow->$lid as $id=>$row)
-	{
-		$tablerow = location_row($row) . table_form($row);
-		$table .= '<tr>' . $tablerow . '</tr>';
-	}
-	*/
-	unset($tablehead);
+
+	//unset($tablehead);
 
 	
 }
