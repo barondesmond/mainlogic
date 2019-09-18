@@ -30,7 +30,7 @@ function location_row($row)
 		{
 			if ($v == 'file')
 			{
-				$value = '<A HREF="?file=' . urlencode($row->$v) . '"><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($row->$v) . '" width=100></A>';
+				$value = '<A HREF="/timesheet/gps/?file=' . urlencode($row->$v) . '"><img src="' . APPURL . 'upload/?show=1&file=' . urlencode($row->$v) . '" width=100></A>';
 			}
 			else
 			{
