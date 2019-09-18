@@ -91,7 +91,7 @@ if (!isset($_REQUEST['key']))
 $table = '<table border=1>';
 foreach(${$_REQUEST['key']} as $id=>$lc)
 {
-	$lc = $file[$lid];
+
 	$table .= '<tr>' . table_head();
 	$table .= '<tr>' . location_row($lc) . '</tr>';
 	$table .= '';

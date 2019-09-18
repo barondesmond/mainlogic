@@ -59,7 +59,7 @@ return $table;
 function table_head()
 {
 	$table = '';
-	$array = array('CustNo', 'LocNo', 'LocName', 'EmpNo', 'location', 'Desc', 'latitude', 'longitude', 'distance', 'file');
+	$array = array('EmpNo', 'reference', 'location', 'Desc', 'latitude', 'longitude',  'file');
 
 	foreach ($array as $id => $key)
 	{
