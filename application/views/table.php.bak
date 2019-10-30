@@ -32,9 +32,11 @@ function table_form($row)
 	{
 		$id = 0;
 	}
-	
+	if (isset($row->file))
+	{
 	$table = '<td><input type=hidden name=file[' . $id . '] value="' . $row->file . '" width="100"></td>';
 	$id++;
+	}
 return $table;
 }
 if (isset($error))
