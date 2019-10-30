@@ -47,17 +47,16 @@ if (!isset($query))
 	return false;
 }
 $table = '<table border=1>';
-foreach($query as $id=>$db)
+foreach($query as $id=>$row)
 {
 	if (!isset($head))
 	{
-		$table .= '<tr>' . table_head($db);
-		$table .= '<tr>' . location_row($lc) . '</tr>';
+		$table .= '<tr>' . table_head($row);
 		$table .= '';
 		$head = true;
 	}
 
-		$tablerow = location_row($row) . table_form($row);
+		$tablerow = table_row($row) . table_form($row);
 		$table .= '<tr>' . $tablerow . '</tr>';	
 }
 $table .= '</table>';
