@@ -24,6 +24,14 @@ class Dispatch extends CI_Controller {
         verify_session('dispatch'); 
 	}
 
+	public function active()
+	{
+
+
+				$this->navigation();
+	
+				$this->load->view('main', $this);
+	}
 
  
 	public function navigation()

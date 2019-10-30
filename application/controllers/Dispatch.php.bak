@@ -34,6 +34,8 @@ class Dispatch extends CI_Controller {
 		$this->push = $this->load->view('push', $this, true);
 		$this->widget = $this->load->view('widget', $this, true);
 		$this->widget2 = $this->load->view('widget2', $this, true);
+		$this->mainnav = $this->load->view('mainnav', $this, true);
+
 		$this->periodnav = '';
 
 		$this->inputnav = '';
