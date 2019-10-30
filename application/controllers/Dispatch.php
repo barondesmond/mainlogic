@@ -27,6 +27,9 @@ class Dispatch extends CI_Controller {
 	public function active()
 	{
 
+				$active = dispatch_active();
+				$this->location_api = $active;
+				$this->content = $this->load->view('gps', $this, true);
 
 				$this->navigation();
 	

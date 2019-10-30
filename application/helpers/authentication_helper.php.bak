@@ -129,6 +129,19 @@
 		return app_api($uri);
 
 	}
+	function gps()
+	{
+		$uri = 'location_timeclock_json.php?location_query=1&Dev=' . __DEV__;
+		return app_api($uri);
+
+	}
+
+	function viewer()
+	{
+		$uri = 'viewer_json.php?Dev=' . __DEV__;
+		return app_api($uri);
+
+	}
 
 function is_selected($key, $id, $jobgroupemployees='', $JobGroup)
 {

@@ -129,6 +129,12 @@
 		return app_api($uri);
 
 	}
+	function dispatch_active()
+	{
+		$uri = 'location_timeclock_json.php?location_query=1&Dev=' . __DEV__;
+		return app_api($uri);
+
+	}
 
 	function viewer()
 	{
