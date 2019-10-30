@@ -36,8 +36,9 @@ function table_form($row)
 	{
 	$table = '<td><input type=hidden name=file[' . $id . '] value="' . $row->file . '" width="100"></td>';
 	$id++;
+	return $table;
+
 	}
-return $table;
 }
 if (isset($error))
 {
