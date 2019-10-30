@@ -49,7 +49,7 @@ if (!isset($query))
 	echo "<P>No Data Found";
 	return false;
 }
-$table = '<table border=1 padding=2>';
+$table = '<table border=1 padding=2 spacing=2>';
 foreach($query as $id=>$row)
 {
 	if (!isset($head))
