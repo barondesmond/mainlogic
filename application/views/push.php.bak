@@ -38,7 +38,7 @@ $nav['dispatch'] = array("LOGOUT" => base_url() . "/login/logout/");
 
 $nav['admin'] = array("LOGOUT" => base_url() . "/login/logout/");
 
-$nav['login'] = array("LOGIN" => base_url() . "/login/login/", "LOGOUT" => base_url() . "/login/logout/");
+$nav['login'] = array("LOGOUT" => base_url() . "/login/logout/");
 
 
 if (isset($controller) && isset($nav[$controller]))
