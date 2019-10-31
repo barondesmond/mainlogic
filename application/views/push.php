@@ -34,7 +34,7 @@ $nav['accounting'] = array("Billing" => base_url() . "/accounting/billing/",  "L
 
 $nav['estimating'] = array("LOGOUT" => base_url() . "/login/logout/");
 
-$nav['dispatch'] = array("Employee Active" => base_url() . "/dispatch/active", "Image Viewer" => base_url() . "/dispatch/viewer/" ,"LOGOUT" => base_url() . "/login/logout/");
+$nav['dispatch'] = array("Employee Active" => base_url() . "dispatch/active", "Image Viewer" => base_url() . "dispatch/viewer/" ,"LOGOUT" => base_url() . "/login/logout/");
 
 $nav['admin'] = array("LOGOUT" => base_url() . "/login/logout/");
 
