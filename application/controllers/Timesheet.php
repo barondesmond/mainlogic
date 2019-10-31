@@ -265,26 +265,7 @@ class Timesheet extends CI_Controller {
 				$this->load->view('main', $this);
 	}
 
-	public function viewer()
-	{
 
-				if (isset($_REQUEST['file']))
-				{
-					$this->navigation_viewer();
-					$gps = viewer_details($_REQUEST['file']);
-					$this->content = $this->load->view('viewerdetails', $gps, true);
-				}
-				else
-				{
-					$viewer = viewer();
-	
-					$this->content = $this->load->view('viewer', $viewer, true);
-				}
-
-				$this->navigation();
-	
-				$this->load->view('main', $this);
-	}
 
 	public function gps()
 	{

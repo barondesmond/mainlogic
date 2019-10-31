@@ -28,8 +28,8 @@ class Dispatch extends CI_Controller {
 	{
 
 				$active = dispatch_active();
-				$this->location_api = $active;
-				$this->content = $this->load->view('gps', $this, true);
+				$this->query = $active;
+				$this->content = $this->load->view('table', $this, true);
 
 				$this->navigation();
 	
