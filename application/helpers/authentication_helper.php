@@ -506,11 +506,12 @@ return $db;
 	{
 
 		$uri = 'timeclock_json.php?timeclock_add=1';
-		if ($_REQUEST['StartDate'] && $_REQUEST['StopDate'] && $_REQUEST['EmpNo'])
+		if ($_REQUEST['timeclock'])
 		{
 			$uri .= '&' . http_build_query($_REQUEST) . '&Dev=' . __DEV__;
+			return app_api($uri);
+
 		}
-		return app_api($uri);
 	}
 
 	function timeclock_update()
