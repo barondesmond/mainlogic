@@ -505,17 +505,14 @@ return $db;
 	function timeclock_add()
 	{
 
-		$uri = 'timeclock_json.php?timeclock_add=1';
-		if ($_REQUEST['timeclock'])
-		{
-			$EmpNo = $_REQUEST['EmpNo'];
-			unset($_REQUEST['EmpNo']);
+		$uri = 'timeclock_json.php?timeclock_add=' . $_REQUEST['EmpNo'];
+	
+	
 			$uri .= '&' . http_build_query($_REQUEST) . '&Dev=' . __DEV__;
 
 			$res =  app_api($uri);
-			$_REQUEST['EmpNo'] = $EmpNo;
 			return $res;
-		}
+
 	}
 
 	function timeclock_update()
