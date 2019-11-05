@@ -56,8 +56,11 @@ class Timesheet extends CI_Controller {
 			$StartTime = strtotime($_REQUEST['StartDay'] . ' 01:00:00');
 			$StopTime = strtotime($_REQUEST['StartDay'] . ' 02:00:00');
 		}
-		$_REQUEST['StartDate'] = date("Y:m:d H:i:s",$StartTime);
-		$_REQUEST['StopDate'] = date("Y:m:d H:i:s", $StopTime);
+		$_REQUEST['timeclock']['StartDate'] = date("Y:m:d H:i:s",$StartTime);
+		$_REQUEST['timeclock']['StopDate'] = date("Y:m:d H:i:s", $StopTime);
+		$_REQUEST['timeclock']['EmpNo'] = $_REQUEST['EmpNo'];
+		$_REQUEST['timeclock']['Screen'] = $_REQUEST['Screen'];
+		$_REQUEST['timeclock']['event'] = $_REQUEST['event'];
 		if (isset($_REQUEST['TimeClockID']))
 		{
 			unset($_REQUEST['TimeClockID']);

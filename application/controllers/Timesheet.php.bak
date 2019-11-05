@@ -56,8 +56,9 @@ class Timesheet extends CI_Controller {
 			$StartTime = strtotime($_REQUEST['StartDay'] . ' 01:00:00');
 			$StopTime = strtotime($_REQUEST['StartDay'] . ' 02:00:00');
 		}
-		$_REQUEST['StartDate'] = date("Y:m:d H:i:s",$StartTime);
-		$_REQUEST['StopDate'] = date("Y:m:d H:i:s", $StopTime);
+		$_REQUEST['timeclock']['StartDate'] = date("Y:m:d H:i:s",$StartTime);
+		$_REQUEST['timeclock']['StopDate'] = date("Y:m:d H:i:s", $StopTime);
+		$_REQUEST['timeclock']['EmpNo'] = $_REQUEST['EmpNo'];
 		if (isset($_REQUEST['TimeClockID']))
 		{
 			unset($_REQUEST['TimeClockID']);
@@ -265,26 +266,7 @@ class Timesheet extends CI_Controller {
 				$this->load->view('main', $this);
 	}
 
-	public function viewer()
-	{
 
-				if (isset($_REQUEST['file']))
-				{
-					$this->navigation_viewer();
-					$gps = viewer_details($_REQUEST['file']);
-					$this->content = $this->load->view('viewerdetails', $gps, true);
-				}
-				else
-				{
-					$viewer = viewer();
-	
-					$this->content = $this->load->view('viewer', $viewer, true);
-				}
-
-				$this->navigation();
-	
-				$this->load->view('main', $this);
-	}
 
 	public function gps()
 	{
