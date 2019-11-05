@@ -89,7 +89,7 @@ if ($_SERVER['HTTP_HOST'] == 'serviq.plisolutions.com')
 }
 else
 {
-	define('APPURL', 'https://app.plisolutions.com:7443/devlogic/');
+	define('APPURL', 'https://app.plisolutions.com:7443/primelogic/');
 }
 define('INSTID', md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']));
 date_default_timezone_set('America/Chicago');
