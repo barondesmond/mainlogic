@@ -509,6 +509,8 @@ return $db;
 		if ($_REQUEST['timeclock'])
 		{
 			$uri .= '&' . http_build_query($_REQUEST) . '&Dev=' . __DEV__;
+			echo $uri;
+			exit;
 			return app_api($uri);
 
 		}
