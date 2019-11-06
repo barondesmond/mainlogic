@@ -87,6 +87,7 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 if ($_SERVER['HTTP_HOST'] == 'serviq.plisolutions.com:780')
 {
 	define('APPURL', 'https://app.plisolutions.com:7443/devlogic/');
+	define('__DEV__', 'Dev');
 }
 else
 {
@@ -94,4 +95,3 @@ else
 }
 define('INSTID', md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']));
 date_default_timezone_set('America/Chicago');
-define('__DEV__', 'Dev');

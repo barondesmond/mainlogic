@@ -83,16 +83,16 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
-echo $_SERVER['HTTP_HOST'];
-exit;
-if ($_SERVER['HTTP_HOST'] == 'serviq.plisolutions.com')
+
+if ($_SERVER['HTTP_HOST'] == 'serviq.plisolutions.com:780')
 {
 	define('APPURL', 'https://app.plisolutions.com:7443/devlogic/');
+	define('__DEV__', 'Dev');
 }
 else
 {
 	define('APPURL', 'https://app.plisolutions.com:7443/primelogic/');
+	define('__DEV__', 'Dev');
 }
 define('INSTID', md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']));
 date_default_timezone_set('America/Chicago');
-define('__DEV__', 'Dev');
