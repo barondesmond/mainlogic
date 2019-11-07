@@ -326,7 +326,9 @@ function select_key($key, $id, $db)
 		}
 
 		$Employee[$event->EmpNo] = '<option value="?EmpNo=' . $event->EmpNo . '&Offset=' . $_REQUEST['Offset'] . '" ' . $selected . ' >' . $event->EmpName . ' ' . $event->EmpNo . '</option>';
-		$Job[$event->EmpNo][$event->Screen][$key] = '<b>' . $event->Name . $event->Dispatch .  ' ' . $event->LocName . '</b>';
+		//$Job[$event->EmpNo][$event->Screen][$key] = '<b>' . $event->Name . $event->Dispatch .  ' ' . $event->LocName . '</b>';
+		$Job[$event->EmpNo][$event->Screen][$key] = '<b>' . $event->Name . $event->Dispatch . '</b>';
+
 
 			//if ($event->Screen != 'Dispatch')
 			//{
