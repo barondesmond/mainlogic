@@ -297,7 +297,7 @@ function select_key($key, $id, $db)
 		$Job = array();
 		$Employee = array();
 		$Chron = array();
-	    usort($TimeClock, "time_sort");
+	    @usort($TimeClock, "time_sort");
 
 		foreach ($TimeClock as $id=>$event)
 		{
