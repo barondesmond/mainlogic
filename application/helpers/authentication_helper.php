@@ -359,7 +359,7 @@ function select_key($key, $id, $db)
 				{
 					$Save[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, 'readonly');
 					$Time[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, $input);
-					$str = $event->TimeClockID . ' ' . $event->Screen . ' ' . $key . ' ';
+					$str = $event->Screen . ' ' . $key . ' ';
 					$Chron[$event->EmpNo]['Chron'] .= '<tr><td><b>' . $str. '</b> </td><td> ' . timeclock_row($event, $input) . ' </td></tr>';
 				}
 	
