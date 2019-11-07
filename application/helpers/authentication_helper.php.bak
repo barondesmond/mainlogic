@@ -285,7 +285,7 @@ function select_key($key, $id, $db)
 
 
     function time_sort($a,$b) {
-          return $a->StartTime > $b->StartTime;
+          return $a->StartTime < $b->StartTime;
      }
 
 
