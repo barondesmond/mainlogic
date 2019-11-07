@@ -304,7 +304,7 @@ function select_key($key, $id, $db)
 	    uasort($t2, "time_sort");
 		
 		
-		foreach ($t2 as $id=>$event)
+		foreach ($TimeClock as $id=>$event)
 		{
 
 		if (isset($event->StartTime) && isset($event->StopTime))

@@ -358,7 +358,7 @@ function select_key($key, $id, $db)
 		}
 		}
 	
-	$db['Time'] = $Time;
+	//$db['Time'] = $Time;
 	$db['Job']  = $Job;
 	$db['Employee'] = $Employee;
 	$db['Save'] = $Save;
