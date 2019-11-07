@@ -289,9 +289,7 @@ function select_key($key, $id, $db)
 			{
 			  return 0;
 			}
-			print_r($a);
-			print_r($b);
-			exit;
+	
           return $a->StartTime > $b->StartTime;
      }
 
