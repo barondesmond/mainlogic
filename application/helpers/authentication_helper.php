@@ -301,7 +301,7 @@ function select_key($key, $id, $db)
 		{
 			$t2[$id] = $db;
 		}
-	    usort($ts, "time_sort");
+	    usort($t2, "time_sort");
 		print_r($t2);
 		exit;
 		foreach ($TimeClock as $id=>$event)
