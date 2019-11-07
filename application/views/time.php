@@ -45,7 +45,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 
 			//echo $out;
 		//}
-		print_r($Chron[$_REQUEST['EmpNo']]['Chron']);
+		echo $Chron[$_REQUEST['EmpNo']]['Chron'];
 		echo '</table>';
 	}
 }
