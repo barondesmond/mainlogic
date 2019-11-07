@@ -290,7 +290,7 @@ function select_key($key, $id, $db)
 			  return 0;
 			}
 	
-          return $a->StartTime > $b->StartTime;
+          return $a->TimeClockID > $b->TimeClockID;
      }
 
 
@@ -307,7 +307,8 @@ function select_key($key, $id, $db)
 			$t2[$id] = $eve;
 		}
 	    uasort($t2, "time_sort");
-		
+		print_r($t2);
+		exit;
 		
 		foreach ($t2 as $id=>$event)
 		{
