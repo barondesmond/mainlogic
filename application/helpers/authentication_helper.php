@@ -327,8 +327,11 @@ function select_key($key, $id, $db)
 			$Time[$event->EmpNo][$event->Screen][$key] = '';
 			$Save[$event->EmpNo][$event->Screen][$key] = '';
 			$Job[$event->EmpNo][$event->Screen][$key] = '';
-			$Chron[$event->EmpNo]['Chron'] = '';
 
+		}
+		if (!isset($Chron[$event->EmpNo]['Chron']))
+		{
+			$Chron[$event->EmpNo]['Chron'] = '';
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
 		{

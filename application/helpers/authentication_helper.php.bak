@@ -327,7 +327,7 @@ function select_key($key, $id, $db)
 			$Time[$event->EmpNo][$event->Screen][$key] = '';
 			$Save[$event->EmpNo][$event->Screen][$key] = '';
 			$Job[$event->EmpNo][$event->Screen][$key] = '';
-			$Chron[$event->EmpNo]['Chron'][$key] = '';
+			$Chron[$event->EmpNo]['Chron'] = '';
 
 		}
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] == $event->EmpNo)
@@ -357,7 +357,7 @@ function select_key($key, $id, $db)
 					$Save[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, 'readonly');
 					$Time[$event->EmpNo][$event->Screen][$key] .= timeclock_row($event, $input);
 					$str = $event->TimeClockID . ' ' . $event->Screen . ' ' . $key . ' ';
-					$Chron[$event->EmpNo]['Chron'][$key] .= '<tr><td><b>' . $str. '</b> </td><td> ' . timeclock_row($event, $input) . ' </td></tr>';
+					$Chron[$event->EmpNo]['Chron'] .= '<tr><td><b>' . $str. '</b> </td><td> ' . timeclock_row($event, $input) . ' </td></tr>';
 				}
 	
 		}
