@@ -290,7 +290,7 @@ function select_key($key, $id, $db)
 			  return 0;
 			}
 	
-          return $a->TimeClockID > $b->TimeClockID  ? -1 : 1;
+          return ($a->TimeClockID > $b->TimeClockID)  ? -1 : 1;
      }
 
 
