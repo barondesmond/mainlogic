@@ -14,7 +14,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 		$Time = $db['Time'];
 		$Chron = $db['Chron'];
 	}
-	if (isset($Job[$_REQUEST['EmpNo']]) && (!isset($_REQUEST['switch']) || $_REQUEST['switch'] == 'GROUP'))
+	if (isset($Job[$_REQUEST['EmpNo']]) && (isset($_REQUEST['current']) && $_REQUEST['current'] == 'GROUP'))
 	{
 
 
@@ -34,7 +34,7 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 	
 
 	}
-	if (isset($_REQUEST['switch']) && $_REQUEST['switch'] == 'CHRON' && isset($Chron) &&  isset($Chron[$_REQUEST['EmpNo']]))
+	if (isset($_REQUEST['current']) && $_REQUEST['current'] == 'CHRON' && isset($Chron) &&  isset($Chron[$_REQUEST['EmpNo']]))
 	{
 
 			echo '<p><b>' . 'Chronological' . '</b></p>';

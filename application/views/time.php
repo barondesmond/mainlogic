@@ -40,11 +40,12 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '')
 			echo '<p><b>' . 'Chronological' . '</b></p>';
 			echo 'Employee Input<br>';
 			echo '<table border=0>';
-		foreach ($Chron[$_REQUEST['EmpNo']]['Chron'] as $key=>$out)
-		{
+		//foreach ($Chron[$_REQUEST['EmpNo']]['Chron'] as $key=>$out)
+		//{
 
-			echo $out;
-		}
+			//echo $out;
+		//}
+		echo $Chron[$_REQUEST['EmpNo']['Chron'][$_REQUEST['EmpNo'];
 		echo '</table>';
 	}
 }
