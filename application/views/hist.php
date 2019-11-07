@@ -37,11 +37,8 @@ if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && isset($TimeClockHis
 			echo '<p><b>' . 'Chronological' . '</b></p>';
 			echo 'History<br>';
 			echo '<table border=0>';
-		foreach ($Chron[$_REQUEST['EmpNo']]['Chron'] as $key=>$out)
-		{
+			echo $Chron[$_REQUEST['EmpNo']]['Chron'];
 
-			echo $out;
-		}
 		echo '</table>';
 	}
 }
