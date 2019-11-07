@@ -297,14 +297,14 @@ function select_key($key, $id, $db)
 		$Job = array();
 		$Employee = array();
 		$Chron = array();
-		foreach ($TimeClock as $id=>$db)
+		foreach ($TimeClock as $id=>$eve)
 		{
-			$t2[$id] = $db;
+			$t2[$id] = $eve;
 		}
 	    uasort($t2, "time_sort");
 		
 		
-		foreach ($TimeClock as $id=>$event)
+		foreach ($t2 as $id=>$event)
 		{
 
 		if (isset($event->StartTime) && isset($event->StopTime))
@@ -358,7 +358,7 @@ function select_key($key, $id, $db)
 		}
 		}
 	
-	//$db['Time'] = $Time;
+	$db['Time'] = $Time;
 	$db['Job']  = $Job;
 	$db['Employee'] = $Employee;
 	$db['Save'] = $Save;
