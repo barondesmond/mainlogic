@@ -29,7 +29,7 @@ class Dispatch extends CI_Controller {
 		$this->periodnav = $this->load->view('clock_employee', $this, true);
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && !isset($this->Post->$_REQUEST['EmpNo']))
 		{
-				if (isset($this->centercolumn1) && this->centercolumn1 == 'START')
+				if (isset($this->centercolumn1) && $this->centercolumn1 == 'START')
 				{
 					$start = true;
 				}
