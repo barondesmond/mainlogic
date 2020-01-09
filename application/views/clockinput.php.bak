@@ -1,0 +1,56 @@
+<?php
+//input select
+if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
+{
+	return false;
+}
+	if (!isset($_REQUEST['Screen']))
+	{
+		$_REQUEST['Screen'] = 'Employee';
+	}
+
+
+		$arraytype = array('Employee', 'Job', 'Dispatch');
+		echo 'Type<select name="ScreenType" onchange="javascript:location.href = this.value;"><OPTION>Select Type</OPTION>';
+		foreach ($arraytype as $type)
+		{
+			echo '<OPTION value="' . '?Offset=' . $_REQUEST['Offset'] . '&EmpNo=' . $_REQUEST['EmpNo'] . '&Screen=' . $type . '&StartDay=' . $_REQUEST['StartDay'] . '"';
+			if ($_REQUEST['Screen'] == $type)
+			{
+				echo ' selected ' ;
+			}
+			echo '>' . $type . '</OPTION>';
+		}
+		echo '</select>';
+		echo '<input type=hidden name=StartDay value="' . $_REQUEST['StartDay'] . '">';
+
+		echo '<input type=hidden name="Screen" value="'  .$_REQUEST['Screen'] . '" >';
+		echo 'Event<select name="event"><OPTION>Traveling</OPTION><OPTION>Working</OPTION></SELECT>';
+		if (isset($Job))
+		{
+			echo 'Job#<select name="JD"><OPTION>Select Job</OPTION>';
+			foreach ($Job->jobs as $job)
+			{
+				echo '<OPTION value="' . $job->Name . ':' . $job->JobID . '">' . substr($job->Name . ' ' . $job->LocName, 0, 20) . '</OPTION>';
+			}
+			echo '</select>';
+		}
+		if (isset($Dispatch))
+		{
+	
+			echo 'Dispatch#<select name="JD"><OPTION>Select Dispatch</OPTION>';
+			foreach ($Dispatch->dispatchs as $dispatch)
+			{
+				echo '<OPTION value="' . $dispatch->Dispatch . ':' . $dispatch->Counter . '">' . substr($dispatch->Dispatch . ' ' . $dispatch->DispatchName, 0, 20) . '</OPTION>';
+			}
+			echo '</select>';
+		}
+	
+
+
+
+
+
+
+
+?>
