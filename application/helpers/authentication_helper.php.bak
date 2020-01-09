@@ -506,7 +506,7 @@ return $db;
 	
 	function timeclock()
 	{
-		if (!isset($_REQUEST['StartTime']) || !isset($_REQUEST['StopTime']))
+		if (!isset($_REQUEST['StartTime']) || !isset($_REQUEST['StopTime']) && $_REQUEST['Offset'])
 		{
 			$gpb = get_period_bounds($_REQUEST['Offset']);
 			$StartTime = $gpb[0];
