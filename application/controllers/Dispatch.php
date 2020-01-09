@@ -59,7 +59,12 @@ class Dispatch extends CI_Controller {
 				$this->Dispatch = dispatchs();
 			}
 		}
-
+		if (isset($_REQUEST['submit']) && isset($_REQUEST['EmpNo']))
+		{
+			$this->users = users_active();
+			$db = array_merge((array) $this->users, $_REQUEST);
+			$authemp = timeclock_authemp($db);
+		}			
 
 		$active = dispatch_active();
 		if (isset($_REQUEST['EmpNo']) && isset($active->$_REQUEST['EmpNo']))
@@ -81,7 +86,6 @@ class Dispatch extends CI_Controller {
 		{
 			$this->TimeClock = $TimeClock;
 		}
-		$this->users = users_active();
 		$this->query = $active;
 		$this->content = $this->load->view('table', $this, true);
 

@@ -38,7 +38,7 @@ class Dispatch extends CI_Controller {
 		}
 		if ($start)
 		{
-			$this->inputnav = $this->load->view('input', $this, true);
+			$this->inputnav = $this->load->view('clockinput', $this, true);
 		}
 	}
 
