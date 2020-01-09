@@ -36,7 +36,7 @@ class Dispatch extends CI_Controller {
 
 	public function active()
 	{
-		if (!$_REQUEST['Offset'])
+		if (!isset($_REQUEST['Offset']))
 		{
 			$_REQUEST['Offset'] = '1';
 		}

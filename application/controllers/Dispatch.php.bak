@@ -36,6 +36,10 @@ class Dispatch extends CI_Controller {
 
 	public function active()
 	{
+		if (!$_REQUEST['Offset'])
+		{
+			$_REQUEST['Offset'] = '1';
+		}
 		$TimeClock = timeclock();
 		if (isset($TimeClock->TimeClock))
 		{
