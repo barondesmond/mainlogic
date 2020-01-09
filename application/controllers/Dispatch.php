@@ -25,7 +25,7 @@ class Dispatch extends CI_Controller {
 	}
 	public function active_navigation()
 	{
-		private $start = false;
+		$start = false;
 		$this->periodnav = $this->load->view('clock_employee', $this, true);
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && !isset($this->Post->$_REQUEST['EmpNo']))
 		{
