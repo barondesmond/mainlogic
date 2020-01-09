@@ -512,10 +512,15 @@ return $db;
 			$StartTime = $gpb[0];
 			$StopTime = $gpb[1];
 		}
-		elseif (isset($_REQUEST['StartTime']) && isset($_REQUEST['StopTime'])
+		elseif (isset($_REQUEST['StartTime']) && isset($_REQUEST['StopTime']))
 		{
 			$StartTime = $_REQUEST['StartTime'];
 			$StopTime = $_REQUEST['StopTime'];
+		}
+		else
+		{
+			$StartTime = '0';
+			$StopTime = time();
 		}
 		$uri = "timeclock_json.php?timeclock=1&StartTime=$StartTime&StopTime=$StopTime&Dev=" . __DEV__;
 		return app_api($uri);

@@ -512,7 +512,7 @@ return $db;
 			$StartTime = $gpb[0];
 			$StopTime = $gpb[1];
 		}
-		else
+		elseif (isset($_REQUEST['StartTime']) && isset($_REQUEST['StopTime'])
 		{
 			$StartTime = $_REQUEST['StartTime'];
 			$StopTime = $_REQUEST['StopTime'];
