@@ -63,10 +63,7 @@ class Dispatch extends CI_Controller {
 		{
 				$this->centercolumn1 = 'START';
 		}
-		else
-		{
-			$this->centercolumn1 = '';
-		}
+	
 		
 		$TimeClock = timeclock();
 		if (isset($TimeClock->TimeClock))
