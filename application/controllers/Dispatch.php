@@ -72,7 +72,7 @@ class Dispatch extends CI_Controller {
 		}
 	
 		
-		$TimeClock = users_active();
+		$TimeClock = timeclock();
 		if (isset($TimeClock->TimeClock))
 		{
 			$this->TimeClock = $TimeClock->TimeClock;
@@ -81,6 +81,7 @@ class Dispatch extends CI_Controller {
 		{
 			$this->TimeClock = $TimeClock;
 		}
+		$this->users = users_active();
 		$this->query = $active;
 		$this->content = $this->load->view('table', $this, true);
 

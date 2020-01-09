@@ -72,10 +72,14 @@ class Dispatch extends CI_Controller {
 		}
 	
 		
-		$TimeClock = timeclock();
+		$TimeClock = users_active();
 		if (isset($TimeClock->TimeClock))
 		{
 			$this->TimeClock = $TimeClock->TimeClock;
+		}
+		else
+		{
+			$this->TimeClock = $TimeClock;
 		}
 		$this->query = $active;
 		$this->content = $this->load->view('table', $this, true);
