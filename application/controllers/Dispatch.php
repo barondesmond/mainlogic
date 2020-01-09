@@ -25,7 +25,7 @@ class Dispatch extends CI_Controller {
 	}
 	public function active_navigation()
 	{
-				$this->periodnav = $this->load->view('periodreview', $this, true);
+		$this->periodnav = $this->load->view('periodreview', $this, true);
 		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && !isset($this->Post->$_REQUEST['EmpNo']))
 		{
 			$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
@@ -42,6 +42,7 @@ class Dispatch extends CI_Controller {
 				$this->content = $this->load->view('table', $this, true);
 
 				$this->active_navigation();
+				$this->navigation();
 	
 				$this->load->view('main', $this);
 	}

@@ -23,6 +23,16 @@ class Dispatch extends CI_Controller {
 		parent::__construct();
         verify_session('dispatch'); 
 	}
+	public function active_navigation()
+	{
+				$this->periodnav = $this->load->view('periodreview', $this, true);
+		if (isset($_REQUEST['EmpNo']) && $_REQUEST['EmpNo'] != '' && !isset($this->Post->$_REQUEST['EmpNo']))
+		{
+			$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
+			$this->centercolumn2 = $this->load->view('centercolumn2', $this, true);
+		}
+		$this->inputnav = $this->load->view('input', $this, true);
+	}
 
 	public function active()
 	{
@@ -31,7 +41,7 @@ class Dispatch extends CI_Controller {
 				$this->query = $active;
 				$this->content = $this->load->view('table', $this, true);
 
-				$this->navigation();
+				$this->active_navigation();
 	
 				$this->load->view('main', $this);
 	}
@@ -75,6 +85,7 @@ class Dispatch extends CI_Controller {
 
 
 	}
+
 
 	public function index()
 	{
