@@ -36,15 +36,20 @@ class Dispatch extends CI_Controller {
 
 	public function active()
 	{
+		$TimeClock = timeclock();
+		if (isset($TimeClock->TimeClock))
+		{
+			$this->TimeClock = $TimeClock->TimeClock;
+		}
 
-				$active = dispatch_active();
-				$this->query = $active;
-				$this->content = $this->load->view('table', $this, true);
+		$active = dispatch_active();
+		$this->query = $active;
+		$this->content = $this->load->view('table', $this, true);
 
-				$this->active_navigation();
-				$this->navigation();
+		$this->active_navigation();
+		$this->navigation();
 	
-				$this->load->view('main', $this);
+		$this->load->view('main', $this);
 	}
 	public function viewer()
 	{
