@@ -64,6 +64,7 @@ class Dispatch extends CI_Controller {
 			$this->users = users_active();
 			$db = array_merge((array) $this->users, $_REQUEST);
 			$authemp = timeclock_authemp($db);
+			print_r($authemp);
 		}			
 
 		$active = dispatch_active();
