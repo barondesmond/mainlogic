@@ -55,13 +55,17 @@ class Dispatch extends CI_Controller {
 
 
 		$active = dispatch_active();
-		if (isset($active->$_REQUEST['EmpNo']))
+		if (isset($_REQUEST['EmpNo']) && isset($active->$_REQUEST['EmpNo']))
 			{
 				$this->centercolumn1 = 'STOP';
 			}
+			elseif (isset($_REQUEST['EmpNo']))
+			{
+				$this->centercolumn1 = 'START';
+			}
 			else
 			{
-				$this->centercolumn2 = 'START';
+				$this->centercolumn1 = '';
 			}
 		}
 		$TimeClock = timeclock();
