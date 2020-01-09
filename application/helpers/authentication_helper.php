@@ -135,6 +135,12 @@
 		return app_api($uri);
 
 	}
+	function users_active()
+	{
+		$uri = 'users_json.php?location_query=1&Dev=' . __DEV__;
+		return app_api($uri);
+
+	}
 
 	function viewer()
 	{
