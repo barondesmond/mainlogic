@@ -38,7 +38,18 @@ class Dispatch extends CI_Controller {
 	{
 		if (!isset($_REQUEST['Offset']))
 		{
-			$_REQUEST['Offset'] = '1';
+			$_REQUEST['Offset'] = -1;
+		}	
+		if (isset($_REQUEST['Screen']))
+		{
+			if ($_REQUEST['Screen'] == 'Job')
+			{
+				$this->Job = jobs();
+			}
+			if ($_REQUEST['Screen'] == 'Dispatch')
+			{
+				$this->Dispatch = dispatchs();
+			}
 		}
 		$TimeClock = timeclock();
 		if (isset($TimeClock->TimeClock))
