@@ -32,6 +32,7 @@ class Dispatch extends CI_Controller {
 				if (isset($this->centercolumn1) && this->centercolumn1 == 'START')
 				{
 					$start = true;
+				}
 				$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
 
 		}
