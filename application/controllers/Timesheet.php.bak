@@ -166,8 +166,11 @@ class Timesheet extends CI_Controller {
 		{
 			$this->Post = $TimeSheet->Post;
 		}
-		$this->navigation_timesheet();
-		$this->navigation();
+		if (!$_REQUEST['print'])
+		{
+			$this->navigation_timesheet();
+			$this->navigation();
+		}
 		$this->content = $this->load->view('timesheet', $TimeSheet, true);
 		$this->load->view('main', $this);
 	}
