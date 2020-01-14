@@ -556,7 +556,7 @@ return $db;
 	}
 	function timeclock_authemp($db)
 	{
-		$uri = "timeclock_authemp.php?timeclock['EmpNo']=" . $db['EmpNo'] . "&timeclock['installationId']=" . $db['installationId'];
+		$uri = "timeclock_authemp.php?timeclock['EmpNo']=" . $db['EmpNo'] . "&timeclock['installationId']=" . $db['installationID'];
 		if (isset($db))
 		{			
 			$uri .= '&' . http_build_query($db) . '&Dev=' . __DEV__;
