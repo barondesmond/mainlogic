@@ -260,7 +260,7 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]) && $_REQUEST['
 	echo '</table>';
 	if (!isset($_REQUEST['print']) && isset($_REQUEST['EmpNo']) && isset ($_REQUEST['Offset']))
 	{
-		echo '<A HREF=' . base_url() . '?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'] . '&print=1>Print</a>';	
+		echo '<A HREF=' . base_url() . '/timesheet/timesheet/?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'] . '&print=1>Print</a>';	
 	}
 }
 ?>
