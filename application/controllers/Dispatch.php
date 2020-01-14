@@ -63,6 +63,14 @@ class Dispatch extends CI_Controller {
 		{
 			$this->users = users_active();
 			$db = array_merge((array) $this->users->$_REQUEST['EmpNo'], $_REQUEST);
+			if ($_REQUEST['submit'] == 'START')
+			{
+				$db['checkinStatus'] = 'Start';
+			}
+			if ($_REQUEST['submit'] == 'STOP')
+			{
+				$db['checkinStatus'] = 'Stop';
+			}
 			unset($db['Employee']);
 			unset($db['ScreenType']);
 			print_r($db);
