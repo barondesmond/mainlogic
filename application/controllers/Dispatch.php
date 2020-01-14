@@ -73,7 +73,7 @@ class Dispatch extends CI_Controller {
 			}
 			unset($db['Employee']);
 			unset($db['ScreenType']);
-			//print_r($db);
+			print_r($db);
 			$authemp = timeclock_authemp($db);
 			//print_r($authemp);
 			redirect('/dispatch/active/' , 'refresh');
