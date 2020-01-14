@@ -76,7 +76,7 @@ class Dispatch extends CI_Controller {
 			//print_r($db);
 			$authemp = timeclock_authemp($db);
 			//print_r($authemp);
-			redirect('/dispatch/active/?' . http_build_query($_REQUEST) , 'refresh');
+			redirect('/dispatch/active/' , 'refresh');
 
 		}			
 
