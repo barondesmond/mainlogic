@@ -93,7 +93,7 @@ class Dispatch extends CI_Controller {
 					$db['Name'] = $jd['0'];
 					$db['JobID'] = $jd['1'];
 				}
-
+			}
 			unset($db['Employee']);
 			unset($db['ScreenType']);
 			//print_r($db);

@@ -79,7 +79,7 @@ class Dispatch extends CI_Controller {
 			{
 				$db['checkinStatus'] = 'Stop';
 			}
-			if ($_REQUEST['JD']])
+			if (isset($_REQUEST['JD']))
 			{
 				$jd=	explode(':', $_REQUEST['JD']);
 				
