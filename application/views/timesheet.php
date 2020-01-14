@@ -258,7 +258,9 @@ if (isset($_REQUEST['EmpNo']) && isset($Time[$_REQUEST['EmpNo']]) && $_REQUEST['
 	echo '<tr><td >Total Hours</td><td ><input type=hidden name=PRHours[TCHours] value=' . $tchours . '> ' . $max . '</td></tr>';
 
 	echo '</table>';
-
-
+	if (!isset($_REQUEST['print']) && isset($_REQUEST['EmpNo']) && isset ($_REQUEST['Offset']))
+	{
+		echo '<A HREF=' . base_url() . '?EmpNo=' . $_REQUEST['EmpNo'] . '&Offset=' . $_REQUEST['Offset'] . '&print=1>Print</a>';	
+	}
 }
 ?>

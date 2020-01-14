@@ -121,8 +121,7 @@ return $row;
 
 function timesheet_prhours_head($PRHours)
 {
-	$row =  '<tr><td>PayItemID</td><td>Hours>';
-	$row .= '</tr>';
+	$row =  '<tr><td>PayItemID</td><td>Hours</td></tr>';
 	return $row;
 }
 function timesheet_prhours($PRHours, &$max)
