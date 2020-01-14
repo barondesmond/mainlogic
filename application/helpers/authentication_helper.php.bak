@@ -405,7 +405,7 @@ $Employee = array_merge($Employee, $db['Employee']);
 if (isset($Employee))
 {
 //Employee Select
-echo 'Employee <select name="EmpNo" onchange="javascript:location.href = this.value;">';
+echo 'Employee <select name="Employee" onchange="javascript:location.href = this.value;">';
 
 foreach ($Employee as $Emp)
 {
@@ -556,9 +556,10 @@ return $db;
 	}
 	function timeclock_authemp($db)
 	{
-		$uri = 'authempinst_json.php?timeclock_authemp=1';
+		$uri = 'timeclock_authemp.php?timeclock_authemp=' . $db['EmpNo'];
 		if (isset($db))
 		{
+			unset($db['EmpNo']);
 			$uri .= '&' . http_build_query($db) . '&Dev=' . __DEV__;
 		}
 		return app_api($uri);
