@@ -59,10 +59,18 @@ class Dispatch extends CI_Controller {
 				$this->Dispatch = dispatchs();
 			}
 		}
+		$active = dispatch_active();
 		if (isset($_REQUEST['submit']) && isset($_REQUEST['EmpNo']))
 		{
 			$this->users = users_active();
-			$db = array_merge((array) $this->users->$_REQUEST['EmpNo'], $_REQUEST);
+			if (isset($active->$_REQUEST['EmpNo']))
+			{
+				$db = array_merge((array) $active->$_REQUEST['EmpNo'], $_REQUEST);
+			}
+			else
+			{
+				$db = array_merge((array) $this->users->$_REQUEST['EmpNo'], $_REQUEST);
+			}
 			if ($_REQUEST['submit'] == 'START')
 			{
 				$db['checkinStatus'] = 'Start';
@@ -80,7 +88,6 @@ class Dispatch extends CI_Controller {
 
 		}			
 
-		$active = dispatch_active();
 		if (isset($_REQUEST['EmpNo']) && isset($active->$_REQUEST['EmpNo']))
 		{
 				$this->centercolumn1 = 'STOP';
