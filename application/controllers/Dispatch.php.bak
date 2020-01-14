@@ -62,7 +62,7 @@ class Dispatch extends CI_Controller {
 		if (isset($_REQUEST['submit']) && isset($_REQUEST['EmpNo']))
 		{
 			$this->users = users_active();
-			$db = array_merge((array) $this->users, $_REQUEST);
+			$db = array_merge((array) $this->users->$_REQUEST['EmpNo'], $_REQUEST);
 			print_r($db);
 			$authemp = timeclock_authemp($db);
 			print_r($authemp);
