@@ -554,6 +554,15 @@ return $db;
 		}
 		return app_api($uri);
 	}
+	function timeclock_authemp($db)
+	{
+		$uri = 'authempinst_json.php?timeclock_authemp=1';
+		if (isset($db))
+		{
+			$uri .= '&' . http_build_query($db) . '&Dev=' . __DEV__;
+		}
+		return app_api($uri);
+	}
 
 
 

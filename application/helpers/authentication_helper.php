@@ -405,7 +405,7 @@ $Employee = array_merge($Employee, $db['Employee']);
 if (isset($Employee))
 {
 //Employee Select
-echo 'Employee <select name="EmpNo" onchange="javascript:location.href = this.value;">';
+echo 'Employee <select name="Employee" onchange="javascript:location.href = this.value;">';
 
 foreach ($Employee as $Emp)
 {
