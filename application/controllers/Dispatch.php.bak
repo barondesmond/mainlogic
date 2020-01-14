@@ -79,9 +79,25 @@ class Dispatch extends CI_Controller {
 			{
 				$db['checkinStatus'] = 'Stop';
 			}
+			if ($_REQUEST['JD']])
+			{
+				$jd=	explode(':', $_REQUEST['JD']);
+				
+				if ($_REQUEST['Screen'] == 'Dispatch')
+				{
+					$db['Dispatch'] = $jd['0'];
+					$db['Counter'] = $jd['1'];
+				}
+				if ($_REQUEST['Screen'] == 'Job')
+				{
+					$db['Name'] = $jd['0'];
+					$db['JobID'] = $jd['1'];
+				}
+
 			unset($db['Employee']);
 			unset($db['ScreenType']);
 			//print_r($db);
+			
 			$authemp = timeclock_authemp($db);
 			//print_r($authemp);
 			redirect('/dispatch/active/' , 'refresh');
