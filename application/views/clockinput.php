@@ -6,7 +6,7 @@ if (!isset($_REQUEST['EmpNo']) || $_REQUEST['EmpNo'] == '')
 }
 	if (!isset($_REQUEST['Screen']))
 	{
-		$_REQUEST['Screen'] = 'Employee';
+		$_REQUEST['Screen'] = '';
 	}
 
 
