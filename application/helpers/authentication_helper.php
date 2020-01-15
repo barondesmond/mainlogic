@@ -200,15 +200,15 @@ function select_key($key, $id, $db)
 	function get_period_bounds($offset = -1) 
 	{
 
-	  $secondhalf  = ($offset % 2) == 0 xor (int) date('j') >= 15;
+	  $secondhalf  = ($offset % 2) == 0 xor (int) date('j') >= 16;
 	 $monthnumber = ceil((int) date('n') + $offset / 2);;
 
 	    $period_begin = mktime(0, 0, 0, // 00:00:00
                            $monthnumber,
-                           $secondhalf ? 16 : 1);
+                           $secondhalf ? 16 : 0);
 	  $period_end   = mktime(0, 0, 0, // 00:00:00
                            $secondhalf ? $monthnumber + 1 : $monthnumber,
-                           $secondhalf ? 0 : 15);
+                           $secondhalf ? 0 : 16);
 
 		return array($period_begin, $period_end-1);
 	}
