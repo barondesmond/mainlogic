@@ -208,7 +208,7 @@ function select_key($key, $id, $db)
                            $secondhalf ? 16 : 1);
 	  $period_end   = mktime(0, 0, 0, // 00:00:00
                            $secondhalf ? $monthnumber + 1 : $monthnumber,
-                           $secondhalf ? 0 : 15);
+                           $secondhalf ? 0 : 16);
 
 		return array($period_begin, $period_end);
 	}
