@@ -208,7 +208,7 @@ function get_period_bounds($offset = 0) {
                            $secondhalf ? $monthnumber + 1 : $monthnumber,
                            $secondhalf ? 0 : 15);
 
-    return array($period_begin, $period_end);
+    return array($period_begin, $period_end+86399);
 }
 		
 
