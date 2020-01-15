@@ -210,7 +210,7 @@ function select_key($key, $id, $db)
                            $secondhalf ? $monthnumber + 1 : $monthnumber,
                            $secondhalf ? 0 : 16);
 
-		return array($period_begin, $period_end);
+		return array($period_begin, $period_end-1);
 	}
 		
 
