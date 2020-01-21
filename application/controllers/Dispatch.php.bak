@@ -180,11 +180,7 @@ class Dispatch extends CI_Controller {
 		{
 			$this->auth();
 		}
-		$this->navigation();
-		$this->content = 'Dispatch Level Access';
-
-
-		$this->load->view('main', $this);
+		this->active();
 	}
 
 }
