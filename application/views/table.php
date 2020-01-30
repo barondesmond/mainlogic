@@ -15,11 +15,11 @@ function table_row($row)
 			$val = '<option value="?EmpNo=' . $row->EmpNo . '&checkinStatus=Switch';
 			if ($row->Screen == 'Dispatch')
 			{
-				$val = '&Screen=Dispatch&Dispatch=' . $row->Dispatch . '&Counter='  . $row->Counter;
+				$val .= '&Screen=Dispatch&Dispatch=' . $row->Dispatch . '&Counter='  . $row->Counter;
 			}
 			if ($row->Screen == 'Job')
 			{
-				$val = '&Screen=Job&Name=' . $row->Name . '&JobID=' . $row->JobID;
+				$val .= '&Screen=Job&Name=' . $row->Name . '&JobID=' . $row->JobID;
 			}
 			if ($value == 'Traveling')
 			{
