@@ -73,17 +73,15 @@ class Dispatch extends CI_Controller {
 			}
 			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'START')
 			{
-				if (!isset($db['checkinStatus']) || $db['checkinStatus'] != 'Switch')
-				{
+
 					$db['checkinStatus'] = 'Start';
-				}
+
 			}
 			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'STOP')
 			{
-				if (!isset($db['checkinStatus']) || $db['checkinStatus'] != 'Switch')
-				{
+		
 					$db['checkinStatus'] = 'Stop';
-				}
+	
 			}
 			if (isset($_REQUEST['JD']))
 			{

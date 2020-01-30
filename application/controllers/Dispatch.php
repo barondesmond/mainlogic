@@ -104,6 +104,7 @@ class Dispatch extends CI_Controller {
 			
 			$authemp = timeclock_authemp($db);
 			//print_r($authemp);
+			error_log(json_encode($authemp));
 			redirect('/dispatch/active/' , 'refresh');
 
 		}			
