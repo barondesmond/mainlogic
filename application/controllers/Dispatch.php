@@ -101,7 +101,7 @@ class Dispatch extends CI_Controller {
 			unset($db['Employee']);
 			unset($db['ScreenType']);
 			//print_r($db);
-			
+			error_log(json_encode($db));
 			$authemp = timeclock_authemp($db);
 			//print_r($authemp);
 			error_log(json_encode($authemp));
