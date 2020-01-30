@@ -71,16 +71,16 @@ class Dispatch extends CI_Controller {
 			{
 				$db = array_merge((array) $this->users->$_REQUEST['EmpNo'], $_REQUEST);
 			}
-			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'START'))
+			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'START')
 			{
-				if (!$db['checkinStatus'])
+				if (!isset($db['checkinStatus']) || $db['checkinStatus'] != 'Switch')
 				{
 					$db['checkinStatus'] = 'Start';
 				}
 			}
-			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'STOP'))
+			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'STOP')
 			{
-				if (!$db['checkinStatus'])
+				if (!isset($db['checkinStatus']) || $db['checkinStatus'] != 'Switch')
 				{
 					$db['checkinStatus'] = 'Stop';
 				}

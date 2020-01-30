@@ -71,13 +71,19 @@ class Dispatch extends CI_Controller {
 			{
 				$db = array_merge((array) $this->users->$_REQUEST['EmpNo'], $_REQUEST);
 			}
-			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'START' && !isset($db['checkinStatus']))
+			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'START')
 			{
-				$db['checkinStatus'] = 'Start';
+				if (!$db['checkinStatus'])
+				{
+					$db['checkinStatus'] = 'Start';
+				}
 			}
-			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'STOP' && !isset($db['checkinStatus']))
+			if (isset($_REQUEST['submit']) && $_REQUEST['submit'] == 'STOP')
 			{
-				$db['checkinStatus'] = 'Stop';
+				if (!$db['checkinStatus'])
+				{
+					$db['checkinStatus'] = 'Stop';
+				}
 			}
 			if (isset($_REQUEST['JD']))
 			{
