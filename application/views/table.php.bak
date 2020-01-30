@@ -13,16 +13,16 @@ function table_row($row)
 		{
 			$t = '<select name="eventStatus" onchange="javascript:location.href = this.value;">';
 			$val = '<option value="?EmpNo=' . $row->EmpNo . '&checkinStatus=Switch';
-			if ($row['Screen'] == 'Dispatch')
+			if ($row->Screen == 'Dispatch')
 			{
 				$val = '&Screen=Dispatch&Dispatch=' . $row->Dispatch . '&Counter='  . $row->Counter;
 			}
-			if ($row['Screen'] == 'Job')
+			if ($row->Screen == 'Job')
 			{
 				$val = '&Screen=Job&Name=' . $row->Name . '&JobID=' . $row->JobID;
 			}
 			$value = $t . $val . '&event=' . $value . '</option>' . $val . '&event=Working</option>';
-			if ($row['Screen'] == 'Dispatch')
+			if ($row->Screen == 'Dispatch')
 			{
 				$value .= $val . '&event=Complete</option>';
 			}
