@@ -180,7 +180,7 @@ class Dispatch extends CI_Controller {
 		{
 			$this->auth();
 		}
-		this->active();
+		$this->active();
 	}
 
 }
