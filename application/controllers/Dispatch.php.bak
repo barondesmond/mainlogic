@@ -60,7 +60,7 @@ class Dispatch extends CI_Controller {
 			}
 		}
 		$active = dispatch_active();
-		if (isset($_REQUEST['submit']) && isset($_REQUEST['EmpNo']))
+		if (isset($_REQUEST['submit'] || isset($_REQUEST['checkinStatus'])) && isset($_REQUEST['EmpNo']))
 		{
 			$this->users = users_active();
 			if (isset($active->$_REQUEST['EmpNo']))
