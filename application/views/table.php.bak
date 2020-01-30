@@ -21,10 +21,13 @@ function table_row($row)
 			{
 				$val = '&Screen=Job&Name=' . $row->Name . '&JobID=' . $row->JobID;
 			}
-			$value = $t . $val . '&event=' . $value . '">' . $value . </option>' . $val . '&event=Working">Working</option>';
-			if ($row->Screen == 'Dispatch')
+			if ($value == 'Traveling')
 			{
-				$value .= $val . '&event=Complete">Complete</option>';
+				$value = $t . $val . '&event=' . $value . '">Traveling</option>' . $val . '&event=Working">Working</option>';
+			}
+			if ($row->Screen == 'Dispatch' && $value == 'Working')
+			{
+				$value = $t . $val . '&event=Working">Working</option>' . $val . '&event=Complete">Complete</option>';
 			}
 			$value .= '</select>';
 		}

@@ -23,7 +23,7 @@ function table_row($row)
 			}
 			if ($value == 'Traveling')
 			{
-				$value = $t . $val . '&event=' . $value . '">Traveling</option>' . $val . '&event=Working">Working</option>';
+				$value = $t . $val . '&event=Traveling">Traveling</option>' . $val . '&event=Working">Working</option>';
 			}
 			if ($row->Screen == 'Dispatch' && $value == 'Working')
 			{
