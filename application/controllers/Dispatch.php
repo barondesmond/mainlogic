@@ -113,7 +113,7 @@ class Dispatch extends CI_Controller {
 		{
 				$this->centercolumn1 = 'STOP';
 		}
-		elseif (isset($_REQUEST['EmpNo']))
+		elseif (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Screen']))
 		{
 				$this->centercolumn1 = 'START';
 		}
