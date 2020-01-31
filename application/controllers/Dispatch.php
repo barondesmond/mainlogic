@@ -36,10 +36,9 @@ class Dispatch extends CI_Controller {
 				$this->centercolumn1 = $this->load->view('centercolumn1', $this, true);
 
 		}
-		if ($start)
-		{
+
 			$this->inputnav = $this->load->view('clockinput', $this, true);
-		}
+
 	}
 
 	public function active()
@@ -116,6 +115,10 @@ class Dispatch extends CI_Controller {
 		elseif (isset($_REQUEST['EmpNo']) && isset($_REQUEST['Screen']))
 		{
 				$this->centercolumn1 = 'START';
+		}
+		else
+		{
+			$this->centercolumn1 = '';
 		}
 	
 		
